@@ -1,0 +1,24 @@
+.mycard {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+    .owl-dots {
+    width: 100%;
+    text-align: center;
+    padding-top: 18px;
+  }
+  .owl-dots button.owl-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #ccc;
+    margin: 0 6px;
+  }
+  .owl-dots button.owl-dot.active {
+    background-color: #fda403;
+  }
+  .owl-dots button.owl-dot:focus {
+    outline: none;
+  }
