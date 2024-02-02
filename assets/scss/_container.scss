@@ -21,6 +21,36 @@ img{
 a{
     text-decoration: none;
 }
+.menu-list{
+    background-color:rgba(0, 0, 0, 0.521);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    // display: none;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    @include transition;
+
+    .res-menu-list{
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        width: 300px;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        padding: 20px;
+        @include transition;
+        p{
+            text-align: end;
+        }
+        a{
+            padding: 5px;
+            color: $white;
+        }
+    }
+}
 nav{
     position: fixed;
     width: 100%;
@@ -28,7 +58,6 @@ nav{
     border-bottom:1px solid rgba(255, 255, 255, 0.665) ;
     .nav{
         @include flex;
-        // padding: 10px 0 ;
         font-size: 16px;
         font-weight: $firstFont;
         .logo{
@@ -45,6 +74,9 @@ nav{
                     cursor: pointer;
                     gap: 5px;
                     position: relative;
+                    a{
+                        color: $white;
+                    }
                     .sub-nav{
                         display: none;
                         position: absolute;
@@ -54,8 +86,11 @@ nav{
                         background-color: $white;
                         color: $gray;
                         border-radius: 5px;
-                        >p{
-                            padding: 3px 10px;
+                        padding: 10px;
+                        >a{
+                            padding: 5px 10px;
+                            color: $gray;
+                            @include column;
                             @include transition;
                             &:hover{
                                 color: $orange;
@@ -66,20 +101,26 @@ nav{
                             @include flex;
                             position: relative;
                             .sub-text{
+                                color: $gray;
                                 width: 100%;
                                 @include flex;
                                 @include transition;
+                                &:hover{
+                                    color: $orange;
+                                }
                             }
                             .sub-nav-second{
                                 padding:5px;
-                                width: 100px;
+                                width: 130px;
                                 position: absolute;
                                 top: 0;
                                 left: 100%;
                                 border-radius: 5px;
                                 background-color: $white;
                                 display: none;
-                                p{
+                                padding: 10px;
+                                a{
+                                    padding: 7px 10px;
                                     color: $gray;
                                     @include transition;
                                     &:hover{
@@ -110,8 +151,14 @@ nav{
         }
         .search{
             font-size: 23px;
+            color: $white;
+            @include center;
+            gap: 15px;
             i{
                 cursor: pointer;
+            }
+            .bi-person{
+                font-size: 30px;
             }
         }
         .menu{
@@ -128,9 +175,11 @@ nav{
     background-size: cover;
     position: relative;
     .banner{
-        padding: 250px 0;
+        padding: 200px 0;
         display: flex;
         justify-content: space-between;
+        flex-direction: column-reverse;
+        gap: 20px;
         color: $white;
         .text-left{
             max-width: 600px;
@@ -143,29 +192,47 @@ nav{
                 font-size: 90px;
                 color: $white;
                 line-height: 1;
+                cursor: pointer;
+                @include transition;
+                &:hover{
+                    color: $orange;
+                }
             }
            >div{
             margin-top: 40px;
             a{
-                padding: 20px 50px;
+                padding: 20px;
+                width: 200px;
                 text-align: center;
                 font-size: 15px;
                 margin-right: 20px;
+                @include transition;
+                font-weight: $thridFond;
             }
             .info{
                 background-color:$white ;
                 color: $black;
+                &:hover{
+                    background-color: $orange;
+                    color: $white;
+                }
             }
             .ticket{
                 background-color: $orange;
                 color: $white;
+                &:hover{
+                    background-color:$white ;
+                    color: $black;
+                }
             }
            }
         }
         .text-right{
+            width: 100%;
             @include column;
+            align-items: end;
             gap: 0px;
-            width: 250px;
+            // width: 250px;
             p{
                 font-size: 16px;
                 font-weight: $firstFont;
@@ -173,6 +240,9 @@ nav{
             span{
                 font-size: 30px;
                 font-weight: $fourthFont;
+            }
+            img{
+                max-width: 200px;
             }
 
         }
@@ -202,7 +272,8 @@ nav{
                 .card{
                     position: relative;
                     background: rgb(70, 0, 0);
-                    height: 180px;
+                    // height: 180px;
+                    // padding: 10px;
                     .image{
                         position: absolute;
                         top: 0;
@@ -218,9 +289,9 @@ nav{
                         }
                     }
                     .text{
-                        position: absolute;
-                        top: 0;
-                        left: 0;
+                        // position: absolute;
+                        // top: 0;
+                        // left: 0;
                         width: 100%;
                         background-color: rgba(0, 0, 0, 0.7);
                         color: $white;
@@ -228,9 +299,11 @@ nav{
                         border: none;
                         @include flex;
                         flex-direction: row;
+                        z-index: 10;
                         .left{
                             max-width: 200px;
                             span{
+
                                 font-weight: $firstFont;
                                 color: $gray;
                             }
@@ -257,7 +330,7 @@ nav{
     }
 }
 
-#now-palying{
+#now-playing{
     .now-playing{
         padding: 100px 0;
         @include center;
@@ -277,15 +350,18 @@ nav{
                 color: $gray;
             }
             h2{
+                text-align: center;
                 font-weight: $fourthFont;
                 font-size: 50px;
             }
         }
-        .owl-carousel{
+        .playing{
+            width: 100%;
             .my-card{
                 padding: 10px;
                 @include transition;
                 >div{
+                    width: 100%;
                     position: relative;
                     height: 400px;
                     .image{
@@ -306,6 +382,7 @@ nav{
                             position: absolute;
                             content: "";
                             top: 0;
+                            left: 0;
                             height: 0;
                             background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.9));
                             width: 100%;
@@ -320,17 +397,28 @@ nav{
                         color: $white;
                         font-weight: $secondFont;
                         .category-time{
-                            @include center;
+                            display: flex;
+                            gap: 5px;
                             font-size: 13px;
                         }
                         .film-name{
                             font-size: 20px;
                             margin-bottom: 10px;
+                            @include transition;
+                            cursor: pointer;
+                            &:hover{
+                                color:$orange;
+                            }
                         }
                         a{
                             padding:8px 20px;
                             color: $black;
                             background-color: $white;
+                            @include transition;
+                            &:hover{
+                                background-color: $orange;
+                                color: $white;
+                            }
                         }
                     }
                     
@@ -346,6 +434,7 @@ nav{
     }
 }
 #photo-gallery{
+    background-color: $white;
     text-align: center;
     font-size: 40px;
     font-weight: $fourthFont;
@@ -428,10 +517,11 @@ nav{
 }
 
 #company{
+    background-color: $white;
     .company{
         padding: 100px 0;
         margin: 0 auto;
-        width: 900px;
+        
         .image{
             width: 100%;
             height: 150px;
@@ -497,11 +587,13 @@ nav{
         padding: 100px 0;
         .row{
             >div{
+                padding: 20px 10px;
                 .card{
-                    max-width: 500px;
+                    // max-width: 500px;
                     border: none;
                     background: none;
                     .header{
+                        z-index: 10;
                         display: flex;
                         flex-direction: column;
                         gap: 10px;
@@ -577,10 +669,11 @@ nav{
                         position: absolute;
                         content: "";
                         background-image: url("../image/background-people-feedback-home-1.png");
-                        width: 700px;
+                        max-width: 700px;
+                        width: 100%;
                         height: 500px;
                         top: -100px;
-                        left: -50px;
+                        left: -20px;
                         z-index: -1;
                         background-repeat: no-repeat;
                     }
@@ -627,17 +720,38 @@ nav{
                 padding: 10px;
                 .card{
                     border: none;
-                    .image{
+                    @include transition;
+                    .images{
+                        overflow: hidden;
                         height: 50%;
                         position: relative;
                         img{
                             width: 100%;
                             height: 100%;
+                            @include transition;
                             object-fit: cover;
                         }
-                        >div{
+                        .background{
                             position: absolute;
-                            bottom: -10px;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(0, 0, 0, 0);
+                            @include transition;
+                        }
+                        
+                    }
+                    .text{
+                        padding: 20px;
+                        height: 50%;
+                        @include column;
+                        gap: 10px;
+                        z-index: 1;
+                        position: relative;
+                        .date{
+                            position: absolute;
+                            top: -15px;
                             right: 20px;
                             width: 100px;
                             height: 30px;
@@ -647,13 +761,8 @@ nav{
                             font-weight: $thridFond;
                             text-align: center;
                             background-color: $orange;
+                            z-index: 10;
                         }
-                    }
-                    .text{
-                        padding: 20px;
-                        height: 50%;
-                        @include column;
-                        gap: 10px;
                         .avatar{
                             @include center;
                             gap: 5px;
@@ -672,13 +781,475 @@ nav{
                         }
                         .content{
                             font-size: 22px;
+                            color: $black;
+                            font-weight: $fourthFont;
+                            max-width: 300px;
+                            @include transition;
+                            &:hover{
+                                color: $orange;
+                            }
                         }
                         .read-more{
+                            font-weight: $secondFont;
+                            color: $gray;
                             font-size: 13px;
+                            @include transition;
+                            // position: relative;
+                            // border-bottom: 1px solid $gray;
+                            // border-right: 1px solid $gray;
+                            // width: 10px;
+                            // height: 10px;
+                            // &::after{
+                            //     position: absolute;
+                            //     content: "";
+                            //     width: 10px;
+                            //     height: 10px;
+                            //     border-bottom: 1px solid $gray;
+                            //     border-right: 1px solid $gray;
+                            //     bottom: 1px;
+                            //     right: -7px;
+                                
+                            // }
+                            &:hover{
+                                color: $orange;
+                            }
+                        }
+                        
+                    }
+                    &:hover{
+                        box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.2);
+                        .background{
+                            background-color: rgba(0, 0, 0, 0.658);
+                        }
+                        .images img{
+                            scale: 1.1;
                         }
                     }
                 }
             }
         }
+    }
+}
+
+#top-movies{
+    background-color: $black;
+   .top-movies{
+    .row{
+            margin: 0 auto;
+            width: 100%;
+        >div{
+            padding: 2px;
+            border-radius: 10px;
+            overflow: hidden;
+                .card{
+                padding: 10px;
+                overflow: hidden;
+                border-radius: none;
+                border: none;
+                width: 100%;
+                height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+                gap: 20px;
+                .icon{
+                    z-index: 10;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    border: 1px solid rgba(255, 255, 255, 0.7);
+                    @include transition;
+                    @include center;
+                    flex-direction: column;
+                    >div{
+                        font-size: 30px;
+                        width: 100px;
+                        height: 100px;
+                        background-color: $white;
+                        @include center;
+                        flex-direction: column;
+                        border-radius: 50%;
+                        color:$orange;
+                    }
+                }
+                p{
+                    max-width: 280px;
+                    color: $white;
+                    z-index: 10;
+                    font-size: 30px;
+                    font-weight: $fourthFont;
+                    line-height: 1;
+                    text-align: center;
+                }
+            }
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                @include transition;
+            }
+            .orange{
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #d96b2cb8
+                }
+            }
+            &:hover{
+                .icon{
+                    scale: 1.1;
+                    // width: 130px;
+                    // height: 130px;
+                }
+                .icon >div{
+                    width: 100px;
+                    height: 100px;
+                    background-color: $orange;
+                    color: $white;
+                }
+                img{
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+   }
+}
+footer{
+    background-color: $black;
+    .top-footer{
+        padding: 20px 0;
+        @include flex;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.646);
+        .logo{
+            width: 120px;
+            img{
+                width: 100%;
+            }
+        }
+        .right{
+            @include center;
+            gap: 20px;
+            color: $gray;
+            .text{
+                a{
+                    color: $gray;
+                    @include transition;
+                    &:hover{
+                        color: $orange;
+                    }
+                }
+            }
+            .icons{
+                color:$white;
+                @include center;
+                gap: 10px;
+                >div{
+                    height: 50px;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    .icon{
+                        background-color: $gray;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        @include center;
+                        flex-direction: column;
+                        @include transition;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: $orange;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottom-footer{
+        padding: 50px 0;
+        .row{
+            >div{
+                @include column;
+                gap: 5px;
+                h3{
+                    color: $orange;
+                    font-weight: $fourthFont;
+                    font-size: 20px;
+                    padding-bottom: 20px;
+                }
+                a{
+                   
+                    font-size: 15px;
+                    font-weight: $firstFont;
+                    color: $gray;
+                    padding: 5px 0;
+                    cursor: pointer;
+                }
+                p{
+                    font-size: 15px;
+                    font-weight: $firstFont;
+                    color: $gray;
+                    padding: 5px 0;
+                }
+                .send{
+                    // padding: 10px 0;
+                    margin: 10px 0;
+                    width:300px;
+                    height: 50px;
+                    @include center;
+                    background-color: #fda403;
+                    input{
+                        width: 100%;
+                        height: 100%;
+                        outline: none;
+                        padding: 5px;
+                        border: none;
+                    }
+                    .icon{
+                        width: 10%;
+                        height: 100%;
+                        background-color: $white;
+                        font-size: 20px;
+                        @include center;
+                        flex-direction: column;
+                    }
+                }
+                .sertler{
+                    @include center;
+                    gap: 5px
+                }
+                a{
+                    @include transition;
+                    &:hover{
+                        color: $orange;
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        border-top: 1px solid  rgba(255, 255, 255, 0.646);
+        background-color: $black;
+        padding: 15px;
+        color: $gray;
+        text-align: center;
+    }
+}
+
+/////////////// movie all banner
+
+#movie-all-banner{
+    background-image:linear-gradient(#00000080,#00000080), url("../image/background-header-2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .movie-all-banner{
+        padding: 200px 0;
+        @include center;
+        flex-direction: column;
+        .text{
+            @include column;
+            align-items: center;
+            gap: 10px;
+            >div{
+                @include center;
+                color: $white;
+            }
+            p{
+                padding-top: 1px;
+                font-size: 14px;
+            }
+            i{
+                padding-top: 1px;
+                font-size: 12px;
+            }
+            h1{
+                color: $white;
+                font-size: 50px;
+            }
+            a{
+                color: $white;
+                font-size: 14px;
+                @include transition;
+                &:hover{
+                    color: $orange;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1400px){
+    #upcomming{
+        .upcomming{
+            .row{
+                >div{
+                    .card{
+                        .text{
+                            @include column;
+                        gap: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media screen and (max-width:1000px){
+    #banner{
+        .banner{
+           .text-left{
+            h1{
+                font-size: 70px;
+            }
+           }
+        }
+    }
+}
+
+@media screen and (max-width:992px){
+    nav{
+        .nav{
+            padding: 15px 0;
+            .list-nav, .search{
+                display: none;
+            }
+            .menu{
+                display: block;
+                color: $white;
+                
+            }
+        }
+    }
+    #upcomming{
+        .upcomming{
+            .row{
+                >div{
+                    .card{
+                        .text{
+                            flex-direction: row;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .top-footer{
+            @include column;
+            gap: 15px;
+            .right{
+                @include column;
+                gap: 10px;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){
+    #banner{
+        .banner{
+            padding: 150px 0;
+           .text-left{
+            h1{
+                font-size: 50px;
+            }
+            span{
+                font-size: 28px;
+            }
+           }
+        }
+    }
+    #now-playing{
+        .now-playing{
+            .header{
+                h2{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+    #feedbacks{
+        .feedbacks{
+            .row{
+                >div{
+                    .card{
+                        .header{
+                            h2{
+                                font-size: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #blog-post{
+        .blog-post{
+            .header{
+                h2{
+                    font-size: 40px;
+                }
+            }
+            .row{
+                >div .card .text .content{
+                    max-width: 600px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:425px){
+    #banner{
+        .banner{
+           .text-left{
+            >div{
+                @include column;
+                gap: 20px;
+            }
+           }
+        }
+    }
+    #upcomming{
+        .upcomming{
+            .row{
+                >div{
+                    .card{
+                        .text{
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #feedbacks{
+        .feedbacks{
+            .row{
+                >div{
+                    .card{
+                        .people .people-card{
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    #feedbacks .feedbacks .row > div .people .my-card .position{
+        width: 100px;
+        height: 100px;
     }
 }
