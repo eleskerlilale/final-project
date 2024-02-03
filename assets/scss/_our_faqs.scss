@@ -1,0 +1,66 @@
+#faqs{
+    .faqs{
+        padding: 100px 0;
+        .row{
+            >div{
+                .card-main{
+                    // background-color: aqua;
+                    @include column;
+                    // gap: 10px;
+                    >div{
+                        width: 100%;
+                        background-color: rgba(222, 222, 222, 0.584);
+                        // border: 1px solid gray;
+                        margin: 1px;
+                        cursor: pointer;
+                        padding: 20px 40px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        font-size: 20px;
+                        font-weight: $secondFont;
+                        @include transition;
+                        border-right: 2px solid  rgba(222, 222, 222, 0.584);
+
+                        i{
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            background-color: $white;
+                            color: $orange;
+                            @include center ;
+                            flex-direction: column;
+                            @include transition;
+                        }
+                        &:hover{
+                            background-color: $white;
+                            color: $orange;
+                            border-right: 2px solid $orange;
+                            i{
+                                background-color: $orange;
+                                color: $white;
+                            }
+                        }
+                    }
+                    .active{
+                        background-color: $white;
+                            color: $orange;
+                            border-right: 2px solid $orange;
+                            i{
+                                background-color: $orange;
+                                color: $white;
+                            }
+                    }
+                }
+                .card-accordion{
+                    background-color: bisque;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+.accordion-button:not(.collapsed) {
+    background-color: $orange;
+}

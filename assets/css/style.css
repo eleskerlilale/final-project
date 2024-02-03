@@ -27,6 +27,68 @@
   outline: none;
 }
 
+#faqs .faqs {
+  padding: 100px 0;
+}
+#faqs .faqs .row > div .card-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#faqs .faqs .row > div .card-main > div {
+  width: 100%;
+  background-color: rgba(222, 222, 222, 0.584);
+  margin: 1px;
+  cursor: pointer;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-right: 2px solid rgba(222, 222, 222, 0.584);
+}
+#faqs .faqs .row > div .card-main > div i {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #d96c2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+#faqs .faqs .row > div .card-main > div:hover {
+  background-color: #fff;
+  color: #d96c2c;
+  border-right: 2px solid #d96c2c;
+}
+#faqs .faqs .row > div .card-main > div:hover i {
+  background-color: #d96c2c;
+  color: #fff;
+}
+#faqs .faqs .row > div .card-main .active {
+  background-color: #fff;
+  color: #d96c2c;
+  border-right: 2px solid #d96c2c;
+}
+#faqs .faqs .row > div .card-main .active i {
+  background-color: #d96c2c;
+  color: #fff;
+}
+#faqs .faqs .row > div .card-accordion {
+  background-color: bisque;
+  width: 100%;
+  height: 100%;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #d96c2c;
+}
+
 * {
   padding: 0;
   margin: 0;
