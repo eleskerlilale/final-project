@@ -183,11 +183,10 @@ nav {
             color: $white;
             @include center;
             gap: 15px;
-
             i {
+                color: $white;
                 cursor: pointer;
             }
-
             .bi-person {
                 font-size: 30px;
             }

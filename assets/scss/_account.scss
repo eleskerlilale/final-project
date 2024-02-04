@@ -37,6 +37,11 @@
                 label{
                     font-size: 17px;
                     font-weight: $secondFont;
+                    @include flex;
+                    p{
+                        color: red;
+                        font-size: 12px;
+                    }
                     span{
                         color: red;
                     }
@@ -83,6 +88,11 @@
                 label{
                     font-size: 17px;
                     font-weight: $secondFont;
+                    @include flex;
+                    p{
+                        color: red;
+                        font-size: 12px;
+                    }
                     span{
                         color: red;
                     }
@@ -114,20 +124,29 @@
                 padding: 50px 0;
                 @include column;
                 // align-items: center;
+                display: none;
                 gap: 20px;
+                width: 100%;
                 p{
+                    font-size: 13px;
+                    color: $gray;
+                }
+                p:first-child{
                     font-size: 17px;
                     font-weight: $secondFont;
+                    color: $black;
                     span{
                         color: red;
                     }
                 }
                 input{
+                    width: 100%;
                     padding: 8px;
                 }
                 button{
                     padding: 10px;
-                    width:225px;
+                    // width:225px;
+                    width: 100%;
                     padding: 10px;
                     border: none;
                     background-color: $orange;

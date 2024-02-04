@@ -1,313 +1,319 @@
 {
-    "main": [
+  "main": [
+    {
+      "id": 572802,
+      "imdb_id": "tt9663764",
+      "original_language": "en",
+      "original_title": "Aquaman and the Lost Kingdom",
+      "overview": "Black Manta, still driven by the need to avenge his father's death and wielding the power of the mythic Black Trident, will stop at nothing to take Aquaman down once and for all. To defeat him, Aquaman must turn to his imprisoned brother Orm, the former King of Atlantis, to forge an unlikely alliance in order to save the world from irreversible destruction.",
+      "popularity": 2392.899,
+      "poster_path": "/7lTnXOy0iNtBAdRP3TZvaKJ77F6.jpg",
+      "runtime": 124,
+      "key": "UGc5Tzz19UY",
+      "release_date": "2023-12-20",
+      "vote_average": 6.988,
+      "genres": [
         {
-            "id": 572802,
-            "imdb_id": "tt9663764",
-            "original_language": "en",
-            "original_title": "Aquaman and the Lost Kingdom",
-            "overview": "Black Manta, still driven by the need to avenge his father's death and wielding the power of the mythic Black Trident, will stop at nothing to take Aquaman down once and for all. To defeat him, Aquaman must turn to his imprisoned brother Orm, the former King of Atlantis, to forge an unlikely alliance in order to save the world from irreversible destruction.",
-            "popularity": 2392.899,
-            "poster_path": "/7lTnXOy0iNtBAdRP3TZvaKJ77F6.jpg",
-            "runtime": 124,
-            "key": "UGc5Tzz19UY",
-            "release_date": "2023-12-20",
-            "vote_average": 6.988,
-            "genres": [
-                {
-                    "id": 28,
-                    "name": "Action"
-                },
-                {
-                    "id": 12,
-                    "name": "Adventure"
-                },
-                {
-                    "id": 14,
-                    "name": "Fantasy"
-                }
-            ]
+          "id": 28,
+          "name": "Action"
         },
         {
-            "id": 787699,
-            "imdb_id": "tt6166392",
-            "original_language": "en",
-            "original_title": "Wonka",
-            "overview": "Willy Wonka – chock-full of ideas and determined to change the world one delectable bite at a time – is proof that the best things in life begin with a dream, and if you’re lucky enough to meet Willy Wonka, anything is possible.",
-            "popularity": 1989.417,
-            "poster_path": "/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
-            "runtime": 117,
-            "key": "otNh9bTjXWg",
-            "genres": [
-                {
-                    "id": 35,
-                    "name": "Comedy"
-                },
-                {
-                    "id": 10751,
-                    "name": "Family"
-                },
-                {
-                    "id": 14,
-                    "name": "Fantasy"
-                }
-            ]
+          "id": 12,
+          "name": "Adventure"
         },
         {
-            "id": 1022796,
-            "imdb_id": "tt11304740",
-            "original_language": "en",
-            "original_title": "Wish",
-            "overview": "Asha, a sharp-witted idealist, makes a wish so powerful that it is answered by a cosmic force – a little ball of boundless energy called Star. Together, Asha and Star confront a most formidable foe - the ruler of Rosas, King Magnifico - to save her community and prove that when the will of one courageous human connects with the magic of the stars, wondrous things can happen.",
-            "popularity": 1428.915,
-            "poster_path": "/AcoVfiv1rrWOmAdpnAMnM56ki19.jpg",
-            "runtime": 95,
-            "key": "eQPeGiCH7A0",
-            "genres": [
-                {
-                    "id": 16,
-                    "name": "Animation"
-                },
-                {
-                    "id": 10751,
-                    "name": "Family"
-                },
-                {
-                    "id": 14,
-                    "name": "Fantasy"
-                },
-                {
-                    "id": 12,
-                    "name": "Adventure"
-                }
-            ]
-        },
-        {
-            "id": 940551,
-            "imdb_id": "tt6495056",
-            "original_language": "en",
-            "original_title": "Migration",
-            "overview": "After a migrating duck family alights on their pond with thrilling tales of far-flung places, the Mallard family embarks on a family road trip, from New England, to New York City, to tropical Jamaica.",
-            "popularity": 1356.633,
-            "poster_path": "/ldfCF9RhR40mppkzmftxapaHeTo.jpg",
-            "runtime": 83,
-            "key": "cQfo0HJhCnE",
-            "genres": [
-                {
-                    "id": 16,
-                    "name": "Animation"
-                },
-                {
-                    "id": 28,
-                    "name": "Action"
-                },
-                {
-                    "id": 12,
-                    "name": "Adventure"
-                },
-                {
-                    "id": 35,
-                    "name": "Comedy"
-                },
-                {
-                    "id": 10751,
-                    "name": "Family"
-                }
-            ]
-        },
-        {
-            "id": 609681,
-            "imdb_id": "tt10676048",
-            "original_language": "en",
-            "original_title": "The Marvels",
-            "overview": "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. But unintended consequences see Carol shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol’s estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
-            "popularity": 1288.591,
-            "poster_path": "/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
-            "runtime": 105,
-            "key": "uwmDH12MAA4",
-            "genres": [
-                {
-                    "id": 878,
-                    "name": "Science Fiction"
-                },
-                {
-                    "id": 12,
-                    "name": "Adventure"
-                },
-                {
-                    "id": 28,
-                    "name": "Action"
-                }
-            ]
-        },
-        {
-            "id": 1212073,
-            "imdb_id": "tt29538571",
-            "original_language": "de",
-            "original_title": "60 Minuten",
-            "overview": "Desperate to keep custody of his daughter, a mixed martial arts fighter abandons a big match and races across Berlin to attend her birthday party.",
-            "popularity": 899.318,
-            "poster_path": "/cND79ZWPFINDtkA8uwmQo1gnPPE.jpg",
-            "runtime": 89,
-            "key": "uiyZW82Rxf8",
-            "vote_average": 6.939,
-            "genres": [
-                {
-                    "id": 28,
-                    "name": "Action"
-                },
-                {
-                    "id": 18,
-                    "name": "Drama"
-                }
-            ]
-        },
-        {
-            "id": 1058694,
-            "imdb_id": "tt14570440",
-            "original_language": "en",
-            "original_title": "Radical",
-            "overview": "In a Mexican border town plagued by neglect, corruption, and violence, a frustrated teacher tries a radical new method to break through his students’ apathy and unlock their curiosity, their potential… and maybe even their genius.",
-            "popularity": 598.187,
-            "poster_path": "/eSatbygYZp8ooprBHZdb6GFZxGB.jpg",
-            "key": "BXcGgvAKC1Q",
-            "genres": [
-                {
-                    "id": 18,
-                    "name": "Drama"
-                }
-            ],
-            "runtime": 127
-        },
-        {
-            "id": 940551,
-            "imdb_id": "tt6495056",
-            "original_language": "en",
-            "original_title": "Migration",
-            "overview": "After a migrating duck family alights on their pond with thrilling tales of far-flung places, the Mallard family embarks on a family road trip, from New England, to New York City, to tropical Jamaica.",
-            "popularity": 1356.633,
-            "runtime": 83,
-            "key": "UkHxhPGpRuA",
-            "poster_path": "/ldfCF9RhR40mppkzmftxapaHeTo.jpg",
-            "genres": [
-                {
-                    "id": 16,
-                    "name": "Animation"
-                },
-                {
-                    "id": 28,
-                    "name": "Action"
-                },
-                {
-                    "id": 12,
-                    "name": "Adventure"
-                },
-                {
-                    "id": 35,
-                    "name": "Comedy"
-                },
-                {
-                    "id": 10751,
-                    "name": "Family"
-                }
-            ],
-            "vote_average": 7.77,
-            "release_date": "2023-12-06"
-        },
-        {
-            "id": 955916,
-            "imdb_id": "tt14371878",
-            "original_language": "en",
-            "original_title": "Lift",
-            "overview": "An international heist crew, led by Cyrus Whitaker, race to lift $500 million in gold from a passenger plane at 40,000 feet.",
-            "popularity": 655.9,
-            "key": "m2L-Sa_6MU0",
-            "runtime": 106,
-            "poster_path": "/gma8o1jWa6m0K1iJ9TzHIiFyTtI.jpg",
-            "genres": [
-                {
-                    "id": 28,
-                    "name": "Action"
-                },
-                {
-                    "id": 35,
-                    "name": "Comedy"
-                },
-                {
-                    "id": 80,
-                    "name": "Crime"
-                }
-            ],
-            "vote_average": 6.512,
-            "release_date": "2024-01-10"
-        },
-        {
-            "id": 852445,
-            "imdb_id": "tt17569526",
-            "original_language": "fr",
-            "original_title": "Acide",
-            "overview": "During a heat wave, strange clouds start pouring down acid rain, wreaking devastation and panic throughout France. In a world teetering on the edge, a girl and her divorced parents must join forces to confront and try to escape this climate catastrophe.",
-            "popularity": 460.052,
-            "key": "XeRo7qpNFxo",
-            "poster_path": "/91vF7SNB2tqsSultsmEn8tJYh4l.jpg",
-            "genres": [
-                {
-                    "id": 18,
-                    "name": "Drama"
-                },
-                {
-                    "id": 14,
-                    "name": "Fantasy"
-                }
-            ],
-            "vote_average": 5.791,
-            "release_date": "2023-09-20",
-            "runtime": 99
-        },
-        {
-            "id": 1211957,
-            "imdb_id": "tt30253266",
-            "original_language": "en",
-            "original_title": "The Painter",
-            "overview": "An ex-CIA operative is thrown back into a dangerous world when a mysterious woman from his past resurfaces. Now exposed and targeted by a relentless killer and a rogue black ops program, he must rely on skills he thought he left behind in a high-stakes game of survival.",
-            "popularity": 333.344,
-            "key": "rZe3fRnZr78",
-            "poster_path": "/UZ0ydgbXtnrq8xZCI5lHVXVcH9.jpg",
-            "genres": [
-                {
-                    "id": 28,
-                    "name": "Action"
-                },
-                {
-                    "id": 53,
-                    "name": "Thriller"
-                }
-            ],
-            "release_date": "2024-01-05",
-            "runtime": 100,
-            "vote_average": 7.196
-        },
-        {
-            "id": 866398,
-            "imdb_id": "tt15314262",
-            "original_language": "en",
-            "original_title": "The Beekeeper",
-            "overview": "One man’s campaign for vengeance takes on national stakes after he is revealed to be a former operative of a powerful and clandestine organization known as Beekeepers.",
-            "popularity": 1268.827,
-            "poster_path": "/A7EByudX0eOzlkQ2FIbogzyazm2.jpg",
-            "genres": [
-                {
-                    "id": 28,
-                    "name": "Action"
-                },
-                {
-                    "id": 53,
-                    "name": "Thriller"
-                }
-            ],
-            "runtime": 105,
-            "vote_average": 7.312,
-            "key": "CHKn-yDCE2w"
+          "id": 14,
+          "name": "Fantasy"
         }
-    ],
-    "account":[]
+      ]
+    },
+    {
+      "id": 787699,
+      "imdb_id": "tt6166392",
+      "original_language": "en",
+      "original_title": "Wonka",
+      "overview": "Willy Wonka – chock-full of ideas and determined to change the world one delectable bite at a time – is proof that the best things in life begin with a dream, and if you’re lucky enough to meet Willy Wonka, anything is possible.",
+      "popularity": 1989.417,
+      "poster_path": "/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
+      "runtime": 117,
+      "key": "otNh9bTjXWg",
+      "genres": [
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        },
+        {
+          "id": 14,
+          "name": "Fantasy"
+        }
+      ]
+    },
+    {
+      "id": 1022796,
+      "imdb_id": "tt11304740",
+      "original_language": "en",
+      "original_title": "Wish",
+      "overview": "Asha, a sharp-witted idealist, makes a wish so powerful that it is answered by a cosmic force – a little ball of boundless energy called Star. Together, Asha and Star confront a most formidable foe - the ruler of Rosas, King Magnifico - to save her community and prove that when the will of one courageous human connects with the magic of the stars, wondrous things can happen.",
+      "popularity": 1428.915,
+      "poster_path": "/AcoVfiv1rrWOmAdpnAMnM56ki19.jpg",
+      "runtime": 95,
+      "key": "eQPeGiCH7A0",
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        },
+        {
+          "id": 14,
+          "name": "Fantasy"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        }
+      ]
+    },
+    {
+      "id": 940551,
+      "imdb_id": "tt6495056",
+      "original_language": "en",
+      "original_title": "Migration",
+      "overview": "After a migrating duck family alights on their pond with thrilling tales of far-flung places, the Mallard family embarks on a family road trip, from New England, to New York City, to tropical Jamaica.",
+      "popularity": 1356.633,
+      "poster_path": "/ldfCF9RhR40mppkzmftxapaHeTo.jpg",
+      "runtime": 83,
+      "key": "cQfo0HJhCnE",
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        }
+      ]
+    },
+    {
+      "id": 609681,
+      "imdb_id": "tt10676048",
+      "original_language": "en",
+      "original_title": "The Marvels",
+      "overview": "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. But unintended consequences see Carol shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol’s estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
+      "popularity": 1288.591,
+      "poster_path": "/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
+      "runtime": 105,
+      "key": "uwmDH12MAA4",
+      "genres": [
+        {
+          "id": 878,
+          "name": "Science Fiction"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 28,
+          "name": "Action"
+        }
+      ]
+    },
+    {
+      "id": 1212073,
+      "imdb_id": "tt29538571",
+      "original_language": "de",
+      "original_title": "60 Minuten",
+      "overview": "Desperate to keep custody of his daughter, a mixed martial arts fighter abandons a big match and races across Berlin to attend her birthday party.",
+      "popularity": 899.318,
+      "poster_path": "/cND79ZWPFINDtkA8uwmQo1gnPPE.jpg",
+      "runtime": 89,
+      "key": "uiyZW82Rxf8",
+      "vote_average": 6.939,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ]
+    },
+    {
+      "id": 1058694,
+      "imdb_id": "tt14570440",
+      "original_language": "en",
+      "original_title": "Radical",
+      "overview": "In a Mexican border town plagued by neglect, corruption, and violence, a frustrated teacher tries a radical new method to break through his students’ apathy and unlock their curiosity, their potential… and maybe even their genius.",
+      "popularity": 598.187,
+      "poster_path": "/eSatbygYZp8ooprBHZdb6GFZxGB.jpg",
+      "key": "BXcGgvAKC1Q",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "runtime": 127
+    },
+    {
+      "id": 940551,
+      "imdb_id": "tt6495056",
+      "original_language": "en",
+      "original_title": "Migration",
+      "overview": "After a migrating duck family alights on their pond with thrilling tales of far-flung places, the Mallard family embarks on a family road trip, from New England, to New York City, to tropical Jamaica.",
+      "popularity": 1356.633,
+      "runtime": 83,
+      "key": "UkHxhPGpRuA",
+      "poster_path": "/ldfCF9RhR40mppkzmftxapaHeTo.jpg",
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animation"
+        },
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 10751,
+          "name": "Family"
+        }
+      ],
+      "vote_average": 7.77,
+      "release_date": "2023-12-06"
+    },
+    {
+      "id": 955916,
+      "imdb_id": "tt14371878",
+      "original_language": "en",
+      "original_title": "Lift",
+      "overview": "An international heist crew, led by Cyrus Whitaker, race to lift $500 million in gold from a passenger plane at 40,000 feet.",
+      "popularity": 655.9,
+      "key": "m2L-Sa_6MU0",
+      "runtime": 106,
+      "poster_path": "/gma8o1jWa6m0K1iJ9TzHIiFyTtI.jpg",
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 35,
+          "name": "Comedy"
+        },
+        {
+          "id": 80,
+          "name": "Crime"
+        }
+      ],
+      "vote_average": 6.512,
+      "release_date": "2024-01-10"
+    },
+    {
+      "id": 852445,
+      "imdb_id": "tt17569526",
+      "original_language": "fr",
+      "original_title": "Acide",
+      "overview": "During a heat wave, strange clouds start pouring down acid rain, wreaking devastation and panic throughout France. In a world teetering on the edge, a girl and her divorced parents must join forces to confront and try to escape this climate catastrophe.",
+      "popularity": 460.052,
+      "key": "XeRo7qpNFxo",
+      "poster_path": "/91vF7SNB2tqsSultsmEn8tJYh4l.jpg",
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 14,
+          "name": "Fantasy"
+        }
+      ],
+      "vote_average": 5.791,
+      "release_date": "2023-09-20",
+      "runtime": 99
+    },
+    {
+      "id": 1211957,
+      "imdb_id": "tt30253266",
+      "original_language": "en",
+      "original_title": "The Painter",
+      "overview": "An ex-CIA operative is thrown back into a dangerous world when a mysterious woman from his past resurfaces. Now exposed and targeted by a relentless killer and a rogue black ops program, he must rely on skills he thought he left behind in a high-stakes game of survival.",
+      "popularity": 333.344,
+      "key": "rZe3fRnZr78",
+      "poster_path": "/UZ0ydgbXtnrq8xZCI5lHVXVcH9.jpg",
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 53,
+          "name": "Thriller"
+        }
+      ],
+      "release_date": "2024-01-05",
+      "runtime": 100,
+      "vote_average": 7.196
+    },
+    {
+      "id": 866398,
+      "imdb_id": "tt15314262",
+      "original_language": "en",
+      "original_title": "The Beekeeper",
+      "overview": "One man’s campaign for vengeance takes on national stakes after he is revealed to be a former operative of a powerful and clandestine organization known as Beekeepers.",
+      "popularity": 1268.827,
+      "poster_path": "/A7EByudX0eOzlkQ2FIbogzyazm2.jpg",
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 53,
+          "name": "Thriller"
+        }
+      ],
+      "runtime": 105,
+      "vote_average": 7.312,
+      "key": "CHKn-yDCE2w"
+    }
+  ],
+  "account": [
+    {
+      "email": "anoniiim42@gmail.com",
+      "password": "1!Aa1234",
+      "id": 2
+    }
+  ]
 }

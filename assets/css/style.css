@@ -151,6 +151,13 @@
 #login-register .login-register .main .login-page label {
   font-size: 17px;
   font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#login-register .login-register .main .login-page label p {
+  color: red;
+  font-size: 12px;
 }
 #login-register .login-register .main .login-page label span {
   color: red;
@@ -199,6 +206,13 @@
 #login-register .login-register .main .register-page label {
   font-size: 17px;
   font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#login-register .login-register .main .register-page label p {
+  color: red;
+  font-size: 12px;
 }
 #login-register .login-register .main .register-page label span {
   color: red;
@@ -230,21 +244,29 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  display: none;
   gap: 20px;
+  width: 100%;
 }
 #login-register .login-register .main .key-page p {
+  font-size: 13px;
+  color: #737373;
+}
+#login-register .login-register .main .key-page p:first-child {
   font-size: 17px;
   font-weight: 500;
+  color: #000;
 }
-#login-register .login-register .main .key-page p span {
+#login-register .login-register .main .key-page p:first-child span {
   color: red;
 }
 #login-register .login-register .main .key-page input {
+  width: 100%;
   padding: 8px;
 }
 #login-register .login-register .main .key-page button {
   padding: 10px;
-  width: 225px;
+  width: 100%;
   padding: 10px;
   border: none;
   background-color: #d96c2c;
@@ -429,6 +451,7 @@ nav .nav .search {
   gap: 15px;
 }
 nav .nav .search i {
+  color: #fff;
   cursor: pointer;
 }
 nav .nav .search .bi-person {

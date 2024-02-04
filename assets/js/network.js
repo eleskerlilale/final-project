@@ -17,6 +17,19 @@ const network = {
     //     return res.data;
     // },
 
+    getfetch : async function(){
+            let res= await fetch(this.url1);
+            return res.json();
+    },
+    getfetchById : async function(id){
+        let res = await fetch(this.url1+id);
+        return res.json();
+    },
+    
+    getfetchaccount : async function(){
+        let res= await fetch(this.url2);
+        return res.json();
+    },
     getfetchpost : async function(data){
         let res = await fetch(this.url2, {
             method: "POST",
@@ -28,18 +41,4 @@ const network = {
       
           return res.json();
     },
-
-    getfetch : async function(){
-            let res= await fetch(this.url1);
-            return res.json();
-    },
-    getfetchById : async function(id){
-        let res = await fetch(this.url1+id);
-        return res.json();
-    },
-    getfetchaccount : async function(){
-        let res= await fetch(this.url2);
-        return res.json();
-    },
-
 }

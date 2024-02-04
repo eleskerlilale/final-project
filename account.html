@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <style>
         nav {
-        width: 100%;
+            width: 100%;
             background-color: black;
         }
     </style>
@@ -99,20 +99,15 @@
     <section id="login-register">
         <div class="container">
             <div class="login-register">
-                <!-- <input type="text" id="subject" placeholder="subject">
-                <input type="text" id="sendername" placeholder="sendername">
-                <input type="text" id="to" placeholder="to">
-                <textarea id="message" id="" cols="30" rows="10"></textarea>
-                <button onclick="sendEmail()">send</button> -->
-
                 <div class="log-reg">
                     <div class="login active">Login</div>
                     <div class="register">Register</div>
-                    
                 </div>
                 <div class="main">
                     <div class="login-page">
-                        <label >Email address <span>*</span></label>
+                        <label>Email address <span>*</span>
+                            <p class="email-problem-log"></p>
+                        </label>
                         <input type="text" placeholder="Email" id="email-log">
                         <label>Password <span>*</span></label>
                         <div>
@@ -122,7 +117,9 @@
                         <button class="log-button">Log In</button>
                     </div>
                     <div class="register-page">
-                        <label>Email <span>*</span></label>
+                        <label>Email <span>*</span>
+                            <p class="email-problem-reg"></p>
+                        </label>
                         <input type="text" id="email-reg" placeholder="Email Address">
                         <label>Password <span>*</span></label>
                         <div>
@@ -130,12 +127,15 @@
                             <i class="bi bi-eye"></i>
                         </div>
                         <p>A link to set a new password will be sent to your email address.</p>
-                        <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="">privacy policy</a>.</p>
+                        <p>Your personal data will be used to support your experience throughout this website, to manage
+                            access to your account, and for other purposes described in our <a href="">privacy
+                                policy</a>.</p>
                         <button class="register-button">Register</button>
                     </div>
                     <div class="key-page">
                         <p>Include the key word <span>*</span></p>
                         <input type="text" id="key-input" placeholder="Key...">
+                        <p>Include your four-digit password sent to your email address</p>
                         <button class="key-button">Send</button>
                     </div>
                 </div>
@@ -234,4 +234,3 @@
 </body>
 
 </html>
-
