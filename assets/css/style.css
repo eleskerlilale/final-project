@@ -85,8 +85,171 @@
   height: 100%;
 }
 
+.accordion-button {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  box-shadow: 0 0 10px 1px orange;
+}
+
+.accordion-collapse .accordion-body {
+  color: #737373;
+}
+
+.accordion-button:focus {
+  border-color: orange;
+  box-shadow: 0 0 10px 1px orange;
+}
+
+#login-register {
+  width: 100%;
+}
+#login-register .login-register {
+  width: 100%;
+  padding: 100px 0 200px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#login-register .login-register .log-reg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: rgb(0, 0, 89);
+  font-size: 30px;
+}
+#login-register .login-register .log-reg > div {
+  cursor: pointer;
+}
+#login-register .login-register .active {
+  border-bottom: 2px solid #d96c2c;
+}
+#login-register .login-register .main {
+  background-color: #fff;
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  height: 300px;
+}
+#login-register .login-register .main .login-page {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+#login-register .login-register .main .login-page label {
+  font-size: 17px;
+  font-weight: 500;
+}
+#login-register .login-register .main .login-page label span {
+  color: red;
+}
+#login-register .login-register .main .login-page input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+}
+#login-register .login-register .main .login-page > div {
+  width: 100%;
+  position: relative;
+}
+#login-register .login-register .main .login-page > div i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+#login-register .login-register .main .login-page button {
+  margin-top: 10px;
+  color: #fff;
   background-color: #d96c2c;
+  font-weight: 500;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border: none;
+}
+#login-register .login-register .main .register-page {
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  display: none;
+}
+#login-register .login-register .main .register-page p {
+  color: #737373;
+  font-size: 16px;
+}
+#login-register .login-register .main .register-page label {
+  font-size: 17px;
+  font-weight: 500;
+}
+#login-register .login-register .main .register-page label span {
+  color: red;
+}
+#login-register .login-register .main .register-page > div {
+  width: 100%;
+  position: relative;
+}
+#login-register .login-register .main .register-page > div i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+#login-register .login-register .main .register-page input {
+  padding: 8px;
+  width: 100%;
+}
+#login-register .login-register .main .register-page .register-button {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  font-weight: 500;
+  border: none;
+  background-color: #d96c2c;
+}
+#login-register .login-register .main .key-page {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+#login-register .login-register .main .key-page p {
+  font-size: 17px;
+  font-weight: 500;
+}
+#login-register .login-register .main .key-page p span {
+  color: red;
+}
+#login-register .login-register .main .key-page input {
+  padding: 8px;
+}
+#login-register .login-register .main .key-page button {
+  padding: 10px;
+  width: 225px;
+  padding: 10px;
+  border: none;
+  background-color: #d96c2c;
+  color: #fff;
+  font-weight: 500;
 }
 
 * {

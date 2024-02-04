@@ -61,6 +61,25 @@
         }
     }
 }
-.accordion-button:not(.collapsed) {
-    background-color: $orange;
+
+.accordion-button{
+    font-size: 20px;
+    font-weight: $thridFond;
 }
+.accordion-button:not(.collapsed) {
+    background-color:transparent;
+    box-shadow:0 0 10px 1px orange;
+}
+.accordion-collapse .accordion-body {
+    color: $gray;
+}
+.accordion-button:focus {
+    border-color:orange ;
+    box-shadow:0 0 10px 1px orange;
+
+}
+// .accordion-button:not(.collapsed)::after{
+//     width: 30px;
+//     height: 30px;
+//     background-color: $orange;
+// }

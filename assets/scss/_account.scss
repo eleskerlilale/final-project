@@ -1,0 +1,140 @@
+#login-register{
+    width: 100%;
+    .login-register{
+        width: 100%;
+        padding: 100px 0 200px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        .log-reg{
+            @include center;
+            gap: 10px;
+            color: rgb(0, 0, 89);
+            font-size: 30px;
+            >div{
+                cursor: pointer;
+            }
+        }
+        .active{
+            border-bottom: 2px solid $orange;
+        }
+        .main{
+            background-color: $white;
+            position: relative;
+            max-width: 400px;
+            width: 100%;
+            height: 300px;
+            .login-page{
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $white;
+                z-index: 10;
+                @include column;
+                gap:5px;
+                label{
+                    font-size: 17px;
+                    font-weight: $secondFont;
+                    span{
+                        color: red;
+                    }
+                }
+                input{
+                    width: 100%;
+                    padding: 8px;
+                    margin-bottom: 5px;
+                }
+                >div{
+                    width: 100%;
+                    position: relative;
+                    i{
+                        position: absolute;
+                        right: 10px;
+                        top: 10px;
+                        cursor: pointer;
+                    }
+                }
+                button{
+                    margin-top: 10px;
+                    color:$white;
+                    background-color: $orange;
+                    font-weight: $secondFont;
+                    width: 100%;
+                    padding: 10px;
+                    text-align: center;
+                    border:none
+                }
+            }
+            .register-page{
+                padding: 10px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: white;
+                @include column;
+                gap: 10px;
+                display: none;
+                p {
+                    color: $gray;
+                    font-size: 16px;
+                }
+                label{
+                    font-size: 17px;
+                    font-weight: $secondFont;
+                    span{
+                        color: red;
+                    }
+                }
+                >div{
+                    width: 100%;
+                    position: relative;
+                    i{
+                        position: absolute;
+                        right: 10px;
+                        top: 10px;
+                        cursor: pointer;
+                    }
+                }
+                input{
+                    padding: 8px;
+                    width: 100%;
+                }
+                .register-button{
+                    width: 100%;
+                    padding: 10px;
+                    color: white;
+                    font-weight: $secondFont;
+                    border: none;
+                    background-color: $orange;
+                }
+            }
+            .key-page{
+                padding: 50px 0;
+                @include column;
+                // align-items: center;
+                gap: 20px;
+                p{
+                    font-size: 17px;
+                    font-weight: $secondFont;
+                    span{
+                        color: red;
+                    }
+                }
+                input{
+                    padding: 8px;
+                }
+                button{
+                    padding: 10px;
+                    width:225px;
+                    padding: 10px;
+                    border: none;
+                    background-color: $orange;
+                    color: $white;
+                    font-weight: $secondFont;
+                }
+            }
+        }
+    }
+}
