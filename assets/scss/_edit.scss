@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+#search{
+    .search{
+        padding: 50px 10px 0 10px;
+        @include flex;
+        max-width: 500px;
+        width: 100%;
+        input{
+            width: 70%;
+            padding: 12px;
+            border: 1px solid gray;
+        }
+        a{
+            display: block;
+            width: 50px;
+            height: 50px;
+            padding: 3px 15px;
+            border-radius: 50%;
+            background-color: $orange;
+            color: $white;
+            font-size: 30px;
+            @include transition;
+            border: 1px solid $orange;
+            cursor: pointer;
+            &:hover{
+                background-color: $white;
+                color:$orange;
+                transform: rotateZ(360deg);
+            }
+        }
+    }
+}
+#edit {
+    width: 100%;
+    background-color: $orange;
+    height: 100vh;
+
+    .edit {
+        width: 100%;
+        height: 100%;
+        @include center;
+        flex-direction: column;
+        padding-top: 50px;
+
+        .main {
+            padding: 20px;
+            // max-width: 400px;
+            width: 100%;
+            box-shadow: 0 0 10px 2px rgb(242, 242, 242);
+            max-height: 500px;
+            @include column;
+            gap: 20px;
+            border-radius: 5px;
+            .first{
+                @include center;
+                gap: 200px;
+                width: 100%;
+                .text{
+                    @include column;
+                    gap: 20px;
+                    width: 100%;
+                }
+            }
+            .poster {
+                width: 150px;
+                height: 200px;
+                @include column;
+                border: 1px solid black;
+                // position: relative;
+                >div{
+                    width: 100%;
+                    height: 80%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                // span{
+                //     position: absolute;
+                //     top: 55px;
+                //     left: 55px;
+                //     border-radius: 50%;
+                //     background-color: $white;
+                //     color: $orange;
+                //     font-weight: $fourthFont;
+                //     padding: 10px 15px;
+                //     cursor: pointer;
+                // }
+            }
+            .video{
+                width: 150px;
+                height: 200px;
+                @include column;
+                // position: relative;
+                >div{
+                    width: 100%;
+                    height: 80%;
+                    iframe {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+            }
+            textarea{
+                width: 100%;
+                height: 100%;
+            }
+            .button {
+                @include center;
+                gap: 20px;
+                width: 100%;
+
+                div,
+                a {
+                    width: 50%;
+                    padding: 10px;
+                    text-align: center;
+                    background-color: $white;
+                    color: $orange;
+                    font-weight: $thridFond;
+                    border: 2px solid $white;
+                    @include transition;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $orange;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -17,7 +17,7 @@ network.getfetchById(Number(id)).then(data => {
                 </div>
                 <div class="trailer">
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.key}?si=J50oRX8ZcO58lLW2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.key}?si=J50oRX8ZcO58lLW2"</iframe>
 
                 </div>
                 <div class="description">
