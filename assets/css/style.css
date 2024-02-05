@@ -595,20 +595,72 @@ a {
 .menu-list .res-menu-list {
   background-color: #000000;
   color: rgb(255, 255, 255);
-  width: 300px;
+  width: -300px;
   height: 100%;
   position: fixed;
   top: 0;
   left: -300px;
   padding: 20px;
   transition: all 0.3s ease;
-}
-.menu-list .res-menu-list p {
-  text-align: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 .menu-list .res-menu-list a {
-  padding: 5px;
+  padding: 0;
+}
+.menu-list .res-menu-list .movie-sub {
+  width: 100%;
+  padding-right: 20px;
+  cursor: pointer;
+}
+.menu-list .res-menu-list .movie-sub i {
+  font-size: 13px;
+}
+.menu-list .res-menu-list .sub-nav {
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  padding-left: 20px;
+}
+.menu-list .res-menu-list .sub-nav span {
+  cursor: pointer;
+}
+.menu-list .res-menu-list .sub-nav span i {
+  font-size: 13px;
+}
+.menu-list .res-menu-list .sub-nav .sub-nav-second {
+  overflow: hidden;
+  max-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  padding-left: 20px;
+}
+.menu-list .res-menu-list p {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: end;
+}
+.menu-list .res-menu-list span {
+  transition: all 0.3s ease;
+}
+.menu-list .res-menu-list span:hover {
+  color: #d96c2c;
+}
+.menu-list .res-menu-list a {
   color: #fff;
+  transition: all 0.3s ease;
+}
+.menu-list .res-menu-list a:hover {
+  color: #d96c2c;
 }
 
 nav {
@@ -938,6 +990,7 @@ nav .nav .menu {
 #now-playing .now-playing .playing .my-card {
   padding: 10px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 #now-playing .now-playing .playing .my-card > div {
   width: 100%;
@@ -1002,7 +1055,7 @@ nav .nav .menu {
   color: #fff;
 }
 #now-playing .now-playing .playing .my-card:hover {
-  background-color: #fda403;
+  background-color: #d96c2c;
 }
 #now-playing .now-playing .playing .my-card:hover img {
   scale: 1.1;
@@ -1017,6 +1070,7 @@ nav .nav .menu {
 }
 #photo-gallery .top {
   background-color: #d96c2c;
+  background-image: linear-gradient(rgba(255, 136, 0, 0.8196078431), rgba(255, 136, 0, 0.8196078431)), url("../image/bg-ticket-decoration.png");
   padding: 50px;
   position: relative;
 }
@@ -1027,7 +1081,7 @@ nav .nav .menu {
   left: calc((100% - 70px) / 2);
   width: 70px;
   height: 40px;
-  background-color: #d96c2c;
+  background-image: linear-gradient(rgba(255, 136, 0, 0.8196078431), rgba(255, 136, 0, 0.8196078431)), url("../image/bg-ticket-decoration.png");
   -webkit-clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
           clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
   transform: rotateX(180deg);
