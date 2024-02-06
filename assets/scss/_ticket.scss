@@ -1,59 +1,76 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-#ticket{
-    .ticket{
+
+.container {
+    padding: 0 50px;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#ticket {
+    .ticket {
         padding: 100px 0;
         width: 100%;
         @include center;
         flex-direction: column;
         gap: 30px;
-        .main{
+
+        .main {
             background-color: rgb(255, 253, 240);
             max-width: 500px;
             width: 100%;
             padding: 20px;
             @include column;
             gap: 20px;
-            .box{
+
+            .box {
                 width: 100%;
-                height: 50px;
+                // height: 50px;
                 border-radius: 20px;
                 border: 2px solid $gray;
-                padding: 0 10px;
+                padding: 10px 20px;
                 @include flex;
+                gap: 20px;
                 @include transition;
                 cursor: pointer;
-                >div{
+                flex-wrap: wrap;
+
+                >div {
                     @include center;
                     gap: 10px;
                 }
-                .date{
+
+                .date {
                     padding: 3px 10px;
                     // background-color: $orange;
                     border: 1px solid $orange;
-                    color:$black;
+                    color: $black;
                     width: 110px;
                     border-radius: 10px;
                     text-align: center;
                 }
-                .time{
+
+                .time {
                     text-align: center;
                     padding: 3px 10px;
                     border: 1px solid $orange;
-                    color:$black;
+                    color: $black;
                     width: 70px;
                     border-radius: 10px;
                 }
-                &:hover{
+
+                &:hover {
                     border: 2px solid $orange;
                 }
-                
+
             }
         }
-        .button{
+
+        .button {
             max-width: 500px;
             width: 100%;
             text-align: center;
@@ -64,10 +81,175 @@
             @include transition;
             cursor: pointer;
             border-radius: 5px;
-            &:hover{
+
+            &:hover {
                 background-color: $white;
                 color: $orange;
             }
         }
     }
+}
+
+#place {
+    width: 100%;
+    .place {
+        background-color: aqua;
+        height: 500px;
+        @include center;
+        .seats {
+
+            max-width: 650px;
+            padding: 10px;
+            width: 100%;
+            background-color: aliceblue;
+            @include column;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            >div {
+                @include center;
+                gap: 7px;
+                z-index: 10;
+                .row {
+                    padding: 0 10px;
+                    font-size: 12px;
+                }
+
+                .seat {
+                    font-size: 8px;
+                    width: 18px;
+                    height: 18px;
+                    background-color: white;
+                    border: 1px solid rgb(105, 105, 105);
+                    font-weight: bold;
+                    cursor: pointer;
+                    @include center;
+                    border-radius: 50%;
+                    color: black;
+                    flex-direction:column;
+                    &:hover {
+                        box-shadow: 0 0 10px 1px white;
+                    }
+                }
+            }
+            .red{
+                position: absolute;
+                top: 0;
+                left: calc((100% - 380px) / 2);
+                width: 380px;
+                height: 90px;
+                background-color: red;
+                z-index: 10;
+            }
+            .stage{
+                position: absolute;
+                bottom: 105%;
+                left: calc(( 100% - 200px) / 2);
+                width: 200px;
+                height: 50px;
+                background-color: gray;
+                color: white;
+            }
+            .green{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: rgb(95, 255, 47);
+                height: 140px;
+                z-index: 5;
+            }
+            .yellow{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: rgb(255, 238, 47);
+                height: 100%;
+                z-index: 4;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    #place {
+        .place {
+            .seats {
+            max-width: 450px;
+
+                >div {
+                    gap: 5px;
+                    .row {
+                    padding: 0 5px;
+
+                        font-size: 10px;
+                    }
+    
+                    .seat {
+                        font-size: 7px;
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+                .red{
+                    left: calc((100% - 260px) / 2);
+                    width: 260px;
+                    height: 70px;
+                }.green{
+                    height: 115px;
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (max-width:425px) {
+    #place {
+        .place {
+            .seats {
+            max-width: 300px;
+
+                >div {
+                    gap: 2px;
+                    .row {
+                        font-size: 8px;
+                    }
+    
+                    .seat {
+                        font-size: 6px;
+                        width: 9px;
+                        height: 9px;
+                    }
+                }
+                .red{
+                    position: absolute;
+                    top: 0;
+                    left: calc((100% - 170px) / 2);
+                    width: 170px;
+                    height: 60px;
+                    background-color: red;
+                    z-index: 10;
+                }.green{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    background-color: rgb(95, 255, 47);
+                    height: 100px;
+                    z-index: 5;
+                }
+                .yellow{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    background-color: rgb(255, 238, 47);
+                    height: 100%;
+                    z-index: 4;
+                }
+            }
+        }
+    }
+    
 }

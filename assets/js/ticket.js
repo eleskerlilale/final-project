@@ -22,3 +22,12 @@ network.getfetchById(572802).then(data => {
 function chooseFunc(id){
     
 }
+
+const place = document.querySelector(".place")
+place.addEventListener("mousemove", () => {
+
+    place.addEventListener("mouseout", () => {
+
+
+    })
+})
