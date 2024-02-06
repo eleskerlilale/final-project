@@ -34,6 +34,7 @@ movieCategory.addEventListener("click", () => {
     movieCategory.classList.remove("active")
   }
 })
+
 menuButton.addEventListener("click", () => {
   menuList.style.zIndex = '110'
   resMenuList.style.left = '0'
@@ -44,6 +45,14 @@ resMenuListPElem.addEventListener("click", () => {
 })
 
 window.addEventListener("scroll", () => {
+  if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+    nav.style.backgroundColor = "black"
+  } else {
+    nav.style.backgroundColor = "transparent"
+  }
+})
+
+window.addEventListener("load", () => {
   if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
     nav.style.backgroundColor = "black"
   } else {

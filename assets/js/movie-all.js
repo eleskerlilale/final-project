@@ -44,7 +44,14 @@ resMenuListPElem.addEventListener("click", () => {
 })
 
 window.addEventListener("scroll", () => {
-  if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+  if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
+    nav.style.backgroundColor = "black"
+  } else {
+    nav.style.backgroundColor = "transparent"
+  }
+})
+window.addEventListener("load", () => {
+  if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
     nav.style.backgroundColor = "black"
   } else {
     nav.style.backgroundColor = "transparent"
@@ -68,15 +75,15 @@ window.addEventListener("scroll", () => {
                         </div>
                     </div> */
 
-const movie=document.querySelector(".movie-all")
+const movie=document.querySelector(".playing")
 
 network.getfetch().then(data => {
   data.forEach(data => {
-    movie.innerHTML=`
-    <div class="my-card">
+    movie.innerHTML+=`
+                    <div class="my-card col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div>
                             <div class="image">
-                                <img src=${data.poster_path} alt="">
+                                <img src='https://image.tmdb.org/t/p/w220_and_h330_face/${data.poster_path}' alt="">
                             </div>
                             <div class="text">
                                 <div class="category-time">
@@ -85,10 +92,18 @@ network.getfetch().then(data => {
                                     <p class="time"> time</p>
                                 </div>
                                 <div class="film-name">Film name</div>
-                                <a href="ticket">Ticket</a>
+                                <a href="./detail.html?id=${data.id}">Detail</a>
                             </div>
+                            <div class='favorite' onclick='favFunc(${data.id})'><i class="bi bi-heart"></i></div>
+
                         </div>
                     </div>
     `
   })
 })
+
+function favFunc(id){
+  network.getfetchaccount().then(data => {
+    
+  })
+}

@@ -44,13 +44,20 @@ resMenuListPElem.addEventListener("click", () => {
 })
 
 window.addEventListener("scroll", () => {
-  if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+  if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
     nav.style.backgroundColor = "black"
   } else {
     nav.style.backgroundColor = "transparent"
   }
 })
 
+window.addEventListener("load", () => {
+  if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
+    nav.style.backgroundColor = "black"
+  } else {
+    nav.style.backgroundColor = "transparent"
+  }
+})
 
 const action = document.querySelector(".playing")
 network.getfetch().then((data) => {

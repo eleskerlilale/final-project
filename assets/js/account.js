@@ -57,13 +57,21 @@ resMenuListPElem.addEventListener("click", () => {
 })
 
 window.addEventListener("scroll", () => {
-  if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+  if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
     nav.style.backgroundColor = "black"
   } else {
     nav.style.backgroundColor = "transparent"
   }
 })
 
+window.addEventListener("load", () => {
+    if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
+      nav.style.backgroundColor = "black"
+    } else {
+      nav.style.backgroundColor = "transparent"
+    }
+  })
+  
 const login = document.querySelector(".login")
 const register = document.querySelector(".register")
 const loginPage = document.querySelector(".login-page")
@@ -97,6 +105,7 @@ const key = document.querySelector("#key-input")
 const keyButton = document.querySelector(".key-button")
 
 const icons = document.querySelectorAll(".bi-eye")
+const nameAccount=document.querySelector(".search span")
 
 let keystring = ''
 let account = {
@@ -193,14 +202,15 @@ buttonLog.addEventListener("click", () => {
         emailLog.style.borderColor = 'red'
         passwordLog.style.borderColor = 'red'
     } else {
-        network.getfetchaccount().then(data => {
-            const address = data.find(f => f.email == emailLog.value)
-            const parol = data.find( f => f.password == passwordLog.value)
-            if(address && parol){
-                window.location='index.html'
-            }else{
-                console.log(address, parol);
-            }
-        })
+      network.getfetchaccount().then(data => {
+        const address = data.find(f => f.email == emailLog.value)
+        const parol = data.find( f => f.password == passwordLog.value)
+        if(address && parol){
+            nameAccount.innerText=`${address.email}`
+            window.location='index.html'
+        }else{
+            console.log(address, parol);
+        }
+    })
     }
 })

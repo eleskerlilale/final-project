@@ -51,6 +51,13 @@ window.addEventListener("scroll", () => {
   }
 })
 
+window.addEventListener("load", () => {
+  if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+    nav.style.backgroundColor = "black"
+  } else {
+    nav.style.backgroundColor = "transparent"
+  }
+})
 const playing = document.querySelector(".playing")
 
 playing.innerHTML = ''
@@ -143,7 +150,7 @@ const printData = () => {
   arr.forEach(elem => {
     console.log(elem.genres[0]);
     playing.innerHTML += `
-                      <div class="my-card" onclick="detailFunc(${elem.id})">
+                      <div class="my-card" >
                           <div>
                               <div class="image">
                                   <img src="https://image.tmdb.org/t/p/w220_and_h330_face/${elem.poster_path}" alt="">
@@ -154,9 +161,10 @@ const printData = () => {
                                       /
                                       <p class="time">${elem.runtime} min</p>
                                   </div>
-                                  <div class="film-name">${elem.original_title}</div>
+                                  <div class="film-name" onclick="detailFunc(${elem.id})">${elem.original_title}</div>
                                   <a href="ticket">Ticket</a>
                               </div>
+                              <div class='favorite'><i class="bi bi-heart"></i></div>
                           </div>
                       </div>
       `
@@ -165,5 +173,4 @@ const printData = () => {
 function detailFunc(id) {
   window.location = `./detail.html?id=${id}`
 }
-
 
