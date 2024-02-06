@@ -8,6 +8,7 @@ const movieSub = document.querySelectorAll(".movie-sub")
 const movieCategory = document.querySelector(".movie-category")
 const subNavSecond = document.querySelector(".sub-nav-second")
 
+// menuList.style.zIndex='-100'
 movieSub.forEach((movieSub, i) => {
   movieSub.addEventListener("click", () => {
     if (movieSub.classList.value == 'movie-sub') {

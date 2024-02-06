@@ -381,6 +381,331 @@
   box-shadow: 0 0 10px 1px orange;
 }
 
+#film-detail {
+  background-color: white;
+}
+
+.film-detail {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.film-detail .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title > div {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1/0px; */
+}
+
+.title > div > div {
+  display: flex;
+  justify-content: center;
+  color: gray;
+  font-size: 16px;
+}
+
+.title > div > div p {
+  margin: 0 3px;
+}
+
+.title a {
+  width: 140px;
+  padding: 14px;
+  background-color: #d96c2c;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  border: 2px solid #d96c2c;
+  transition: all 0.3s ease;
+}
+
+.title a:hover {
+  background-color: white;
+  color: #d96c2c;
+}
+
+.title h2 {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.trailer {
+  /* max-height: 200px; */
+  max-width: 500px;
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+
+.trailer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.trailer span {
+  cursor: pointer;
+  position: absolute;
+  top: calc((100% - 50px) / 2);
+  left: calc((100% - 50px) / 2);
+  border-radius: 50%;
+  border: 2px solid #d96c2c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #d96c2c;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.trailer span:hover {
+  color: #d96c2c;
+  background-color: white;
+}
+
+.description h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.description p {
+  color: gray;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.video i {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  /* width: 100%; */
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: end;
+  cursor: pointer;
+}
+
+.video iframe {
+  width: 1000px;
+  height: 600px;
+}
+
+@media screen and (max-width: 1200px) {
+  .video iframe {
+    width: 800px;
+    height: 500px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .video iframe {
+    width: 600px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .video iframe {
+    width: 500px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .video iframe {
+    width: 400px;
+    height: 250px;
+  }
+  .video i {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .video iframe {
+    width: 250px;
+    height: 150px;
+  }
+}
+#movie-all-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5019607843), rgba(0, 0, 0, 0.5019607843)), url("../image/background-header-2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#movie-all-banner .movie-all-banner {
+  padding: 200px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#movie-all-banner .movie-all-banner .text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+#movie-all-banner .movie-all-banner .text > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+#movie-all-banner .movie-all-banner .text p {
+  padding-top: 1px;
+  font-size: 14px;
+}
+#movie-all-banner .movie-all-banner .text i {
+  padding-top: 1px;
+  font-size: 12px;
+}
+#movie-all-banner .movie-all-banner .text h1 {
+  color: #fff;
+  font-size: 50px;
+}
+#movie-all-banner .movie-all-banner .text a {
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+#movie-all-banner .movie-all-banner .text a:hover {
+  color: #d96c2c;
+}
+
+#movie-all {
+  background-color: #fff;
+}
+#movie-all .movie-all {
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+#movie-all .movie-all .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+#movie-all .movie-all .header i {
+  color: #d96c2c;
+  font-size: 23px;
+}
+#movie-all .movie-all .header span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #737373;
+}
+#movie-all .movie-all .header h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+}
+#movie-all .movie-all .playing {
+  width: 100%;
+}
+#movie-all .movie-all .playing .my-card {
+  padding: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#movie-all .movie-all .playing .my-card > div {
+  width: 100%;
+  position: relative;
+  height: 400px;
+}
+#movie-all .movie-all .playing .my-card > div .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#movie-all .movie-all .playing .my-card > div .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s ease;
+}
+#movie-all .movie-all .playing .my-card > div .image::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
+  width: 100%;
+  height: 100%;
+}
+#movie-all .movie-all .playing .my-card > div .text {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  padding: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+#movie-all .movie-all .playing .my-card > div .text .category-time {
+  display: flex;
+  gap: 5px;
+  font-size: 13px;
+}
+#movie-all .movie-all .playing .my-card > div .text .film-name {
+  font-size: 20px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#movie-all .movie-all .playing .my-card > div .text .film-name:hover {
+  color: #d96c2c;
+}
+#movie-all .movie-all .playing .my-card > div .text a {
+  padding: 8px 20px;
+  color: #000;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+#movie-all .movie-all .playing .my-card > div .text a:hover {
+  background-color: #d96c2c;
+  color: #fff;
+}
+#movie-all .movie-all .playing .my-card:hover {
+  background-color: #d96c2c;
+}
+#movie-all .movie-all .playing .my-card:hover img {
+  scale: 1.1;
+}
+
 #login-register {
   width: 100%;
 }
@@ -887,7 +1212,8 @@ nav .nav .menu {
 }
 
 .back {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../image/big-bg-film.png);
+  background-color: #fff;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.97)), url(../image/big-bg-film.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -902,6 +1228,7 @@ nav .nav .menu {
 #upcomming .upcomming .row > div .card {
   position: relative;
   background: rgb(70, 0, 0);
+  overflow: hidden;
 }
 #upcomming .upcomming .row > div .card .image {
   position: absolute;
@@ -1692,54 +2019,8 @@ footer .footer {
   text-align: center;
 }
 
-#movie-all-banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5019607843), rgba(0, 0, 0, 0.5019607843)), url("../image/background-header-2.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-#movie-all-banner .movie-all-banner {
-  padding: 200px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-#movie-all-banner .movie-all-banner .text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  align-items: center;
-  gap: 10px;
-}
-#movie-all-banner .movie-all-banner .text > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-}
-#movie-all-banner .movie-all-banner .text p {
-  padding-top: 1px;
-  font-size: 14px;
-}
-#movie-all-banner .movie-all-banner .text i {
-  padding-top: 1px;
-  font-size: 12px;
-}
-#movie-all-banner .movie-all-banner .text h1 {
-  color: #fff;
-  font-size: 50px;
-}
-#movie-all-banner .movie-all-banner .text a {
-  color: #fff;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-#movie-all-banner .movie-all-banner .text a:hover {
-  color: #d96c2c;
-}
-
 #get-to-now {
+  background-color: #fff;
   background-image: url("../image/background-dot-about-about-page.png");
   background-position: center right;
   background-repeat: no-repeat;
@@ -1761,6 +2042,7 @@ footer .footer {
 #get-to-now .get-to-now .row > div .card .image {
   width: 100%;
   height: 100%;
+  z-index: 10;
 }
 #get-to-now .get-to-now .row > div .card .image img {
   width: 100%;
@@ -1770,7 +2052,7 @@ footer .footer {
   position: absolute;
   top: 30px;
   right: 0;
-  z-index: -1;
+  z-index: 1;
   width: 200px;
   height: 300px;
 }
@@ -1782,6 +2064,7 @@ footer .footer {
   position: absolute;
   top: 60px;
   left: 0;
+  z-index: 10;
 }
 #get-to-now .get-to-now .row > div .card .message-white .text {
   position: absolute;
@@ -1810,7 +2093,7 @@ footer .footer {
   bottom: -10px;
   right: -40px;
   width: 250px;
-  z-index: -1;
+  z-index: 1;
 }
 #get-to-now .get-to-now .row > div .card .arrow img {
   width: 100%;

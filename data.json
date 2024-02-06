@@ -9,6 +9,7 @@
       "popularity": 2392.899,
       "poster_path": "/7lTnXOy0iNtBAdRP3TZvaKJ77F6.jpg",
       "runtime": 124,
+      "video_poster":"https://www.aquamanmovie.com/images/share.jpg",
       "key": "UGc5Tzz19UY",
       "release_date": "2023-12-20",
       "vote_average": 6.988,
@@ -36,6 +37,7 @@
       "popularity": 1989.417,
       "poster_path": "/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
       "runtime": 117,
+      "video_poster":"https://cloudimages.broadwayworld.com/columnpiccloud/Photos-Check-Out-New-WONKA-Posters-With-Timothee-Chalamet-Natasha-Rothwell-More-1697120565.jpg",
       "key": "otNh9bTjXWg",
       "genres": [
         {
@@ -61,6 +63,7 @@
       "popularity": 1428.915,
       "poster_path": "/AcoVfiv1rrWOmAdpnAMnM56ki19.jpg",
       "runtime": 95,
+      "video_poster":"https://w0.peakpx.com/wallpaper/750/732/HD-wallpaper-wish-2023-afis-blue-yellow-movie-yelliw-poster-disney-wish-thumbnail.jpg",
       "key": "eQPeGiCH7A0",
       "genres": [
         {
@@ -88,6 +91,7 @@
       "original_title": "Migration",
       "overview": "After a migrating duck family alights on their pond with thrilling tales of far-flung places, the Mallard family embarks on a family road trip, from New England, to New York City, to tropical Jamaica.",
       "popularity": 1356.633,
+      "video_poster":"https://i.ytimg.com/vi/ESlJu-y92Ps/maxresdefault.jpg",
       "poster_path": "/ldfCF9RhR40mppkzmftxapaHeTo.jpg",
       "runtime": 83,
       "key": "cQfo0HJhCnE",
@@ -121,6 +125,7 @@
       "original_title": "The Marvels",
       "overview": "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. But unintended consequences see Carol shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol’s estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
       "popularity": 1288.591,
+      "video_poster":"https://www.allkpop.com/upload/2023/09/content/291659/1696021162-untitled-1.jpg",
       "poster_path": "/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
       "runtime": 105,
       "key": "uwmDH12MAA4",
@@ -146,6 +151,7 @@
       "original_title": "60 Minuten",
       "overview": "Desperate to keep custody of his daughter, a mixed martial arts fighter abandons a big match and races across Berlin to attend her birthday party.",
       "popularity": 899.318,
+      "video_poster":"https://newagebharat.com/wp-content/uploads/2024/01/Upcoming-Movies-on-Netflix-in-January-2024-copy-11-jpg.webp",
       "poster_path": "/cND79ZWPFINDtkA8uwmQo1gnPPE.jpg",
       "runtime": 89,
       "key": "uiyZW82Rxf8",
@@ -168,6 +174,7 @@
       "original_title": "Radical",
       "overview": "In a Mexican border town plagued by neglect, corruption, and violence, a frustrated teacher tries a radical new method to break through his students’ apathy and unlock their curiosity, their potential… and maybe even their genius.",
       "popularity": 598.187,
+      "video_poster":"https://i.ytimg.com/vi/L4DvL0UBZPQ/maxresdefault.jpg",
       "poster_path": "/eSatbygYZp8ooprBHZdb6GFZxGB.jpg",
       "key": "BXcGgvAKC1Q",
       "genres": [
@@ -179,47 +186,13 @@
       "runtime": 127
     },
     {
-      "id": 940551,
-      "imdb_id": "tt6495056",
-      "original_language": "en",
-      "original_title": "Migration",
-      "overview": "After a migrating duck family alights on their pond with thrilling tales of far-flung places, the Mallard family embarks on a family road trip, from New England, to New York City, to tropical Jamaica.",
-      "popularity": 1356.633,
-      "runtime": 83,
-      "key": "UkHxhPGpRuA",
-      "poster_path": "/ldfCF9RhR40mppkzmftxapaHeTo.jpg",
-      "genres": [
-        {
-          "id": 16,
-          "name": "Animation"
-        },
-        {
-          "id": 28,
-          "name": "Action"
-        },
-        {
-          "id": 12,
-          "name": "Adventure"
-        },
-        {
-          "id": 35,
-          "name": "Comedy"
-        },
-        {
-          "id": 10751,
-          "name": "Family"
-        }
-      ],
-      "vote_average": 7.77,
-      "release_date": "2023-12-06"
-    },
-    {
       "id": 955916,
       "imdb_id": "tt14371878",
       "original_language": "en",
       "original_title": "Lift",
       "overview": "An international heist crew, led by Cyrus Whitaker, race to lift $500 million in gold from a passenger plane at 40,000 feet.",
       "popularity": 655.9,
+      "video_poster":"",
       "key": "m2L-Sa_6MU0",
       "runtime": 106,
       "poster_path": "/gma8o1jWa6m0K1iJ9TzHIiFyTtI.jpg",
@@ -247,6 +220,7 @@
       "original_title": "Acide",
       "overview": "During a heat wave, strange clouds start pouring down acid rain, wreaking devastation and panic throughout France. In a world teetering on the edge, a girl and her divorced parents must join forces to confront and try to escape this climate catastrophe.",
       "popularity": 460.052,
+      "video_poster":"https://miro.medium.com/v2/resize:fit:1358/1*7r9dywcwU1dSTwCyXd5nZQ.jpeg",
       "key": "XeRo7qpNFxo",
       "poster_path": "/91vF7SNB2tqsSultsmEn8tJYh4l.jpg",
       "genres": [
@@ -270,6 +244,7 @@
       "original_title": "The Painter",
       "overview": "An ex-CIA operative is thrown back into a dangerous world when a mysterious woman from his past resurfaces. Now exposed and targeted by a relentless killer and a rogue black ops program, he must rely on skills he thought he left behind in a high-stakes game of survival.",
       "popularity": 333.344,
+      "video_poster":"https://i.ytimg.com/vi/nQbCKPlaeG0/maxresdefault.jpg",
       "key": "rZe3fRnZr78",
       "poster_path": "/UZ0ydgbXtnrq8xZCI5lHVXVcH9.jpg",
       "genres": [
@@ -293,6 +268,7 @@
       "original_title": "The Beekeeper",
       "overview": "One man’s campaign for vengeance takes on national stakes after he is revealed to be a former operative of a powerful and clandestine organization known as Beekeepers.",
       "popularity": 1268.827,
+      "video_poster":"https://deadline.com/wp-content/uploads/2023/10/The-Beekeeper-FI.jpg?w=1000",
       "poster_path": "/A7EByudX0eOzlkQ2FIbogzyazm2.jpg",
       "genres": [
         {
@@ -309,6 +285,8 @@
       "key": "CHKn-yDCE2w"
     }
   ],
+
+  
   "account": [
     {
       "email": "anoniiim42@gmail.com",

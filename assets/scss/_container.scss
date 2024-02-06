@@ -32,7 +32,6 @@ a {
     width: 100%;
     height: 100%;
     position: fixed;
-    // display: none;
     top: 0;
     left: 0;
     z-index: -10;
@@ -375,7 +374,8 @@ nav {
 }
 
 .back {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../image/big-bg-film.png);
+    background-color: $white;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.97)), url(../image/big-bg-film.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -392,7 +392,7 @@ nav {
                 .card {
                     position: relative;
                     background: rgb(70, 0, 0);
-
+                    overflow: hidden;
                     // height: 180px;
                     // padding: 10px;
                     .image {
@@ -1309,58 +1309,10 @@ footer {
 
 /////////////// movie all banner
 
-#movie-all-banner {
-    background-image: linear-gradient(#00000080, #00000080), url("../image/background-header-2.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    .movie-all-banner {
-        padding: 200px 0;
-        @include center;
-        flex-direction: column;
-
-        .text {
-            @include column;
-            align-items: center;
-            gap: 10px;
-
-            >div {
-                @include center;
-                color: $white;
-            }
-
-            p {
-                padding-top: 1px;
-                font-size: 14px;
-            }
-
-            i {
-                padding-top: 1px;
-                font-size: 12px;
-            }
-
-            h1 {
-                color: $white;
-                font-size: 50px;
-            }
-
-            a {
-                color: $white;
-                font-size: 14px;
-                @include transition;
-
-                &:hover {
-                    color: $orange;
-                }
-            }
-        }
-    }
-}
 
 ///////////////// about
 #get-to-now {
-
+    background-color: $white;
     background-image: url("../image/background-dot-about-about-page.png");
     background-position: center right;
     background-repeat: no-repeat;
@@ -1384,7 +1336,7 @@ footer {
                     .image {
                         width: 100%;
                         height: 100%;
-
+                        z-index: 10;
                         img {
                             width: 100%;
                             height: 100%;
@@ -1395,7 +1347,7 @@ footer {
                         position: absolute;
                         top: 30px;
                         right: 0;
-                        z-index: -1;
+                        z-index: 1;
                         width: 200px;
                         height: 300px;
 
@@ -1409,6 +1361,7 @@ footer {
                         position: absolute;
                         top: 60px;
                         left: 0;
+                        z-index: 10;
 
                         .text {
                             position: absolute;
@@ -1439,7 +1392,7 @@ footer {
                         bottom: -10px;
                         right: -40px;
                         width: 250px;
-                        z-index: -1;
+                        z-index: 1;
 
                         img {
                             width: 100%;
