@@ -93,9 +93,13 @@
 #place {
     width: 100%;
     .place {
-        background-color: aqua;
         height: 500px;
-        @include center;
+        // @include flex;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap;
         .seats {
 
             max-width: 650px;
@@ -127,8 +131,34 @@
                     border-radius: 50%;
                     color: black;
                     flex-direction:column;
+                    position: relative;
+                    >div{
+                        position: absolute;
+                        bottom: 100%;
+                        left: -120%;
+                        z-index: 20;
+                        font-size: 15px;
+                        font-weight: 300;
+
+                        color: $white;
+                        width: 60px;
+                        @include column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 10px 20px;
+                        background-color: $black;
+                        display: none;
+                        clip-path: polygon(50% 100%, 40% 90%, 0% 90%, 0% 0%, 100% 0%, 100% 90%,60% 90% );
+                        .degree{
+                            font-size: 13px;
+                        }
+                    }
                     &:hover {
                         box-shadow: 0 0 10px 1px white;
+                        >div{
+                            display: flex;
+                        }
                     }
                 }
             }
@@ -169,8 +199,66 @@
                 z-index: 4;
             }
         }
+        .information{
+            padding: 10px;
+            background-color: $white;
+            max-width: 300px;
+            width: 100%;
+            box-shadow: 0 0 10px 1px rgb(192, 192, 192);
+            border-radius: 5px;
+            >span{
+                color: #333333;
+                font-size: 14px;
+                font-weight: $fourthFont;
+                border-bottom: 2px solid #333333;
+            }
+            .seat-price{
+                padding: 30px 0 10px 0;
+                font-size: 14px;
+                font-weight: $fourthFont;
+                color: gray;
+                @include flex;
+                border-bottom: 1px dashed gray;
+            }
+            .main-seat-price{
+                padding: 20px 0;
+                background-color: $white;
+                @include flex;
+                gap: 10px;
+                .seat{
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    background-color: $white;
+
+                    color: rgb(134, 224, 0);
+                    font-size: 14px;
+                }
+                .price{
+                    font-size: 16px;
+                    color: $gray;
+                }
+
+            }
+            .total{
+                background-color: $gray;
+                color: $white;
+                @include flex;
+                padding: 15px 10px ;
+            }
+            .proceed{
+                margin-top: 20px;
+                background-color: rgb(0, 175, 0);
+                color: $white;
+                padding: 15px 10px;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
     }
 }
+
+
 
 @media screen and (max-width:992px) {
     #place {

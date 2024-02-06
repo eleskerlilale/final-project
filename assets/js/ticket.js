@@ -23,11 +23,26 @@ function chooseFunc(id){
     
 }
 
+const seat = document.querySelectorAll(".seat")
+
 const place = document.querySelector(".place")
-place.addEventListener("mousemove", () => {
 
-    place.addEventListener("mouseout", () => {
-
-
+seat.forEach((seat , i) => {
+        const div=document.createElement("div")
+        seat.appendChild(div)
+        network.getfetchticket().then(data => {
+            data.forEach(data => {
+                console.log(seat.classList.value, data.seat);
+                if(seat.classList.value==`seat ${data.seat}`){
+                    console.log("sdbf");
+                    div.innerHTML=`
+                    <span>${data.seat}</span>
+                    <span class='degree'>${data.degree}</span>
+                    <span>${data.price}</span>
+                    `
+                }
+            })
+            
+        })
+        
     })
-})

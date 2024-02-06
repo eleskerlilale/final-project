@@ -822,11 +822,12 @@
   width: 100%;
 }
 #place .place {
-  background-color: aqua;
   height: 500px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 #place .place .seats {
   max-width: 650px;
@@ -865,9 +866,37 @@
   border-radius: 50%;
   color: black;
   flex-direction: column;
+  position: relative;
+}
+#place .place .seats > div .seat > div {
+  position: absolute;
+  bottom: 100%;
+  left: -120%;
+  z-index: 20;
+  font-size: 15px;
+  font-weight: 300;
+  color: #fff;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #000;
+  display: none;
+  -webkit-clip-path: polygon(50% 100%, 40% 90%, 0% 90%, 0% 0%, 100% 0%, 100% 90%, 60% 90%);
+          clip-path: polygon(50% 100%, 40% 90%, 0% 90%, 0% 0%, 100% 0%, 100% 90%, 60% 90%);
+}
+#place .place .seats > div .seat > div .degree {
+  font-size: 13px;
 }
 #place .place .seats > div .seat:hover {
   box-shadow: 0 0 10px 1px white;
+}
+#place .place .seats > div .seat:hover > div {
+  display: flex;
 }
 #place .place .seats .red {
   position: absolute;
@@ -904,6 +933,66 @@
   background-color: rgb(255, 238, 47);
   height: 100%;
   z-index: 4;
+}
+#place .place .information {
+  padding: 10px;
+  background-color: #fff;
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0 0 10px 1px rgb(192, 192, 192);
+  border-radius: 5px;
+}
+#place .place .information > span {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 700;
+  border-bottom: 2px solid #333333;
+}
+#place .place .information .seat-price {
+  padding: 30px 0 10px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed gray;
+}
+#place .place .information .main-seat-price {
+  padding: 20px 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+#place .place .information .main-seat-price .seat {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: #fff;
+  color: rgb(134, 224, 0);
+  font-size: 14px;
+}
+#place .place .information .main-seat-price .price {
+  font-size: 16px;
+  color: #737373;
+}
+#place .place .information .total {
+  background-color: #737373;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+}
+#place .place .information .proceed {
+  margin-top: 20px;
+  background-color: rgb(0, 175, 0);
+  color: #fff;
+  padding: 15px 10px;
+  text-align: center;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 992px) {

@@ -3,6 +3,7 @@ const network = {
     // url : "https://api.themoviedb.org/3/movie/now_playing?api_key=233029fa6ff0c910354e5553874c41e9",
     url1: "http://localhost:3000/main/",
     url2: "http://localhost:3000/account/",
+    url3: "http://localhost:3000/ticket/",
     // url2:"http://localhost:3000/mean",
     // getAll : async function(){
     //    let res= await axios.get(this.url);
@@ -55,6 +56,11 @@ const network = {
             body: JSON.stringify(data)
         });
         return res.json();
+    },
+
+    getfetchticket : async function (){
+        let res =await fetch(this.url3);
+        return res.json()
     }
 }
 
