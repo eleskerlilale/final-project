@@ -44,6 +44,22 @@
                     color: $orange;
                 }
             }
+            .search{
+                max-width: 300px;
+                width: 100%;
+                height: 50px;
+                input,i{
+                    border: none;
+                    outline: none;
+                    height: 100%;
+                    background-color: $white;
+                    font-size: 20px;
+                    color: $gray;
+                    padding: 5;
+                }i{
+                    padding: 10px 13px;
+                }
+            }
         }
     }
 }
@@ -111,7 +127,7 @@
                             top: 0;
                             left: 0;
                             height: 0;
-                            background: linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.8));
+                            background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.8));
                             width: 100%;
                             height: 100%;
                         }

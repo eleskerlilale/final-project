@@ -388,6 +388,13 @@
   background-color: white;
 }
 
+#movie-all-banner {
+  padding: 50px 0;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .film-detail {
   padding: 30px 0;
   display: flex;
@@ -399,6 +406,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .title > div {
@@ -412,6 +420,8 @@
   justify-content: center;
   color: gray;
   font-size: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
 .title > div > div p {
@@ -444,8 +454,21 @@
   /* max-height: 200px; */
   max-width: 500px;
   width: 100%;
-  height: 250px;
+  height: 350px;
   position: relative;
+}
+.trailer .watch-text {
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  font-weight: 700;
+}
+.trailer .watch-text i {
+  position: absolute;
+  bottom: 80%;
+  font-size: 40px;
 }
 
 .trailer img {
@@ -458,21 +481,98 @@
 .trailer span {
   cursor: pointer;
   position: absolute;
-  top: calc((100% - 50px) / 2);
-  left: calc((100% - 50px) / 2);
+  top: calc((100% - 90px) / 2);
+  left: calc((100% - 90px) / 2);
   border-radius: 50%;
   border: 2px solid #d96c2c;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  background-color: #d96c2c;
+  font-size: 30px;
+  width: 90px;
+  height: 90px;
+  transition: all 0.3s ease;
+  background-color: rgba(40, 40, 40, 0.7529411765);
   color: white;
   transition: all 0.3s ease;
+  animation: video 2s infinite reverse linear;
+  z-index: 10;
+}
+.trailer span::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-color: #d96c2c;
+  z-index: -2;
+  border-radius: 50%;
+}
+.trailer span i {
+  color: #fff;
 }
 
+.cast {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.cast h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.cast .row {
+  margin: 0 auto;
+  width: 100%;
+}
+.cast .row > div {
+  padding: 10px 0;
+}
+.cast .row > div .card {
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.cast .row > div .card .image {
+  width: 100px;
+  height: 100px;
+}
+.cast .row > div .card .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.cast .row > div .card .name {
+  padding-left: 20px;
+}
+.cast .row > div .card .name h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.cast .row > div .card .name p {
+  font-size: 14px;
+}
+
+@keyframes video {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .trailer span:hover {
   color: #d96c2c;
   background-color: white;
@@ -539,6 +639,24 @@
   }
 }
 @media screen and (max-width: 576px) {
+  .title > div > div {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 15px;
+  }
+  .trailer .watch-text {
+    font-size: 15px;
+    bottom: 50px;
+    left: 10px;
+    font-weight: 700;
+  }
+  .trailer .watch-text i {
+    transform: rotateZ(-20deg);
+    position: absolute;
+    bottom: 50%;
+    left: 80%;
+    font-size: 40px;
+  }
   .video iframe {
     width: 400px;
     height: 250px;
@@ -598,6 +716,23 @@
 }
 #movie-all-banner .movie-all-banner .text a:hover {
   color: #d96c2c;
+}
+#movie-all-banner .movie-all-banner .text .search {
+  max-width: 300px;
+  width: 100%;
+  height: 50px;
+}
+#movie-all-banner .movie-all-banner .text .search input, #movie-all-banner .movie-all-banner .text .search i {
+  border: none;
+  outline: none;
+  height: 100%;
+  background-color: #fff;
+  font-size: 20px;
+  color: #737373;
+  padding: 5;
+}
+#movie-all-banner .movie-all-banner .text .search i {
+  padding: 10px 13px;
 }
 
 #movie-all {
@@ -666,7 +801,7 @@
   top: 0;
   left: 0;
   height: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.8));
+  background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.8));
   width: 100%;
   height: 100%;
 }
@@ -729,6 +864,28 @@
 }
 #movie-all .movie-all .playing .my-card:hover .favorite {
   left: 20px;
+}
+
+#pirivacy {
+  background-color: white;
+  padding: 50px 0;
+}
+#pirivacy h2 {
+  color: black;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+#pirivacy p {
+  font-size: 16px;
+  /* font-weight: 400; */
+  color: gray;
+  margin: 10px 0 30px 0;
+}
+#pirivacy span {
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(68, 68, 68);
 }
 
 * {
@@ -1485,93 +1642,175 @@ nav .nav .menu {
 }
 
 #banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../image/banner.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 100%;
+  z-index: 10;
   position: relative;
 }
 #banner .banner {
-  padding: 200px 0;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column-reverse;
-  gap: 20px;
-  color: #fff;
-}
-#banner .banner .text-left {
-  max-width: 600px;
-}
-#banner .banner .text-left span {
-  font-size: 40px;
-  color: #d96c2c;
-  font-family: "Covered By Your Grace", cursive;
-}
-#banner .banner .text-left h1 {
-  font-size: 90px;
-  color: #fff;
-  line-height: 1;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-#banner .banner .text-left h1:hover {
-  color: #d96c2c;
-}
-#banner .banner .text-left > div {
-  margin-top: 40px;
-}
-#banner .banner .text-left > div a {
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  font-size: 15px;
-  margin-right: 20px;
-  transition: all 0.3s ease;
-  font-weight: 600;
-}
-#banner .banner .text-left > div .info {
-  background-color: #fff;
-  color: #000;
-}
-#banner .banner .text-left > div .info:hover {
-  background-color: #d96c2c;
-  color: #fff;
-}
-#banner .banner .text-left > div .ticket {
-  background-color: #d96c2c;
-  color: #fff;
-}
-#banner .banner .text-left > div .ticket:hover {
-  background-color: #fff;
-  color: #000;
-}
-#banner .banner .text-right {
   width: 100%;
+  height: 100%;
+}
+#banner .banner .my-card {
+  padding-top: 150px;
+  width: 100%;
+  height: 110vh;
+  background-color: antiquewhite;
+  position: relative;
+}
+#banner .banner .my-card .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+}
+#banner .banner .my-card .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#banner .banner .my-card .image::after {
+  position: absolute;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.2588235294);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#banner .banner .my-card .container {
+  padding-top: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  align-items: end;
-  gap: 0px;
+  gap: 50px;
 }
-#banner .banner .text-right p {
+#banner .banner .my-card .container .text-left {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+#banner .banner .my-card .container .text-left > div p {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
 }
-#banner .banner .text-right span {
+#banner .banner .my-card .container .text-left > div span {
   font-size: 30px;
   font-weight: 700;
 }
-#banner .banner .text-right img {
-  max-width: 200px;
+#banner .banner .my-card .container .text-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+  height: 100%;
+  line-height: 0.1;
+}
+#banner .banner .my-card .container .text-right span {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Covered By Your Grace", cursive;
+  font-weight: 600;
+  color: #d96c2c;
+}
+#banner .banner .my-card .container .text-right h1 {
+  font-size: 90px;
+  font-weight: 700;
+  margin: 0;
+}
+#banner .banner .my-card .container .text-right p {
+  padding-top: 10px;
+  font-size: 18px;
+  height: 20px;
+  width: 100%;
+  line-height: 1;
+}
+#banner .banner .my-card .container .text-right > div {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#banner .banner .my-card .container .text-right > div a {
+  text-align: center;
+  padding: 25px 40px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+#banner .banner .my-card .container .text-right > div .info {
+  color: #000;
+  background-color: #fff;
+}
+#banner .banner .my-card .container .text-right > div .info:hover {
+  background-color: #d96c2c;
+  color: #fff;
+}
+#banner .banner .my-card .container .text-right > div .ticket {
+  background-color: #d96c2c;
+  color: #fff;
+}
+#banner .banner .my-card .container .text-right > div .ticket:hover {
+  background-color: #fff;
+  color: #000;
+}
+#banner .position-trailer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #000000;
+  height: 180px;
+  max-width: 500px;
+  width: 100%;
+  z-index: 10;
+  padding: 10px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+#banner .position-trailer > img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 50px;
+}
+#banner .position-trailer .trailer {
+  max-width: 400px;
+  width: 100%;
+  height: 110px;
+}
+#banner .position-trailer .trailer .img {
+  height: 110px;
+  background-color: aliceblue;
+  padding: 2px;
+}
+#banner .position-trailer .trailer .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #banner::after {
-  content: "";
   position: absolute;
-  top: 101%;
-  left: 0;
+  content: "";
   width: 100%;
   height: 10px;
+  bottom: -30px;
+  left: 0;
   background-image: url(../image/image-lines-header.jpg);
+}
+#banner .owl-dots {
+  display: none;
 }
 
 .back {
@@ -1583,7 +1822,7 @@ nav .nav .menu {
 }
 
 #upcomming .upcomming {
-  padding: 50px 0;
+  padding: 70px 0;
 }
 #upcomming .upcomming .row > div {
   padding: 10px;
@@ -2885,7 +3124,7 @@ footer .footer {
   }
 }
 @media screen and (max-width: 1000px) {
-  #banner .banner .text-left h1 {
+  #banner .banner .my-card .container .text-right h1 {
     font-size: 70px;
   }
 }
@@ -2921,13 +3160,10 @@ footer .footer {
   }
 }
 @media screen and (max-width: 768px) {
-  #banner .banner {
-    padding: 150px 0;
+  #banner .banner .my-card .container .text-right h1 {
+    font-size: 70px;
   }
-  #banner .banner .text-left h1 {
-    font-size: 50px;
-  }
-  #banner .banner .text-left span {
+  #banner .banner .my-card .container .text-right span {
     font-size: 28px;
   }
   #now-playing .now-playing .header h2 {
@@ -2963,6 +3199,21 @@ footer .footer {
   }
 }
 @media screen and (max-width: 576px) {
+  #banner .banner .my-card .container .text-right h1 {
+    font-size: 55px;
+  }
+  #banner .banner .my-card .container .text-right p {
+    font-size: 15px;
+  }
+  #banner .banner .my-card {
+    height: 130vh;
+  }
+  #banner .banner .my-card .container .text-right > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
   #film-crew .film-crew {
     padding-top: 800px;
   }
@@ -2971,12 +3222,6 @@ footer .footer {
   }
 }
 @media screen and (max-width: 425px) {
-  #banner .banner .text-left > div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
   #upcomming .upcomming .row > div .card .text {
     flex-direction: column;
   }

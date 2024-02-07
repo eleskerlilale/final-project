@@ -8,7 +8,6 @@ const movieSub = document.querySelectorAll(".movie-sub")
 const movieCategory = document.querySelector(".movie-category")
 const subNavSecond = document.querySelector(".sub-nav-second")
 
-// menuList.style.zIndex='-100'
 movieSub.forEach((movieSub, i) => {
   movieSub.addEventListener("click", () => {
     if (movieSub.classList.value == 'movie-sub') {
@@ -44,7 +43,7 @@ resMenuListPElem.addEventListener("click", () => {
 })
 
 window.addEventListener("scroll", () => {
-  if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+  if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
     nav.style.backgroundColor = "black"
   } else {
     nav.style.backgroundColor = "transparent"
@@ -52,104 +51,204 @@ window.addEventListener("scroll", () => {
 })
 
 window.addEventListener("load", () => {
-  if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+  if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
     nav.style.backgroundColor = "black"
   } else {
     nav.style.backgroundColor = "transparent"
   }
 })
-const playing = document.querySelector(".playing")
 
-playing.innerHTML = ''
+
 let arr = [];
-
+let dataFav = []
 network.getfetch().then((data) => {
-  arr = data;
-  console.log(data);
-  printData();
-  $(document).ready(function () {
-    $(".playing").owlCarousel({
-      margin: 10,
-      dots: true,
-      loop: true,
-      responsive: {
-        0: {
-          items: 1,
+  network.getfetchaccount().then(datafav => {
+    arr = data;
+    dataFav = datafav
+    console.log(data);
+    printBanner();
+    printData();
+    $(document).ready(function () {
+      $(".banner").owlCarousel({
+        margin: 10,
+        dots: true,
+        loop: true,
+        responsive: {
+          0: {
+            items: 1,
+          }
         },
-        600: {
-          items: 2,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        autoplayTimeout: 3000,
+      });
+      $(".trailer").owlCarousel({
+        margin: 10,
+        dots: true,
+        loop: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          450: {
+            items: 2,
+          }
         },
-        1000: {
-          items: 3,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        autoplayTimeout: 3000,
+      });
+      $(".playing").owlCarousel({
+        margin: 10,
+        dots: true,
+        loop: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+          1400: {
+            items: 4,
+          }
         },
-        1400: {
-          items: 4,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        autoplayTimeout: 3000,
+      });
+      $(".photos").owlCarousel({
+        margin: 10,
+        dots: true,
+        loop: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 5,
+          },
         }
-      },
-      autoplay: true,
-      autoplaySpeed: 1000,
-      autoplayTimeout: 3000,
-    });
-    $(".photos").owlCarousel({
-      margin: 10,
-      dots: true,
-      loop: true,
-      responsive: {
-        0: {
-          items: 1,
+      });
+      $(".company-carousel").owlCarousel({
+        margin: 10,
+        dots: true,
+        loop: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          400: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+          1200: {
+            items: 5,
+          }
         },
-        600: {
-          items: 3,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        autoplayTimeout: 3000,
+      });
+      $(".people").owlCarousel({
+        margin: 10,
+        dots: true,
+        loop: true,
+        responsive: {
+          0: {
+            items: 1,
+          }
         },
-        1000: {
-          items: 5,
-        },
-      }
-    });
-    $(".company-carousel").owlCarousel({
-      margin: 10,
-      dots: true,
-      loop: true,
-      responsive: {
-        0: {
-          items: 1,
-        },
-        400: {
-          items: 2,
-        },
-        1000: {
-          items: 3,
-        },
-        1200: {
-          items: 5,
-        }
-      },
-      autoplay: true,
-      autoplaySpeed: 1000,
-      autoplayTimeout: 3000,
-    });
-    $(".people").owlCarousel({
-      margin: 10,
-      dots: true,
-      loop: true,
-      responsive: {
-        0: {
-          items: 1,
-        }
-      },
-      autoplay: true,
-      autoplaySpeed: 1000,
-      autoplayTimeout: 3000,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        autoplayTimeout: 3000,
+      });
     });
   });
-});
-
+})
 let carouselContainer = document.querySelector('.owl-carousel')
+const playing = document.querySelector(".playing")
+const positionTrailer=document.querySelector(".trailer")
+const banner=document.querySelector(".banner")
+playing.innerHTML = ''
+positionTrailer.innerHTML=``
+banner.innerHTML=``
+let count=0
+const printBanner = () => {
+  arr.forEach(elem => {
+    if(count<3){
+      count++
+      banner.innerHTML+=`
+      <div class="my-card ">
+      <div class="image">
+          <img src=${elem.video_poster} alt="">
+      </div>
+      <div class="container">
 
+          <div class="text-left">
+              <div>
+                  <p>in theater</p>
+                  <span>March 2024</span>
+                  <img src="https://demo.ovatheme.com/aovis/wp-content/plugins/movie-booking/assets/img/underline-heading-entire.png"
+                      alt="">
+              </div>
+          </div>
+          <div class="text-right">
+              <span>Thriller Movie</span>
+              <h1>${elem.original_title}</h1>
+              <p>Writen and Directed by Aleesha Rose / Ireland 2023</p>
+              <div>
+                  <a href="./detail.html" class="info">More Info</a>
+                  <a href="./ticket.html" class="ticket">Get Ticket</a>
+              </div>
+          </div>
+      </div>
+  </div>
+      `
+      positionTrailer.innerHTML+=`
+      <div class="img">
+        <img src=${elem.video_poster} alt="">
+        <span onclick='videoFunc(${elem.id})'><i class="bi bi-caret-right-fill"></i></span>
+    </div>
+      `
+    }
+   
+  })
+}
 const printData = () => {
   arr.forEach(elem => {
-    console.log(elem.genres[0]);
-    playing.innerHTML += `
+    const ids = dataFav[dataFav.length - 1].favorite.find(f => f.id == elem.id)
+    if (!ids) {
+      playing.innerHTML += `
+                      <div class="my-card " >
+                          <div>
+                              <div class="image">
+                                  <img src="https://image.tmdb.org/t/p/w220_and_h330_face/${elem.poster_path}" alt="">
+                              </div>
+                              <div class="text">
+                                  <div class="category-time">
+                                      <p class="category">${elem.genres[0].name}</p>
+                                      /
+                                      <p class="time">${elem.runtime} min</p>
+                                  </div>
+                                  <div class="film-name" onclick="detailFunc(${elem.id})">${elem.original_title}</div>
+                                  <a href="ticket">Ticket</a>
+                              </div>
+                              <div class='favorite favorite${elem.id}' onclick='favFunc(${elem.id})'><i class="bi bi-heart"></i></div>
+                          </div>
+                      </div>
+      `
+    }
+    else {
+      playing.innerHTML += `
                       <div class="my-card" >
                           <div>
                               <div class="image">
@@ -164,13 +263,71 @@ const printData = () => {
                                   <div class="film-name" onclick="detailFunc(${elem.id})">${elem.original_title}</div>
                                   <a href="ticket">Ticket</a>
                               </div>
-                              <div class='favorite'><i class="bi bi-heart"></i></div>
+                              <div class='favorite favorite${elem.id}' onclick='favFunc(${elem.id})'><i class="bi bi-heart-fill"></i></div>
                           </div>
                       </div>
       `
+    }
   })
 }
+
+function videoFunc(id){
+  network.getfetchById(id).then(elem => {
+    const video= document.createElement("div")
+    video.classList.add("video")
+    document.body.prepend(video)
+    video.innerHTML=`
+    <i class="bi bi-x-lg"></i>
+    <iframe  src="https://www.youtube.com/embed/${elem.key}?si=J50oRX8ZcO58lLW2"></iframe>
+    `
+    const videoClose=document.querySelector(".video i")
+    videoClose.addEventListener("click", () => {
+        video.remove()
+    })
+  })
+    
+  
+}
+
 function detailFunc(id) {
   window.location = `./detail.html?id=${id}`
 }
 
+let index = ''
+function favFunc(id) {
+  const favorite = document.querySelector(`.favorite${id}`)
+  console.log("aside");
+  network.getfetchById(id).then(data => {
+    network.getfetchaccount().then(datafav => {
+      const ids = datafav[datafav.length - 1].favorite.find(f => f.id == data.id)
+      if (!ids) {
+        favorite.innerHTML = `<i class="bi bi-heart-fill"></i>`
+        console.log("aside");
+        datafav[datafav.length - 1].favorite.push(data)
+        network.getaccountpath(datafav[datafav.length - 1].id, { favorite: datafav[datafav.length - 1].favorite })
+      }
+      else {
+        favorite.innerHTML = `<i class="bi bi-heart"></i>`
+        console.log(id);
+        [...newarr] = datafav[datafav.length - 1].favorite
+        newarr.forEach((elem, i) => {
+          if (elem.id == id) {
+            index = i
+          }
+        })
+        if (index > -1) {
+          newarr.splice(index, 1);
+        }
+        network.getaccountpath(datafav[datafav.length - 1].id, { favorite: newarr })
+      }
+    })
+  })
+}
+
+
+
+
+const account = document.querySelector(".search span")
+network.getfetchaccount().then(data => {
+  account.innerText = `${data[data.length - 1].email}`
+})

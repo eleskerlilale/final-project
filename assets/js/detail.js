@@ -60,16 +60,21 @@ window.addEventListener("load", () => {
 })
 
 const id = new URLSearchParams(window.location.search).get("id")
-console.log(typeof id);
 const filmDetail = document.querySelector(".film-detail")
 const body= document.querySelector("body")
+const movieBanner=document.querySelector("#movie-all-banner")
+const filmName=document.querySelector(".film-name")
+const h1=document.querySelector("h1")
 const arr = []
 
 
 network.getfetchById(id).then(data => {
+    filmName.innerText= `${data.original_title}`
+    h1.innerText=`${data.original_title}`
     console.log(data.original_title);
     data.genres.forEach(e => arr.push(e.name))
     console.log(arr);
+    movieBanner.style.backgroundImage=`url(${data.video_poster})`
     filmDetail.innerHTML = `
                 <div class="title">
                     <div>
@@ -81,15 +86,109 @@ network.getfetchById(id).then(data => {
                 <div class="trailer">
                     <img src=${data.video_poster}>
                     <span class='trailer-span'><i class="bi bi-caret-right-fill"></i></span>
+                    <div class='watch-text'> Watch the Trailer<i class="bi bi-arrow-up-right"></i></div>
+
                 </div>
+                <div class="cast">
+                <h2>Top Cast</h2>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-xs-2">
+                        <div class="card">
+                            <div class="image">
+                                <img src="./assets/image/cast-01.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <h3>Millie Brown</h3>
+                                <p>as Eleven</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-xs-2">
+                        <div class="card">
+                            <div class="image">
+                                <img src="./assets/image/cast-02.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <h3>Finn Wolfhard</h3>
+                                <p>as Mike Wheeler</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-xs-2">
+                        <div class="card">
+                            <div class="image">
+                                <img src="./assets/image/cast-03.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <h3>Winona Ryder</h3>
+                                <p>as Joyce Byers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-xs-2">
+                        <div class="card">
+                            <div class="image">
+                                <img src="./assets/image/cast-04.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <h3>David Harbour</h3>
+                                <p>as Jim Hopper</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-xs-2">
+                        <div class="card">
+                            <div class="image">
+                                <img src="./assets/image/cast-05.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <h3>Gaten Matarazo</h3>
+                                <p>as Ted Wheeler</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-xs-2">
+                        <div class="card">
+                            <div class="image">
+                                <img src="./assets/image/cast-06.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <h3>Natalia Dyer</h3>
+                                <p>as Nancy Wheeler</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-xs-2">
+                        <div class="card">
+                            <div class="image">
+                                <img src="./assets/image/cast-07.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <h3>Caleb Laughlin</h3>
+                                <p>as Lucas Sinclair</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-xs-2">
+                        <div class="card">
+                            <div class="image">
+                                <img src="./assets/image/cast-08.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <h3>Sadie Sink</h3>
+                                <p>as Max Mayfield</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
                 <div class="description">
                     <h2>Story Line</h2>
-                    <p>${data.overview}ahdbbadkjf</p>
+                    <p>${data.overview}</p>
                 </div>
-    `
+            `
 const videoPlay=document.querySelector(".trailer-span")
 videoPlay.addEventListener("click", () => {
-    console.log("sdljs");
     const video= document.createElement("div")
     video.classList.add("video")
     document.body.prepend(video)

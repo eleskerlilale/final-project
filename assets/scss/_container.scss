@@ -257,10 +257,11 @@ nav {
             .bi-person {
                 font-size: 30px;
             }
-            span{
+
+            span {
                 font-size: 13px;
                 border: 1px solid $white;
-                padding:5px 15px;
+                padding: 5px 15px;
             }
         }
 
@@ -272,109 +273,332 @@ nav {
     }
 }
 
+// #banner {   
+//     background-color: #00ffff;
+//     .my-banner{
+//         width: 100%;
+//         background-color: #00ffff;
+//         position: relative;
+//         height: 100vh;
+//         .container {
+//             position: absolute;
+//             background-color: #00ffff;
+//             top: 0;
+//             left: 0;
+//             // width: 100%;
+//             // height: 100%;
+//         }
+
+//         .banner {
+//             padding: 250px 0;
+//             display: flex;
+//             justify-content: space-between;
+//             flex-direction: column-reverse;
+//             gap: 20px;
+//             color: $white;
+//             width: 100%;
+//             height: 100%;
+
+//             .text-left {
+//                 max-width: 600px;
+//                 height: 100%;
+
+//                 span {
+//                     font-size: 40px;
+//                     color: $orange;
+//                     
+//                 }
+
+//                 h1 {
+//                     font-size: 90px;
+//                     color: $white;
+//                     line-height: 1;
+//                     cursor: pointer;
+//                     @include transition;
+
+//                     &:hover {
+//                         color: $orange;
+//                     }
+//                 }
+
+//                 >div {
+//                     margin-top: 40px;
+//                     width: 100%;
+
+//                     a {
+//                         padding: 20px 50px;
+//                         max-width: 200px;
+//                         width: 100%;
+//                         text-align: center;
+//                         font-size: 15px;
+//                         margin-right: 20px;
+//                         @include transition;
+//                         font-weight: $thridFond;
+//                     }
+
+//                     .info {
+//                         background-color: $white ;
+//                         color: $black;
+
+//                         &:hover {
+//                             background-color: $orange;
+//                             color: $white;
+//                         }
+//                     }
+
+//                     .ticket {
+//                         background-color: $orange;
+//                         color: $white;
+
+//                         &:hover {
+//                             background-color: $white ;
+//                             color: $black;
+//                         }
+//                     }
+//                 }
+//             }
+
+//             .text-right {
+//                 width: 100%;
+//                 @include column;
+//                 align-items: end;
+//                 gap: 0px;
+//                 height: 100%;
+
+//                 p {
+//                     font-size: 16px;
+//                     font-weight: $firstFont;
+//                 }
+
+//                 span {
+//                     font-size: 30px;
+//                     font-weight: $fourthFont;
+//                 }
+
+//                 img {
+//                     max-width: 200px;
+//                 }
+
+//             }
+//         }
+//         .background-image {
+//             background-color: #00ffff;
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             width: 100%;
+//             height: 100%;
+//             height: 100vh;
+//             img{
+//                 width: 100%;
+//                 height: 100%;
+//                 object-fit: cover;
+//             }
+//         }
+//         &::after {
+//             content: "";
+//             position: absolute;
+//             top: 101%;
+//             left: 0;
+//             width: 100%;
+//             height: 10px;
+//             background-image: url(../image/image-lines-header.jpg);
+//         }
+//     }
+
+// }
 #banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../image/banner.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
+    // background-color: #d96b2c;
+    // height: 100vh;
+    z-index: 10;
     position: relative;
 
     .banner {
-        padding: 200px 0;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column-reverse;
-        gap: 20px;
-        color: $white;
+        width: 100%;
+        height: 100%;
 
-        .text-left {
-            max-width: 600px;
-
-            span {
-                font-size: 40px;
-                color: $orange;
-                font-family: 'Covered By Your Grace', cursive;
-            }
-
-            h1 {
-                font-size: 90px;
-                color: $white;
-                line-height: 1;
-                cursor: pointer;
-                @include transition;
-
-                &:hover {
-                    color: $orange;
-                }
-            }
-
-            >div {
-                margin-top: 40px;
-
-                a {
-                    padding: 20px;
-                    width: 200px;
-                    text-align: center;
-                    font-size: 15px;
-                    margin-right: 20px;
-                    @include transition;
-                    font-weight: $thridFond;
-                }
-
-                .info {
-                    background-color: $white ;
-                    color: $black;
-
-                    &:hover {
-                        background-color: $orange;
-                        color: $white;
-                    }
-                }
-
-                .ticket {
-                    background-color: $orange;
-                    color: $white;
-
-                    &:hover {
-                        background-color: $white ;
-                        color: $black;
-                    }
-                }
-            }
-        }
-
-        .text-right {
+        .my-card {
+            padding-top: 150px;
             width: 100%;
-            @include column;
-            align-items: end;
-            gap: 0px;
+            height: 110vh;
+            background-color: antiquewhite;
+            position: relative;
 
-            // width: 250px;
-            p {
-                font-size: 16px;
-                font-weight: $firstFont;
+            .image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: aqua;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                &::after{
+                    position: absolute;
+                    content: "";
+                    background-color: #00000042;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                }
             }
 
-            span {
-                font-size: 30px;
-                font-weight: $fourthFont;
-            }
+            .container {
+                padding-top: 150px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                // background-color: #fda403;
+                z-index: 100;
+                color: white;
+                @include column;
+                gap: 50px;
 
-            img {
-                max-width: 200px;
-            }
+                .text-left {
+                    display: flex;
+                    justify-content: end;
+                    width: 100%;
 
+                    >div {
+                        p {
+                            font-size: 16px;
+                            font-weight: $secondFont;
+                        }
+
+                        span {
+                            font-size: 30px;
+                            font-weight: $fourthFont;
+                        }
+                    }
+                }
+
+                .text-right {
+                    @include column;
+                    max-width: 600px;
+                    height: 100%;
+                    line-height: .1;
+
+                    span {
+                        width: 100%;
+                        text-align: center;
+                        font-size: 40px;
+                        font-family: 'Covered By Your Grace', cursive;
+                        font-weight: $thridFond;
+                        color: $orange;
+                        // padding-top: 20px;
+                    }
+
+                    h1 {
+                        font-size: 90px;
+                        font-weight: $fourthFont;
+                        margin: 0;
+                    }
+
+                    p {
+                        padding-top: 10px;
+                        font-size: 18px;
+                        height: 20px;
+                        width: 100%;
+                        line-height: 1;
+                    }
+
+                    >div {
+                        margin-top: 50px;
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+
+                        a {
+
+                            text-align: center;
+                            padding: 25px 40px;
+                            @include transition;
+                            font-weight: $thridFond;
+                        }
+
+                        .info {
+                            color: $black;
+                            background-color: $white;
+
+                            &:hover {
+                                background-color: $orange;
+                                color: $white;
+                            }
+                        }
+
+                        .ticket {
+                            background-color: $orange;
+                            color: $white;
+
+                            &:hover {
+                                background-color: $white;
+                                color: $black;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
-    &::after {
-        content: "";
+    .position-trailer {
         position: absolute;
-        top: 101%;
-        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #000000;
+        height: 180px;
+        max-width: 500px;
+        width: 100%;
+        z-index: 10;
+        padding: 10px;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        // padding-top: 20px;
+        >img{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 30px;
+            height: 50px;
+        }
+        .trailer{
+            
+            max-width: 400px;
+            width:100%;
+            height: 110px;
+            .img{
+                // width: 100%;
+                height: 110px;
+                background-color: aliceblue;
+                padding: 2px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    &::after{
+        position: absolute;
+        content: "";
         width: 100%;
         height: 10px;
+        bottom: -30px;
+        left: 0;
         background-image: url(../image/image-lines-header.jpg);
+    }
+    .owl-dots {
+        display: none;
     }
 }
 
@@ -388,7 +612,7 @@ nav {
 
 #upcomming {
     .upcomming {
-        padding: 50px 0;
+        padding: 70px 0;
 
         .row {
             >div {
@@ -506,6 +730,7 @@ nav {
                     position: relative;
                     height: 400px;
                     overflow: hidden;
+
                     .image {
                         position: absolute;
                         top: 0;
@@ -570,7 +795,8 @@ nav {
                             }
                         }
                     }
-                    .favorite{
+
+                    .favorite {
                         position: absolute;
                         top: 20px;
                         left: -40px;
@@ -583,7 +809,8 @@ nav {
                         cursor: pointer;
                         @include transition;
                         z-index: 10;
-                        &:hover{
+
+                        &:hover {
                             transform: rotateZ(360deg);
                             color: $white;
                             background-color: $orange;
@@ -594,9 +821,11 @@ nav {
 
                 &:hover {
                     background-color: $orange;
-                    .favorite{
+
+                    .favorite {
                         left: 20px;
                     }
+
                     img {
                         scale: 1.1;
                     }
@@ -1921,13 +2150,9 @@ footer {
 }
 
 @media screen and (max-width:1000px) {
-    #banner {
-        .banner {
-            .text-left {
-                h1 {
-                    font-size: 70px;
-                }
-            }
+    #banner .banner .my-card .container .text-right {
+        h1 {
+            font-size: 70px;
         }
     }
 }
@@ -1982,22 +2207,15 @@ footer {
 }
 
 @media screen and (max-width:768px) {
-    #banner {
-        .banner {
-            padding: 150px 0;
+    #banner .banner .my-card .container .text-right {
+        h1 {
+            font-size: 70px;
+        }
+        span{
+            font-size: 28px;
 
-            .text-left {
-                h1 {
-                    font-size: 50px;
-                }
-
-                span {
-                    font-size: 28px;
-                }
-            }
         }
     }
-
     #now-playing {
         .now-playing {
             .header {
@@ -2071,6 +2289,23 @@ footer {
 }
 
 @media screen and (max-width:576px) {
+    #banner .banner .my-card .container .text-right {
+        h1{
+            font-size: 55px
+        }
+        p{
+        font-size: 15px;
+    }}
+    #banner .banner .my-card{
+        height: 130vh;
+    }
+    #banner .banner .my-card .container .text-right {
+        >div {
+            @include column;
+            gap: 20px;
+        }
+    }
+
     #film-crew .film-crew {
         padding-top: 800px;
     }
@@ -2081,16 +2316,7 @@ footer {
 }
 
 @media screen and (max-width:425px) {
-    #banner {
-        .banner {
-            .text-left {
-                >div {
-                    @include column;
-                    gap: 20px;
-                }
-            }
-        }
-    }
+
 
     #upcomming {
         .upcomming {

@@ -1,46 +1,6 @@
 {
   "main": [
     {
-      "id": 572802,
-      "imdb_id": "tt9663764",
-      "original_language": "en",
-      "original_title": "Aquaman and the Lost Kingdom",
-      "overview": "Black Manta, still driven by the need to avenge his father's death and wielding the power of the mythic Black Trident, will stop at nothing to take Aquaman down once and for all. To defeat him, Aquaman must turn to his imprisoned brother Orm, the former King of Atlantis, to forge an unlikely alliance in order to save the world from irreversible destruction.",
-      "popularity": 2392.899,
-      "poster_path": "/7lTnXOy0iNtBAdRP3TZvaKJ77F6.jpg",
-      "runtime": 124,
-      "video_poster":"https://www.aquamanmovie.com/images/share.jpg",
-      "key": "UGc5Tzz19UY",
-      "release_date": "2023-12-20",
-      "vote_average": 6.988,
-      "genres": [
-        {
-          "id": 28,
-          "name": "Action"
-        },
-        {
-          "id": 12,
-          "name": "Adventure"
-        },
-        {
-          "id": 14,
-          "name": "Fantasy"
-        }
-      ],
-      "date":[
-        {
-          "id":1,
-          "date":"24/02/2024",
-          "time":"08:30"
-        },
-        {
-          "id":2,
-          "date":"02/03/2024",
-          "time":"09:30"
-        }
-      ]
-    },
-    {
       "id": 787699,
       "imdb_id": "tt6166392",
       "original_language": "en",
@@ -49,7 +9,7 @@
       "popularity": 1989.417,
       "poster_path": "/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
       "runtime": 117,
-      "video_poster":"https://cloudimages.broadwayworld.com/columnpiccloud/Photos-Check-Out-New-WONKA-Posters-With-Timothee-Chalamet-Natasha-Rothwell-More-1697120565.jpg",
+      "video_poster": "https://cloudimages.broadwayworld.com/columnpiccloud/Photos-Check-Out-New-WONKA-Posters-With-Timothee-Chalamet-Natasha-Rothwell-More-1697120565.jpg",
       "key": "otNh9bTjXWg",
       "genres": [
         {
@@ -65,16 +25,16 @@
           "name": "Fantasy"
         }
       ],
-      "date":[
+      "date": [
         {
-          "id":1,
-          "date":"24/02/2024",
-          "time":"10:30"
+          "id": 1,
+          "date": "24/02/2024",
+          "time": "10:30"
         },
         {
-          "id":2,
-          "date":"02/03/2024",
-          "time":"10:30"
+          "id": 2,
+          "date": "02/03/2024",
+          "time": "10:30"
         }
       ]
     },
@@ -87,7 +47,7 @@
       "popularity": 1428.915,
       "poster_path": "/AcoVfiv1rrWOmAdpnAMnM56ki19.jpg",
       "runtime": 95,
-      "video_poster":"https://w0.peakpx.com/wallpaper/750/732/HD-wallpaper-wish-2023-afis-blue-yellow-movie-yelliw-poster-disney-wish-thumbnail.jpg",
+      "video_poster": "https://nerdreactor.com/wp-content/uploads/2023/11/wish-movie.jpg",
       "key": "eQPeGiCH7A0",
       "genres": [
         {
@@ -107,16 +67,16 @@
           "name": "Adventure"
         }
       ],
-      "date":[
+      "date": [
         {
-          "id":1,
-          "date":"23/02/2024",
-          "time":"10:30"
+          "id": 1,
+          "date": "23/02/2024",
+          "time": "10:30"
         },
         {
-          "id":2,
-          "date":"01/03/2024",
-          "time":"10:30"
+          "id": 2,
+          "date": "01/03/2024",
+          "time": "10:30"
         }
       ]
     },
@@ -127,7 +87,7 @@
       "original_title": "Migration",
       "overview": "After a migrating duck family alights on their pond with thrilling tales of far-flung places, the Mallard family embarks on a family road trip, from New England, to New York City, to tropical Jamaica.",
       "popularity": 1356.633,
-      "video_poster":"https://i.ytimg.com/vi/ESlJu-y92Ps/maxresdefault.jpg",
+      "video_poster": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/10/migration-mig_adv1sheet_landing4_rgb_1sm_rgb.jpg",
       "poster_path": "/ldfCF9RhR40mppkzmftxapaHeTo.jpg",
       "runtime": 83,
       "key": "cQfo0HJhCnE",
@@ -153,16 +113,56 @@
           "name": "Family"
         }
       ],
-      "date":[
+      "date": [
         {
-          "id":1,
-          "date":"23/02/2024",
-          "time":"09:30"
+          "id": 1,
+          "date": "23/02/2024",
+          "time": "09:30"
         },
         {
-          "id":2,
-          "date":"01/03/2024",
-          "time":"10:00"
+          "id": 2,
+          "date": "01/03/2024",
+          "time": "10:00"
+        }
+      ]
+    },
+    {
+      "id": 572802,
+      "imdb_id": "tt9663764",
+      "original_language": "en",
+      "original_title": "Aquaman and the Lost Kingdom",
+      "overview": "Black Manta, still driven by the need to avenge his father's death and wielding the power of the mythic Black Trident, will stop at nothing to take Aquaman down once and for all. To defeat him, Aquaman must turn to his imprisoned brother Orm, the former King of Atlantis, to forge an unlikely alliance in order to save the world from irreversible destruction.",
+      "popularity": 2392.899,
+      "poster_path": "/7lTnXOy0iNtBAdRP3TZvaKJ77F6.jpg",
+      "runtime": 124,
+      "video_poster": "https://www.aquamanmovie.com/images/share.jpg",
+      "key": "UGc5Tzz19UY",
+      "release_date": "2023-12-20",
+      "vote_average": 6.988,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Action"
+        },
+        {
+          "id": 12,
+          "name": "Adventure"
+        },
+        {
+          "id": 14,
+          "name": "Fantasy"
+        }
+      ],
+      "date": [
+        {
+          "id": 1,
+          "date": "24/02/2024",
+          "time": "08:30"
+        },
+        {
+          "id": 2,
+          "date": "02/03/2024",
+          "time": "09:30"
         }
       ]
     },
@@ -173,7 +173,7 @@
       "original_title": "The Marvels",
       "overview": "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. But unintended consequences see Carol shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol’s estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
       "popularity": 1288.591,
-      "video_poster":"https://www.allkpop.com/upload/2023/09/content/291659/1696021162-untitled-1.jpg",
+      "video_poster": "https://www.allkpop.com/upload/2023/09/content/291659/1696021162-untitled-1.jpg",
       "poster_path": "/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
       "runtime": 105,
       "key": "uwmDH12MAA4",
@@ -199,7 +199,7 @@
       "original_title": "60 Minuten",
       "overview": "Desperate to keep custody of his daughter, a mixed martial arts fighter abandons a big match and races across Berlin to attend her birthday party.",
       "popularity": 899.318,
-      "video_poster":"https://newagebharat.com/wp-content/uploads/2024/01/Upcoming-Movies-on-Netflix-in-January-2024-copy-11-jpg.webp",
+      "video_poster": "https://newagebharat.com/wp-content/uploads/2024/01/Upcoming-Movies-on-Netflix-in-January-2024-copy-11-jpg.webp",
       "poster_path": "/cND79ZWPFINDtkA8uwmQo1gnPPE.jpg",
       "runtime": 89,
       "key": "uiyZW82Rxf8",
@@ -222,7 +222,7 @@
       "original_title": "Radical",
       "overview": "In a Mexican border town plagued by neglect, corruption, and violence, a frustrated teacher tries a radical new method to break through his students’ apathy and unlock their curiosity, their potential… and maybe even their genius.",
       "popularity": 598.187,
-      "video_poster":"https://i.ytimg.com/vi/L4DvL0UBZPQ/maxresdefault.jpg",
+      "video_poster": "https://i.ytimg.com/vi/L4DvL0UBZPQ/maxresdefault.jpg",
       "poster_path": "/eSatbygYZp8ooprBHZdb6GFZxGB.jpg",
       "key": "BXcGgvAKC1Q",
       "genres": [
@@ -240,7 +240,7 @@
       "original_title": "Lift",
       "overview": "An international heist crew, led by Cyrus Whitaker, race to lift $500 million in gold from a passenger plane at 40,000 feet.",
       "popularity": 655.9,
-      "video_poster":"",
+      "video_poster": "",
       "key": "m2L-Sa_6MU0",
       "runtime": 106,
       "poster_path": "/gma8o1jWa6m0K1iJ9TzHIiFyTtI.jpg",
@@ -268,7 +268,7 @@
       "original_title": "Acide",
       "overview": "During a heat wave, strange clouds start pouring down acid rain, wreaking devastation and panic throughout France. In a world teetering on the edge, a girl and her divorced parents must join forces to confront and try to escape this climate catastrophe.",
       "popularity": 460.052,
-      "video_poster":"https://miro.medium.com/v2/resize:fit:1358/1*7r9dywcwU1dSTwCyXd5nZQ.jpeg",
+      "video_poster": "https://miro.medium.com/v2/resize:fit:1358/1*7r9dywcwU1dSTwCyXd5nZQ.jpeg",
       "key": "XeRo7qpNFxo",
       "poster_path": "/91vF7SNB2tqsSultsmEn8tJYh4l.jpg",
       "genres": [
@@ -292,7 +292,7 @@
       "original_title": "The Painter",
       "overview": "An ex-CIA operative is thrown back into a dangerous world when a mysterious woman from his past resurfaces. Now exposed and targeted by a relentless killer and a rogue black ops program, he must rely on skills he thought he left behind in a high-stakes game of survival.",
       "popularity": 333.344,
-      "video_poster":"https://i.ytimg.com/vi/nQbCKPlaeG0/maxresdefault.jpg",
+      "video_poster": "https://i.ytimg.com/vi/nQbCKPlaeG0/maxresdefault.jpg",
       "key": "rZe3fRnZr78",
       "poster_path": "/UZ0ydgbXtnrq8xZCI5lHVXVcH9.jpg",
       "genres": [
@@ -316,7 +316,7 @@
       "original_title": "The Beekeeper",
       "overview": "One man’s campaign for vengeance takes on national stakes after he is revealed to be a former operative of a powerful and clandestine organization known as Beekeepers.",
       "popularity": 1268.827,
-      "video_poster":"https://deadline.com/wp-content/uploads/2023/10/The-Beekeeper-FI.jpg?w=1000",
+      "video_poster": "https://deadline.com/wp-content/uploads/2023/10/The-Beekeeper-FI.jpg?w=1000",
       "poster_path": "/A7EByudX0eOzlkQ2FIbogzyazm2.jpg",
       "genres": [
         {
@@ -333,433 +333,550 @@
       "key": "CHKn-yDCE2w"
     }
   ],
-
-  
   "account": [
     {
       "email": "eleskerlilale@gmail.com",
       "password": "1!Aa1234",
       "id": 2,
-      "favorite":[]
+      "favorite": [
+        {
+          "id": 609681,
+          "imdb_id": "tt10676048",
+          "original_language": "en",
+          "original_title": "The Marvels",
+          "overview": "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. But unintended consequences see Carol shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol’s estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
+          "popularity": 1288.591,
+          "video_poster": "https://www.allkpop.com/upload/2023/09/content/291659/1696021162-untitled-1.jpg",
+          "poster_path": "/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
+          "runtime": 105,
+          "key": "uwmDH12MAA4",
+          "genres": [
+            {
+              "id": 878,
+              "name": "Science Fiction"
+            },
+            {
+              "id": 12,
+              "name": "Adventure"
+            },
+            {
+              "id": 28,
+              "name": "Action"
+            }
+          ]
+        },
+        {
+          "id": 1212073,
+          "imdb_id": "tt29538571",
+          "original_language": "de",
+          "original_title": "60 Minuten",
+          "overview": "Desperate to keep custody of his daughter, a mixed martial arts fighter abandons a big match and races across Berlin to attend her birthday party.",
+          "popularity": 899.318,
+          "video_poster": "https://newagebharat.com/wp-content/uploads/2024/01/Upcoming-Movies-on-Netflix-in-January-2024-copy-11-jpg.webp",
+          "poster_path": "/cND79ZWPFINDtkA8uwmQo1gnPPE.jpg",
+          "runtime": 89,
+          "key": "uiyZW82Rxf8",
+          "vote_average": 6.939,
+          "genres": [
+            {
+              "id": 28,
+              "name": "Action"
+            },
+            {
+              "id": 18,
+              "name": "Drama"
+            }
+          ]
+        },
+        {
+          "id": 1211957,
+          "imdb_id": "tt30253266",
+          "original_language": "en",
+          "original_title": "The Painter",
+          "overview": "An ex-CIA operative is thrown back into a dangerous world when a mysterious woman from his past resurfaces. Now exposed and targeted by a relentless killer and a rogue black ops program, he must rely on skills he thought he left behind in a high-stakes game of survival.",
+          "popularity": 333.344,
+          "video_poster": "https://i.ytimg.com/vi/nQbCKPlaeG0/maxresdefault.jpg",
+          "key": "rZe3fRnZr78",
+          "poster_path": "/UZ0ydgbXtnrq8xZCI5lHVXVcH9.jpg",
+          "genres": [
+            {
+              "id": 28,
+              "name": "Action"
+            },
+            {
+              "id": 53,
+              "name": "Thriller"
+            }
+          ],
+          "release_date": "2024-01-05",
+          "runtime": 100,
+          "vote_average": 7.196
+        },
+        {
+          "id": 1022796,
+          "imdb_id": "tt11304740",
+          "original_language": "en",
+          "original_title": "Wish",
+          "overview": "Asha, a sharp-witted idealist, makes a wish so powerful that it is answered by a cosmic force – a little ball of boundless energy called Star. Together, Asha and Star confront a most formidable foe - the ruler of Rosas, King Magnifico - to save her community and prove that when the will of one courageous human connects with the magic of the stars, wondrous things can happen.",
+          "popularity": 1428.915,
+          "poster_path": "/AcoVfiv1rrWOmAdpnAMnM56ki19.jpg",
+          "runtime": 95,
+          "video_poster": "https://nerdreactor.com/wp-content/uploads/2023/11/wish-movie.jpg",
+          "key": "eQPeGiCH7A0",
+          "genres": [
+            {
+              "id": 16,
+              "name": "Animation"
+            },
+            {
+              "id": 10751,
+              "name": "Family"
+            },
+            {
+              "id": 14,
+              "name": "Fantasy"
+            },
+            {
+              "id": 12,
+              "name": "Adventure"
+            }
+          ],
+          "date": [
+            {
+              "id": 1,
+              "date": "23/02/2024",
+              "time": "10:30"
+            },
+            {
+              "id": 2,
+              "date": "01/03/2024",
+              "time": "10:30"
+            }
+          ]
+        }
+      ]
     }
   ],
-
-  "ticket":[
+  "ticket": [
     {
-      "id":1,
-      "seat":"A1",
-      "degree":"SPECIAL",
-      "price":"20$"
+      "id": 1,
+      "seat": "A1",
+      "degree": "SPECIAL",
+      "price": "20$"
     },
     {
-      "id":2,
-      "seat":"A2",
-      "degree":"SPECIAL",
-      "price":"20$"
+      "id": 2,
+      "seat": "A2",
+      "degree": "SPECIAL",
+      "price": "20$"
     },
     {
-      "id":3,
-      "seat":"A3",
-      "degree":"SPECIAL",
-      "price":"20$"
+      "id": 3,
+      "seat": "A3",
+      "degree": "SPECIAL",
+      "price": "20$"
     },
     {
-      "id":4,
-      "seat":"A4",
-      "degree":"SPECIAL",
-      "price":"20$"
+      "id": 4,
+      "seat": "A4",
+      "degree": "SPECIAL",
+      "price": "20$"
     },
     {
-      "id":5,
-      "seat":"A5",
-      "degree":"SPECIAL",
-      "price":"20$"
+      "id": 5,
+      "seat": "A5",
+      "degree": "SPECIAL",
+      "price": "20$"
     },
     {
-      "id":6,
-      "seat":"A6",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 6,
+      "seat": "A6",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":7,
-      "seat":"A7",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 7,
+      "seat": "A7",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":9,
-      "seat":"A8",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 9,
+      "seat": "A8",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":10,
-      "seat":"A9",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 10,
+      "seat": "A9",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":11,
-      "seat":"A10",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 11,
+      "seat": "A10",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":12,
-      "seat":"A12",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 12,
+      "seat": "A12",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":13,
-      "seat":"A13",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 13,
+      "seat": "A13",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":14,
-      "seat":"A14",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 14,
+      "seat": "A14",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":15,
-      "seat":"A15",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 15,
+      "seat": "A15",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":16,
-      "seat":"A16",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 16,
+      "seat": "A16",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":18,
-      "seat":"A18",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 18,
+      "seat": "A18",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":19,
-      "seat":"A19",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 19,
+      "seat": "A19",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":20,
-      "seat":"A20",
-      "degree":"SPECIAL",
-      "price":"20$"
+      "id": 20,
+      "seat": "A20",
+      "degree": "SPECIAL",
+      "price": "20$"
     },
     {
-      "id":21,
-      "seat":"A21",
-      "degree":"SPECIAL",
-      "price":"20$"
+      "id": 21,
+      "seat": "A21",
+      "degree": "SPECIAL",
+      "price": "20$"
     },
     {
-      "id":22,
-      "seat":"A22",
-      "degree":"SPECIAL",
-      "price":"20$"
+      "id": 22,
+      "seat": "A22",
+      "degree": "SPECIAL",
+      "price": "20$"
     },
     {
-      "id":23,
-      "seat":"A23",
-      "degree":"SPECIAL",
-      "price":"20$"
+      "id": 23,
+      "seat": "A23",
+      "degree": "SPECIAL",
+      "price": "20$"
     },
     {
-      "id":24,
-      "seat":"A24",
-      "degree":"SPECIAL",
-      "price":"20$"
+      "id": 24,
+      "seat": "A24",
+      "degree": "SPECIAL",
+      "price": "20$"
     },
     {
-      "id":25,
-      "seat":"B1",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 25,
+      "seat": "B1",
+      "degree": "SPECIAL",
+      "price": "30$"
     },
     {
-      "id":26,
-      "seat":"B2",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 26,
+      "seat": "B2",
+      "degree": "SPECIAL",
+      "price": "30$"
     },
     {
-      "id":27,
-      "seat":"B3",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 27,
+      "seat": "B3",
+      "degree": "SPECIAL",
+      "price": "30$"
     },
     {
-      "id":28,
-      "seat":"B4",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 28,
+      "seat": "B4",
+      "degree": "SPECIAL",
+      "price": "30$"
     },
     {
-      "id":29,
-      "seat":"B5",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 29,
+      "seat": "B5",
+      "degree": "SPECIAL",
+      "price": "30$"
     },
     {
-      "id":30,
-      "seat":"B6",
-      "degree":"VIP",
-      "price":"20$"
+      "id": 30,
+      "seat": "B6",
+      "degree": "VIP",
+      "price": "20$"
     },
     {
-      "id":31,
-      "seat":"B7",
-      "degree":"VIP",
-      "price":"30$"
-    }, {
-      "id":32,
-      "seat":"B8",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 31,
+      "seat": "B7",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":33,
-      "seat":"B9",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 32,
+      "seat": "B8",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":34,
-      "seat":"B10",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 33,
+      "seat": "B9",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":35,
-      "seat":"B11",
-      "degree":"VIP",
-      "price":"20$"
+      "id": 34,
+      "seat": "B10",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":36,
-      "seat":"B12",
-      "degree":"VIP",
-      "price":"30$"
-    }, {
-      "id":37,
-      "seat":"B13",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 35,
+      "seat": "B11",
+      "degree": "VIP",
+      "price": "20$"
     },
     {
-      "id":38,
-      "seat":"B14",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 36,
+      "seat": "B12",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":39,
-      "seat":"B15",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 37,
+      "seat": "B13",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":40,
-      "seat":"B16",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 38,
+      "seat": "B14",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":41,
-      "seat":"B17",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 39,
+      "seat": "B15",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":42,
-      "seat":"B18",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 40,
+      "seat": "B16",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":43,
-      "seat":"B19",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 41,
+      "seat": "B17",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":44,
-      "seat":"B20",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 42,
+      "seat": "B18",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":45,
-      "seat":"B21",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 43,
+      "seat": "B19",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":46,
-      "seat":"B22",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 44,
+      "seat": "B20",
+      "degree": "SPECIAL",
+      "price": "30$"
     },
     {
-      "id":47,
-      "seat":"B23",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 45,
+      "seat": "B21",
+      "degree": "SPECIAL",
+      "price": "30$"
     },
     {
-      "id":48,
-      "seat":"B24",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 46,
+      "seat": "B22",
+      "degree": "SPECIAL",
+      "price": "30$"
     },
     {
-      "id":49,
-      "seat":"C1",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 47,
+      "seat": "B23",
+      "degree": "SPECIAL",
+      "price": "30$"
     },
     {
-      "id":50,
-      "seat":"C2",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 48,
+      "seat": "B24",
+      "degree": "SPECIAL",
+      "price": "30$"
     },
     {
-      "id":51,
-      "seat":"C3",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 49,
+      "seat": "C1",
+      "degree": "SPECIAL",
+      "price": "30$"
     },
     {
-      "id":52,
-      "seat":"C4",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 50,
+      "seat": "C2",
+      "degree": "SPECIAL",
+      "price": "30$"
     },
     {
-      "id":53,
-      "seat":"C5",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 51,
+      "seat": "C3",
+      "degree": "SPECIAL",
+      "price": "30$"
     },
     {
-      "id":54,
-      "seat":"C6",
-      "degree":"VIP",
-      "price":"20$"
+      "id": 52,
+      "seat": "C4",
+      "degree": "SPECIAL",
+      "price": "30$"
     },
     {
-      "id":55,
-      "seat":"C7",
-      "degree":"VIP",
-      "price":"30$"
-    }, {
-      "id":56,
-      "seat":"C8",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 53,
+      "seat": "C5",
+      "degree": "SPECIAL",
+      "price": "30$"
     },
     {
-      "id":57,
-      "seat":"C9",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 54,
+      "seat": "C6",
+      "degree": "VIP",
+      "price": "20$"
     },
     {
-      "id":58,
-      "seat":"C10",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 55,
+      "seat": "C7",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":59,
-      "seat":"C11",
-      "degree":"VIP",
-      "price":"20$"
+      "id": 56,
+      "seat": "C8",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":60,
-      "seat":"C12",
-      "degree":"VIP",
-      "price":"30$"
-    }, {
-      "id":61,
-      "seat":"C13",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 57,
+      "seat": "C9",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":62,
-      "seat":"C14",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 58,
+      "seat": "C10",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":63,
-      "seat":"C15",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 59,
+      "seat": "C11",
+      "degree": "VIP",
+      "price": "20$"
     },
     {
-      "id":64,
-      "seat":"C16",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 60,
+      "seat": "C12",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":65,
-      "seat":"C17",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 61,
+      "seat": "C13",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":66,
-      "seat":"C18",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 62,
+      "seat": "C14",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":67,
-      "seat":"C19",
-      "degree":"VIP",
-      "price":"30$"
+      "id": 63,
+      "seat": "C15",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":68,
-      "seat":"C20",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 64,
+      "seat": "C16",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":69,
-      "seat":"C21",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 65,
+      "seat": "C17",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":70,
-      "seat":"C22",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 66,
+      "seat": "C18",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":71,
-      "seat":"C23",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 67,
+      "seat": "C19",
+      "degree": "VIP",
+      "price": "30$"
     },
     {
-      "id":72,
-      "seat":"C24",
-      "degree":"SPECIAL",
-      "price":"30$"
+      "id": 68,
+      "seat": "C20",
+      "degree": "SPECIAL",
+      "price": "30$"
+    },
+    {
+      "id": 69,
+      "seat": "C21",
+      "degree": "SPECIAL",
+      "price": "30$"
+    },
+    {
+      "id": 70,
+      "seat": "C22",
+      "degree": "SPECIAL",
+      "price": "30$"
+    },
+    {
+      "id": 71,
+      "seat": "C23",
+      "degree": "SPECIAL",
+      "price": "30$"
+    },
+    {
+      "id": 72,
+      "seat": "C24",
+      "degree": "SPECIAL",
+      "price": "30$"
     }
   ]
 }

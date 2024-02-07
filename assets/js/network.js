@@ -62,6 +62,16 @@ const network = {
         let res =await fetch(this.url3);
         return res.json()
     }
+    ,
+    getaccountpath : async function(id, data){
+        let res = await fetch(this.url2 + id, {
+            method: 'PATCH',
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8'
+            },
+            body: JSON.stringify(data)
+        });
+        return res.json();
+    }
 }
-
 
