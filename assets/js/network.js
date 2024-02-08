@@ -4,19 +4,7 @@ const network = {
     url1: "http://localhost:3000/main/",
     url2: "http://localhost:3000/account/",
     url3: "http://localhost:3000/ticket/",
-    // url2:"http://localhost:3000/mean",
-    // getAll : async function(){
-    //    let res= await axios.get(this.url);
-    //    return res.data;
-    // },
-    // getById : async function(id){
-    //     let res = await axios.get(this.url+id);
-    //     return res.data;
-    // },
-    // add : async function(body){
-    //     let res = await axios.post(this.url1, body)
-    //     return res.data;
-    // },
+    url4: "http://localhost:3000/blog/",
 
     getfetch: async function () {
         let res = await fetch(this.url1);
@@ -71,6 +59,14 @@ const network = {
             },
             body: JSON.stringify(data)
         });
+        return res.json();
+    },
+    getblog : async function(){
+        let res = await fetch(this.url4)
+        return res.json();
+    },
+    getblogById: async function (id) {
+        let res = await fetch(this.url4 + id);
         return res.json();
     }
 }

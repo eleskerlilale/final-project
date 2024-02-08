@@ -3,9 +3,22 @@
 }
 #movie-all-banner{
     padding: 50px 0;
-    background-position: center top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    // background-image: ;
+    .movie-all-banner{
+        .text{
+        >div {
+            a{
+                font-size: 18px;
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+    }
 }
 .film-detail {
     padding: 30px 0;

@@ -206,8 +206,8 @@ const printBanner = () => {
               <h1>${elem.original_title}</h1>
               <p>Writen and Directed by Aleesha Rose / Ireland 2023</p>
               <div>
-                  <a href="./detail.html" class="info">More Info</a>
-                  <a href="./ticket.html" class="ticket">Get Ticket</a>
+                  <a href="./detail.html?id=${elem.id}" class="info">More Info</a>
+                  <a href="./ticket.html?id=${elem.id}" class="ticket">Get Ticket</a>
               </div>
           </div>
       </div>

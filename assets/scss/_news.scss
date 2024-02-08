@@ -1,0 +1,414 @@
+#blog {
+    background-color: $white;
+
+    .blog {
+        padding: 50px 0;
+
+        >div {
+            padding: 20px;
+            .card {
+                @include column;
+                gap: 60px;
+                width: 100%;
+                border: none;
+                border-radius: none;
+
+                .box {
+                    @include column;
+                    gap: 20px;
+                    width: 100%;
+                    height: 100%;
+
+                    .image {
+                        width: 100%;
+                        height: 100%;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .text {
+                        @include column;
+                        gap: 20px;
+
+                        h2 {
+                            margin: 0;
+
+                            a {
+                                font-weight: $fourthFont;
+                                font-size: 28px;
+                                @include transition;
+                                color: $black;
+                                cursor: pointer;
+
+                                &:hover {
+                                    color: $orange
+                                }
+                            }
+                        }
+
+                        .status {
+                            @include center;
+                            gap: 20px;
+
+                            >div {
+                                @include center;
+                                gap: 10px;
+                                font-size: 16px;
+                                color: rgb(167, 167, 167);
+
+                                i {
+                                    color: $orange;
+                                    font-size: 15px;
+                                }
+                            }
+                            .list{
+                                @include transition;
+                                cursor: pointer;
+                                &:hover{
+                                    color: $orange;
+                                }
+                            }
+                        }
+                    }
+
+                    >a {
+                        padding: 12px 30px;
+                        background-color: $orange;
+                        color: $white;
+                        border: 2px solid $orange;
+                        @include transition;
+
+                        &:hover {
+                            background-color: $white;
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+
+            .my-card {
+                width: 100%;
+                @include column;
+                gap: 30px;
+
+                .first-box {
+                    width: 100%;
+                    background-color: $lightGray;
+                    @include column;
+                    gap: 5px;
+                    padding: 40px;
+                    h3 {
+                        font-size: 20px;
+                        font-weight: $fourthFont
+                    }
+
+                    .latest-box {
+                        @include column;
+                        gap: 5px;
+                        width: 100%;
+
+                        .block {
+                            padding: 10px;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            @include transition;
+                            gap: 10px;
+                            cursor: pointer;
+                            .image {
+                                // width: 70px;
+                                height: 70px;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                           >div{
+                            .people{
+                                color: $gray;
+                                font-size: 14px;
+                                i{
+                                    color: $orange;
+                                }
+                            }
+                            h4{
+                                font-size: 18px;
+                                font-weight: $fourthFont
+
+                            }
+                            
+                           }
+                           &:hover{
+                            background-color: $white;
+                            h4{
+                                color: $orange;
+                            }
+                        }
+                        }
+                    }
+                }
+                .second-box{
+                    padding: 40px;
+                    background-color: $lightGray;
+                    width: 100%;
+                    @include column;
+                    gap: 20px;
+                    h3{
+                        font-size: 20px;
+                        font-weight: $fourthFont;
+                    }
+                    .category-box{
+                        width: 100%;
+                        @include column;
+                        gap: 10px;
+                        .box{
+                            color: $gray;
+                            @include transition;
+                            cursor: pointer;
+                            &:hover{
+                                color: $orange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#blog-detail{
+    background-color: $white;
+    .blog-detail{
+        padding: 100px 0;
+        >div {
+            padding: 20px;
+            .card {
+                @include column;
+                gap: 60px;
+                width: 100%;
+                border: none;
+                border-radius: none;
+
+                .box {
+                    @include column;
+                    gap: 20px;
+                    width: 100%;
+                    height: 100%;
+
+                    .image {
+                        width: 100%;
+                        height: 100%;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .text {
+                        @include column;
+                        gap: 20px;
+
+                        h2 {
+                            margin: 0;
+
+                            a {
+                                font-weight: $fourthFont;
+                                font-size: 28px;
+                                @include transition;
+                                color: $black;
+                                cursor: pointer;
+
+                                &:hover {
+                                    color: $orange
+                                }
+                            }
+                        }
+
+                        .status {
+                            @include center;
+                            gap: 20px;
+
+                            >div {
+                                @include center;
+                                gap: 10px;
+                                font-size: 16px;
+                                color: rgb(167, 167, 167);
+
+                                i {
+                                    color: $orange;
+                                    font-size: 15px;
+                                }
+                            }
+                            .list{
+                                @include transition;
+                                cursor: pointer;
+                                &:hover{
+                                    color: $orange;
+                                }
+                            }
+                        }
+                    }
+
+                    >a {
+                        padding: 12px 30px;
+                        background-color: $orange;
+                        color: $white;
+                        border: 2px solid $orange;
+                        @include transition;
+
+                        &:hover {
+                            background-color: $white;
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+            .card-davam{
+                padding-top: 20px;
+                @include column;
+                gap: 10px;
+                .italic-font{
+                    color: $black;
+                    font-weight: $thridFond;
+                    font-style: italic;
+                    font-size: 19px;
+                    @include center;
+                    gap: 20px;
+                    p{
+                        &:first-child{
+                        font-size: 50px;
+                        color: $orange;
+                        }
+                    }
+                }
+                >p{
+                    padding: 10px 0;
+                    font-size: 16px;
+                    color: $gray;
+                }
+                >h3{
+                    font-size: 25px;
+                    font-weight: $fourthFont;
+                }
+            }
+            .my-card {
+                width: 100%;
+                @include column;
+                gap: 30px;
+
+                .first-box {
+                    width: 100%;
+                    background-color: $lightGray;
+                    @include column;
+                    gap: 5px;
+                    padding: 40px;
+                    h3 {
+                        font-size: 20px;
+                        font-weight: $fourthFont
+                    }
+
+                    .latest-box {
+                        @include column;
+                        gap: 5px;
+                        width: 100%;
+
+                        .block {
+                            padding: 10px;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            @include transition;
+                            gap: 10px;
+                            cursor: pointer;
+                            .image {
+                                // width: 70px;
+                                height: 70px;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                           >div{
+                            .people{
+                                color: $gray;
+                                font-size: 14px;
+                                i{
+                                    color: $orange;
+                                }
+                            }
+                            h4{
+                                font-size: 18px;
+                                font-weight: $fourthFont
+
+                            }
+                            
+                           }
+                           &:hover{
+                            background-color: $white;
+                            h4{
+                                color: $orange;
+                            }
+                        }
+                        }
+                    }
+                }
+                .second-box{
+                    padding: 40px;
+                    background-color: $lightGray;
+                    width: 100%;
+                    @include column;
+                    gap: 20px;
+                    h3{
+                        font-size: 20px;
+                        font-weight: $fourthFont;
+                    }
+                    .category-box{
+                        width: 100%;
+                        @include column;
+                        gap: 10px;
+                        .box{
+                            color: $gray;
+                            @include transition;
+                            cursor: pointer;
+                            &:hover{
+                                color: $orange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#news-banner{
+    background-color: $lightGray;
+    .news-banner{
+        color:$gray;
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        i{
+            font-size: 10px;
+            padding-top: 5px;
+        }
+        a{
+            color: $gray;
+            @include transition;
+            &:hover{
+                color: $orange;
+            }
+        }
+    }
+}

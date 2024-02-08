@@ -333,6 +333,55 @@
       "key": "CHKn-yDCE2w"
     }
   ],
+  "blog":[
+    {
+      "id":1,
+      "image":"./assets/image/blog-4.jpg",
+      "people":"Duno",
+      "blog_name":"See Meila enjoyable capturing moment",
+      "date":"March 23, 2023",
+      "list":"Fantasy",
+      "description":"Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable."
+    },
+    {
+      "id":2,
+      "image":"./assets/image/blog-1.jpg",
+      "people":"Duno",
+      "blog_name":"The Foreign Oscar Nominations 2023",
+      "date":"March 23, 2023",
+      "list":"Fantasy",
+      "description":"Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable."
+    },
+    {
+      "id":3,
+      "image":"./assets/image/blog-3.jpg",
+      "people":"Duno",
+      "blog_name":"Upcoming New Season 5 Just Flow in !",
+      "date":"March 23, 2023",
+      "list":"Fantasy",
+      "description":"Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable."
+    },
+    {
+      "id":4,
+      "image":"./assets/image/blog-5.jpg",
+      "people":"duong",
+      "blog_name":"Hassle-free Streaming Experience",
+      "date":"March 1, 2023",
+      "list":"Fantasy",
+      "description":"Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable."
+    },
+    {
+      "id":5,
+      "image":"./assets/image/blog-2.jpg",
+      "people":"duong",
+      "blog_name":"8 Films are Vying for the Foreign Oscar Nominations",
+      "date":"March 1, 2023",
+      "list":"Fantasy",
+      "description":"Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable."
+    }
+  ],
+
+
   "account": [
     {
       "email": "eleskerlilale@gmail.com",

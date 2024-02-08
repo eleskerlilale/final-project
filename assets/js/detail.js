@@ -74,7 +74,7 @@ network.getfetchById(id).then(data => {
     console.log(data.original_title);
     data.genres.forEach(e => arr.push(e.name))
     console.log(arr);
-    movieBanner.style.backgroundImage=`url(${data.video_poster})`
+    movieBanner.style.backgroundImage=`linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url(${data.video_poster})`
     filmDetail.innerHTML = `
                 <div class="title">
                     <div>
