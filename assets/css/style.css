@@ -27,132 +27,157 @@
   outline: none;
 }
 
-#admin-panel {
-  margin: 0 auto;
-}
-#admin-panel .admin-panel {
-  padding: 100px 0;
-  margin: 0 auto;
-  width: 100%;
-}
-#admin-panel .admin-panel .my-card {
-  padding: 10px;
+#admin-nav {
+  background-color: #000;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  border-right: 1px solid white;
   transition: all 0.3s ease;
-  overflow: hidden;
+  z-index: 110;
+  left: 0px;
 }
-#admin-panel .admin-panel .my-card > div {
-  width: 100%;
-  position: relative;
-  height: 400px;
-}
-#admin-panel .admin-panel .my-card > div .image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-#admin-panel .admin-panel .my-card > div .image img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: all 0.3s ease;
-}
-#admin-panel .admin-panel .my-card > div .image::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  height: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
-  width: 100%;
-  height: 100%;
-}
-#admin-panel .admin-panel .my-card > div .text {
-  position: absolute;
-  bottom: 20px;
-  left: 10px;
-  padding: 20px;
-  color: #fff;
-  font-weight: 500;
-}
-#admin-panel .admin-panel .my-card > div .text .category-time {
+#admin-nav .admin-nav {
+  padding: 30px 10px;
   display: flex;
-  gap: 5px;
-  font-size: 13px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  color: #fff;
 }
-#admin-panel .admin-panel .my-card > div .text .film-name {
-  font-size: 20px;
-  margin-bottom: 10px;
+#admin-nav .admin-nav .logo {
+  width: 130px;
+  margin-bottom: 20px;
+}
+#admin-nav .admin-nav .logo img {
+  width: 100%;
+}
+#admin-nav .admin-nav a {
+  color: #fff;
   transition: all 0.3s ease;
-  cursor: pointer;
 }
-#admin-panel .admin-panel .my-card > div .text .film-name:hover {
+#admin-nav .admin-nav a:hover {
   color: #d96c2c;
 }
-#admin-panel .admin-panel .my-card > div .text a {
-  padding: 8px 20px;
-  color: #000;
-  background-color: #fff;
+#admin-nav .admin-nav p {
+  padding-bottom: 10px;
+}
+
+#admin-menu-panel {
+  position: fixed;
+  top: -100px;
+  transition: all 0.3s ease;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  z-index: 100;
+}
+#admin-menu-panel .admin-menu-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  color: #fff;
+  font-size: 20px;
+}
+#admin-menu-panel .admin-menu-panel .logo {
+  width: 120px;
+}
+#admin-menu-panel .admin-menu-panel .logo img {
+  width: 100%;
+}
+#admin-menu-panel .admin-menu-panel i {
+  cursor: pointer;
   transition: all 0.3s ease;
 }
-#admin-panel .admin-panel .my-card > div .edit-delete {
-  position: absolute;
-  top: 20px;
-  left: -40px;
+#admin-menu-panel .admin-menu-panel i:hover {
+  color: #d96c2c;
+}
+
+#dashboard {
+  background-color: #000;
+  padding-left: 250px;
+  height: 100%;
+  width: 100%;
   transition: all 0.3s ease;
+}
+#dashboard .dashboard {
+  padding: 0px 0 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+#dashboard .dashboard h2 {
+  margin-top: 40px;
+  color: #fff;
+  font-size: 30px;
+}
+#dashboard .dashboard .card {
+  padding: 30px;
+  width: 100%;
+  background: rgb(34, 34, 34);
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
 }
-#admin-panel .admin-panel .my-card > div .edit-delete > div {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+#dashboard .dashboard .card .title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+}
+#dashboard .dashboard .card .title > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  z-index: 10;
+  flex-direction: row;
+  gap: 10px;
 }
-#admin-panel .admin-panel .my-card > div .edit-delete > div a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-#admin-panel .admin-panel .my-card > div .edit-delete > div i {
-  padding: 3px 7px;
-  border-radius: 50%;
-  display: block;
-  width: 100%;
-  height: 100%;
+#dashboard .dashboard .card .title i {
   color: #d96c2c;
-  background-color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
-#admin-panel .admin-panel .my-card > div .edit-delete > div i:hover {
-  color: #fff;
-  background-color: #d96c2c;
-  transform: rotateZ(360deg);
+#dashboard .dashboard .card table {
+  width: 100%;
 }
-#admin-panel .admin-panel .my-card:hover {
-  background-color: #d96c2c;
+#dashboard .dashboard .card table thead {
+  width: 100%;
+  font-size: 12px;
+  color: #737373;
+  border-top: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
-#admin-panel .admin-panel .my-card:hover img {
-  scale: 1.1;
+#dashboard .dashboard .card table thead tr td {
+  padding: 10px 0;
 }
-#admin-panel .admin-panel .my-card:hover .text > a {
-  background-color: #d96c2c;
-  color: #fff;
+#dashboard .dashboard .card table tbody {
+  font-size: 14px;
 }
-#admin-panel .admin-panel .my-card:hover .edit-delete {
-  left: 20px;
+#dashboard .dashboard .card table tbody i {
+  color: #d96c2c;
+}
+#dashboard .dashboard .card table tbody td {
+  padding-top: 10px;
+}
+#dashboard .dashboard .card table tbody td i {
+  padding-right: 5px;
 }
 
+@media screen and (max-width: 768px) {
+  #admin-menu-panel {
+    top: 0;
+  }
+  #admin-nav {
+    left: -250px;
+  }
+  #dashboard {
+    padding-left: 0px;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -965,6 +990,9 @@
 #ticket .ticket .main .box:hover {
   border: 2px solid #d96c2c;
 }
+#ticket .ticket .main .active {
+  background-color: aqua;
+}
 #ticket .ticket .button {
   max-width: 500px;
   width: 100%;
@@ -1021,7 +1049,7 @@
   width: 18px;
   height: 18px;
   background-color: white;
-  border: 1px solid rgb(105, 105, 105);
+  border: 1px solid #696969;
   font-weight: bold;
   cursor: pointer;
   display: flex;
@@ -1400,12 +1428,12 @@
   align-items: flex-start;
   gap: 10px;
 }
-#blog .blog > div .my-card .second-box .category-box .box {
+#blog .blog > div .my-card .second-box .category-box .box a {
   color: #737373;
   transition: all 0.3s ease;
   cursor: pointer;
 }
-#blog .blog > div .my-card .second-box .category-box .box:hover {
+#blog .blog > div .my-card .second-box .category-box .box a:hover {
   color: #d96c2c;
 }
 
@@ -1612,12 +1640,12 @@
   align-items: flex-start;
   gap: 10px;
 }
-#blog-detail .blog-detail > div .my-card .second-box .category-box .box {
+#blog-detail .blog-detail > div .my-card .second-box .category-box .box a {
   color: #737373;
   transition: all 0.3s ease;
   cursor: pointer;
 }
-#blog-detail .blog-detail > div .my-card .second-box .category-box .box:hover {
+#blog-detail .blog-detail > div .my-card .second-box .category-box .box a:hover {
   color: #d96c2c;
 }
 
@@ -1640,6 +1668,10 @@
 }
 #news-banner .news-banner a:hover {
   color: #d96c2c;
+}
+#news-banner .news-banner > p {
+  color: #d96c2c;
+  padding-left: 5px;
 }
 
 #login-register {

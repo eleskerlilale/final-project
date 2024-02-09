@@ -186,6 +186,7 @@ network.getfetchById(id).then(data => {
                     <h2>Story Line</h2>
                     <p>${data.overview}</p>
                 </div>
+                
             `
 const videoPlay=document.querySelector(".trailer-span")
 videoPlay.addEventListener("click", () => {
@@ -203,4 +204,29 @@ videoPlay.addEventListener("click", () => {
 })
 })
 
+
+// let arr = [];
+// let dataFav = []
+// network.getfetch().then((data) => {
+//   network.getfetchaccount().then(datafav => {
+//     arr = data;
+//     dataFav = datafav
+//     console.log(data);
+//     printBanner();
+//     printData();
+    $(document).ready(function () {
+      $(".sinaq").owlCarousel({
+        margin: 10,
+        dots: true,
+        loop: true,
+        responsive: {
+          0: {
+            items: 1,
+          }
+        }
+      });
+     
+    });
+//   });
+// })
 

@@ -1,11 +1,16 @@
 const id =new URLSearchParams(window.location.search).get("id")
-console.log(id);
-
 const card=document.querySelector(".blog-detail .card")
 const firstBox=document.querySelector(".blog-detail .latest-box")
 
+const category= document.querySelector(".news-banner .category")
+const name=document.querySelector(".news-banner p")
+let count=0;
+firstBox.innerHTML=``
+
 network.getblogById(id).then(elem => {
     console.log(elem);
+    category.innerText=`${elem.list}`
+    name.innerText=`${elem.blog_name}`
     card.innerHTML=`
     <div class="box">
     <div class="image">
@@ -33,4 +38,33 @@ network.getblogById(id).then(elem => {
     </div>
 </div>
     `
+    network.getblog().then(data => {
+        data.forEach(elem => {
+            if(count<3){
+                if(elem.id != id){
+                    count++
+                    firstBox.innerHTML += `
+                    <div class="block" onclick='blogDetailFunc(${elem.id})'>
+                        <div class="image">
+                            <img src=${elem.image} alt="">
+                        </div>
+                        <div>
+                            <div class="people">
+                                <i class="bi bi-person-fill"></i>
+                                ${elem.people}
+                            </div>
+                            <h4>${elem.blog_name}</h4>
+                        </div>
+                    </div>
+                    `
+                    
+                }
+            }
+            
+        })
+    })
 })
+
+function blogDetailFunc(id){
+    window.location=`./blog_detail.html?id=${id}`
+}

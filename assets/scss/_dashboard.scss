@@ -1,0 +1,167 @@
+#admin-nav {
+    background-color: $black;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    border-right: 1px solid white;
+    @include transition;
+    z-index: 110;
+    left: 0px;
+    .admin-nav {
+        padding: 30px 10px;
+        @include column;
+        gap: 10px;
+        color: $white;
+
+        .logo {
+            width: 130px;
+            margin-bottom: 20px;
+
+            img {
+                width: 100%;
+
+            }
+        }
+
+        a {
+            color: $white;
+            @include transition;
+            &:hover{
+                color: $orange;
+            }
+        }
+
+        p {
+            padding-bottom: 10px;
+        }
+       
+    }
+}
+
+#admin-menu-panel {
+    position: fixed;
+    top: -100px;
+    @include transition;
+    left: 0;
+    width: 100%;
+    background-color: $black;
+    z-index: 100;
+    .admin-menu-panel {
+        @include flex;
+        width: 100%;
+        padding: 20px 0;
+        color:$white;
+        font-size: 20px;
+        
+        .logo {
+            width: 120px;
+
+            img {
+                width: 100%;
+            }
+        }
+        i{
+            cursor: pointer;
+            @include transition;
+            &:hover{
+                color: $orange;
+            }
+        }
+    }
+}
+
+#dashboard {
+    background-color: $black;
+    padding-left: 250px;
+    height: 100%;
+    width: 100%;
+    @include transition;
+
+    .dashboard {
+        padding: 0px 0 100px 0;
+        @include column;
+        gap: 30px;
+        h2{
+            margin-top: 40px;
+            color: $white;
+            font-size: 30px;
+        }
+        .card {
+            padding: 30px;
+            width: 100%;
+            background: rgb(34, 34, 34);
+            color: $white;
+            @include column;
+            gap: 10px;
+
+            .title {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 18px;
+
+                >div {
+                    @include center;
+                    flex-direction: row;
+                    gap: 10px;
+                }
+
+                i {
+                    color: $orange;
+                }
+            }
+
+            table {
+                width: 100%;
+
+                thead {
+                    width: 100%;
+                    font-size: 12px;
+                    color: $gray;
+                    border-top:1px solid rgb(0, 0, 0) ;
+                    border-bottom:1px solid rgb(0, 0, 0) ;
+                    tr{
+                        td{
+                    padding: 10px 0;
+
+                        }
+                    }
+                }
+
+                tbody {
+                    font-size: 14px;
+
+                    i {
+                        color: $orange;
+                    }
+
+                    td {
+                        padding-top: 10px;
+
+                        i {
+                            padding-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#catalog{
+    .catalog{
+        
+    }
+}
+@media screen and (max-width:768px){
+    #admin-menu-panel{
+        top:0
+    }
+    #admin-nav{
+        left: -250px;
+    }
+    #dashboard{
+        padding-left: 0px;
+    }
+}

@@ -180,6 +180,40 @@
         }
     }
 }
+
+// #sinaq{
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     background-color: #000000d5;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 1000;
+//     color: white;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: end;
+//     p{
+//     font-size: 30px;
+//     cursor: pointer;
+//     margin: 20px 20px 0 0;
+//     }
+//    >div{
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     >div{
+//         // margin: 0 auto;
+//         max-width: 600px;
+//         width: 80%;
+//         height: 60%;
+//         background-color: #fff;
+//     }
+//    }
+// }
 @keyframes video {
     0%{
         transform: scale(1);

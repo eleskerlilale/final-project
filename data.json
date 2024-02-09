@@ -9,6 +9,7 @@
       "popularity": 1989.417,
       "poster_path": "/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
       "runtime": 117,
+      "vote_average": 7.204,
       "video_poster": "https://cloudimages.broadwayworld.com/columnpiccloud/Photos-Check-Out-New-WONKA-Posters-With-Timothee-Chalamet-Natasha-Rothwell-More-1697120565.jpg",
       "key": "otNh9bTjXWg",
       "genres": [
@@ -47,6 +48,7 @@
       "popularity": 1428.915,
       "poster_path": "/AcoVfiv1rrWOmAdpnAMnM56ki19.jpg",
       "runtime": 95,
+      "vote_average": 6.665,
       "video_poster": "https://nerdreactor.com/wp-content/uploads/2023/11/wish-movie.jpg",
       "key": "eQPeGiCH7A0",
       "genres": [
@@ -90,6 +92,7 @@
       "video_poster": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/10/migration-mig_adv1sheet_landing4_rgb_1sm_rgb.jpg",
       "poster_path": "/ldfCF9RhR40mppkzmftxapaHeTo.jpg",
       "runtime": 83,
+      "vote_average": 7.657,
       "key": "cQfo0HJhCnE",
       "genres": [
         {
@@ -137,6 +140,7 @@
       "runtime": 124,
       "video_poster": "https://www.aquamanmovie.com/images/share.jpg",
       "key": "UGc5Tzz19UY",
+
       "release_date": "2023-12-20",
       "vote_average": 6.988,
       "genres": [
@@ -176,6 +180,7 @@
       "video_poster": "https://www.allkpop.com/upload/2023/09/content/291659/1696021162-untitled-1.jpg",
       "poster_path": "/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
       "runtime": 105,
+      "vote_average": 6.96,
       "key": "uwmDH12MAA4",
       "genres": [
         {
@@ -222,6 +227,7 @@
       "original_title": "Radical",
       "overview": "In a Mexican border town plagued by neglect, corruption, and violence, a frustrated teacher tries a radical new method to break through his students’ apathy and unlock their curiosity, their potential… and maybe even their genius.",
       "popularity": 598.187,
+      "vote_average": 7.96,
       "video_poster": "https://i.ytimg.com/vi/L4DvL0UBZPQ/maxresdefault.jpg",
       "poster_path": "/eSatbygYZp8ooprBHZdb6GFZxGB.jpg",
       "key": "BXcGgvAKC1Q",
@@ -333,134 +339,68 @@
       "key": "CHKn-yDCE2w"
     }
   ],
-  "blog":[
+  "blog": [
     {
-      "id":1,
-      "image":"./assets/image/blog-4.jpg",
-      "people":"Duno",
-      "blog_name":"See Meila enjoyable capturing moment",
-      "date":"March 23, 2023",
-      "list":"Fantasy",
-      "description":"Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable."
+      "id": 1,
+      "image": "./assets/image/blog-4.jpg",
+      "people": "Duno",
+      "blog_name": "See Meila enjoyable capturing moment",
+      "date": "March 23, 2023",
+      "list": "Fantasy",
+      "description": "Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable."
     },
     {
-      "id":2,
-      "image":"./assets/image/blog-1.jpg",
-      "people":"Duno",
-      "blog_name":"The Foreign Oscar Nominations 2023",
-      "date":"March 23, 2023",
-      "list":"Fantasy",
-      "description":"Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable."
+      "id": 2,
+      "image": "./assets/image/blog-5.jpg",
+      "people": "Duno",
+      "blog_name": "The Foreign Oscar Nominations 2023",
+      "date": "March 23, 2023",
+      "list": "Movie",
+      "description": "Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable."
     },
     {
-      "id":3,
-      "image":"./assets/image/blog-3.jpg",
-      "people":"Duno",
-      "blog_name":"Upcoming New Season 5 Just Flow in !",
-      "date":"March 23, 2023",
-      "list":"Fantasy",
-      "description":"Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable."
+      "id": 3,
+      "image": "./assets/image/blog-6.jpg",
+      "people": "Duno",
+      "blog_name": "Upcoming New Season 5 Just Flow in !",
+      "date": "March 23, 2023",
+      "list": "Fantasy",
+      "description": "Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable."
     },
     {
-      "id":4,
-      "image":"./assets/image/blog-5.jpg",
-      "people":"duong",
-      "blog_name":"Hassle-free Streaming Experience",
-      "date":"March 1, 2023",
-      "list":"Fantasy",
-      "description":"Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable."
+      "id": 4,
+      "image": "./assets/image/blog-2.jpg",
+      "people": "duong",
+      "blog_name": "Hassle-free Streaming Experience",
+      "date": "March 1, 2023",
+      "list": "Movie",
+      "description": "Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable."
     },
     {
-      "id":5,
-      "image":"./assets/image/blog-2.jpg",
-      "people":"duong",
-      "blog_name":"8 Films are Vying for the Foreign Oscar Nominations",
-      "date":"March 1, 2023",
-      "list":"Fantasy",
-      "description":"Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable."
+      "id": 5,
+      "image": "./assets/image/blog-3.jpg",
+      "people": "duong",
+      "blog_name": "8 Films are Vying for the Foreign Oscar Nominations",
+      "date": "March 1, 2023",
+      "list": "Fantasy",
+      "description": "Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable."
+    },
+    {
+      "id": 6,
+      "image": "./assets/image/blog-1.jpg",
+      "people": "duno",
+      "blog_name": "Let this summer day never end !",
+      "date": "March 1, 2023",
+      "list": "Movie",
+      "description": "Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable."
     }
   ],
-
-
   "account": [
     {
       "email": "eleskerlilale@gmail.com",
       "password": "1!Aa1234",
       "id": 2,
       "favorite": [
-        {
-          "id": 609681,
-          "imdb_id": "tt10676048",
-          "original_language": "en",
-          "original_title": "The Marvels",
-          "overview": "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. But unintended consequences see Carol shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol’s estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
-          "popularity": 1288.591,
-          "video_poster": "https://www.allkpop.com/upload/2023/09/content/291659/1696021162-untitled-1.jpg",
-          "poster_path": "/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
-          "runtime": 105,
-          "key": "uwmDH12MAA4",
-          "genres": [
-            {
-              "id": 878,
-              "name": "Science Fiction"
-            },
-            {
-              "id": 12,
-              "name": "Adventure"
-            },
-            {
-              "id": 28,
-              "name": "Action"
-            }
-          ]
-        },
-        {
-          "id": 1212073,
-          "imdb_id": "tt29538571",
-          "original_language": "de",
-          "original_title": "60 Minuten",
-          "overview": "Desperate to keep custody of his daughter, a mixed martial arts fighter abandons a big match and races across Berlin to attend her birthday party.",
-          "popularity": 899.318,
-          "video_poster": "https://newagebharat.com/wp-content/uploads/2024/01/Upcoming-Movies-on-Netflix-in-January-2024-copy-11-jpg.webp",
-          "poster_path": "/cND79ZWPFINDtkA8uwmQo1gnPPE.jpg",
-          "runtime": 89,
-          "key": "uiyZW82Rxf8",
-          "vote_average": 6.939,
-          "genres": [
-            {
-              "id": 28,
-              "name": "Action"
-            },
-            {
-              "id": 18,
-              "name": "Drama"
-            }
-          ]
-        },
-        {
-          "id": 1211957,
-          "imdb_id": "tt30253266",
-          "original_language": "en",
-          "original_title": "The Painter",
-          "overview": "An ex-CIA operative is thrown back into a dangerous world when a mysterious woman from his past resurfaces. Now exposed and targeted by a relentless killer and a rogue black ops program, he must rely on skills he thought he left behind in a high-stakes game of survival.",
-          "popularity": 333.344,
-          "video_poster": "https://i.ytimg.com/vi/nQbCKPlaeG0/maxresdefault.jpg",
-          "key": "rZe3fRnZr78",
-          "poster_path": "/UZ0ydgbXtnrq8xZCI5lHVXVcH9.jpg",
-          "genres": [
-            {
-              "id": 28,
-              "name": "Action"
-            },
-            {
-              "id": 53,
-              "name": "Thriller"
-            }
-          ],
-          "release_date": "2024-01-05",
-          "runtime": 100,
-          "vote_average": 7.196
-        },
         {
           "id": 1022796,
           "imdb_id": "tt11304740",
@@ -502,6 +442,30 @@
               "time": "10:30"
             }
           ]
+        },
+        {
+          "id": 1211957,
+          "imdb_id": "tt30253266",
+          "original_language": "en",
+          "original_title": "The Painter",
+          "overview": "An ex-CIA operative is thrown back into a dangerous world when a mysterious woman from his past resurfaces. Now exposed and targeted by a relentless killer and a rogue black ops program, he must rely on skills he thought he left behind in a high-stakes game of survival.",
+          "popularity": 333.344,
+          "video_poster": "https://i.ytimg.com/vi/nQbCKPlaeG0/maxresdefault.jpg",
+          "key": "rZe3fRnZr78",
+          "poster_path": "/UZ0ydgbXtnrq8xZCI5lHVXVcH9.jpg",
+          "genres": [
+            {
+              "id": 28,
+              "name": "Action"
+            },
+            {
+              "id": 53,
+              "name": "Thriller"
+            }
+          ],
+          "release_date": "2024-01-05",
+          "runtime": 100,
+          "vote_average": 7.196
         }
       ]
     }
@@ -511,133 +475,169 @@
       "id": 1,
       "seat": "A1",
       "degree": "SPECIAL",
-      "price": "20$"
+      "price": "20",
+      "table": [
+        {
+          "id": 1,
+          "moviedate": "24/02/2024",
+          "movietime": "10:30",
+          "oturacaq": "A1"
+        },
+        {
+          "id": 2,
+          "moviedate": "24/02/2024",
+          "movietime": "10:30",
+          "oturacaq": "A3"
+        }
+      ]
     },
     {
       "id": 2,
       "seat": "A2",
       "degree": "SPECIAL",
-      "price": "20$"
+      "price": "20",
+      "table": [
+        {
+          "id": 1,
+          "oturacaq": ""
+        },
+        {
+          "id": 2,
+          "oturacaq": ""
+        }
+      ]
     },
     {
       "id": 3,
       "seat": "A3",
       "degree": "SPECIAL",
-      "price": "20$"
+      "price": "20"
     },
     {
       "id": 4,
       "seat": "A4",
       "degree": "SPECIAL",
-      "price": "20$"
+      "price": "20"
     },
     {
       "id": 5,
       "seat": "A5",
       "degree": "SPECIAL",
-      "price": "20$"
+      "price": "20"
     },
     {
       "id": 6,
       "seat": "A6",
       "degree": "VIP",
-      "price": "30$"
+      "price": "30"
     },
     {
       "id": 7,
       "seat": "A7",
       "degree": "VIP",
-      "price": "30$"
+      "price": "30"
+    },
+    {
+      "id": 8,
+      "seat": "A8",
+      "degree": "VIP",
+      "price": "30"
     },
     {
       "id": 9,
-      "seat": "A8",
+      "seat": "A9",
       "degree": "VIP",
-      "price": "30$"
+      "price": "30"
     },
     {
       "id": 10,
-      "seat": "A9",
+      "seat": "A10",
       "degree": "VIP",
-      "price": "30$"
+      "price": "30"
     },
     {
       "id": 11,
-      "seat": "A10",
+      "seat": "A11",
       "degree": "VIP",
-      "price": "30$"
+      "price": "30"
     },
     {
       "id": 12,
       "seat": "A12",
       "degree": "VIP",
-      "price": "30$"
+      "price": "30"
     },
     {
       "id": 13,
       "seat": "A13",
       "degree": "VIP",
-      "price": "30$"
+      "price": "30"
     },
     {
       "id": 14,
       "seat": "A14",
       "degree": "VIP",
-      "price": "30$"
+      "price": "30"
     },
     {
       "id": 15,
       "seat": "A15",
       "degree": "VIP",
-      "price": "30$"
+      "price": "30"
     },
     {
       "id": 16,
       "seat": "A16",
       "degree": "VIP",
-      "price": "30$"
+      "price": "30"
+    },
+    {
+      "id": 17,
+      "seat": "A17",
+      "degree": "VIP",
+      "price": "30"
     },
     {
       "id": 18,
       "seat": "A18",
       "degree": "VIP",
-      "price": "30$"
+      "price": "30"
     },
     {
       "id": 19,
       "seat": "A19",
       "degree": "VIP",
-      "price": "30$"
+      "price": "30"
     },
     {
       "id": 20,
       "seat": "A20",
       "degree": "SPECIAL",
-      "price": "20$"
+      "price": "20"
     },
     {
       "id": 21,
       "seat": "A21",
       "degree": "SPECIAL",
-      "price": "20$"
+      "price": "20"
     },
     {
       "id": 22,
       "seat": "A22",
       "degree": "SPECIAL",
-      "price": "20$"
+      "price": "20"
     },
     {
       "id": 23,
       "seat": "A23",
       "degree": "SPECIAL",
-      "price": "20$"
+      "price": "20"
     },
     {
       "id": 24,
       "seat": "A24",
       "degree": "SPECIAL",
-      "price": "20$"
+      "price": "20"
     },
     {
       "id": 25,

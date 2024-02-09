@@ -168,11 +168,13 @@
                         @include column;
                         gap: 10px;
                         .box{
-                            color: $gray;
+                            a{
+                                color: $gray;
                             @include transition;
                             cursor: pointer;
                             &:hover{
                                 color: $orange;
+                            }
                             }
                         }
                     }
@@ -377,11 +379,13 @@
                         @include column;
                         gap: 10px;
                         .box{
-                            color: $gray;
+                            a{
+                                color: $gray;
                             @include transition;
                             cursor: pointer;
                             &:hover{
                                 color: $orange;
+                            }
                             }
                         }
                     }
@@ -409,6 +413,10 @@
             &:hover{
                 color: $orange;
             }
+        }
+        >p{
+            color: $orange;
+            padding-left: 5px;
         }
     }
 }
