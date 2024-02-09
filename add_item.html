@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aovis</title>
+    <title>Avios</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -51,45 +51,71 @@
         </div>
     </section>
 
-    <section id="catalog">
+    <section id="add-item">
         <div class="container">
-            <div class="catalog">
-                <div class="title">
-                    <div class="left">
-                        <h2>CATALOG</h2>
-                        <!-- <p class="total">23.383 Total</p> -->
-                    </div>
-                    <div class="right">
-                        <div class="sort">
-                            <span>Sort by</span>
-                            <p>Default<i class="bi bi-list-nested"></i></p>
+            <div class="add-item">
+                <h2>Add new item</h2>
+                <div class="add-main">
+
+                    <div class="a">
+                        <div class="image">
+                            <label for="add-image"><img src="" id="image"></label>
+
+                            <input type="file" accept="image/png, image/jpeg, image/jpg" id="add-image">
                         </div>
-                        <div class="search">
-                            <input type="text">
-                            <i class="bi bi-search"></i>
+                    </div>
+                    <div class="b"> <input type="text" placeholder="Name" id="name"></div>
+                    <div class="c">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Description"></textarea>
+                    </div>
+                    <div class="d">
+                        <input type="text" placeholder="Running time" id="time">
+                    </div>
+                    <div class="select">
+                        <div>
+                            <input type="checkbox" value="32" name="genres" id="action">
+                            <label for="action">Action</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="14" name="genres" id="Fantasy">
+                            <label for="Fantasy">Fantasy</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="35" name="genres" id="Comedy">
+                            <label for="Comedy">Comedy</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="10751" name="genres" id="Family">
+                            <label for="Family">Family</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="16" name="genres" id="Animation">
+                            <label for="Animation">Animation</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="12" name="genres" id="Adventure">
+                            <label for="Adventure">Adventure</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="18" name="genres" id="Drama">
+                            <label for="Drama">Drama</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="80" name="genres" id="Crime">
+                            <label for="Crime">Crime</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" value="53" name="genres" id="Thriller">
+                            <label for="Thriller">Thriller</label>
                         </div>
                     </div>
                 </div>
-                <div class="table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <td>ID</td>
-                                <td>TITLE</td>
-                                <td>RATING</td>
-                                <td>GENRES</td>
-                                <td>RUNTIME</td>
-                                <td>ACTIONS</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                        </tbody>
-                    </table>
-                </div>
+                <div class="save">Save</div>
             </div>
         </div>
     </section>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -101,7 +127,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="./assets/js/network.js"></script>
-    <script src="./assets/js/catalog.js"></script>
+    <script src="./assets/js/add_item.js"></script>
 </body>
 
 </html>

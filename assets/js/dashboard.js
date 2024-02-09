@@ -39,7 +39,7 @@ network.getfetch().then(data => {
                     <td>${dt.id}</td>
                     <td>${dt.original_title}</td>
                     <td>${dt.runtime} min</td>
-                    <td><i class="bi bi-star-fill"></i>${dt.vote_average}</td>
+                    <td><i class="bi bi-star-fill"></i>${dt.vote_average.toFixed(1)}</td>
                 </tr>
                 `
             }
