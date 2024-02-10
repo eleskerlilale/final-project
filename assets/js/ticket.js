@@ -1,8 +1,8 @@
 const main = document.querySelector(".main")
-const button=document.querySelector(".button")
-// const id=new URLSearchParams(window.location.search).get("id")
-// console.log(id);
-network.getfetchById(787699).then(data => {
+const button = document.querySelector(".button")
+const SearchId = new URLSearchParams(window.location.search).get("id")
+console.log(SearchId);
+network.getfetchById(SearchId).then(data => {
     data.date.forEach(elem => {
         main.innerHTML += `
         <div class="box box${elem.id}" onclick='chooseFunc(${elem.id})'>
@@ -19,59 +19,52 @@ network.getfetchById(787699).then(data => {
         `
     })
 })
-let date='';
-let time='';
+let date = '';
+let time = '';
+let say = ''
 function chooseFunc(id) {
-    const boxs=document.querySelectorAll(".box")
-    const box=document.querySelector(`.box${id}`)
-    const dateElem=document.querySelector(`.box .date`)
-    const timeElem=document.querySelector(`.box .time`)
+    say = id
+    const boxs = document.querySelectorAll(".box")
+    const box = document.querySelector(`.box${id}`)
+    const dateElem = document.querySelector(`.box .date`)
+    const timeElem = document.querySelector(`.box .time`)
     console.log(box);
-    if(box.classList.value==`box box${id}`){
+    if (box.classList.value == `box box${id}`) {
         boxs.forEach(b => b.classList.remove("active"));
         box.classList.add("active");
-        date=dateElem.innerText;
-        time=timeElem.innerText;
-    }else{
+        date = dateElem.innerText;
+        time = timeElem.innerText;
+    } else {
         box.classList.remove("active")
     }
 }
-const seat = document.querySelectorAll(".seats .seat")
-const place = document.querySelector(".place")
+const seats = document.querySelectorAll(".seats .seat")
+const place = document.querySelector("#place")
 const selected = document.querySelector(".main-seat-price .seat")
 const price = document.querySelector(".main-seat-price .price")
-let countPrice=0
-
+const proceed = document.querySelector(".proceed")
+let countPrice = 0
+let table = ''
 button.addEventListener("click", () => {
+    console.log(say);
     console.log(date, time);
-    seat.forEach((seat, i)=> {
-        network.getfetchticket().then(data => {
-            data.forEach(elem => {
-                if(elem.table){
-                    const ids= elem.table.find(f => (f.moviedate==date && f.movietime == time))
-                    if(ids){
-                        console.log(ids);
-                    }
-                    // elem.table.forEach(e => {
-                    //     // console.log(e);
-                    //     if((e.moviedate == date && e.movietime == time)){
-                    //         console.log(e);
-                    //         // if(e.oturacaq.includes(seat.classList.value.slice(5))){
-                    //         //     console.log(seat);
-                    //         //     seat.style.backgroundColor="red"
-                    //         //     seat.classList.add("active")
-                    //         // }
-                    //     }
-                    // })
+    network.getfetchById(SearchId).then(data => {
+        network.getfetchticket().then(ticket => {
+            table = `${data.date[Number(say) - 1].seat}`
+            ticket.forEach((t, index) => {
+                if (data.date[Number(say) - 1].seat.includes(t.seat)) {
+                    seats[index].style.backgroundColor = 'red'
                 }
             })
+            place.style.display = "block"
         })
     })
 })
 
-let seatStr=''
-
-seat.forEach((seat, i) => {
+let seatStr = '';
+let newClassSeat = '';
+let prc = 0;
+seats.forEach((seat, i) => {
     const div = document.createElement("div")
     seat.appendChild(div)
     network.getfetchticket().then(data => {
@@ -86,36 +79,78 @@ seat.forEach((seat, i) => {
         })
     })
     seat.addEventListener("click", () => {
-        if(!seat.classList.value.includes("active")){
-            network.getfetchticket().then(data => {
-                data.map(f =>  {
-                    if(seat.classList.value.includes(f.seat)){
-                        if(seat.classList.value.includes('yasil')){
-                            countPrice-=Number(f.price)
-                            price.innerHTML=`$${countPrice}`
-                            seat.style.backgroundColor="#fff"
-                            seat.classList.remove("yasil")
-                            const i = seatStr.indexOf(f.seat)
-                            if(i!=0){
-                                seatStr=seatStr.slice(0,i)+seatStr.slice((i+f.seat.length+2))
-                            }
-                            else{
-                                seatStr=seatStr.slice((i+f.seat.length+2))
-                            }
-                            // console.log(seatStr.slice(i,i+f.seat.length), seatStr);
-                            selected.innerHTML=`${seatStr}`
-                        }else{
-                            seatStr+=`${f.seat} | `
-                            selected.innerHTML=`${seatStr}`
+        network.getfetchticket().then(ticket => {
+            if (getComputedStyle(seat).backgroundColor != 'rgb(255, 0, 0)') {
+                if (getComputedStyle(seat).backgroundColor == 'rgb(0, 128, 0)') {
+                    seat.style.backgroundColor = 'rgb(255, 255, 255)'
+                    newClassSeat = seat.classList.value.slice(5)
+                    const index = seatStr.indexOf(newClassSeat)
+                    prc -= Number(ticket[i].price)
+                    if (index == 0) {
+                        seatStr = seatStr.slice(newClassSeat.length + 3)
+                        console.log(seatStr);
+                    } else {
+                        seatStr = seatStr.slice(0, index) + seatStr.slice(index + newClassSeat.length + 3)
+                        console.log(seatStr);
+                    }
+                    selected.innerText = `${seatStr}`
+                    price.innerText = `$${prc}`
+                } else {
+                    seat.style.backgroundColor = 'rgb(0, 128, 0)'
+                    seatStr += `${seat.classList.value.slice(5)} | `
+                    prc += Number(ticket[i].price)
+                    selected.innerText = `${seatStr}`
+                    price.innerText = `$${prc}`
+                }
+            }
+        })
+    })
+})
 
-                            countPrice+=Number(f.price)
-                            price.innerHTML=`$${countPrice}`
-                            seat.style.backgroundColor="#99ff00"
-                            seat.classList.add("yasil")
+proceed.addEventListener("click", () => {
+    network.getfetchById(SearchId).then(data => {
+        network.getfetchaccount().then(dataaccount => {
+            [...favdata] = dataaccount[0].date;
+            [...maindata] = data.date;
+            console.log(seatStr);
+            data.date.forEach((element, x) => {
+                if (element.date == date && element.time == time) {
+                    maindata[x].seat = table + seatStr;
+                    console.log(maindata);
+                }
+            })
+
+            const yoxla = favdata.find(f => (f.movieId == SearchId && f.date == date))
+            console.log(favdata[0].movieId == SearchId);
+            console.log(favdata[0].date == date);
+            if (yoxla) {
+                favdata.forEach((element, y) => {
+                    if (element.movieId == SearchId && element.date == date) {
+                        element.seat += seatStr
+                        console.log(favdata);
+                        favdata[y] = {
+                            movieId: element.movieId,
+                            date: element.date,
+                            time: element.time,
+                            seat: element.seat
                         }
+                        network.getaccountpath(dataaccount[0].id, { date: favdata })
                     }
                 })
-            })
-        }
+
+            } else {
+                favdata.push({
+                    movieId: SearchId,
+                    date: date,
+                    time: time,
+                    seat: seatStr
+                })
+                console.log(favdata);
+                network.getaccountpath(dataaccount[0].id, { date: favdata })
+            }
+            network.getmainPath(SearchId, { date: maindata })
+
+            // network.getaccountpath(data[0].id, {favorite:favmaindata})
+        })
     })
 })

@@ -7,8 +7,11 @@ const subNav = document.querySelectorAll(".sub-nav")
 const movieSub = document.querySelectorAll(".movie-sub")
 const movieCategory = document.querySelector(".movie-category")
 const subNavSecond = document.querySelector(".sub-nav-second")
+const movieAllBannerP=document.querySelector(".movie-all-banner p")
+const movieAllBannerH1=document.querySelector(".movie-all-banner h1")
+const genres=new URLSearchParams(window.location.search).get("genres")
 
-// menuList.style.zIndex='-100'
+console.log(typeof genres);
 movieSub.forEach((movieSub, i) => {
   movieSub.addEventListener("click", () => {
     if (movieSub.classList.value == 'movie-sub') {
@@ -58,17 +61,19 @@ window.addEventListener("load", () => {
     nav.style.backgroundColor = "transparent"
   }
 })
-
+movieAllBannerH1.innerText=`${genres}`
+movieAllBannerP.innerText=`${genres}`
 const action = document.querySelector(".playing")
 network.getfetch().then((data) => {
-    let arr=['Action'];
+    let arr=[genres];
+    console.log(arr);
     data.forEach(elem => {
         elem.genres.forEach(e => {
-            if(arr.length <=1 && e.name!='Action'){
+            if(arr.length <=1 && e.name!=genres){
                 arr.push(e.name)
             }
-            if(e.name=='Action'){
-                console.log(elem);
+            if(e.name==genres){
+                // console.log(elem);
                 action.innerHTML+=`
                 <div class="my-card col-lg-3 col-md-4 col-sm-2 col-xs-1">
                 <div>
@@ -87,7 +92,7 @@ network.getfetch().then((data) => {
                 </div>
             </div>
                 `
-                arr=['Action']
+                arr=[genres]
             }
         })
     })

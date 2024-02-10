@@ -24,22 +24,20 @@
         {
           "id": 14,
           "name": "Fantasy"
-        },
-        {
-          "id": 12,
-          "name": "Adventure"
         }
       ],
       "date": [
         {
           "id": 1,
           "date": "23/02/2024",
-          "time": "10:30"
+          "time": "10:30",
+          "seat":""
         },
         {
           "id": 2,
           "date": "01/03/2024",
-          "time": "10:30"
+          "time": "10:30",
+          "seat":""
         }
       ]
     },
@@ -73,12 +71,14 @@
         {
           "id": 1,
           "date": "24/02/2024",
-          "time": "10:30"
+          "time": "10:30",
+          "seat": "A6 | A7 | "
         },
         {
           "id": 2,
           "date": "02/03/2024",
-          "time": "10:30"
+          "time": "10:30",
+          "seat": ""
         }
       ]
     },
@@ -120,12 +120,14 @@
         {
           "id": 1,
           "date": "23/02/2024",
-          "time": "09:30"
+          "time": "09:30",
+          "seat":""
         },
         {
           "id": 2,
           "date": "01/03/2024",
-          "time": "10:00"
+          "time": "10:00",
+          "seat":""
         }
       ]
     },
@@ -481,17 +483,24 @@
           "date": [
             {
               "id": 1,
+              "movieId": 787699,
               "date": "23/02/2024",
-              "time": "10:30"
+              "time": "10:30",
+              "seat": "",
+              "price": ""
             },
             {
               "id": 2,
+              "movieId": 787699,
               "date": "01/03/2024",
-              "time": "10:30"
+              "time": "10:30",
+              "seat": "",
+              "price": ""
             }
           ]
         }
-      ]
+      ],
+      "date": []
     }
   ],
   "ticket": [
@@ -499,37 +508,13 @@
       "id": 1,
       "seat": "A1",
       "degree": "SPECIAL",
-      "price": "20",
-      "table": [
-        {
-          "id": 1,
-          "moviedate": "24/02/2024",
-          "movietime": "10:30",
-          "oturacaq": "A1"
-        },
-        {
-          "id": 2,
-          "moviedate": "24/02/2024",
-          "movietime": "10:30",
-          "oturacaq": "A3"
-        }
-      ]
+      "price": "20"
     },
     {
       "id": 2,
       "seat": "A2",
       "degree": "SPECIAL",
-      "price": "20",
-      "table": [
-        {
-          "id": 1,
-          "oturacaq": ""
-        },
-        {
-          "id": 2,
-          "oturacaq": ""
-        }
-      ]
+      "price": "20"
     },
     {
       "id": 3,
