@@ -5,7 +5,7 @@ const network = {
     url2: "http://localhost:3000/account/",
     url3: "http://localhost:3000/ticket/",
     url4: "http://localhost:3000/blog/",
-
+    url5: "http://localhost:3000/mainaccount/",
     getfetch: async function () {
         let res = await fetch(this.url1);
         return res.json();
@@ -20,12 +20,8 @@ const network = {
         })
         return res.json();
     },
-    getfetchaccount: async function () {
-        let res = await fetch(this.url2);
-        return res.json();
-    },
-    getfetchpost: async function (data) {
-        let res = await fetch(this.url2, {
+    getmainpost: async function (data) {
+        let res = await fetch(this.url1, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -45,6 +41,42 @@ const network = {
         });
         return res.json();
     },
+    getmainPath : async function(id , data){
+        let res = await fetch(this.url1 + id, {
+            method: 'PATCH',
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8'
+            },
+            body: JSON.stringify(data)
+        })
+        return res.json();
+    }
+    ,
+    getfetchaccount: async function () {
+        let res = await fetch(this.url2);
+        return res.json();
+    },
+    getaccountpath : async function(id, data){
+        let res = await fetch(this.url2 + id, {
+            method: 'PATCH',
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8'
+            },
+            body: JSON.stringify(data)
+        });
+        return res.json();
+    },
+    getfetchpost: async function (data) {
+        let res = await fetch(this.url2, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        return res.json();
+    },
 
     getfetchticket : async function (){
         let res =await fetch(this.url3);
@@ -61,22 +93,27 @@ const network = {
         return res.json();
     }
     ,
-    getaccountpath : async function(id, data){
-        let res = await fetch(this.url2 + id, {
-            method: 'PATCH',
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8'
-            },
-            body: JSON.stringify(data)
-        });
-        return res.json();
-    },
+   
     getblog : async function(){
         let res = await fetch(this.url4)
         return res.json();
     },
     getblogById: async function (id) {
         let res = await fetch(this.url4 + id);
+        return res.json();
+    },
+    getMainaccount: async function () {
+        let res = await fetch(this.url5);
+        return res.json();
+    },
+    getmainaccountpath : async function(id, data){
+        let res = await fetch(this.url5 + id, {
+            method: 'PATCH',
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8'
+            },
+            body: JSON.stringify(data)
+        });
         return res.json();
     }
 }

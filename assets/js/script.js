@@ -305,6 +305,16 @@ function favFunc(id) {
         console.log("aside");
         datafav[datafav.length - 1].favorite.push(data)
         network.getaccountpath(datafav[datafav.length - 1].id, { favorite: datafav[datafav.length - 1].favorite })
+        network.getfetchaccount().then(data => {
+          network.getMainaccount().then(maindata => {
+            maindata.forEach(maindt => {
+              if (maindt.email == data[0].email) {
+                const index = maindt.id;
+                network.getmainaccountpath(index, data[0])
+              }
+            })
+          })
+        })
       }
       else {
         favorite.innerHTML = `<i class="bi bi-heart"></i>`
@@ -319,6 +329,16 @@ function favFunc(id) {
           newarr.splice(index, 1);
         }
         network.getaccountpath(datafav[datafav.length - 1].id, { favorite: newarr })
+        network.getfetchaccount().then(data => {
+          network.getMainaccount().then(maindata => {
+            maindata.forEach(maindt => {
+              if (maindt.email == data[0].email) {
+                const index = maindt.id;
+                network.getmainaccountpath(index,{ favorite: newarr } )
+              }
+            })
+          })
+        })
       }
     })
   })

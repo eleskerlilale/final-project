@@ -164,6 +164,7 @@ buttonReg.addEventListener("click", () => {
                 const servicId = "service_b9nzc0s";
                 const templateId = "template_lm5owkj";
                 console.log(account);
+                
                 network.getfetchpost(account).then(res => console.log(res))
 
                 emailjs.send(servicId, templateId, params)

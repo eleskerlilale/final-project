@@ -37,8 +37,8 @@ function item() {
                             <td>${element.genres[0].name}</td>
                             <td>${element.runtime} min</td>
                             <td>
-                                <i class="bi bi-pencil-square" ></i>
-                                <i class="bi bi-eye-fill"></i>
+                                <i class="bi bi-pencil-square" onclick='editFunc(${element.id})'></i>
+                                <i class="bi bi-eye-fill" onclick='detailFunc(${element.id})'></i>
                                 <i class="bi bi-trash3" onclick='delFunc(${element.id})'></i>
                             </td>
                         </tr>
@@ -50,6 +50,12 @@ item()
 function delFunc(id){
     network.getFetchDelete(id)
     window.location.reload()
+}
+function editFunc(id){
+    window.location=`./add_item.html?id=${id}`
+}
+function detailFunc(id){
+    window.location=`./admin_detail.html?id=${id}`
 }
 sort.addEventListener("click", () => {
     tbody.innerHTML = ``

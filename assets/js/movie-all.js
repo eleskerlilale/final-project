@@ -58,31 +58,15 @@ window.addEventListener("load", () => {
   }
 })
 
-/* <div class="my-card">
-                        <div>
-                            <div class="image">
-                                <img src="./assets/image/movie-image-12-768x513.jpg" alt="">
-                            </div>
-                            <div class="text">
-                                <div class="category-time">
-                                    <p class="category">category </p>
-                                    /
-                                    <p class="time"> time</p>
-                                </div>
-                                <div class="film-name">Film name</div>
-                                <a href="ticket">Ticket</a>
-                            </div>
-                        </div>
-                    </div> */
 
-const movie=document.querySelector(".playing")
+const movie = document.querySelector(".playing")
 
 network.getfetch().then(data => {
   network.getfetchaccount().then(dataFav => {
-  data.forEach(elem => {
-    const ids = dataFav[dataFav.length - 1].favorite.find(f => f.id == elem.id)
-    if (!ids) {
-      movie.innerHTML += `
+    data.forEach(elem => {
+      const ids = dataFav[dataFav.length - 1].favorite.find(f => f.id == elem.id)
+      if (!ids) {
+        movie.innerHTML += `
                       <div class="my-card col-lg-3 col-md-4 col-sm-6 col-xs-12" >
                           <div>
                               <div class="image">
@@ -101,9 +85,9 @@ network.getfetch().then(data => {
                           </div>
                       </div>
                     `
-    }
-    else {
-      movie.innerHTML += `
+      }
+      else {
+        movie.innerHTML += `
                       <div class="my-card col-lg-3 col-md-4 col-sm-6 col-xs-12" >
                           <div>
                               <div class="image">
@@ -122,21 +106,29 @@ network.getfetch().then(data => {
                           </div>
                       </div>
       `
-    }
+      }
+    })
   })
 })
-})
-function favFunc(id){
+function favFunc(id) {
   const favorite = document.querySelector(`.favorite${id}`)
-  console.log("aside");
   network.getfetchById(id).then(data => {
     network.getfetchaccount().then(datafav => {
       const ids = datafav[datafav.length - 1].favorite.find(f => f.id == data.id)
       if (!ids) {
         favorite.innerHTML = `<i class="bi bi-heart-fill"></i>`
-        console.log("aside");
         datafav[datafav.length - 1].favorite.push(data)
         network.getaccountpath(datafav[datafav.length - 1].id, { favorite: datafav[datafav.length - 1].favorite })
+        network.getfetchaccount().then(data => {
+          network.getMainaccount().then(maindata => {
+            maindata.forEach(maindt => {
+              if (maindt.email == data[0].email) {
+                const index = maindt.id;
+                network.getmainaccountpath(index, data[0])
+              }
+            })
+          })
+        })
       }
       else {
         favorite.innerHTML = `<i class="bi bi-heart"></i>`
@@ -151,21 +143,33 @@ function favFunc(id){
           newarr.splice(index, 1);
         }
         network.getaccountpath(datafav[datafav.length - 1].id, { favorite: newarr })
+        network.getfetchaccount().then(data => {
+          network.getMainaccount().then(maindata => {
+            maindata.forEach(maindt => {
+              if (maindt.email == data[0].email) {
+                const index = maindt.id;
+                network.getmainaccountpath(index, { favorite: newarr })
+              }
+            })
+          })
+        })
       }
     })
+
   })
 }
+// network.getfetchaccount().then(data => console.log(data))
 
-const search= document.querySelector(".search input")
+const search = document.querySelector(".search input")
 
 search.addEventListener("input", () => {
-  movie.innerHTML=``
+  movie.innerHTML = ``
   network.getfetch().then(data => {
     network.getfetchaccount().then(dataFav => {
       data.forEach(elem => {
-      const ids = dataFav[dataFav.length - 1].favorite.find(f => f.id == elem.id)
+        const ids = dataFav[dataFav.length - 1].favorite.find(f => f.id == elem.id)
         console.log(search.value);
-        if(elem.original_title.toLowerCase().includes(search.value.toLowerCase())){
+        if (elem.original_title.toLowerCase().includes(search.value.toLowerCase())) {
           if (!ids) {
             movie.innerHTML += `
                             <div class="my-card col-lg-3 col-md-4 col-sm-6 col-xs-12" >
@@ -210,8 +214,6 @@ search.addEventListener("input", () => {
           }
         }
       })
-  })
-
-    
+    })
   })
 })
