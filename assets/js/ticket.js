@@ -1,19 +1,25 @@
 const main = document.querySelector(".main")
 const button = document.querySelector(".button")
+const close = document.querySelectorAll(".close")
+const request = document.querySelector(".request")
+const buy = document.querySelector(".buy")
+const backk = document.querySelector(".backk")
+const image=document.querySelector(".image")
 const SearchId = new URLSearchParams(window.location.search).get("id")
-console.log(SearchId);
+console.log( typeof SearchId);
+
 network.getfetchById(SearchId).then(data => {
     data.date.forEach(elem => {
         main.innerHTML += `
         <div class="box box${elem.id}" onclick='chooseFunc(${elem.id})'>
             <div>
                 Date:
-                <div class="date">
+                <div class="date date${elem.id}">
                     ${elem.date}
                 </div>
             </div>
             <div>
-                Time:<div class="time">${elem.time}</div>
+                Time:<div class="time time${elem.id}">${elem.time}</div>
             </div>
         </div>
         `
@@ -26,14 +32,15 @@ function chooseFunc(id) {
     say = id
     const boxs = document.querySelectorAll(".box")
     const box = document.querySelector(`.box${id}`)
-    const dateElem = document.querySelector(`.box .date`)
-    const timeElem = document.querySelector(`.box .time`)
+    const dateElem = document.querySelector(`.box .date${id} `)
+    const timeElem = document.querySelector(`.box .time${id}`)
     console.log(box);
     if (box.classList.value == `box box${id}`) {
         boxs.forEach(b => b.classList.remove("active"));
         box.classList.add("active");
         date = dateElem.innerText;
         time = timeElem.innerText;
+        console.log(date);
     } else {
         box.classList.remove("active")
     }
@@ -46,6 +53,8 @@ const proceed = document.querySelector(".proceed")
 let countPrice = 0
 let table = ''
 button.addEventListener("click", () => {
+    image.style.display="flex"
+
     console.log(say);
     console.log(date, time);
     network.getfetchById(SearchId).then(data => {
@@ -56,8 +65,21 @@ button.addEventListener("click", () => {
                     seats[index].style.backgroundColor = 'red'
                 }
             })
+
             place.style.display = "block"
+            image.style.display="none"
+
         })
+    })
+})
+
+close.forEach((close, i) => {
+    close.addEventListener("click", () => {
+        if (i == 0) {
+            window.location = './index.html'
+        } else {
+            place.style.display = 'none'
+        }
     })
 })
 
@@ -108,49 +130,56 @@ seats.forEach((seat, i) => {
 })
 
 proceed.addEventListener("click", () => {
-    network.getfetchById(SearchId).then(data => {
-        network.getfetchaccount().then(dataaccount => {
-            [...favdata] = dataaccount[0].date;
-            [...maindata] = data.date;
-            console.log(seatStr);
-            data.date.forEach((element, x) => {
-                if (element.date == date && element.time == time) {
-                    maindata[x].seat = table + seatStr;
-                    console.log(maindata);
-                }
-            })
-
-            const yoxla = favdata.find(f => (f.movieId == SearchId && f.date == date))
-            console.log(favdata[0].movieId == SearchId);
-            console.log(favdata[0].date == date);
-            if (yoxla) {
-                favdata.forEach((element, y) => {
-                    if (element.movieId == SearchId && element.date == date) {
-                        element.seat += seatStr
-                        console.log(favdata);
-                        favdata[y] = {
-                            movieId: element.movieId,
-                            date: element.date,
-                            time: element.time,
-                            seat: element.seat
-                        }
-                        network.getaccountpath(dataaccount[0].id, { date: favdata })
+    request.style.display = 'flex'
+    buy.addEventListener("click", () => {
+        network.getfetchById(SearchId).then(data => {
+            network.getfetchaccount().then(dataaccount => {
+                [...favdata] = dataaccount[0].date;
+                [...maindata] = data.date;
+                console.log(seatStr);
+                data.date.forEach((element, x) => {
+                    if (element.date == date && element.time == time) {
+                        maindata[x].seat = table + seatStr;
+                        console.log(maindata);
                     }
                 })
 
-            } else {
-                favdata.push({
-                    movieId: SearchId,
-                    date: date,
-                    time: time,
-                    seat: seatStr
-                })
-                console.log(favdata);
-                network.getaccountpath(dataaccount[0].id, { date: favdata })
-            }
-            network.getmainPath(SearchId, { date: maindata })
+                const yoxla = favdata.find(f => (f.movieId === Number(SearchId) && f.date === date && f.time === time))
 
-            // network.getaccountpath(data[0].id, {favorite:favmaindata})
+                if (yoxla) {
+                    favdata.forEach((element, y) => {
+                        if (element.movieId == Number(SearchId) && element.date == date) {
+                            element.seat += seatStr
+                            console.log(favdata);
+                            favdata[y] = {
+                                movieId: Number(SearchId),
+                                date: element.date,
+                                time: element.time,
+                                seat: element.seat
+                            }
+                            network.getaccountpath(dataaccount[0].id, { date: favdata })
+                        }
+                    })
+
+                } else {
+                    favdata.push({
+                        movieId: Number(SearchId),
+                        date: date,
+                        time: time,
+                        seat: seatStr
+                    })
+                    console.log(favdata);
+                    network.getaccountpath(dataaccount[0].id, { date: favdata })
+                }
+                network.getmainPath(SearchId, { date: maindata })
+                window.location='./index.html'
+                // network.getaccountpath(data[0].id, {favorite:favmaindata})
+            })
         })
     })
+    backk.addEventListener("click", () => {
+        request.style.display = 'none'
+
+    })
+
 })

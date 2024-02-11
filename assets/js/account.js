@@ -74,8 +74,12 @@ window.addEventListener("load", () => {
   
 const login = document.querySelector(".login")
 const register = document.querySelector(".register")
+const loginRegisterPage=document.querySelector(".login-register")
 const loginPage = document.querySelector(".login-page")
 const registerPage = document.querySelector(".register-page")
+const main = document.querySelector(".login-register .main")
+const accountpage = document.querySelector("#login-register .account")
+console.log(accountpage);
 
 login.addEventListener("click", () => {
     loginPage.style.display = 'flex'
@@ -95,6 +99,7 @@ const passwordLog = document.querySelector("#password-log")
 const buttonLog = document.querySelector(".log-button")
 const problemLog = document.querySelector(".email-problem-log")
 
+const usernameReg=document.querySelector(".username")
 const emailReg = document.querySelector("#email-reg")
 const passwordReg = document.querySelector("#password-reg")
 const buttonReg = document.querySelector(".register-button")
@@ -110,7 +115,10 @@ const nameAccount=document.querySelector(".search span")
 let keystring = ''
 let account = {
     email: '',
-    password: ""
+    username:"",
+    password: "",
+    favorite:[],
+    date:[]
 }
 
 icons.forEach((icon, index) => {
@@ -139,6 +147,18 @@ icons.forEach((icon, index) => {
     })
 })
 
+network.getfetchaccount().then(data => {
+  if(data.length==1){
+    nameAccount.style.display='block'
+    nameAccount.innerText = `${data[0].email}`
+    loginRegisterPage.style.display='none'
+    accountpage.style.display='flex'
+  }else{
+    loginRegisterPage.style.display='flex'
+    accountpage.style.display='none'
+  }
+})
+
 buttonReg.addEventListener("click", () => {
     if (!(emailReg.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) && passwordReg.value.match(/^(?=.*[\d])(?=.*[!@#$%^&*])[\w!@#$%^&*]{6,16}$/))) {
         emailReg.style.borderColor = 'red'
@@ -151,6 +171,7 @@ buttonReg.addEventListener("click", () => {
             if (!id) {
                 const messages = Math.floor(Math.random() * 9000) + 1000;
                 keystring = `${messages}`
+                account.username=`${usernameReg.value}`
                 account.email = `${emailReg.value}`
                 account.password = `${passwordReg.value}`
 
@@ -165,7 +186,7 @@ buttonReg.addEventListener("click", () => {
                 const templateId = "template_lm5owkj";
                 console.log(account);
                 
-                network.getfetchpost(account).then(res => console.log(res))
+                network.getpostaccount(account).then(res => console.log(res))
 
                 emailjs.send(servicId, templateId, params)
                     .then(res => {
@@ -203,15 +224,93 @@ buttonLog.addEventListener("click", () => {
         emailLog.style.borderColor = 'red'
         passwordLog.style.borderColor = 'red'
     } else {
-      network.getfetchaccount().then(data => {
-        const address = data.find(f => f.email == emailLog.value)
-        const parol = data.find( f => f.password == passwordLog.value)
+      network.getMainaccount().then(data => {
+        data.forEach(element => {
+          if(element.email== emailLog.value && element.password== passwordLog.value){
+            console.log(element);
+            loginRegisterPage.style.display='none'
+            accountpage.style.display='flex'
+            network.getpostaccount(element).then(data => console.log("drgsdgdg"))
+
+          }
+        })
+        
+        const address = data.find(f => f.email == emailLog.value );
+        const parol = data.find( f => f.password == passwordLog.value);
         if(address && parol){
-            nameAccount.innerText=`${address.email}`
-            window.location='index.html'
+          console.log(data);
+            // nameAccount.innerText=`${address.email}`
+            // window.location='index.html'
+            
         }else{
             console.log(address, parol);
         }
     })
     }
 })
+
+
+// {
+//   "email": "eleskerlilale@gmail.com",
+//   "password": "1!Aa1234",
+//   "id": 2,
+//   "favorite": [
+//     {
+//       "id": 1022796,
+//       "imdb_id": "tt11304740",
+//       "original_language": "en",
+//       "original_title": "Wish",
+//       "overview": "Asha, a sharp-witted idealist, makes a wish so powerful that it is answered by a cosmic force – a little ball of boundless energy called Star. Together, Asha and Star confront a most formidable foe - the ruler of Rosas, King Magnifico - to save her community and prove that when the will of one courageous human connects with the magic of the stars, wondrous things can happen.",
+//       "popularity": 1428.915,
+//       "poster_path": "/AcoVfiv1rrWOmAdpnAMnM56ki19.jpg",
+//       "runtime": 95,
+//       "vote_average": 6.665,
+//       "video_poster": "https://nerdreactor.com/wp-content/uploads/2023/11/wish-movie.jpg",
+//       "key": "eQPeGiCH7A0",
+//       "genres": [
+//         {
+//           "id": 16,
+//           "name": "Animation"
+//         },
+//         {
+//           "id": 10751,
+//           "name": "Family"
+//         },
+//         {
+//           "id": 14,
+//           "name": "Fantasy"
+//         },
+//         {
+//           "id": 12,
+//           "name": "Adventure"
+//         }
+//       ],
+//       "date": [
+//         {
+//           "id": 1,
+//           "movieId": 787699,
+//           "date": "23/02/2024",
+//           "time": "10:30",
+//           "seat": "",
+//           "price": ""
+//         },
+//         {
+//           "id": 2,
+//           "movieId": 787699,
+//           "date": "01/03/2024",
+//           "time": "10:30",
+//           "seat": "",
+//           "price": ""
+//         }
+//       ]
+//     }
+//   ],
+//   "date": [
+//     {
+//       "movieId": 1022796,
+//       "date": "23/02/2024",
+//       "time": "10:30",
+//       "seat": ""
+//     }
+//   ]
+// }

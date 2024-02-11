@@ -66,7 +66,7 @@ const network = {
         });
         return res.json();
     },
-    getfetchpost: async function (data) {
+    getpostaccount: async function (data) {
         let res = await fetch(this.url2, {
             method: "POST",
             headers: {
@@ -115,6 +115,17 @@ const network = {
             body: JSON.stringify(data)
         });
         return res.json();
-    }
+    },
+    getpostmainaccount: async function (data) {
+        let res = await fetch(this.url5, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        return res.json();
+    },
 }
 

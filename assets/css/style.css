@@ -1330,6 +1330,82 @@
   margin: 0 auto;
 }
 
+.request {
+  z-index: 110;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.657);
+  display: none;
+}
+.request .request-main {
+  max-width: 200px;
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid #7171ff;
+  font-size: 14px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+.request .request-main p {
+  text-align: center;
+}
+.request .request-main > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.request .request-main > div div {
+  padding: 5px 15px;
+  border: 2px solid #7171ff;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.request .request-main > div .buy {
+  background-color: #7171ff;
+}
+.request .request-main > div .buy:hover {
+  background-color: #fff;
+  color: #7171ff;
+}
+.request .request-main > div .backk {
+  color: #7171ff;
+}
+.request .request-main > div .backk:hover {
+  background-color: #7171ff;
+  color: #fff;
+}
+
+.close {
+  background-color: red;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+.close:hover {
+  background-color: rgb(226, 0, 0);
+}
+
 #ticket .ticket {
   padding: 100px 0;
   width: 100%;
@@ -1408,11 +1484,15 @@
 }
 
 #place {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   display: none;
 }
 #place .place {
-  height: 500px;
+  padding: 100px 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -2072,6 +2152,10 @@
   padding-left: 5px;
 }
 
+nav .search span {
+  display: none;
+}
+
 #login-register {
   background-color: #fff;
   width: 100%;
@@ -2083,6 +2167,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  display: none;
 }
 #login-register .login-register .log-reg {
   display: flex;
@@ -2241,6 +2326,44 @@
   background-color: #d96c2c;
   color: #fff;
   font-weight: 500;
+}
+#login-register .account {
+  padding: 100px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  display: none;
+}
+#login-register .account .log-out {
+  margin-top: 30px;
+  max-width: 120px;
+  background-color: #d96c2c;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  border: 2px solid #d96c2c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#login-register .account .log-out:hover {
+  background-color: #fff;
+  color: #d96c2c;
+}
+#login-register .account .my-account {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+#login-register .account .my-account input {
+  width: 100%;
+  padding: 8px;
 }
 
 * {
