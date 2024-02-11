@@ -16,7 +16,7 @@ network.getblog().then(data => {
             <img src=${elem.image} alt="">
         </div>
         <div class="text">
-            <h2><a href="./blog-detail.html">${elem.blog_name}</a></h2>
+            <h2><a onclick='blogDetailFunc(${elem.id})'>${elem.blog_name}</a></h2>
             <div class="status">
                 <div class="date">
                     <i class="bi bi-calendar3"></i>
@@ -82,7 +82,7 @@ if(list){
                         <img src=${elem.image} alt="">
                     </div>
                     <div class="text">
-                        <h2><a href="./blog-detail.html">${elem.blog_name}</a></h2>
+                        <h2><a onclick='blogDetailFunc(${elem.id}'>${elem.blog_name}</a></h2>
                         <div class="status">
                             <div class="date">
                                 <i class="bi bi-calendar3"></i>

@@ -5,8 +5,15 @@ const resMenuListPElem = document.querySelector(".res-menu-list p")
 const menuButton = document.querySelector(".menu")
 const subNav = document.querySelectorAll(".sub-nav")
 const movieSub = document.querySelectorAll(".movie-sub")
-const movieCategory = document.querySelector(".movie-category")
 const subNavSecond = document.querySelector(".sub-nav-second")
+const accountA=document.querySelector(".search a")
+const accountback=document.querySelector(".search")
+
+network.getfetchaccount().then(data => {
+  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  accountA.innerHTML=`${data[0].username[0].toUpperCase()}`
+  accountback.style.backgroundColor='#'+randomColor
+})
 
 movieSub.forEach((movieSub, i) => {
   movieSub.addEventListener("click", () => {
@@ -20,18 +27,6 @@ movieSub.forEach((movieSub, i) => {
       movieSub.classList.remove("active")
     }
   })
-})
-movieCategory.addEventListener("click", () => {
-  if (movieCategory.classList.value == 'movie-category') {
-    subNavSecond.style.maxHeight = '80px'
-    movieCategory.style.color = ' #d96c2c'
-    movieCategory.classList.add("active")
-  }
-  else {
-    subNavSecond.style.maxHeight = '0'
-    movieCategory.style.color = ' white'
-    movieCategory.classList.remove("active")
-  }
 })
 menuButton.addEventListener("click", () => {
   menuList.style.zIndex = '110'
@@ -174,6 +169,7 @@ network.getfetch().then((data) => {
     });
   });
 })
+
 let carouselContainer = document.querySelector('.owl-carousel')
 const playing = document.querySelector(".playing")
 const positionTrailer=document.querySelector(".trailer")
@@ -231,7 +227,7 @@ const printData = () => {
                       <div class="my-card " >
                           <div>
                               <div class="image">
-                                  <img src="https://image.tmdb.org/t/p/w220_and_h330_face/${elem.poster_path}" alt="">
+                                  <img src="${elem.poster_path}" alt="">
                               </div>
                               <div class="text">
                                   <div class="category-time">
@@ -240,7 +236,7 @@ const printData = () => {
                                       <p class="time">${elem.runtime} min</p>
                                   </div>
                                   <div class="film-name" onclick="detailFunc(${elem.id})">${elem.original_title}</div>
-                                  <a href="ticket">Ticket</a>
+                                  <a href="./ticket.html?id=${elem.id}">Ticket</a>
                               </div>
                               <div class='favorite favorite${elem.id}' onclick='favFunc(${elem.id})'><i class="bi bi-heart"></i></div>
                           </div>
@@ -252,7 +248,7 @@ const printData = () => {
                       <div class="my-card" >
                           <div>
                               <div class="image">
-                                  <img src="https://image.tmdb.org/t/p/w220_and_h330_face/${elem.poster_path}" alt="">
+                                  <img src="${elem.poster_path}" alt="">
                               </div>
                               <div class="text">
                                   <div class="category-time">
@@ -261,7 +257,7 @@ const printData = () => {
                                       <p class="time">${elem.runtime} min</p>
                                   </div>
                                   <div class="film-name" onclick="detailFunc(${elem.id})">${elem.original_title}</div>
-                                  <a href="ticket">Ticket</a>
+                                  <a href="./ticket.html?id=${elem.id}" >Ticket</a>
                               </div>
                               <div class='favorite favorite${elem.id}' onclick='favFunc(${elem.id})'><i class="bi bi-heart-fill"></i></div>
                           </div>
@@ -346,8 +342,3 @@ function favFunc(id) {
 
 
 
-
-const account = document.querySelector(".search span")
-network.getfetchaccount().then(data => {
-  account.innerText = `${data[data.length - 1].email}`
-})

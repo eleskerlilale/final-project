@@ -75,7 +75,7 @@ network.getfetch().then((data) => {
             if(e.name==genres){
                 // console.log(elem);
                 action.innerHTML+=`
-                <div class="my-card col-lg-3 col-md-4 col-sm-2 col-xs-1">
+                <div class="my-card col-lg-3 col-md-4 col-sm-6 col-xs-1">
                 <div>
                     <div class="image">
                         <img src="https://image.tmdb.org/t/p/w220_and_h330_face/${elem.poster_path}" alt="">
@@ -86,8 +86,8 @@ network.getfetch().then((data) => {
                             /
                             <p class="time">${elem.runtime} min</p>
                         </div>
-                        <div class="film-name">Film name</div>
-                        <a href="ticket">Ticket</a>
+                        <div class="film-name" onclick="detailFunc(${elem.id})">Film name</div>
+                        <a href="./ticket.html?id=${elem.id}">Ticket</a>
                     </div>
                 </div>
             </div>
@@ -97,3 +97,6 @@ network.getfetch().then((data) => {
         })
     })
 })
+function detailFunc(id){
+  window.location=`./detail.html?id=${id}`
+}

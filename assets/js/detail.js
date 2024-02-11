@@ -83,12 +83,23 @@ network.getfetchById(id).then(data => {
                     </div>
                     <a href="./tiicket.html">Get Ticket</a>
                 </div>
-                <div class="trailer">
-                    <img src=${data.video_poster}>
-                    <span class='trailer-span'><i class="bi bi-caret-right-fill"></i></span>
-                    <div class='watch-text'> Watch the Trailer<i class="bi bi-arrow-up-right"></i></div>
-
+                <div class="row row-image">
+                    <div class="col-lg-7 col-md-6 col-sm-12">
+                        <div class="trailer">
+                        <img src=${data.video_poster}>
+                        <span class='trailer-span'><i class="bi bi-caret-right-fill"></i></span>
+                        <div class='watch-text'> Watch the Trailer<i class="bi bi-arrow-up-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-12">
+                        <div class="card" onclick='imageFunc(${data.id})'>
+                            <img src='${data.image[0]}'>
+                            <span>${data.image.length}+</span>
+                        </div>
+                    </div>
                 </div>
+               
+                
                 <div class="cast">
                 <h2>Top Cast</h2>
                 <div class="row">
@@ -203,30 +214,43 @@ videoPlay.addEventListener("click", () => {
     })
 })
 })
-
-
-// let arr = [];
-// let dataFav = []
-// network.getfetch().then((data) => {
-//   network.getfetchaccount().then(datafav => {
-//     arr = data;
-//     dataFav = datafav
-//     console.log(data);
-//     printBanner();
-//     printData();
-    $(document).ready(function () {
-      $(".sinaq").owlCarousel({
-        margin: 10,
-        dots: true,
-        loop: true,
-        responsive: {
-          0: {
-            items: 1,
+const imageId=document.querySelector("#image")
+const image=document.querySelector(".images")
+const imageClose=document.querySelector(".image-close")
+function imageFunc(id){
+    imageId.style.display='flex'
+}
+imageClose.addEventListener("click" ,() => {
+    imageId.style.display="none"
+})
+let arrimage = []
+network.getfetchById(id).then((data) => {
+      arrimage = data;
+      printData();
+      $(document).ready(function () {
+        $(".images").owlCarousel({
+          margin: 10,
+          dots: true,
+          loop: true,
+          responsive: {
+            0: {
+              items: 1,
+            }
           }
-        }
-      });
-     
-    });
-//   });
-// })
+        });
+    })
+})
 
+const printData = ()=> {
+    console.log(arrimage.image);
+    arrimage.image.forEach(elem => {
+        console.log(elem);
+        image.innerHTML+=`
+        <div class="item">
+            <div>
+                <img src='${elem}' alt="">
+            </div>
+        </div>  `
+    })
+   
+}

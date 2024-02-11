@@ -4,7 +4,10 @@
         padding: 100px 0;
         .row{
             >div{
+                // padding: 20px 0;
                 .card-main{
+                    margin:0 0 20px 0;
+
                     // background-color: aqua;
                     @include column;
                     // gap: 10px;

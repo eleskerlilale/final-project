@@ -63,53 +63,78 @@ const movie = document.querySelector(".playing")
 
 network.getfetch().then(data => {
   network.getfetchaccount().then(dataFav => {
-    data.forEach(elem => {
-      const ids = dataFav[dataFav.length - 1].favorite.find(f => f.id == elem.id)
-      if (!ids) {
-        movie.innerHTML += `
-                      <div class="my-card col-lg-3 col-md-4 col-sm-6 col-xs-12" >
-                          <div>
-                              <div class="image">
-                                  <img src="https://image.tmdb.org/t/p/w220_and_h330_face/${elem.poster_path}" alt="">
-                              </div>
-                              <div class="text">
-                                  <div class="category-time">
-                                      <p class="category">${elem.genres[0].name}</p>
-                                      /
-                                      <p class="time">${elem.runtime} min</p>
-                                  </div>
-                                  <div class="film-name" onclick="detailFunc(${elem.id})">${elem.original_title}</div>
-                                  <a href="ticket">Ticket</a>
-                              </div>
-                              <div class='favorite favorite${elem.id}' onclick='favFunc(${elem.id})'><i class="bi bi-heart"></i></div>
-                          </div>
-                      </div>
-                    `
-      }
-      else {
-        movie.innerHTML += `
-                      <div class="my-card col-lg-3 col-md-4 col-sm-6 col-xs-12" >
-                          <div>
-                              <div class="image">
-                                  <img src="https://image.tmdb.org/t/p/w220_and_h330_face/${elem.poster_path}" alt="">
-                              </div>
-                              <div class="text">
-                                  <div class="category-time">
-                                      <p class="category">${elem.genres[0].name}</p>
-                                      /
-                                      <p class="time">${elem.runtime} min</p>
-                                  </div>
-                                  <div class="film-name" onclick="detailFunc(${elem.id})">${elem.original_title}</div>
-                                  <a href="ticket">Ticket</a>
-                              </div>
-                              <div class='favorite favorite${elem.id}' onclick='favFunc(${elem.id})'><i class="bi bi-heart-fill"></i></div>
-                          </div>
-                      </div>
-      `
-      }
-    })
+    if (data.length != 0) {
+      data.forEach(elem => {
+        const ids = dataFav[dataFav.length - 1].favorite.find(f => f.id == elem.id)
+        if (!ids) {
+          movie.innerHTML += `
+                        <div class="my-card col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+                            <div>
+                                <div class="image">
+                                    <img src="https://image.tmdb.org/t/p/w220_and_h330_face/${elem.poster_path}" alt="">
+                                </div>
+                                <div class="text">
+                                    <div class="category-time">
+                                        <p class="category">${elem.genres[0].name}</p>
+                                        /
+                                        <p class="time">${elem.runtime} min</p>
+                                    </div>
+                                    <div class="film-name" onclick="detailFunc(${elem.id})">${elem.original_title}</div>
+                                    <a href="./ticket.html?id=${elem.id}">Ticket</a>
+                                </div>
+                                <div class='favorite favorite${elem.id}' onclick='favFunc(${elem.id})'><i class="bi bi-heart"></i></div>
+                            </div>
+                        </div>
+                      `
+        }
+        else {
+          movie.innerHTML += `
+                        <div class="my-card col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+                            <div>
+                                <div class="image">
+                                    <img src="https://image.tmdb.org/t/p/w220_and_h330_face/${elem.poster_path}" alt="">
+                                </div>
+                                <div class="text">
+                                    <div class="category-time">
+                                        <p class="category">${elem.genres[0].name}</p>
+                                        /
+                                        <p class="time">${elem.runtime} min</p>
+                                    </div>
+                                    <div class="film-name" onclick="detailFunc(${elem.id})">${elem.original_title}</div>
+                                    <a href="ticket">Ticket</a>
+                                </div>
+                                <div class='favorite favorite${elem.id}' onclick='favFunc(${elem.id})'><i class="bi bi-heart-fill"></i></div>
+                            </div>
+                        </div>
+        `
+        }
+      })
+    }else{
+      movie.innerHTML += `
+      <div class="my-card col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+          <div>
+              <div class="image">
+                  <img src="https://image.tmdb.org/t/p/w220_and_h330_face/${elem.poster_path}" alt="">
+              </div>
+              <div class="text">
+                  <div class="category-time">
+                      <p class="category">${elem.genres[0].name}</p>
+                      /
+                      <p class="time">${elem.runtime} min</p>
+                  </div>
+                  <div class="film-name" onclick="detailFunc(${elem.id})">${elem.original_title}</div>
+                  <a href="ticket">Ticket</a>
+              </div>
+          </div>
+      </div>
+`
+    }
   })
 })
+
+function detailFunc(id) {
+  window.location = `./detail.html?id=${id}`
+}
 function favFunc(id) {
   const favorite = document.querySelector(`.favorite${id}`)
   network.getfetchById(id).then(data => {

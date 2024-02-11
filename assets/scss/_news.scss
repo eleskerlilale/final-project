@@ -3,9 +3,10 @@
 
     .blog {
         padding: 50px 0;
-
+        // gap: 20px;
         >div {
-            padding: 20px;
+            padding: 20px 0;
+
             .card {
                 @include column;
                 gap: 60px;
@@ -65,13 +66,7 @@
                                     font-size: 15px;
                                 }
                             }
-                            .list{
-                                @include transition;
-                                cursor: pointer;
-                                &:hover{
-                                    color: $orange;
-                                }
-                            }
+
                         }
                     }
 
@@ -94,13 +89,14 @@
                 width: 100%;
                 @include column;
                 gap: 30px;
-
+                padding-left: 10px;
                 .first-box {
                     width: 100%;
                     background-color: $lightGray;
                     @include column;
                     gap: 5px;
                     padding: 40px;
+
                     h3 {
                         font-size: 20px;
                         font-weight: $fourthFont
@@ -119,6 +115,7 @@
                             @include transition;
                             gap: 10px;
                             cursor: pointer;
+
                             .image {
                                 // width: 70px;
                                 height: 70px;
@@ -129,52 +126,61 @@
                                     object-fit: cover;
                                 }
                             }
-                           >div{
-                            .people{
-                                color: $gray;
-                                font-size: 14px;
-                                i{
+
+                            >div {
+                                .people {
+                                    color: $gray;
+                                    font-size: 14px;
+
+                                    i {
+                                        color: $orange;
+                                    }
+                                }
+
+                                h4 {
+                                    font-size: 18px;
+                                    font-weight: $fourthFont
+                                }
+
+                            }
+
+                            &:hover {
+                                background-color: $white;
+
+                                h4 {
                                     color: $orange;
                                 }
                             }
-                            h4{
-                                font-size: 18px;
-                                font-weight: $fourthFont
-
-                            }
-                            
-                           }
-                           &:hover{
-                            background-color: $white;
-                            h4{
-                                color: $orange;
-                            }
-                        }
                         }
                     }
                 }
-                .second-box{
+
+                .second-box {
                     padding: 40px;
                     background-color: $lightGray;
                     width: 100%;
                     @include column;
                     gap: 20px;
-                    h3{
+
+                    h3 {
                         font-size: 20px;
                         font-weight: $fourthFont;
                     }
-                    .category-box{
+
+                    .category-box {
                         width: 100%;
                         @include column;
                         gap: 10px;
-                        .box{
-                            a{
+
+                        .box {
+                            a {
                                 color: $gray;
-                            @include transition;
-                            cursor: pointer;
-                            &:hover{
-                                color: $orange;
-                            }
+                                @include transition;
+                                cursor: pointer;
+
+                                &:hover {
+                                    color: $orange;
+                                }
                             }
                         }
                     }
@@ -184,12 +190,15 @@
     }
 }
 
-#blog-detail{
+#blog-detail {
     background-color: $white;
-    .blog-detail{
+
+    .blog-detail {
         padding: 100px 0;
+
         >div {
             padding: 20px;
+
             .card {
                 @include column;
                 gap: 60px;
@@ -249,13 +258,15 @@
                                     font-size: 15px;
                                 }
                             }
-                            .list{
-                                @include transition;
-                                cursor: pointer;
-                                &:hover{
-                                    color: $orange;
-                                }
-                            }
+
+                            // .list {
+                            //     @include transition;
+                            //     cursor: pointer;
+
+                            //     &:hover {
+                            //         color: $orange;
+                            //     }
+                            // }
                         }
                     }
 
@@ -273,34 +284,40 @@
                     }
                 }
             }
-            .card-davam{
+
+            .card-davam {
                 padding-top: 20px;
                 @include column;
                 gap: 10px;
-                .italic-font{
+
+                .italic-font {
                     color: $black;
                     font-weight: $thridFond;
                     font-style: italic;
                     font-size: 19px;
                     @include center;
                     gap: 20px;
-                    p{
-                        &:first-child{
-                        font-size: 50px;
-                        color: $orange;
+
+                    p {
+                        &:first-child {
+                            font-size: 50px;
+                            color: $orange;
                         }
                     }
                 }
-                >p{
+
+                >p {
                     padding: 10px 0;
                     font-size: 16px;
                     color: $gray;
                 }
-                >h3{
+
+                >h3 {
                     font-size: 25px;
                     font-weight: $fourthFont;
                 }
             }
+
             .my-card {
                 width: 100%;
                 @include column;
@@ -312,6 +329,7 @@
                     @include column;
                     gap: 5px;
                     padding: 40px;
+
                     h3 {
                         font-size: 20px;
                         font-weight: $fourthFont
@@ -330,6 +348,7 @@
                             @include transition;
                             gap: 10px;
                             cursor: pointer;
+
                             .image {
                                 // width: 70px;
                                 height: 70px;
@@ -340,52 +359,61 @@
                                     object-fit: cover;
                                 }
                             }
-                           >div{
-                            .people{
-                                color: $gray;
-                                font-size: 14px;
-                                i{
+
+                            >div {
+                                .people {
+                                    color: $gray;
+                                    font-size: 14px;
+
+                                    i {
+                                        color: $orange;
+                                    }
+                                }
+
+                                h4 {
+                                    font-size: 18px;
+                                    font-weight: $fourthFont
+                                }
+
+                            }
+
+                            &:hover {
+                                background-color: $white;
+
+                                h4 {
                                     color: $orange;
                                 }
                             }
-                            h4{
-                                font-size: 18px;
-                                font-weight: $fourthFont
-
-                            }
-                            
-                           }
-                           &:hover{
-                            background-color: $white;
-                            h4{
-                                color: $orange;
-                            }
-                        }
                         }
                     }
                 }
-                .second-box{
+
+                .second-box {
                     padding: 40px;
                     background-color: $lightGray;
                     width: 100%;
                     @include column;
                     gap: 20px;
-                    h3{
+
+                    h3 {
                         font-size: 20px;
                         font-weight: $fourthFont;
                     }
-                    .category-box{
+
+                    .category-box {
                         width: 100%;
                         @include column;
                         gap: 10px;
-                        .box{
-                            a{
+
+                        .box {
+                            a {
                                 color: $gray;
-                            @include transition;
-                            cursor: pointer;
-                            &:hover{
-                                color: $orange;
-                            }
+                                @include transition;
+                                cursor: pointer;
+
+                                &:hover {
+                                    color: $orange;
+                                }
                             }
                         }
                     }
@@ -396,27 +424,76 @@
 }
 
 
-#news-banner{
+#news-banner {
     background-color: $lightGray;
-    .news-banner{
-        color:$gray;
+
+    .news-banner {
+        color: $gray;
         padding: 20px 0;
         display: flex;
         align-items: center;
-        i{
+
+        i {
             font-size: 10px;
             padding-top: 5px;
         }
-        a{
+
+        a {
             color: $gray;
             @include transition;
-            &:hover{
+
+            &:hover {
                 color: $orange;
             }
         }
-        >p{
+
+        >p {
             color: $orange;
             padding-left: 5px;
         }
     }
+}
+
+@media screen and (max-width:425px) {
+    #blog {
+        .blog {
+            >div {
+                .card{
+                    .box {
+                        >a{
+                            padding: 8px 21px;
+                        }
+                        .text {
+                            .status > div{
+                                font-size: 13px;
+                            }
+                            .description{
+                                font-size: 15px;
+                            }
+                            h2{
+                                a{
+                                    font-size: 25px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .my-card {
+                    .first-box {
+                        padding: 20px 10px;
+                        .latest-box .block {
+                            >div{
+                                h4{
+                                    font-size: 13px;
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
 }

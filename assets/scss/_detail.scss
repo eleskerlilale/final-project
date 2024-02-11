@@ -25,8 +25,54 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+  
 }
-
+#image{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.648);
+    @include center;
+    flex-direction: column;
+    display: none;
+    // padding: 20px;
+    .image-close{
+        margin: 30px 30px 0 0 ;
+        width: 100%;
+        font-size: 20px;
+        color: $white;
+        text-align: end;
+        i{
+            padding:5px 7px;
+            cursor: pointer;
+            background-color: red;
+        }
+    }
+    .images{
+        width: 100%;
+        height: 100%;
+        .item{
+            width: 100%;
+            height: 100%;
+            padding-left:calc((100% - 500px) /2);
+            padding-top: calc((100vh - 500px) /2);
+           >div{
+            max-width: 500px;
+            max-height:500px;
+            width:100%;
+            height: 100%;
+            img{
+                width: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+           }
+        }
+    }
+}
 .film-detail .title {
     display: flex;
     justify-content: space-between;
@@ -74,10 +120,47 @@
     font-size: 34px;
     font-weight: 700;
 }
-
+.film-detail{
+    .row-image{
+        >div{
+            .card{
+                border: none;
+                background:none;
+                height: 350px;
+                position: relative;
+                
+                span{
+                    position: absolute;
+                    top:calc((100% - 40px) /2) ;
+                    left:calc((100% - 40px) /2) ;
+                    color: $white;
+                    width: 40px;
+                    height: 40px;
+                    z-index: 20;
+                    font-size: 20px;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+                &::after{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(rgba(106, 72, 0, 0), rgba(55, 37, 0, 0.227));
+                    content: "";
+                    z-index: 10;
+                }
+            }
+        }
+    }
+}
 .trailer {
     /* max-height: 200px; */
-    max-width: 500px;
+    // max-width: 500px;
     width: 100%;
     height: 350px;
     position: relative;
@@ -294,6 +377,26 @@
 }
 
 @media screen and (max-width: 576px) {
+    #image{
+        .images{
+            width: 100%;
+            height: 100%;
+            .item{
+                width: 100%;
+                height: 100%;
+                padding-left:calc((100% - 250px) /2);
+                padding-top: calc((100vh - 250px) /2);
+               >div{
+                max-width: 250px;
+                max-height:250px;
+                width:100%;
+                height: 100%;
+               
+               }
+            }
+        }
+    }
+
     .title>div>div {
         display: flex;
         justify-content:flex-start;

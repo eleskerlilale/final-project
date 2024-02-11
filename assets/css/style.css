@@ -733,6 +733,7 @@
   padding: 100px 0;
 }
 #faqs .faqs .row > div .card-main {
+  margin: 0 0 20px 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -830,6 +831,55 @@
   gap: 20px;
 }
 
+#image {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.648);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+#image .image-close {
+  margin: 30px 30px 0 0;
+  width: 100%;
+  font-size: 20px;
+  color: #fff;
+  text-align: end;
+}
+#image .image-close i {
+  padding: 5px 7px;
+  cursor: pointer;
+  background-color: red;
+}
+#image .images {
+  width: 100%;
+  height: 100%;
+}
+#image .images .item {
+  width: 100%;
+  height: 100%;
+  padding-left: calc((100% - 500px) / 2);
+  padding-top: calc((100vh - 500px) / 2);
+}
+#image .images .item > div {
+  max-width: 500px;
+  max-height: 500px;
+  width: 100%;
+  height: 100%;
+}
+#image .images .item > div img {
+  width: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .film-detail .title {
   display: flex;
   justify-content: space-between;
@@ -878,9 +928,41 @@
   font-weight: 700;
 }
 
+.film-detail .row-image > div .card {
+  border: none;
+  background: none;
+  height: 350px;
+  position: relative;
+}
+.film-detail .row-image > div .card span {
+  position: absolute;
+  top: calc((100% - 40px) / 2);
+  left: calc((100% - 40px) / 2);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  z-index: 20;
+  font-size: 20px;
+}
+.film-detail .row-image > div .card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.film-detail .row-image > div .card::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(106, 72, 0, 0), rgba(55, 37, 0, 0.227));
+  content: "";
+  z-index: 10;
+}
+
 .trailer {
   /* max-height: 200px; */
-  max-width: 500px;
   width: 100%;
   height: 350px;
   position: relative;
@@ -1067,6 +1149,22 @@
   }
 }
 @media screen and (max-width: 576px) {
+  #image .images {
+    width: 100%;
+    height: 100%;
+  }
+  #image .images .item {
+    width: 100%;
+    height: 100%;
+    padding-left: calc((100% - 250px) / 2);
+    padding-top: calc((100vh - 250px) / 2);
+  }
+  #image .images .item > div {
+    max-width: 250px;
+    max-height: 250px;
+    width: 100%;
+    height: 100%;
+  }
   .title > div > div {
     display: flex;
     justify-content: flex-start;
@@ -1740,7 +1838,7 @@
   padding: 50px 0;
 }
 #blog .blog > div {
-  padding: 20px;
+  padding: 20px 0;
 }
 #blog .blog > div .card {
   display: flex;
@@ -1806,13 +1904,6 @@
   color: #d96c2c;
   font-size: 15px;
 }
-#blog .blog > div .card .box .text .status .list {
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-#blog .blog > div .card .box .text .status .list:hover {
-  color: #d96c2c;
-}
 #blog .blog > div .card .box > a {
   padding: 12px 30px;
   background-color: #d96c2c;
@@ -1830,6 +1921,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
+  padding-left: 10px;
 }
 #blog .blog > div .my-card .first-box {
   width: 100%;
@@ -1988,13 +2080,6 @@
   color: #d96c2c;
   font-size: 15px;
 }
-#blog-detail .blog-detail > div .card .box .text .status .list {
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-#blog-detail .blog-detail > div .card .box .text .status .list:hover {
-  color: #d96c2c;
-}
 #blog-detail .blog-detail > div .card .box > a {
   padding: 12px 30px;
   background-color: #d96c2c;
@@ -2152,6 +2237,26 @@
   padding-left: 5px;
 }
 
+@media screen and (max-width: 425px) {
+  #blog .blog > div .card .box > a {
+    padding: 8px 21px;
+  }
+  #blog .blog > div .card .box .text .status > div {
+    font-size: 13px;
+  }
+  #blog .blog > div .card .box .text .description {
+    font-size: 15px;
+  }
+  #blog .blog > div .card .box .text h2 a {
+    font-size: 25px;
+  }
+  #blog .blog > div .my-card .first-box {
+    padding: 20px 10px;
+  }
+  #blog .blog > div .my-card .first-box .latest-box .block > div h4 {
+    font-size: 13px;
+  }
+}
 nav .search span {
   display: none;
 }
@@ -2359,11 +2464,12 @@ nav .search span {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 5px;
 }
 #login-register .account .my-account input {
   width: 100%;
   padding: 8px;
+  margin-bottom: 10px;
 }
 
 * {
@@ -2442,21 +2548,6 @@ a {
   transition: all 0.3s ease;
   padding-left: 20px;
 }
-.menu-list .res-menu-list .sub-nav span {
-  cursor: pointer;
-}
-.menu-list .res-menu-list .sub-nav span i {
-  font-size: 13px;
-}
-.menu-list .res-menu-list .sub-nav .sub-nav-second {
-  overflow: hidden;
-  max-height: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  transition: all 0.3s ease;
-  padding-left: 20px;
-}
 .menu-list .res-menu-list p {
   width: 100%;
   font-size: 20px;
@@ -2464,10 +2555,10 @@ a {
   cursor: pointer;
   text-align: end;
 }
-.menu-list .res-menu-list span {
+.menu-list .res-menu-list > span {
   transition: all 0.3s ease;
 }
-.menu-list .res-menu-list span:hover {
+.menu-list .res-menu-list > span:hover {
   color: #d96c2c;
 }
 .menu-list .res-menu-list a {
@@ -2479,6 +2570,7 @@ a {
 }
 
 nav {
+  transition: all 0.3s ease;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -2509,6 +2601,7 @@ nav .nav .list-nav ul li {
   position: relative;
 }
 nav .nav .list-nav ul li a {
+  transition: all 0.3s ease;
   color: #fff;
 }
 nav .nav .list-nav ul li .sub-nav {
@@ -2533,53 +2626,6 @@ nav .nav .list-nav ul li .sub-nav > a {
 nav .nav .list-nav ul li .sub-nav > a:hover {
   color: #d96c2c;
 }
-nav .nav .list-nav ul li .sub-nav .sub-nav-second-main {
-  padding: 3px 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-nav .nav .list-nav ul li .sub-nav .sub-nav-second-main .sub-text {
-  color: #737373;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-nav .nav .list-nav ul li .sub-nav .sub-nav-second-main .sub-text:hover {
-  color: #d96c2c;
-}
-nav .nav .list-nav ul li .sub-nav .sub-nav-second-main .sub-nav-second {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 5px;
-  width: 130px;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  border-radius: 5px;
-  background-color: #fff;
-  display: none;
-  padding: 10px;
-}
-nav .nav .list-nav ul li .sub-nav .sub-nav-second-main .sub-nav-second a {
-  padding: 0px 10px;
-  color: #737373;
-  transition: all 0.3s ease;
-}
-nav .nav .list-nav ul li .sub-nav .sub-nav-second-main .sub-nav-second a:hover {
-  color: #d96c2c;
-}
-nav .nav .list-nav ul li .sub-nav .sub-nav-second-main:hover {
-  color: #d96c2c;
-}
-nav .nav .list-nav ul li .sub-nav .sub-nav-second-main:hover .sub-nav-second {
-  display: block;
-}
 nav .nav .list-nav ul li i {
   padding-top: 3px;
   font-size: 10px;
@@ -2587,28 +2633,29 @@ nav .nav .list-nav ul li i {
 nav .nav .list-nav ul li:hover {
   color: #d96c2c;
 }
+nav .nav .list-nav ul li:hover > a {
+  color: #d96c2c;
+}
 nav .nav .list-nav ul li:hover .sub-nav {
   display: block;
 }
 nav .nav .search {
-  font-size: 23px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 50%;
   color: #fff;
+  font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
 }
-nav .nav .search i {
+nav .nav .search a {
+  width: 100%;
+  padding: 0 12px;
+  height: 100%;
   color: #fff;
-  cursor: pointer;
-}
-nav .nav .search .bi-person {
-  font-size: 30px;
-}
-nav .nav .search span {
-  font-size: 13px;
-  border: 1px solid #fff;
-  padding: 5px 15px;
 }
 nav .nav .menu {
   font-size: 25px;
@@ -3546,6 +3593,7 @@ footer .top-footer .right .icons > div .icon {
   flex-direction: column;
   transition: all 0.3s ease;
   cursor: pointer;
+  color: #fff;
 }
 footer .top-footer .right .icons > div .icon:hover {
   background-color: #d96c2c;
@@ -3559,6 +3607,7 @@ footer .bottom-footer .row > div {
   flex-direction: column;
   align-items: flex-start;
   gap: 5px;
+  padding: 20px 0;
 }
 footer .bottom-footer .row > div h3 {
   color: #d96c2c;
@@ -3660,7 +3709,7 @@ footer .footer {
   right: 0;
   z-index: 1;
   width: 200px;
-  height: 300px;
+  height: 250px;
 }
 #get-to-now .get-to-now .row > div .card .message-orange img {
   width: 100%;
@@ -3869,6 +3918,7 @@ footer .footer {
   flex-direction: column;
   align-items: flex-start;
   line-height: 0.8;
+  gap: 10px;
 }
 #watch .watch .position .row > div .card .text span {
   font-size: 60px;
@@ -4216,8 +4266,8 @@ footer .footer {
     height: 100px;
   }
   #get-to-now .get-to-now .row > div .card .message-orange {
-    height: 180px;
-    width: 150px;
+    height: 150px;
+    width: 120px;
   }
   #get-to-now .get-to-now .row > div .card .message-white {
     display: none;

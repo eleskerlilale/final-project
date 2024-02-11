@@ -74,24 +74,6 @@ a {
             @include transition;
             padding-left: 20px;
 
-            span {
-                // padding-left: 5px;
-                cursor: pointer;
-
-                i {
-                    font-size: 13px;
-                }
-            }
-
-            .sub-nav-second {
-                overflow: hidden;
-                max-height: 0;
-                // background-color: aqua;
-                @include column;
-                @include transition;
-                padding-left: 20px;
-
-            }
         }
 
         p {
@@ -102,7 +84,7 @@ a {
             text-align: end;
         }
 
-        span {
+        >span {
             @include transition;
 
             &:hover {
@@ -123,6 +105,7 @@ a {
 }
 
 nav {
+    @include transition;
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -151,6 +134,7 @@ nav {
                     position: relative;
 
                     a {
+                        @include transition;
                         color: $white;
                     }
 
@@ -176,55 +160,7 @@ nav {
                             }
                         }
 
-                        .sub-nav-second-main {
-                            padding: 3px 10px;
-                            @include flex;
-                            position: relative;
-
-                            .sub-text {
-                                color: $gray;
-                                width: 100%;
-                                @include flex;
-                                @include transition;
-
-                                &:hover {
-                                    color: $orange;
-                                }
-                            }
-
-                            .sub-nav-second {
-                                @include column;
-                                gap: 20px;
-                                padding: 5px;
-                                width: 130px;
-                                position: absolute;
-                                top: 0;
-                                left: 100%;
-                                border-radius: 5px;
-                                background-color: $white;
-                                display: none;
-                                padding: 10px;
-
-                                a {
-                                    padding: 0px 10px;
-                                    // margin: 20px 0;
-                                    color: $gray;
-                                    @include transition;
-
-                                    &:hover {
-                                        color: $orange;
-                                    }
-                                }
-                            }
-
-                            &:hover {
-                                color: $orange;
-
-                                .sub-nav-second {
-                                    display: block;
-                                }
-                            }
-                        }
+                       
                     }
 
                     i {
@@ -234,7 +170,9 @@ nav {
 
                     &:hover {
                         color: $orange;
-
+                        >a{
+                            color: $orange;
+                        }
                         .sub-nav {
                             display: block;
                         }
@@ -244,25 +182,47 @@ nav {
         }
 
         .search {
-            font-size: 23px;
+            // font-size: 23px;
+            // color: $white;
+            // @include center;
+            // gap: 15px;
+            display: block;
+            width: 40px;
+            height:40px;
+            border: 1px solid $white;
+            // background-color: #d96b2cb8;
+            border-radius: 50%;
             color: $white;
+            font-size: 25px;
             @include center;
-            gap: 15px;
-
-            i {
+            a{
+                width: 100%;
+                padding: 0 12px;
+                height: 100%;
                 color: $white;
-                cursor: pointer;
             }
+            // a{
 
-            .bi-person {
-                font-size: 30px;
-            }
+            //     padding: 10px;
+            // }
 
-            span {
-                font-size: 13px;
-                border: 1px solid $white;
-                padding: 5px 15px;
-            }
+            // i {
+            //     color: $white;
+            //     cursor: pointer;
+            // }
+
+            // .bi-person {
+            //     font-size: 30px;
+            // }
+
+            // span {
+            //     font-size: 13px;
+            //     border: 1px solid $white;
+            //     padding: 5px 15px;
+            //     background-color: #fda403;
+            //     color: white;
+
+            // }
         }
 
         .menu {
@@ -273,144 +233,8 @@ nav {
     }
 }
 
-// #banner {   
-//     background-color: #00ffff;
-//     .my-banner{
-//         width: 100%;
-//         background-color: #00ffff;
-//         position: relative;
-//         height: 100vh;
-//         .container {
-//             position: absolute;
-//             background-color: #00ffff;
-//             top: 0;
-//             left: 0;
-//             // width: 100%;
-//             // height: 100%;
-//         }
-
-//         .banner {
-//             padding: 250px 0;
-//             display: flex;
-//             justify-content: space-between;
-//             flex-direction: column-reverse;
-//             gap: 20px;
-//             color: $white;
-//             width: 100%;
-//             height: 100%;
-
-//             .text-left {
-//                 max-width: 600px;
-//                 height: 100%;
-
-//                 span {
-//                     font-size: 40px;
-//                     color: $orange;
-//                     
-//                 }
-
-//                 h1 {
-//                     font-size: 90px;
-//                     color: $white;
-//                     line-height: 1;
-//                     cursor: pointer;
-//                     @include transition;
-
-//                     &:hover {
-//                         color: $orange;
-//                     }
-//                 }
-
-//                 >div {
-//                     margin-top: 40px;
-//                     width: 100%;
-
-//                     a {
-//                         padding: 20px 50px;
-//                         max-width: 200px;
-//                         width: 100%;
-//                         text-align: center;
-//                         font-size: 15px;
-//                         margin-right: 20px;
-//                         @include transition;
-//                         font-weight: $thridFond;
-//                     }
-
-//                     .info {
-//                         background-color: $white ;
-//                         color: $black;
-
-//                         &:hover {
-//                             background-color: $orange;
-//                             color: $white;
-//                         }
-//                     }
-
-//                     .ticket {
-//                         background-color: $orange;
-//                         color: $white;
-
-//                         &:hover {
-//                             background-color: $white ;
-//                             color: $black;
-//                         }
-//                     }
-//                 }
-//             }
-
-//             .text-right {
-//                 width: 100%;
-//                 @include column;
-//                 align-items: end;
-//                 gap: 0px;
-//                 height: 100%;
-
-//                 p {
-//                     font-size: 16px;
-//                     font-weight: $firstFont;
-//                 }
-
-//                 span {
-//                     font-size: 30px;
-//                     font-weight: $fourthFont;
-//                 }
-
-//                 img {
-//                     max-width: 200px;
-//                 }
-
-//             }
-//         }
-//         .background-image {
-//             background-color: #00ffff;
-//             position: absolute;
-//             top: 0;
-//             left: 0;
-//             width: 100%;
-//             height: 100%;
-//             height: 100vh;
-//             img{
-//                 width: 100%;
-//                 height: 100%;
-//                 object-fit: cover;
-//             }
-//         }
-//         &::after {
-//             content: "";
-//             position: absolute;
-//             top: 101%;
-//             left: 0;
-//             width: 100%;
-//             height: 10px;
-//             background-image: url(../image/image-lines-header.jpg);
-//         }
-//     }
-
-// }
 #banner {
     width: 100%;
-    // background-color: #d96b2c;
-    // height: 100vh;
     z-index: 10;
     position: relative;
 
@@ -1479,7 +1303,7 @@ footer {
                         flex-direction: column;
                         @include transition;
                         cursor: pointer;
-
+                        color: $white;
                         &:hover {
                             background-color: $orange;
                             margin-bottom: 10px;
@@ -1497,7 +1321,7 @@ footer {
             >div {
                 @include column;
                 gap: 5px;
-
+                padding: 20px 0;
                 h3 {
                     color: $orange;
                     font-weight: $fourthFont;
@@ -1615,7 +1439,7 @@ footer {
                         right: 0;
                         z-index: 1;
                         width: 200px;
-                        height: 300px;
+                        height: 250px;
 
                         img {
                             width: 100%;
@@ -1853,10 +1677,9 @@ footer {
                         .text {
                             @include column;
                             line-height: .8;
-
+                            gap: 10px;
                             span {
                                 font-size: 60px;
-
                             }
 
                             p {
@@ -2368,8 +2191,9 @@ footer {
                 >div {
                     .card {
                         .message-orange {
-                            height: 180px;
-                            width: 150px;
+                            // left: 90px;
+                            height: 150px;
+                            width: 120px;
                         }
 
                         .message-white {

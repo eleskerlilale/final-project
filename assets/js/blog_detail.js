@@ -1,13 +1,15 @@
 const id =new URLSearchParams(window.location.search).get("id")
 const card=document.querySelector(".blog-detail .card")
 const firstBox=document.querySelector(".blog-detail .latest-box")
-
+// const a = document.querySelector(".news-banner a")
 const category= document.querySelector(".news-banner .category")
 const name=document.querySelector(".news-banner p")
 let count=0;
 firstBox.innerHTML=``
 
 network.getblogById(id).then(elem => {
+    category.href=`./news.html?list=${elem.list}`
+    // console.log(a);
     console.log(elem);
     category.innerText=`${elem.list}`
     name.innerText=`${elem.blog_name}`
