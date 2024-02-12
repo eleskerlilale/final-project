@@ -5,10 +5,16 @@ const resMenuListPElem = document.querySelector(".res-menu-list p")
 const menuButton = document.querySelector(".menu")
 const subNav = document.querySelectorAll(".sub-nav")
 const movieSub = document.querySelectorAll(".movie-sub")
-const movieCategory = document.querySelector(".movie-category")
 const subNavSecond = document.querySelector(".sub-nav-second")
+const accountA=document.querySelector(".search a")
+const accountback=document.querySelector(".search")
 
-// menuList.style.zIndex='-100'
+network.getfetchaccount().then(data => {
+  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  accountA.innerHTML=`${data[0].username[0].toUpperCase()}`
+  accountback.style.backgroundColor='#'+randomColor
+})
+
 movieSub.forEach((movieSub, i) => {
   movieSub.addEventListener("click", () => {
     if (movieSub.classList.value == 'movie-sub') {
@@ -21,18 +27,6 @@ movieSub.forEach((movieSub, i) => {
       movieSub.classList.remove("active")
     }
   })
-})
-movieCategory.addEventListener("click", () => {
-  if (movieCategory.classList.value == 'movie-category') {
-    subNavSecond.style.maxHeight = '80px'
-    movieCategory.style.color = ' #d96c2c'
-    movieCategory.classList.add("active")
-  }
-  else {
-    subNavSecond.style.maxHeight = '0'
-    movieCategory.style.color = ' white'
-    movieCategory.classList.remove("active")
-  }
 })
 menuButton.addEventListener("click", () => {
   menuList.style.zIndex = '110'
@@ -59,6 +53,7 @@ window.addEventListener("load", () => {
   }
 })
 
+
 const id = new URLSearchParams(window.location.search).get("id")
 const filmDetail = document.querySelector(".film-detail")
 const body= document.querySelector("body")
@@ -84,14 +79,14 @@ network.getfetchById(id).then(data => {
                     <a href="./tiicket.html">Get Ticket</a>
                 </div>
                 <div class="row row-image">
-                    <div class="col-lg-7 col-md-6 col-sm-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="trailer">
                         <img src=${data.video_poster}>
                         <span class='trailer-span'><i class="bi bi-caret-right-fill"></i></span>
                         <div class='watch-text'> Watch the Trailer<i class="bi bi-arrow-up-right"></i></div>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="card" onclick='imageFunc(${data.id})'>
                             <img src='${data.image[0]}'>
                             <span>${data.image.length}+</span>

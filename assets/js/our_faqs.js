@@ -8,10 +8,16 @@ const resMenuListPElem = document.querySelector(".res-menu-list p")
 const menuButton = document.querySelector(".menu")
 const subNav = document.querySelectorAll(".sub-nav")
 const movieSub = document.querySelectorAll(".movie-sub")
-const movieCategory = document.querySelector(".movie-category")
 const subNavSecond = document.querySelector(".sub-nav-second")
+const accountA=document.querySelector(".search a")
+const accountback=document.querySelector(".search")
 
-// menuList.style.zIndex='-100'
+network.getfetchaccount().then(data => {
+  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  accountA.innerHTML=`${data[0].username[0].toUpperCase()}`
+  accountback.style.backgroundColor='#'+randomColor
+})
+
 movieSub.forEach((movieSub, i) => {
   movieSub.addEventListener("click", () => {
     if (movieSub.classList.value == 'movie-sub') {
@@ -24,18 +30,6 @@ movieSub.forEach((movieSub, i) => {
       movieSub.classList.remove("active")
     }
   })
-})
-movieCategory.addEventListener("click", () => {
-  if (movieCategory.classList.value == 'movie-category') {
-    subNavSecond.style.maxHeight = '80px'
-    movieCategory.style.color = ' #d96c2c'
-    movieCategory.classList.add("active")
-  }
-  else {
-    subNavSecond.style.maxHeight = '0'
-    movieCategory.style.color = ' white'
-    movieCategory.classList.remove("active")
-  }
 })
 menuButton.addEventListener("click", () => {
   menuList.style.zIndex = '110'
@@ -55,12 +49,13 @@ window.addEventListener("scroll", () => {
 })
 
 window.addEventListener("load", () => {
-  if (document.documentElement.scrollTop >100 || document.body.scrollTop > 100) {
+  if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
     nav.style.backgroundColor = "black"
   } else {
     nav.style.backgroundColor = "transparent"
   }
 })
+
 
 main.forEach((elem, i) => {
   elem.addEventListener("click", () => {

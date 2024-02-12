@@ -575,157 +575,6 @@
     padding-left: 0px;
   }
 }
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.container {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-#search .search {
-  padding: 50px 10px 0 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 500px;
-  width: 100%;
-}
-#search .search input {
-  width: 70%;
-  padding: 12px;
-  border: 1px solid gray;
-}
-#search .search a {
-  display: block;
-  width: 50px;
-  height: 50px;
-  padding: 3px 15px;
-  border-radius: 50%;
-  background-color: #d96c2c;
-  color: #fff;
-  font-size: 30px;
-  transition: all 0.3s ease;
-  border: 1px solid #d96c2c;
-  cursor: pointer;
-}
-#search .search a:hover {
-  background-color: #fff;
-  color: #d96c2c;
-  transform: rotateZ(360deg);
-}
-
-#edit {
-  width: 100%;
-  background-color: #d96c2c;
-  height: 100vh;
-}
-#edit .edit {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 50px;
-}
-#edit .edit .main {
-  padding: 20px;
-  width: 100%;
-  box-shadow: 0 0 10px 2px rgb(242, 242, 242);
-  max-height: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  border-radius: 5px;
-}
-#edit .edit .main .first {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 200px;
-  width: 100%;
-}
-#edit .edit .main .first .text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  width: 100%;
-}
-#edit .edit .main .poster {
-  width: 150px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border: 1px solid black;
-}
-#edit .edit .main .poster > div {
-  width: 100%;
-  height: 80%;
-}
-#edit .edit .main .poster > div img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#edit .edit .main .video {
-  width: 150px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-#edit .edit .main .video > div {
-  width: 100%;
-  height: 80%;
-}
-#edit .edit .main .video > div iframe {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#edit .edit .main input {
-  width: 100%;
-  padding: 10px;
-}
-#edit .edit .main textarea {
-  width: 100%;
-  height: 100%;
-}
-#edit .edit .main .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-}
-#edit .edit .main .button div,
-#edit .edit .main .button a {
-  width: 50%;
-  padding: 10px;
-  text-align: center;
-  background-color: #fff;
-  color: #d96c2c;
-  font-weight: 600;
-  border: 2px solid #fff;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-#edit .edit .main .button div:hover,
-#edit .edit .main .button a:hover {
-  background-color: #d96c2c;
-  color: #fff;
-}
-
 #faqs {
   background-color: #fff;
 }
@@ -929,6 +778,7 @@
 }
 
 .film-detail .row-image > div .card {
+  margin-top: 10px;
   border: none;
   background: none;
   height: 350px;
@@ -945,7 +795,6 @@
   font-size: 20px;
 }
 .film-detail .row-image > div .card img {
-  width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -956,13 +805,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(106, 72, 0, 0), rgba(55, 37, 0, 0.227));
+  background: linear-gradient(rgba(43, 43, 43, 0.09), rgba(56, 56, 56, 0.227));
   content: "";
   z-index: 10;
 }
 
 .trailer {
   /* max-height: 200px; */
+  margin-top: 10px;
   width: 100%;
   height: 350px;
   position: relative;
