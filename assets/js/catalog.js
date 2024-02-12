@@ -49,7 +49,7 @@ function item() {
 item()
 function delFunc(id){
     network.getFetchDelete(id)
-    window.location.reload()
+    
 }
 function editFunc(id){
     window.location=`./add_item.html?id=${id}`

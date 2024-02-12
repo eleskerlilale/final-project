@@ -112,7 +112,7 @@
 #dashboard .dashboard h2 {
   margin-top: 40px;
   color: #fff;
-  font-size: 30px;
+  font-size: 28px;
 }
 #dashboard .dashboard .card {
   padding: 30px;
@@ -184,7 +184,7 @@
   gap: 20px;
 }
 #catalog .catalog .title {
-  padding: 25px 0;
+  padding: 25px 0 0px 0;
   width: 100%;
   color: #fff;
   display: flex;
@@ -199,7 +199,7 @@
   gap: 10px;
 }
 #catalog .catalog .title .left h2 {
-  font-size: 30px;
+  font-size: 26px;
 }
 #catalog .catalog .title .left p {
   color: #737373;
@@ -252,6 +252,17 @@
   padding-top: 10px;
   height: 96%;
   right: 10px;
+}
+#catalog .catalog .push {
+  width: 100%;
+  text-align: end;
+  padding-bottom: 10px;
+}
+#catalog .catalog .push a {
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 20px;
+  background-color: #d96c2c;
 }
 #catalog .catalog .table > :not(caption) > * > * {
   background-color: transparent;
@@ -345,6 +356,20 @@
 }
 #add-item .add-item .add-main .d {
   grid-area: 5/2/6/4;
+}
+#add-item .add-item .add-main .e {
+  grid-area: 7/1/12/2;
+  box-shadow: 0 0 20px rgb(143, 143, 143);
+  background-color: cyan;
+}
+#add-item .add-item .add-main .e label {
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
+  cursor: pointer;
+}
+#add-item .add-item .add-main .e input {
+  display: none;
 }
 #add-item .add-item .add-main img {
   width: 200px;
@@ -470,6 +495,19 @@
 #detail-admin .detail-admin .d {
   grid-area: 5/2/6/4;
 }
+#detail-admin .detail-admin .e {
+  grid-area: 7/1/10/2;
+  box-shadow: 0 0 20px rgb(143, 143, 143);
+  background-color: cyan;
+}
+#detail-admin .detail-admin .e iframe {
+  width: 100%;
+  height: 100%;
+}
+#detail-admin .detail-admin .f {
+  grid-area: 7/2/8/4;
+  color: #fff;
+}
 #detail-admin .detail-admin img {
   width: 200px;
   height: 100px;
@@ -483,7 +521,6 @@
 #detail-admin .detail-admin .image label {
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 #detail-admin .detail-admin .image label img {
   width: 100%;
@@ -895,7 +932,6 @@
   border: none;
   background: none;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 10px;
   flex-direction: row;
@@ -910,6 +946,8 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .cast .row > div .card .name {
   padding-left: 20px;
@@ -1055,7 +1093,7 @@
   background-color: aqua;
 }
 #movie-all-banner .movie-all-banner {
-  padding: 200px 0;
+  padding: 180px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1076,47 +1114,59 @@
 }
 #movie-all-banner .movie-all-banner .text p {
   padding-top: 1px;
-  font-size: 14px;
+  font-size: 13px;
 }
 #movie-all-banner .movie-all-banner .text i {
   padding-top: 1px;
-  font-size: 12px;
+  font-size: 11px;
 }
 #movie-all-banner .movie-all-banner .text h1 {
   color: #fff;
-  font-size: 50px;
+  font-size: 45px;
+  text-align: center;
 }
 #movie-all-banner .movie-all-banner .text a {
   color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   transition: all 0.3s ease;
 }
 #movie-all-banner .movie-all-banner .text a:hover {
   color: #d96c2c;
 }
-#movie-all-banner .movie-all-banner .text .search {
+
+#movie-all {
+  background-color: #fff;
+  padding: 50px 0 0 0;
+}
+#movie-all .search {
   max-width: 300px;
   width: 100%;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
 }
-#movie-all-banner .movie-all-banner .text .search input, #movie-all-banner .movie-all-banner .text .search i {
-  border: none;
+#movie-all .search input,
+#movie-all .search i {
+  border: 1px solid rgb(202, 202, 202);
   outline: none;
   height: 100%;
   background-color: #fff;
   font-size: 20px;
   color: #737373;
-  padding: 5;
+  padding: 5px;
 }
-#movie-all-banner .movie-all-banner .text .search i {
+#movie-all .search input {
+  width: 100%;
+  border-left: none;
+}
+#movie-all .search i {
   padding: 10px 13px;
-}
-
-#movie-all {
-  background-color: #fff;
+  border-right: none;
 }
 #movie-all .movie-all {
-  padding: 100px 0;
+  padding: 80px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1168,8 +1218,8 @@
 #movie-all .movie-all .playing .my-card > div .image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: all 0.3s ease;
 }
 #movie-all .movie-all .playing .my-card > div .image::after {
@@ -1185,7 +1235,7 @@
 #movie-all .movie-all .playing .my-card > div .text {
   position: absolute;
   bottom: 20px;
-  left: 10px;
+  left: 0px;
   padding: 20px;
   color: #fff;
   font-weight: 500;
@@ -1193,7 +1243,7 @@
 #movie-all .movie-all .playing .my-card > div .text .category-time {
   display: flex;
   gap: 5px;
-  font-size: 13px;
+  font-size: 12px;
 }
 #movie-all .movie-all .playing .my-card > div .text .film-name {
   font-size: 20px;
@@ -1412,7 +1462,8 @@
   border: 2px solid #d96c2c;
 }
 #ticket .ticket .main .active {
-  background-color: aqua;
+  background-color: #d96c2c;
+  color: #fff;
 }
 #ticket .ticket .button {
   max-width: 500px;

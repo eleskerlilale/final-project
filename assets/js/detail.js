@@ -76,7 +76,7 @@ network.getfetchById(id).then(data => {
                         <h2>${data.original_title}</h2>
                         <div><p>${arr} </p>/<p> ${data.runtime} mins</p></div>
                     </div>
-                    <a href="./tiicket.html">Get Ticket</a>
+                    <a href="./tiicket.html?id=${data.id}">Get Ticket</a>
                 </div>
                 <div class="row row-image">
                     <div class="col-lg-6 col-md-6 col-sm-12">

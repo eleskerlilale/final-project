@@ -154,8 +154,6 @@ network.getfetchaccount().then(data => {
     username.value = data[0].username
     email.value = data[0].email
     password.value = data[0].password
-    nameAccount.style.display = 'block'
-    nameAccount.innerText = `${data[0].email}`
     loginRegisterPage.style.display = 'none'
     accountpage.style.display = 'flex'
   } else {

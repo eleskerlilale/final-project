@@ -4,10 +4,10 @@ const close = document.querySelectorAll(".close")
 const request = document.querySelector(".request")
 const buy = document.querySelector(".buy")
 const backk = document.querySelector(".backk")
-const image=document.querySelector(".image")
+const image = document.querySelector(".image")
 const SearchId = new URLSearchParams(window.location.search).get("id")
-console.log( typeof SearchId);
-
+console.log(typeof SearchId);
+network.getfetchticket().then(data => console.log(data))
 network.getfetchById(SearchId).then(data => {
     data.date.forEach(elem => {
         main.innerHTML += `
@@ -53,24 +53,28 @@ const proceed = document.querySelector(".proceed")
 let countPrice = 0
 let table = ''
 button.addEventListener("click", () => {
-    image.style.display="flex"
+    if (document.querySelector(".active")) {
 
-    console.log(say);
-    console.log(date, time);
-    network.getfetchById(SearchId).then(data => {
-        network.getfetchticket().then(ticket => {
-            table = `${data.date[Number(say) - 1].seat}`
-            ticket.forEach((t, index) => {
-                if (data.date[Number(say) - 1].seat.includes(t.seat)) {
-                    seats[index].style.backgroundColor = 'red'
-                }
+        image.style.display = "flex"
+        console.log(say);
+        console.log(date, time);
+        network.getfetchById(SearchId).then(data => {
+            network.getfetchticket().then(ticket => {
+                table = `${data.date[Number(say) - 1].seat}`
+                ticket.forEach((t, index) => {
+                    if (data.date[Number(say) - 1].seat.includes(t.seat)) {
+                        seats[index].style.backgroundColor = 'red'
+                    }
+                })
+
+                place.style.display = "block"
+                image.style.display = "none"
+
             })
-
-            place.style.display = "block"
-            image.style.display="none"
-
         })
-    })
+    } else {
+        alert("Choose one of the options")
+    }
 })
 
 close.forEach((close, i) => {
@@ -143,9 +147,7 @@ proceed.addEventListener("click", () => {
                         console.log(maindata);
                     }
                 })
-
                 const yoxla = favdata.find(f => (f.movieId === Number(SearchId) && f.date === date && f.time === time))
-
                 if (yoxla) {
                     favdata.forEach((element, y) => {
                         if (element.movieId == Number(SearchId) && element.date == date) {
@@ -160,7 +162,6 @@ proceed.addEventListener("click", () => {
                             network.getaccountpath(dataaccount[0].id, { date: favdata })
                         }
                     })
-
                 } else {
                     favdata.push({
                         movieId: Number(SearchId),
@@ -172,14 +173,15 @@ proceed.addEventListener("click", () => {
                     network.getaccountpath(dataaccount[0].id, { date: favdata })
                 }
                 network.getmainPath(SearchId, { date: maindata })
-                window.location='./index.html'
-                // network.getaccountpath(data[0].id, {favorite:favmaindata})
+                network.getfetchaccount().then(data => {
+                    console.log(data[0].id);
+                    network.getmainaccountpath(data[0].id, { date: favdata })
+                    window.location = './index.html'
+                })
             })
         })
     })
     backk.addEventListener("click", () => {
         request.style.display = 'none'
-
     })
-
 })

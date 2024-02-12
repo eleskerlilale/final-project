@@ -1,6 +1,6 @@
 const menuBtn = document.querySelector(".bi-list")
 const adminNav = document.querySelector("#admin-nav")
-const img = document.querySelector("#image")
+const img = document.querySelector("#img")
 const label = document.querySelector("label")
 const name = document.querySelector("#name")
 const textarea = document.querySelector("textarea")
@@ -12,6 +12,13 @@ const checkbox = document.querySelectorAll("input[type=checkbox]")
 const save = document.querySelector(".save")
 const check = document.querySelector(".check")
 const iframe = document.querySelector("iframe")
+const e=document.querySelector(".e")
+
+// const video=document.querySelector("video")
+// const source=document.querySelector("source")
+// console.log(source);
+
+
 menuBtn.addEventListener("click", () => {
     console.log(menuBtn.classList.value);
     if (menuBtn.classList.value == 'bi bi-list') {
@@ -29,7 +36,7 @@ if (id) {
         name.value = data.original_title
         textarea.value = data.overview
         time.value = data.runtime
-        img.src = `https://image.tmdb.org/t/p/w220_and_h330_face/${data.poster_path}`
+        img.src = `${data.poster_path}`
         checkbox.forEach(e => {
            const g = data.genres.find(f => f.id== e.value)
            if(g){
@@ -55,8 +62,19 @@ input.addEventListener("input", () => {
         console.log("reader");
         reader.addEventListener("load", () => {
             img.src = reader.result
+            e.innerHTML=`
+            <video width="400" controls>
+                            <source src="${reader.result}" type="video/mp4">
+                            
+                            
+                          </video>
+            `
             // iframe.src=reader.result
-            console.log(img.src);
+            // setTimeout(() => {
+            //     source.src=reader.result
+            //     console.log(video);
+            // }, 2000);
+            
         })
     }
 

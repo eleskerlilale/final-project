@@ -18,6 +18,7 @@ const network = {
         let res = await fetch(this.url1 + id, {
             method: 'DELETE',
         })
+        window.location.reload()
         return res.json();
     },
     getmainpost: async function (data) {

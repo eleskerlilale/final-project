@@ -221,8 +221,8 @@ const printBanner = () => {
 }
 const printData = () => {
   arr.forEach(elem => {
-    const ids = dataFav[dataFav.length - 1].favorite.find(f => f.id == elem.id)
-    if (!ids) {
+    // const ids = dataFav[dataFav.length - 1].favorite.find(f => f.id == elem.id)
+    // if (!ids) {
       playing.innerHTML += `
                       <div class="my-card " >
                           <div>
@@ -238,32 +238,32 @@ const printData = () => {
                                   <div class="film-name" onclick="detailFunc(${elem.id})">${elem.original_title}</div>
                                   <a href="./ticket.html?id=${elem.id}">Ticket</a>
                               </div>
-                              <div class='favorite favorite${elem.id}' onclick='favFunc(${elem.id})'><i class="bi bi-heart"></i></div>
+                              
                           </div>
                       </div>
       `
-    }
-    else {
-      playing.innerHTML += `
-                      <div class="my-card" >
-                          <div>
-                              <div class="image">
-                                  <img src="${elem.poster_path}" alt="">
-                              </div>
-                              <div class="text">
-                                  <div class="category-time">
-                                      <p class="category">${elem.genres[0].name}</p>
-                                      /
-                                      <p class="time">${elem.runtime} min</p>
-                                  </div>
-                                  <div class="film-name" onclick="detailFunc(${elem.id})">${elem.original_title}</div>
-                                  <a href="./ticket.html?id=${elem.id}" >Ticket</a>
-                              </div>
-                              <div class='favorite favorite${elem.id}' onclick='favFunc(${elem.id})'><i class="bi bi-heart-fill"></i></div>
-                          </div>
-                      </div>
-      `
-    }
+    // }
+    // else {
+    //   playing.innerHTML += `
+    //                   <div class="my-card" >
+    //                       <div>
+    //                           <div class="image">
+    //                               <img src="${elem.poster_path}" alt="">
+    //                           </div>
+    //                           <div class="text">
+    //                               <div class="category-time">
+    //                                   <p class="category">${elem.genres[0].name}</p>
+    //                                   /
+    //                                   <p class="time">${elem.runtime} min</p>
+    //                               </div>
+    //                               <div class="film-name" onclick="detailFunc(${elem.id})">${elem.original_title}</div>
+    //                               <a href="./ticket.html?id=${elem.id}" >Ticket</a>
+    //                           </div>
+    //                           <div class='favorite favorite${elem.id}' onclick='favFunc(${elem.id})'><i class="bi bi-heart-fill"></i></div>
+    //                       </div>
+    //                   </div>
+    //   `
+    // }
   })
 }
 
@@ -290,55 +290,55 @@ function detailFunc(id) {
 }
 
 let index = ''
-function favFunc(id) {
-  const favorite = document.querySelector(`.favorite${id}`)
-  console.log("aside");
-  network.getfetchById(id).then(data => {
-    network.getfetchaccount().then(datafav => {
-      const ids = datafav[datafav.length - 1].favorite.find(f => f.id == data.id)
-      if (!ids) {
-        favorite.innerHTML = `<i class="bi bi-heart-fill"></i>`
-        console.log("aside");
-        datafav[datafav.length - 1].favorite.push(data)
-        network.getaccountpath(datafav[datafav.length - 1].id, { favorite: datafav[datafav.length - 1].favorite })
-        network.getfetchaccount().then(data => {
-          network.getMainaccount().then(maindata => {
-            maindata.forEach(maindt => {
-              if (maindt.email == data[0].email) {
-                const index = maindt.id;
-                network.getmainaccountpath(index, data[0])
-              }
-            })
-          })
-        })
-      }
-      else {
-        favorite.innerHTML = `<i class="bi bi-heart"></i>`
-        console.log(id);
-        [...newarr] = datafav[datafav.length - 1].favorite
-        newarr.forEach((elem, i) => {
-          if (elem.id == id) {
-            index = i
-          }
-        })
-        if (index > -1) {
-          newarr.splice(index, 1);
-        }
-        network.getaccountpath(datafav[datafav.length - 1].id, { favorite: newarr })
-        network.getfetchaccount().then(data => {
-          network.getMainaccount().then(maindata => {
-            maindata.forEach(maindt => {
-              if (maindt.email == data[0].email) {
-                const index = maindt.id;
-                network.getmainaccountpath(index,{ favorite: newarr } )
-              }
-            })
-          })
-        })
-      }
-    })
-  })
-}
+// function favFunc(id) {
+//   const favorite = document.querySelector(`.favorite${id}`)
+//   console.log("aside");
+//   network.getfetchById(id).then(data => {
+//     network.getfetchaccount().then(datafav => {
+//       const ids = datafav[datafav.length - 1].favorite.find(f => f.id == data.id)
+//       if (!ids) {
+//         favorite.innerHTML = `<i class="bi bi-heart-fill"></i>`
+//         console.log("aside");
+//         datafav[datafav.length - 1].favorite.push(data)
+//         network.getaccountpath(datafav[datafav.length - 1].id, { favorite: datafav[datafav.length - 1].favorite })
+//         network.getfetchaccount().then(data => {
+//           network.getMainaccount().then(maindata => {
+//             maindata.forEach(maindt => {
+//               if (maindt.email == data[0].email) {
+//                 const index = maindt.id;
+//                 network.getmainaccountpath(index, data[0])
+//               }
+//             })
+//           })
+//         })
+//       }
+//       else {
+//         favorite.innerHTML = `<i class="bi bi-heart"></i>`
+//         console.log(id);
+//         [...newarr] = datafav[datafav.length - 1].favorite
+//         newarr.forEach((elem, i) => {
+//           if (elem.id == id) {
+//             index = i
+//           }
+//         })
+//         if (index > -1) {
+//           newarr.splice(index, 1);
+//         }
+//         network.getaccountpath(datafav[datafav.length - 1].id, { favorite: newarr })
+//         network.getfetchaccount().then(data => {
+//           network.getMainaccount().then(maindata => {
+//             maindata.forEach(maindt => {
+//               if (maindt.email == data[0].email) {
+//                 const index = maindt.id;
+//                 network.getmainaccountpath(index,{ favorite: newarr } )
+//               }
+//             })
+//           })
+//         })
+//       }
+//     })
+//   })
+// }
 
 
 
