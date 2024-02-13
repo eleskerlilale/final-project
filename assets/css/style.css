@@ -1982,6 +1982,199 @@
     z-index: 4;
   }
 }
+#invoice {
+  overflow-x: auto;
+}
+#invoice .invoice {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#invoice .invoice .left-circle {
+  width: 20px;
+  height: 250px;
+  position: relative;
+}
+#invoice .invoice .left-circle > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+#invoice .invoice .left-circle > div > div {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+#invoice .invoice .right-circle {
+  width: 20px;
+  height: 250px;
+  position: relative;
+}
+#invoice .invoice .right-circle > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+#invoice .invoice .right-circle > div > div {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+#invoice .invoice .main {
+  width: 570px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  background-color: #F3F3F3;
+}
+#invoice .invoice .main .first {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  padding-left: 30px;
+}
+#invoice .invoice .main .first span {
+  font-size: 14px;
+  color: #d96c2c;
+  font-weight: 900;
+}
+#invoice .invoice .main .first p {
+  font-size: 13px;
+  font-weight: 600;
+}
+#invoice .invoice .main .first .top {
+  width: 100%;
+  background-color: #d96c2c;
+  color: #fff;
+  font-size: 700;
+  font-size: 25px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#invoice .invoice .main .first .top p {
+  font-size: 20px;
+}
+#invoice .invoice .main .first .name-ticket {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#invoice .invoice .main .first .name-ticket span {
+  font-size: 16px;
+  font-weight: bold;
+}
+#invoice .invoice .main .first .name-ticket p {
+  font-size: 14px;
+}
+#invoice .invoice .main .first .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+#invoice .invoice .main .first .bottom .icon {
+  font-size: 100px;
+  color: #d96c2c;
+  position: relative;
+}
+#invoice .invoice .main .first .bottom .icon > i {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  color: #fff;
+  font-size: 40px;
+}
+#invoice .invoice .main .first .bottom .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#invoice .invoice .main .first .bottom .text > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#invoice .invoice .main .first .bottom .text span {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 3px;
+}
+#invoice .invoice .main .second {
+  width: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  position: relative;
+}
+#invoice .invoice .main .second > div {
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+#invoice .invoice .main .second .edge-top {
+  position: absolute;
+  top: -7px;
+  left: -3px;
+  width: 15px;
+  height: 15px;
+}
+#invoice .invoice .main .second .edge-bottom {
+  position: absolute;
+  bottom: -7px;
+  left: -3px;
+  width: 15px;
+  height: 15px;
+}
+#invoice .invoice .main .thrid {
+  width: 150px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#invoice .invoice .main .thrid .kod {
+  width: 70%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+#invoice .invoice .main .thrid .kod > div {
+  background-color: black;
+  width: 80%;
+  height: 2px;
+}
+#invoice .invoice .main .thrid .kod .light {
+  height: 1px;
+}
+#invoice .invoice .main .thrid .number {
+  width: 20px;
+  font-size: 20px;
+  transform: rotateZ(90deg);
+  margin-bottom: 70px;
+}
+
 #blog {
   background-color: #fff;
 }

@@ -1,0 +1,233 @@
+#invoice {
+    // background-color: aqua;
+    overflow-x: auto;
+
+    .invoice {
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .left-circle{
+            width: 20px;
+            height: 250px;
+            position: relative;
+            >div{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                position: absolute;
+                top: 0;
+                left: 10px;
+            >div{
+                
+                background-color: #fff;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+            }
+            }
+        }
+        .right-circle{
+            width: 20px;
+            height: 250px;
+            position: relative;
+            >div{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                position: absolute;
+                top: 0;
+                right: 10px;
+            >div{
+                
+                background-color: #fff;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+            }
+            }
+        }
+        .main {
+            width: 570px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            background-color: $lightGray;
+
+            // border: 1px solid black;
+            .first {
+                width: 400px;
+                height: 100%;
+                // background-color: rgb(17, 255, 0);
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px;
+                padding-left: 30px;
+                span {
+                    font-size: 14px;
+                    color: $orange;
+                    font-weight: 900;
+                }
+
+                p {
+                    font-size: 13px;
+                    font-weight: 600;
+                }
+
+                .top {
+                    width: 100%;
+                    background-color: $orange;
+                    color: $white;
+                    font-size: $fourthFont;
+                    font-size: 25px;
+                    // height: 40px;
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    p {
+                        font-size: 20px;
+                    }
+                }
+
+                .name-ticket {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    span {
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+
+                .bottom {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 20px;
+
+                    .icon {
+                        // background-color: aliceblue;
+                        font-size: 100px;
+                        color: $orange;
+                        position: relative;
+
+                        >i {
+                            position: absolute;
+                            top: 50px;
+                            left: 20px;
+                            color: $white;
+                            font-size: 40px;
+                        }
+                    }
+
+                    .text {
+                        width: 100%;
+                        // background-color: blueviolet;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        >div {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                        }
+
+                        span {
+                            // width: 50px;
+                            // margin-right: 5px;
+                            // background-color: aliceblue;
+                            font-weight: bold;
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: row;
+                            gap: 3px;
+                        }
+                    }
+                }
+            }
+
+            .second {
+                // background-color: rgb(22, 125, 215);
+                width: 10px;
+                height: 100%;
+                // background-color: rgb(39, 196, 196);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 3px;
+                position: relative;
+
+                >div {
+                    width: 7px;
+                    height: 7px;
+                    background-color: $white;
+                    border-radius: 50%;
+                }
+
+                .edge-top {
+                    position: absolute;
+                    top: -7px;
+                    left: -3px;
+                    width: 15px;
+                    height: 15px;
+                    // background-color: aqua;
+                }
+
+                .edge-bottom {
+                    position: absolute;
+                    bottom: -7px;
+                    left: -3px;
+                    width: 15px;
+                    height: 15px;
+                    // background-color: aqua;
+                }
+            }
+
+            .thrid {
+                // background-color: burlywood;
+                width: 150px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .kod {
+                    width: 70%;
+                    height: 80%;
+                    // background-color: brown;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2px;
+
+                    >div {
+                        background-color: black;
+                        width: 80%;
+                        height: 2px;
+                    }
+
+                    .light {
+                        height: 1px;
+                    }
+                }
+
+                .number {
+                    // background-color: aliceblue;
+                    width: 20px;
+                    font-size: 20px;
+                    transform: rotateZ(90deg);
+                    margin-bottom: 70px;
+                }
+            }
+        }
+    }
+}
