@@ -1,11 +1,10 @@
 const network = {
-    // url : 'https://northwind.vercel.app/api/products/',
-    // url : "https://api.themoviedb.org/3/movie/now_playing?api_key=233029fa6ff0c910354e5553874c41e9",
     url1: "http://localhost:3000/main/",
     url2: "http://localhost:3000/account/",
     url3: "http://localhost:3000/ticket/",
     url4: "http://localhost:3000/blog/",
     url5: "http://localhost:3000/mainaccount/",
+    url6: "http://localhost:3000/admin/",
     getfetch: async function () {
         let res = await fetch(this.url1);
         return res.json();
@@ -134,5 +133,26 @@ const network = {
 
         return res.json();
     },
+    getadmin : async function() {
+        let res = await fetch(this.url6)
+        return res.json();
+    },
+    getadminpost: async function (data) {
+        let res = await fetch(this.url6, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        return res.json();
+    },
+    getadmindelete: async function (id) {
+        let res = await fetch(this.url6 + id, {
+            method: 'DELETE',
+        })
+        return res.json();
+    }
 }
 

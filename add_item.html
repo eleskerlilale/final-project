@@ -35,31 +35,42 @@
         </div>
     </section>
     <section id="admin-nav">
-        <div class="container">
-            <div class="admin-nav">
-                <div class="logo">
-                    <img src="./assets/image/logo-white.png" alt="">
-                </div>
-                <a href="./dashboard.html"><i class="bi bi-box-fill"></i> Dashboard</a>
-                <a href="./catalog.html"><i class="bi bi-list-ul"></i> Catalog</a>
-                <a href="./add_item.html">Add Item</a>
+        <div class="admin-nav">
+            <div class="logo">
+                <a href="./index.html"><img src="./assets/image/logo-white.png" alt=""></a>
+
             </div>
+            <div class="admin-about">
+                <div>
+                    <div class="people-icon">
+                        <i class="bi bi-person"></i>
+                    </div>
+                    <div class="text">
+                        <span>Admin</span>
+                        <p>Lale</p>
+                    </div>
+                </div>
+                <div class="admin-log-out">
+                    <i class="bi bi-box-arrow-right"></i>
+                </div>
+            </div>
+            <a href="./dashboard.html"><i class="bi bi-box-fill"></i> Dashboard</a>
+            <a href="./catalog.html"><i class="bi bi-film"></i> Catalog</a>
+
         </div>
     </section>
 
     <section id="add-item">
         <div class="container">
             <div class="add-item">
-                <h2>Add new item</h2>
+                <input type="file" id="add-image">
+
                 <div class="add-main">
-                    <!-- accept="image/png, image/jpeg, image/jpg"  -->
                     <div class="a">
                         <div class="image">
-                            <label for="add-image">
-                                <img src="" id="img">
+                            <img src="" id="img">
                             </label>
 
-                            <input type="file" id="add-image">
                         </div>
                     </div>
                     <div class="b"> <input type="text" placeholder="Name" id="name"></div>
@@ -70,10 +81,32 @@
                         <input type="text" placeholder="Running time" id="time">
                     </div>
                     <div class="e">
-                        <label for="add-image">
+                        <span>Trailer</span>
+                        <iframe src="" frameborder="0"></iframe>
+                    </div>
+                    <div class="f">
+                        <label for="new1">
+                            <p></p>
+                            <span>image</span>
+                        </label>
+                        <input type="file" id="new1">
+                        <label for="new2">
+                            <p></p>
+                            <span>image</span>
+                        </label>
+                        <input type="file" id="new2">
+                        <label for="new3">
+                            <p></p>
+                            <span>image</span>
 
                         </label>
-                        <input type="file"  id="add-image">
+                        <input type="file" id="new3">
+
+                        <label for="video-poster">
+                            <p></p>
+                            <span>video poster</span>
+                        </label>
+                        <input type="file" id="video-poster">
                     </div>
                     <div class="select">
                         <div>
@@ -118,6 +151,14 @@
             </div>
         </div>
     </section>
+    <!-- <iframe src="./assets/image/lv_0_20231209150806.mp4" frameborder="0"></iframe> -->
+    <!-- <video width="400" controls>
+        <source src="https://www.youtube.com/embed/eQPeGiCH7A0?si=J50oRX8ZcO58lLW2" type="video/mp4">    
+      </video> -->
+    <!-- <video >
+        
+        <source src="https://www.youtube.com/embed/eQPeGiCH7A0?si=J50oRX8ZcO58lLW2" type="">
+    </video> -->
     <div class="check">
         <i class="bi bi-check-lg"></i>
     </div>

@@ -1,11 +1,35 @@
 const tbodyone = document.querySelector(".first tbody")
 const tbody2 = document.querySelector(".second tbody")
-const tbody3=document.querySelector(".thrid tbody")
-const reload=document.querySelectorAll(".bi-arrow-clockwise")
-const menuBtn=document.querySelector(".bi-list")
-const adminNav=document.querySelector("#admin-nav")
+const tbody3 = document.querySelector(".thrid tbody")
+const reload = document.querySelectorAll(".bi-arrow-clockwise")
+const menuBtn = document.querySelector(".bi-list")
+const adminNav = document.querySelector("#admin-nav")
+const adminlogout = document.querySelector(".admin-log-out")
 const sortArr = []
 let count = 0
+console.log(adminlogout);
+window.addEventListener("load" , () => {
+    network.getadmin().then(data => {
+        if(data.length==0){
+            window.location='./admin-login.html'
+        }
+    })
+})
+
+adminlogout.addEventListener("click", () => {
+    network.getadmin().then(data => {
+        network.getadmindelete(data[0].id)
+        window.location.reload()
+    })
+})
+
+window.addEventListener("load", () => {
+    network.getadmin().then(data => {
+        if (data.length == 0) {
+            window.location = './admin-login.html'
+        }
+    })
+})
 
 reload.forEach(reload => {
     reload.addEventListener("click", () => {
@@ -13,14 +37,26 @@ reload.forEach(reload => {
     })
 })
 
+window.addEventListener("resize", () => {
+    // console.log("dfsd");
+    if (document.body.scrollWidth < 768) {
+        adminNav.style.left = '-250px'
+        menuBtn.classList.remove("active")
+
+    } else {
+        adminNav.style.left = '0'
+        menuBtn.classList.add("active")
+
+    }
+})
 menuBtn.addEventListener("click", () => {
     console.log(menuBtn.classList.value);
-    if(menuBtn.classList.value=='bi bi-list'){
+    if (menuBtn.classList.value == 'bi bi-list') {
         console.log("sdb");
-        adminNav.style.left='0'
+        adminNav.style.left = '0'
         menuBtn.classList.toggle("active")
-    }else{
-        adminNav.style.left='-250px'
+    } else {
+        adminNav.style.left = '-250px'
         menuBtn.classList.toggle("active")
     }
 })
@@ -52,8 +88,8 @@ function localeCompare(a, b) {
 }
 
 network.getfetch().then(data => {
-    data.forEach((dt , i) => {
-        if(i>data.length-6){
+    data.forEach((dt, i) => {
+        if (i > data.length - 6) {
             tbody2.innerHTML += `
                 <tr>
                     <td>${dt.id}</td>
@@ -66,17 +102,21 @@ network.getfetch().then(data => {
     })
 })
 
-network.getMainaccount().then( data => {
+network.getMainaccount().then(data => {
     console.log(data);
-    data.forEach(dt => {
-        tbody3.innerHTML+=`
-        <tr>
-        <td>${dt.id}</td>
-        <td>${dt.email}</td>
-        <td>${dt.username}</td>
-        <td>${dt.password}</td>
-        <!-- <td>RATING</td> -->
-    </tr>
-        `
+    data.forEach((dt, i) => {
+        if (i != 0) {
+            if (i > data.length - 6) {
+                tbody3.innerHTML += `
+                        <tr>
+                        <td>${dt.id}</td>
+                        <td>${dt.email}</td>
+                        <td>${dt.username}</td>
+                        <td>${dt.password}</td>
+                        <!-- <td>RATING</td> -->
+                    </tr>
+                        `
+            }
+        }
     })
 })

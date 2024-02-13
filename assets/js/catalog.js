@@ -8,6 +8,15 @@ network.getfetch().then(data => {
 const menuBtn = document.querySelector(".bi-list")
 const adminNav = document.querySelector("#admin-nav")
 
+
+window.addEventListener("load" , () => {
+    network.getadmin().then(data => {
+        if(data.length==0){
+            window.location='./admin-login.html'
+        }
+    })
+})
+
 menuBtn.addEventListener("click", () => {
     console.log(menuBtn.classList.value);
     if (menuBtn.classList.value == 'bi bi-list') {

@@ -9,7 +9,8 @@
     left: 0px;
 
     .admin-nav {
-        padding: 30px 10px;
+        width: 100%;
+        padding: 30px 20px;
         @include column;
         gap: 10px;
         color: $white;
@@ -24,19 +25,61 @@
             }
         }
 
+        .admin-about {
+            background-color: rgb(26, 26, 26);
+            width: 100%;
+            @include flex;
+            padding: 5px;
+            margin: 10px 0 20px 0;
+            border-radius: 5px;
+
+            >div {
+                @include center;
+                gap: 10px;
+            }
+
+            i {
+                // font-size: 20px;
+                color: $white;
+            }
+
+            .people-icon {
+                font-size: 27px;
+            }
+
+            .text {
+                @include column;
+
+                span {
+                    color: $gray;
+                    font-size: 10px;
+                }
+
+                p {
+                    font-weight: $thridFond;
+                    font-size: 23px;
+                }
+            }
+
+            .admin-log-out {
+                width: 40px;
+                height: 40px;
+                @include center;
+                border: 2px solid $orange;
+                cursor: pointer;
+            }
+        }
+
         a {
             color: $white;
             @include transition;
+            font-size: 17px;
+            margin-left: 20px;
 
             &:hover {
                 color: $orange;
             }
         }
-
-        p {
-            padding-bottom: 10px;
-        }
-
     }
 }
 
@@ -76,6 +119,8 @@
 }
 
 #dashboard {
+    overflow: hidden;
+
     background-color: $black;
     padding-left: 250px;
     height: 100%;
@@ -100,9 +145,11 @@
             color: $white;
             @include column;
             gap: 10px;
+            overflow-x: auto;
 
             .title {
                 width: 100%;
+                min-width: 500px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -120,7 +167,9 @@
             }
 
             table {
+                min-width: 500px;
                 width: 100%;
+                overflow-x: auto;
 
                 thead {
                     width: 100%;
@@ -177,6 +226,7 @@
             color: $white;
             @include flex;
 
+            // flex-direction: column;
             .left {
                 @include center;
                 flex-direction: row;
@@ -197,6 +247,7 @@
                 @include center;
                 flex-direction: row;
                 gap: 20px;
+                flex-wrap: wrap;
 
                 .sort {
                     @include column;
@@ -250,6 +301,7 @@
             width: 100%;
             text-align: end;
             padding-bottom: 10px;
+
             a {
                 color: $white;
                 font-size: 15px;
@@ -337,9 +389,14 @@
     min-height: 100vh;
     height: 100%;
     color: $white;
+    // overflow: hidden;
     @include transition;
 
+    // width: 100%;
     .add-item {
+        padding-top: 40px;
+        overflow: hidden;
+        // width: 100%;
         height: 100%;
         @include column;
         gap: 20px;
@@ -349,7 +406,13 @@
         }
 
         .add-main {
-            padding: 50px 0;
+            // border:1px solid white;
+            // margin-left:5px ;
+            padding-left: 20px;
+            width: 100%;
+            // background-color: aliceblue;
+            padding: 20px 0;
+            // overflow: hidden;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             // grid-template-rows:1fr 1fr 1fr 1fr 1fr;
@@ -364,7 +427,9 @@
 
             .a {
                 grid-area: 1/1/6/2;
-                box-shadow: 0 0 20px rgb(143, 143, 143);
+                // box-shadow: 0 0 10px rgb(143, 143, 143);
+                background-color: rgb(35, 35, 35);
+
             }
 
             .b {
@@ -379,18 +444,89 @@
                 grid-area: 5/2/6/4;
             }
 
-            .e {
-                grid-area: 7/1/12/2;
-                box-shadow: 0 0 20px rgb(143, 143, 143);
-                background-color: cyan;
+            .f {
+                padding: 0;
+                // background-color: azure;
+                grid-area: 7/2/8/4;
+                @include column;
+                gap: 3px;
+                justify-content: space-between;
+                width: 100%;
                 label {
+                    // padding: 10px;
+
+                    width: 100%;
+                    height: 45px;
+                    background-color: rgb(35, 35, 35);
+                    padding: 10px 20px;
+                    // border: 1px solid white;
+                    @include flex;
+
+                    span {
+                        color: $gray;
+                        text-align: end;
+                        font-size: 12px;
+                    }
+
+                    p {
+                        color: $white;
+                    }
+                }
+
+                input {
+                    display: none;
+                }
+
+                // max-height: 500px;
+                // color: $white;
+                // display: flex;
+                // flex-wrap: wrap;
+                // justify-content: space-between;
+                // gap: 5px;
+
+                // img {
+                //     width: 31%;
+                //     height: 100%;
+                // }
+
+            }
+
+
+            .e {
+                grid-area: 7/1/8/2;
+                // box-shadow: 0 0 20px rgb(143, 143, 143);
+                background-color: rgb(35, 35, 35);
+                // width: 100%;
+                position: relative;
+
+                span {
+                    top: 10px;
+                    left: 10px;
+                    z-index: 100;
+                    position: absolute;
+                    color: gray;
+                }
+
+                iframe {
+                    object-fit: cover;
                     width: 100%;
                     height: 100%;
-                    background-color: aliceblue;
-                    cursor: pointer;
                 }
-                input{
-                    display: none;
+
+                input {
+                    cursor: pointer;
+                    background-color: transparent;
+                    background: none;
+                    // background-color: aqua;
+                    position: absolute;
+                    width: 90px;
+                    font-size: 10px;
+                    height: 40px;
+                    top: 0;
+                    left: 0;
+                    z-index: 10;
+
+                    // display: none;
                 }
             }
 
@@ -404,19 +540,20 @@
                 box-shadow: 0 0 20px rgb(34, 34, 34);
                 width: 100%;
                 height: 100%;
-                cursor: pointer;
+                // cursor: pointer;
 
-                label {
+                // label {
+                //     width: 100%;
+                //     height: 100%;
+                //     cursor: pointer;
+
+                img {
                     width: 100%;
                     height: 100%;
-                    cursor: pointer;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
+                    object-fit: cover;
                 }
+
+                // }
 
                 input {
                     display: none;
@@ -472,6 +609,7 @@
             background-color: $orange;
             border: 2px solid $orange;
             max-width: 200px;
+            width: 100%;
             text-align: center;
             border-radius: 5px;
             @include transition;
@@ -505,7 +643,7 @@
 #detail-admin {
     width: 100%;
     background-color: $black;
-    min-height: 100vh;
+    min-height: 130vh;
     color: $white;
     z-index: 200;
     padding-left: 250px;
@@ -541,32 +679,53 @@
         .d {
             grid-area: 5/2/6/4;
         }
+
         .e {
-            grid-area: 7/1/10/2;
+            grid-area: 7/1/8/2;
             box-shadow: 0 0 20px rgb(143, 143, 143);
-            background-color: cyan;
-            iframe{
+
+            iframe {
                 width: 100%;
                 height: 100%;
             }
-            // label {
-            //     width: 100%;
-            //     height: 100%;
-            //     background-color: aliceblue;
-            //     cursor: pointer;
-            // }
-            // input{
-            //     display: none;
-            // }
         }
-        .f{
-            grid-area: 7/2/8/4;
-            color: $white;
-        }
+
         img {
             width: 200px;
             height: 100px;
         }
+
+        .f {
+            grid-area: 7/2/8/4;
+            @include column;
+            gap: 3px;
+            justify-content: space-between;
+
+            label {
+                // padding: 10px;
+                width: 100%;
+                height: 45px;
+                background-color: rgb(35, 35, 35);
+                padding: 10px 20px;
+                @include flex;
+
+                span {
+                    color: $gray;
+                    text-align: end;
+                }
+
+                p {
+                    color: $white;
+                }
+            }
+
+            input {
+                display: none;
+            }
+
+        }
+
+
 
         .image {
             // color: rgb(34, 34, 34);
@@ -638,26 +797,126 @@
     }
 }
 
+#admin-login {
+    width: 100%;
+    height: 100vh;
+    padding: 120px 0 0 0;
+
+    .admin-login {
+        margin: 0 auto;
+        max-width: 400px;
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 0 10px 1px gray;
+        @include column;
+        gap: 15px;
+
+        .logo {
+            width: 100px;
+
+            img {
+                width: 100%;
+
+            }
+        }
+
+        .main-login {
+            width: 100%;
+            @include column;
+            gap: 5px;
+
+            label {
+                font-size: 16px;
+                font-weight: $secondFont;
+
+                span {
+                    color: red;
+                }
+            }
+
+            input {
+                padding: 8px;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            >div {
+                position: relative;
+                width: 100%;
+
+                i {
+                    position: absolute;
+                    top: 4px;
+                    right: 10px;
+                    color: $black;
+                    cursor: pointer;
+                    padding: 5px 6px 4px 6px;
+                    border-radius: 50%;
+                    @include transition;
+
+                    &:hover {
+                        background-color: rgb(215, 215, 215);
+
+                    }
+                }
+            }
+
+            .log {
+                margin-top: 20px;
+                padding: 8px 10px;
+                background-color: $orange;
+                cursor: pointer;
+                color: $white;
+                width: 100px;
+                font-weight: $thridFond;
+                text-align: center;
+                @include transition;
+                border: 2px solid $orange;
+
+                &:hover {
+                    background-color: $white;
+                    color: $orange;
+                }
+            }
+        }
+    }
+}
+#add-item .add-item .f {
+    padding: 0 30px;
+}
 @media screen and (max-width:1042px) {
-    // #add-item .add-item {
-    //     gap: 80px;
-    // }
-
-    #add-item .add-item .add-main {
-        .a {
-            grid-area: 1/1/4/4;
+    #add-item .add-item {
+        .save {
+            width: 100%;
         }
 
-        .b {
-            grid-area: 4/1/5/4;
-        }
+        .add-main {
+            .a {
+                grid-area: 1/1/4/4;
+            }
 
-        .c {
-            grid-area: 5/1/7/4;
-        }
+            .b {
+                grid-area: 4/1/5/4;
+            }
 
-        .d {
-            grid-area: 7/1/8/4;
+            .c {
+                grid-area: 5/1/7/4;
+            }
+
+            .d {
+                grid-area: 7/1/8/4;
+            }
+
+            .e {
+                grid-area: 9/1/10/4;
+
+            }
+
+            .f {
+                width: 100%;
+                grid-area: 11/1/12/4;
+
+            }
         }
     }
 
@@ -678,15 +937,42 @@
             .d {
                 grid-area: 7/1/8/4;
             }
+
+            .e {
+                grid-area: 9/1/10/4;
+
+            }
+
+            .f {
+                width: 100%;
+                grid-area: 11/1/12/4;
+
+                label {
+                    span {
+                        font-size: 10px;
+                    }
+                }
+            }
         }
     }
 }
 
 @media screen and (max-width:768px) {
-    // #add-item .add-item {
-    //     gap: 140px;
+    #catalog .catalog {
+        .title {
+            flex-direction: column;
+            align-items: flex-start;
 
-    // }
+            .right {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        .push {
+            text-align: start;
+        }
+    }
 
     #admin-menu-panel {
         top: 0
@@ -698,27 +984,61 @@
 
     #dashboard {
         padding-left: 0px;
+
+        .dashboard {
+            padding-top: 70px;
+        }
     }
 
     #catalog {
         padding-left: 0px;
+
+        .catalog {
+            padding-top: 70px;
+        }
     }
 
     #add-item {
         padding-left: 0px;
     }
 
+    #add-item {
+        .add-item {
+            padding-top: 80px;
+
+            .f {
+                padding: 0 30px;
+            }
+        }
+    }
+
     #detail-admin {
         padding-left: 0px;
+
+        .detail-admin {
+            .f {
+                padding: 0 30px;
+            }
+        }
     }
 }
 
-@media screen and (max-width:1042px) {
-    // #add-item .add-item {
-    //     gap: 180px;
+@media screen and (max-width:425px) {
+    #detail-admin {
+        .detail-admin {
+            .f {
+                padding: 0px;
 
-    //     .add-main {
-    //         padding: 20px 0;
-    //     }
-    // }
+            }
+        }
+    }
+
+    #add-item {
+        .add-item {
+            .f {
+                padding: 0px;
+
+            }
+        }
+    }
 }

@@ -274,7 +274,7 @@ function videoFunc(id){
     document.body.prepend(video)
     video.innerHTML=`
     <i class="bi bi-x-lg"></i>
-    <iframe  src="https://www.youtube.com/embed/${elem.key}?si=J50oRX8ZcO58lLW2"></iframe>
+    <iframe  src="${elem.key}"></iframe>
     `
     const videoClose=document.querySelector(".video i")
     videoClose.addEventListener("click", () => {

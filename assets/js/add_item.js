@@ -12,12 +12,21 @@ const checkbox = document.querySelectorAll("input[type=checkbox]")
 const save = document.querySelector(".save")
 const check = document.querySelector(".check")
 const iframe = document.querySelector("iframe")
-const e=document.querySelector(".e")
+const videos = document.querySelector("#add-images")
+const e = document.querySelector(".e")
+const file = document.querySelector("input[type=file]")
+const f = document.querySelector(".f")
+const fInput = document.querySelectorAll(".f input")
+const inputP = document.querySelectorAll(".f label p")
+console.log(inputP);
 
-// const video=document.querySelector("video")
-// const source=document.querySelector("source")
-// console.log(source);
-
+window.addEventListener("load" , () => {
+    network.getadmin().then(data => {
+        if(data.length==0){
+            window.location='./admin-login.html'
+        }
+    })
+})
 
 menuBtn.addEventListener("click", () => {
     console.log(menuBtn.classList.value);
@@ -30,57 +39,60 @@ menuBtn.addEventListener("click", () => {
         menuBtn.classList.toggle("active")
     }
 })
-
+let count = 0;
+fInput.forEach((inputF, index) => {
+    inputF.addEventListener("input", () => {
+        const i = inputF.files[0]
+        console.log(i.name);
+        inputP[index].innerText = `${i.name}`
+    })
+})
+let num = 0;
 if (id) {
     network.getfetchById(id).then(data => {
         name.value = data.original_title
         textarea.value = data.overview
         time.value = data.runtime
         img.src = `${data.poster_path}`
+        iframe.src = `${data.key}`
         checkbox.forEach(e => {
-           const g = data.genres.find(f => f.id== e.value)
-           if(g){
-            console.log(e);
-            console.log(e.checked);
-            e.checked=true
-           }
+            const g = data.genres.find(f => f.id == e.value)
+            if (g) {
+                console.log(e);
+                console.log(e.checked);
+                e.checked = true
+            }
         })
+        while (num < 3) {
+            inputP[num].innerText = `${data.image[num].slice(15)}`
+            num++
+            console.log(num);
+        }
+        inputP[3].innerText=`${data.video_poster.slice(15)}`
     })
 }
-console.log(img);
-input.addEventListener("input", () => {
-    // src=`C:/Users/user/Videos`+'/'+`${i.name}`;
 
+file.addEventListener("input", () => {
     i = input.files[0]
     console.log(i);
-    console.log(i.href);
+    console.log(i.name.length);
+    console.log();
     if (i) {
-        // iframe.src=`C:/Users/user/Videos/${i.name}`
         console.log(i);
         const reader = new FileReader()
         reader.readAsDataURL(i)
-        console.log("reader");
         reader.addEventListener("load", () => {
-            img.src = reader.result
-            e.innerHTML=`
-            <video width="400" controls>
-                            <source src="${reader.result}" type="video/mp4">
-                            
-                            
-                          </video>
-            `
-            // iframe.src=reader.result
-            // setTimeout(() => {
-            //     source.src=reader.result
-            //     console.log(video);
-            // }, 2000);
-            
+            if (i.name.slice(i.name.length - 3) != "mp4") {
+                img.src = reader.result
+            } else {
+                iframe.src=`./assets/image/${i.name}`
+            }
         })
     }
-
 })
 let genres = []
-
+let image = []
+let limit=0;
 save.addEventListener("click", () => {
     checkbox.forEach(e => {
         if (e.checked) {
@@ -90,6 +102,12 @@ save.addEventListener("click", () => {
             })
         }
     })
+    inputP.forEach(p => {
+        if(limit<3){
+            image.push(`./assets/image/${p.innerText}`)
+            limit++
+        }
+    })
     if (genres.length != 0) {
         if (!id) {
             network.getmainpost({
@@ -97,27 +115,31 @@ save.addEventListener("click", () => {
                 overview: textarea.value,
                 poster_path: img.src,
                 runtime: Number(time.value),
-                genres: genres
+                genres: genres,
+                key: iframe.src,
+                image: image,
+                video_poster:`./assets/image/${inputP[3].innerText}`
             })
             check.style.display = 'flex'
-
             setTimeout(() => {
                 check.style.display = 'none'
             }, 1000);
-
-        }else{
-            network.getmainPath(id , {
+        } else {
+            network.getmainPath(id, {
                 original_title: name.value,
                 overview: textarea.value,
                 poster_path: img.src,
                 runtime: Number(time.value),
-                genres: genres
+                genres: genres,
+                key: iframe.src,
+                image: image,
+                video_poster:`./assets/image/${inputP[3].innerText}`
             })
-            window.location='./catalog.html'
+            window.location = './catalog.html'
         }
     }
-    else{
-        alert("genres seç")
+    else {
+        alert("Enter genres")
     }
 })
 
