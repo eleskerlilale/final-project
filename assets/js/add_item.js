@@ -12,7 +12,7 @@ const checkbox = document.querySelectorAll("input[type=checkbox]")
 const save = document.querySelector(".save")
 const check = document.querySelector(".check")
 const iframe = document.querySelector("iframe")
-const videos = document.querySelector("#add-images")
+// const videos = document.querySelector("#add-images")
 const e = document.querySelector(".e")
 const file = document.querySelector("input[type=file]")
 const f = document.querySelector(".f")
@@ -20,10 +20,40 @@ const fInput = document.querySelectorAll(".f input")
 const inputP = document.querySelectorAll(".f label p")
 console.log(inputP);
 
-window.addEventListener("load" , () => {
+window.addEventListener("load", () => {
     network.getadmin().then(data => {
-        if(data.length==0){
-            window.location='./admin-login.html'
+        if (data.length == 0) {
+            window.location = './admin-login.html'
+        }
+    })
+})
+
+const timeInput = document.querySelectorAll("#timeInput");
+timeInput.forEach(timeInput => {
+    timeInput.addEventListener("input", function () {
+        const value = this.value.replace(/[^0-9]/g, "");
+        if (value.length > 2) {
+            const first = value.slice(0, 2);
+            const second = value.slice(2);
+            this.value = value.slice(0, 2) + ":" + value.slice(2);
+            if (first > 23 || second > 60) {
+                timeInput.value = 0
+            }
+        }
+    })
+})
+
+const dateInput = document.querySelectorAll("#dateInput");
+dateInput.forEach(dateInput => {
+    dateInput.addEventListener("input", function () {
+        const value = this.value.replace(/[^0-9]/g, "");
+        if (value.length > 2) {
+            const first = value.slice(0, 2);
+            const second = value.slice(2, 4);
+            this.value = value.slice(0, 2) + "/" + value.slice(2, 4) + "/" + value.slice(4);
+            if (first > 31 || second > 12) {
+                dateInput.value = 0
+            }
         }
     })
 })
@@ -68,7 +98,11 @@ if (id) {
             num++
             console.log(num);
         }
-        inputP[3].innerText=`${data.video_poster.slice(15)}`
+        inputP[3].innerText = `${data.video_poster.slice(15)}`
+        data.date.forEach((d, i) => {
+            dateInput[i].value = data.date[i].date
+            timeInput[i].value = data.date[i].time
+        })
     })
 }
 
@@ -85,14 +119,15 @@ file.addEventListener("input", () => {
             if (i.name.slice(i.name.length - 3) != "mp4") {
                 img.src = reader.result
             } else {
-                iframe.src=`./assets/image/${i.name}`
+                iframe.src = `./assets/image/${i.name}`
             }
         })
     }
 })
 let genres = []
 let image = []
-let limit=0;
+let dateItem = []
+let limit = 0;
 save.addEventListener("click", () => {
     checkbox.forEach(e => {
         if (e.checked) {
@@ -103,12 +138,35 @@ save.addEventListener("click", () => {
         }
     })
     inputP.forEach(p => {
-        if(limit<3){
+        if (limit < 3) {
             image.push(`./assets/image/${p.innerText}`)
             limit++
         }
     })
-    if (genres.length != 0) {
+    dateItem = [
+        {
+            id: 1,
+            date: dateInput[0].value,
+            time: timeInput[0].value,
+            seat: ""
+        }
+        , {
+            id: 2,
+            date: dateInput[1].value,
+            time: timeInput[1].value,
+            seat: ""
+        }
+    ]
+
+    console.log(genres.length);
+    console.log( name.value);
+    console.log(textarea.value);
+    console.log(img.src);
+    console.log(time.value);
+    console.log(iframe.src);
+    console.log(time.value == 0);
+    console.log(inputP[3].innerText==0);
+    if (genres.length != 0 || name.value != 0 || textarea.value != 0 || img.src == '' || time.value != 0 || iframe.src == '' || dateInput[0].value!=0 || dateInput[1].value!=0 || timeInput[0].value!=0 || timeInput[1].value!=0  || inputP[0].innerText!=0 || inputP[1].innerText!=0 || inputP[2].innerText!=0 || inputP[3].innerText!=0) {
         if (!id) {
             network.getmainpost({
                 original_title: name.value,
@@ -118,12 +176,15 @@ save.addEventListener("click", () => {
                 genres: genres,
                 key: iframe.src,
                 image: image,
-                video_poster:`./assets/image/${inputP[3].innerText}`
+                date: dateItem,
+                video_poster: `./assets/image/${inputP[3].innerText}`
             })
             check.style.display = 'flex'
             setTimeout(() => {
                 check.style.display = 'none'
+                // window.location = './catalog.html'
             }, 1000);
+
         } else {
             network.getmainPath(id, {
                 original_title: name.value,
@@ -132,14 +193,22 @@ save.addEventListener("click", () => {
                 runtime: Number(time.value),
                 genres: genres,
                 key: iframe.src,
+                date: dateItem,
                 image: image,
-                video_poster:`./assets/image/${inputP[3].innerText}`
+                video_poster: `./assets/image/${inputP[3].innerText}`
             })
-            window.location = './catalog.html'
+            check.style.display = 'flex'
+            setTimeout(() => {
+                check.style.display = 'none'
+                window.location = './catalog.html'
+            }, 1000);
         }
     }
     else {
-        alert("Enter genres")
+        alert("Fill in the boxes")
     }
 })
+
+
+
 

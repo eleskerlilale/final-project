@@ -54,7 +54,7 @@
                 </div>
             </div>
             <a href="./dashboard.html"><i class="bi bi-box-fill"></i> Dashboard</a>
-            <a href="./catalog.html"><i class="bi bi-film"></i> Catalog</a>
+            <a href="./catalog.html"><i class="bi bi-film"></i> Movie</a>
 
         </div>
     </section>
@@ -67,9 +67,8 @@
                 <div class="add-main">
                     <div class="a">
                         <div class="image">
-                            <img src="" id="img">
-                            </label>
-
+                            <!-- onerror="this.style.display='none'"             -->
+                            <label for="add-image"><span>Poster</span><img src="" id="img"  alt=""></label>
                         </div>
                     </div>
                     <div class="b"> <input type="text" placeholder="Name" id="name"></div>
@@ -77,10 +76,11 @@
                         <textarea name="" id="" cols="30" rows="10" placeholder="Description"></textarea>
                     </div>
                     <div class="d">
-                        <input type="text" placeholder="Running time" id="time">
+                        <input type="number" placeholder="Running time" id="time">
                     </div>
                     <div class="e">
-                        <span>Trailer</span>
+                        <!-- <span>Trailer</span> -->
+                        <label for="add-image">Trailer</label>
                         <iframe src="" frameborder="0"></iframe>
                     </div>
                     <div class="f">
@@ -106,6 +106,18 @@
                             <span>video poster</span>
                         </label>
                         <input type="file" id="video-poster">
+                    </div>
+                    <div class="g">
+                        <div>
+                            <p>Date 1</p>
+                            <input type="text" id="dateInput" maxlength="10" placeholder="dd/mm/yyy">
+                            <input type="text" id="timeInput" maxlength="5" placeholder="time">
+                        </div>
+                        <div>
+                            <p>Date 2</p>
+                            <input type="text" id="dateInput" maxlength="10" placeholder="dd/mm/yyy">
+                            <input type="text" id="timeInput" maxlength="5" placeholder="time">
+                        </div>
                     </div>
                     <div class="select">
                         <div>

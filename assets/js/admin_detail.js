@@ -58,6 +58,9 @@ if (id) {
             console.log(num);
         }
         inputP[3].innerText = `${data.video_poster.slice(15)}`
-
+        data.date.forEach((d, i) => {
+            dateInput[i].value = data.date[i].date
+            timeInput[i].value = data.date[i].time
+        })
     })
 }

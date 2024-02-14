@@ -1,16 +1,3 @@
-// function sendEmail(){
-//     Email.send({
-//         Host : "smtp.elasticemail.com",
-//         Username : "eleskerlilale@gmail.com",
-//         Password : "DE4E5540F856E620354422058FEB7D1BA129",
-//         To : 'eleskerlilale@gmail.com',
-//         From : "eleskerlilale@gmail.com",
-//         Subject : "new message",
-//         Body : "name"
-//     }).then(
-//       message => alert(message)
-//     );
-// }
 const nav = document.querySelector("nav")
 const menuList = document.querySelector(".menu-list")
 const resMenuList = document.querySelector(".res-menu-list")
@@ -23,9 +10,9 @@ const accountA=document.querySelector(".search a")
 const accountback=document.querySelector(".search")
 
 network.getfetchaccount().then(data => {
-  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  // const randomColor = Math.floor(Math.random()*16777215).toString(16);
   accountA.innerHTML=`${data[0].username[0].toUpperCase()}`
-  accountback.style.backgroundColor='#'+randomColor
+  accountback.style.backgroundColor='#'+`${data[0].color}`
 })
 
 movieSub.forEach((movieSub, i) => {
@@ -108,11 +95,20 @@ const icons = document.querySelectorAll(".bi-eye")
 const nameAccount = document.querySelector(".search span")
 const logOut=document.querySelector(".log-out")
 
+key.addEventListener("input", () => {
+  if(key.value.length==4){
+    key.style.caretColor='transparent'
+  }else{
+    key.style.caretColor='black'
+  }
+})
+
 let keystring = ''
 let account = {
   email: '',
   username: "",
   password: "",
+  color:"",
   favorite: [],
   date: []
 }
@@ -161,8 +157,9 @@ network.getfetchaccount().then(data => {
     accountpage.style.display = 'none'
   }
 })
-
+let yoxlama=''
 buttonReg.addEventListener("click", () => {
+  problemReg.innerText=''
   console.log(usernameReg.value);
   if (!(emailReg.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) && passwordReg.value.match(/^(?=.*[\d])(?=.*[!@#$%^&*])[\w!@#$%^&*]{6,16}$/))) {
     emailReg.style.borderColor = 'red'
@@ -171,19 +168,29 @@ buttonReg.addEventListener("click", () => {
       usernameReg.style.borderColor = 'red'
     }
   } else {
+      yoxlama=''
 
-    network.getMainaccount().then(data => {
-      console.log(data)
-      // data.forEach(data => {
-      const id = data.find(f => f.email == emailReg.value)
-      if (!id) {
-
+      network.getMainaccount().then(data => {
+        console.log(data)
+        data.forEach(data => {
+          if(data.email.includes(emailReg.value)){
+            yoxlama='true'
+            console.log(data.email , emailReg.value, yoxlama);
+          }
+        })
+      // })
+      // const id = data.find(f => f.email != emailReg.value)
+      // console.log(id);
+      if (yoxlama!='true') {
+        yoxlama=''
+        console.log(yoxlama, "girdi");
         const messages = Math.floor(Math.random() * 9000) + 1000;
+        const randomColor = Math.floor(Math.random()*16777215).toString(16);
         keystring = `${messages}`
         account.email = `${emailReg.value}`
         account.username = `${usernameReg.value}`
         account.password = `${passwordReg.value}`
-
+        account.color= `${randomColor}`
         emailjs.init("YYynOFfdG-YgR_cIO")
         const params = {
           sendername: "Avios",
@@ -198,8 +205,6 @@ buttonReg.addEventListener("click", () => {
 
         emailjs.send(servicId, templateId, params)
           .then(res => {
-
-            // alert("send")
             registerPage.style.display = 'none'
             keyPage.style.display = 'block'
           })
@@ -209,7 +214,6 @@ buttonReg.addEventListener("click", () => {
         problemReg.innerText = `The e-mail you added is registered on our site. Try again.`
       }
     })
-    // })
   }
 })
 
@@ -219,6 +223,7 @@ keyButton.addEventListener("click", () => {
     console.log("dogru", keystring, key.value);
     loginPage.style.display = 'flex'
     registerPage.style.display = 'none'
+    keyPage.style.display='none'
     login.classList.add("active")
     register.classList.remove("active")
     console.log(account);
@@ -247,21 +252,6 @@ buttonLog.addEventListener("click", () => {
           window.location.reload()
         }
       })
-
-      // const address = data.find(f => f.email == emailLog.value);
-      // const parol = data.find(f => f.password == passwordLog.value);
-      // if (address && parol) {
-      //   // console.log(address);
-      //   // nameAccount.innerText=`${address.email}`
-      //   // window.location='index.html'
-      //     loginRegisterPage.style.display = 'none'
-      //     accountpage.style.display = 'flex'
-
-      //     network.getpostaccount(element)
-      //     window.location.reload()
-      // } else {
-      //   console.log(address, parol);
-      // }
     })
   }
 })

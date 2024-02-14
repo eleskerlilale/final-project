@@ -10,9 +10,8 @@ const accountA=document.querySelector(".search a")
 const accountback=document.querySelector(".search")
 
 network.getfetchaccount().then(data => {
-  const randomColor = Math.floor(Math.random()*16777215).toString(16);
   accountA.innerHTML=`${data[0].username[0].toUpperCase()}`
-  accountback.style.backgroundColor='#'+randomColor
+  accountback.style.backgroundColor='#'+`${data[0].color}`
 })
 
 movieSub.forEach((movieSub, i) => {
@@ -74,7 +73,7 @@ network.getfetch().then((data) => {
                 <div class="my-card col-lg-3 col-md-4 col-sm-6 col-xs-1">
                 <div>
                     <div class="image">
-                        <img src="https://image.tmdb.org/t/p/w220_and_h330_face/${elem.poster_path}" alt="">
+                        <img src="${elem.poster_path}" alt="">
                     </div>
                     <div class="text">
                         <div class="category-time">

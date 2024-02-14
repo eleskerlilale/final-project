@@ -27,6 +27,10 @@
   outline: none;
 }
 
+#timeInput {
+  width: 100px;
+}
+
 #admin-nav {
   background-color: #000;
   width: 250px;
@@ -374,7 +378,7 @@
   transition: all 0.3s ease;
 }
 #add-item .add-item {
-  padding-top: 40px;
+  padding: 40px 10px 10px 10px;
   overflow: hidden;
   height: 100%;
   display: flex;
@@ -386,7 +390,7 @@
   font-size: 30px;
 }
 #add-item .add-item .add-main {
-  padding-left: 20px;
+  padding: 20px;
   width: 100%;
   padding: 20px 0;
   display: grid;
@@ -401,6 +405,24 @@
 #add-item .add-item .add-main .a {
   grid-area: 1/1/6/2;
   background-color: rgb(35, 35, 35);
+  position: relative;
+}
+#add-item .add-item .add-main .a span {
+  position: absolute;
+  top: 1px;
+  left: 20px;
+  color: #737373;
+  z-index: 10;
+}
+#add-item .add-item .add-main .a label {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  cursor: pointer;
+}
+#add-item .add-item .add-main .a label img {
+  width: 100%;
+  height: 100%;
 }
 #add-item .add-item .add-main .b {
   grid-area: 1/2/2/4;
@@ -410,6 +432,10 @@
 }
 #add-item .add-item .add-main .d {
   grid-area: 5/2/6/4;
+}
+#add-item .add-item .add-main .d input[type=number]::-webkit-inner-spin-button,
+#add-item .add-item .add-main .d input[type=number]::-webkit-outer-spin-button {
+  opacity: 0;
 }
 #add-item .add-item .add-main .f {
   padding: 0;
@@ -429,6 +455,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 #add-item .add-item .add-main .f label span {
   color: #737373;
@@ -441,10 +468,41 @@
 #add-item .add-item .add-main .f input {
   display: none;
 }
+#add-item .add-item .add-main .g {
+  grid-area: 8/1/9/4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+}
+#add-item .add-item .add-main .g > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#add-item .add-item .add-main .g > div p {
+  color: #fff;
+}
 #add-item .add-item .add-main .e {
   grid-area: 7/1/8/2;
   background-color: rgb(35, 35, 35);
   position: relative;
+}
+#add-item .add-item .add-main .e label {
+  width: 80px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgb(35, 35, 35);
+  color: #fff;
+  font-weight: 600;
+  padding: 2px 10px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #fff;
 }
 #add-item .add-item .add-main .e span {
   top: 10px;
@@ -629,6 +687,22 @@
 #detail-admin .detail-admin .f input {
   display: none;
 }
+#detail-admin .detail-admin .g {
+  grid-area: 8/1/9/4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+}
+#detail-admin .detail-admin .g > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#detail-admin .detail-admin .g > div p {
+  color: #fff;
+}
 #detail-admin .detail-admin .image {
   box-shadow: 0 0 20px rgb(34, 34, 34);
   width: 100%;
@@ -699,11 +773,37 @@
   align-items: flex-start;
   gap: 15px;
 }
+#admin-login .admin-login .notification {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 180px;
+  font-size: 12px;
+  padding: 10px 0 10px 10px;
+  background-color: #F3F3F3;
+  display: none;
+}
+#admin-login .admin-login .notification p {
+  width: 100%;
+}
 #admin-login .admin-login .logo {
-  width: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#admin-login .admin-login .logo > div {
+  position: relative;
+}
+#admin-login .admin-login .logo > div i {
+  padding: 5px;
+  cursor: pointer;
+}
+#admin-login .admin-login .logo > div:hover .notification {
+  display: block;
 }
 #admin-login .admin-login .logo img {
-  width: 100%;
+  width: 100px;
 }
 #admin-login .admin-login .main-login {
   width: 100%;
@@ -758,6 +858,10 @@
   color: #d96c2c;
 }
 
+#add-image {
+  display: none;
+}
+
 #add-item .add-item .f {
   padding: 0 30px;
 }
@@ -785,6 +889,11 @@
     width: 100%;
     grid-area: 11/1/12/4;
   }
+  #add-item .add-item .add-main .g {
+    grid-area: 12/1/13/4;
+    flex-direction: column;
+    gap: 10px;
+  }
   #detail-admin .detail-admin .a {
     grid-area: 1/1/4/4;
   }
@@ -806,6 +915,11 @@
   }
   #detail-admin .detail-admin .f label span {
     font-size: 10px;
+  }
+  #detail-admin .detail-admin .g {
+    grid-area: 12/1/13/4;
+    flex-direction: column;
+    gap: 10px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2664,6 +2778,7 @@ nav .search span {
   flex-direction: column;
   align-items: flex-start;
   gap: 5px;
+  display: flex;
 }
 #login-register .login-register .main .login-page label {
   font-size: 17px;
@@ -2768,6 +2883,8 @@ nav .search span {
 #login-register .login-register .main .key-page p {
   font-size: 13px;
   color: #737373;
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 #login-register .login-register .main .key-page p:first-child {
   font-size: 17px;
@@ -2780,6 +2897,35 @@ nav .search span {
 #login-register .login-register .main .key-page input {
   width: 100%;
   padding: 8px;
+  margin-bottom: 20px;
+  height: 100%;
+  letter-spacing: 40px;
+  background: none;
+  border: none;
+  padding-left: 20px;
+  font-size: 30px;
+  outline: none;
+}
+#login-register .login-register .main .key-page > div {
+  position: relative;
+  height: 50px;
+  z-index: 40;
+}
+#login-register .login-register .main .key-page > div > div {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  height: 100%;
+  gap: 10px;
+}
+#login-register .login-register .main .key-page > div > div > div {
+  width: 50px;
+  height: 100%;
+  border: 1px solid black;
 }
 #login-register .login-register .main .key-page button {
   padding: 10px;
@@ -3011,7 +3157,7 @@ nav .nav .search {
 }
 nav .nav .search a {
   width: 100%;
-  padding: 0 12px;
+  text-align: center;
   height: 100%;
   color: #fff;
 }

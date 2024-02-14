@@ -48,9 +48,8 @@ const accountA=document.querySelector(".search a")
 const accountback=document.querySelector(".search")
 
 network.getfetchaccount().then(data => {
-  const randomColor = Math.floor(Math.random()*16777215).toString(16);
   accountA.innerHTML=`${data[0].username[0].toUpperCase()}`
-  accountback.style.backgroundColor='#'+randomColor
+  accountback.style.backgroundColor='#'+`${data[0].color}`
 })
 
 movieSub.forEach((movieSub, i) => {

@@ -36,13 +36,13 @@
           "id": 1,
           "date": "23/02/2024",
           "time": "10:30",
-          "seat": "A13 | A12 | A11 | A3 | A5 | A6 | A7 | A9 | A8 | A2 | A10 | A4 | A18 | A20 | F15 | F12 | E8 | D4 | A16 | A17 | A19 | A15 | A14 | "
+          "seat": ""
         },
         {
           "id": 2,
           "date": "01/03/2024",
           "time": "10:30",
-          "seat": "A7 | A6 | F9 | E7 | D17 | A11 | D11 | "
+          "seat": ""
         }
       ]
     },
@@ -607,159 +607,26 @@
     },
     {
       "email": "anoniiim42@gmail.com",
-      "username": "lale2",
-      "password": "1!Aa1234",
-      "favorite": [],
-      "date": [
-        {
-          "movieId": 1022796,
-          "date": "23/02/2024",
-          "time": "10:30",
-          "seat": "A13 | A12 | A11 | A3 | A5 | A6 | A7 | "
-        },
-        {
-          "movieId": 787699,
-          "date": "02/03/2024",
-          "time": "10:30",
-          "seat": "A11 | A9 | A7 | A4 | A16 | A2 | A3 | "
-        },
-        {
-          "movieId": 787699,
-          "date": "24/02/2024",
-          "time": "10:30",
-          "seat": "A1 | A2 | "
-        }
-      ],
-      "id": 3
-    },
-    {
-      "email": "colorvbs@gmail.com",
       "username": "lale",
       "password": "1!Aa1234",
+      "color": "1b4bc9",
       "favorite": [],
-      "date": [
-        {
-          "movieId": 1022796,
-          "date": "23/02/2024",
-          "time": "10:30",
-          "seat": "A9 | A8 | A2 | A10 | A4 | A18 | A20 | F15 | F12 | E8 | D4 | A16 | A17 | A19 | A15 | A14 | ",
-          "price": 390
-        },
-        {
-          "movieId": 940551,
-          "date": "03/03/2024",
-          "time": "10:00",
-          "seat": "C13 | D14 | F16 | A6 | A5 | ",
-          "price": 110
-        },
-        {
-          "movieId": 940551,
-          "date": "25/02/2024",
-          "time": "09:30",
-          "seat": "A12 | A11 | D11 | A13 | B13 | D13 | A17 | A14 | A18 | A16 | ",
-          "price": 280
-        },
-        {
-          "movieId": 787699,
-          "date": "24/02/2024",
-          "time": "10:30",
-          "seat": "A16 | A15 | ",
-          "price": 60
-        },
-        {
-          "movieId": 787699,
-          "date": "02/03/2024",
-          "time": "10:30",
-          "seat": "A5 | A6 | A8 | ",
-          "price": 80
-        },
-        {
-          "movieId": 1022796,
-          "date": "01/03/2024",
-          "time": "10:30",
-          "seat": "F9 | E7 | D17 | A11 | D11 | ",
-          "price": 100
-        },
-        {
-          "movieId": 955916,
-          "date": "10/03/2024",
-          "time": "12:30",
-          "seat": "B15 | D15 | ",
-          "price": 50
-        }
-      ],
-      "id": 4
+      "date": [],
+      "id": 3
     }
   ],
   "account": [
     {
-      "email": "colorvbs@gmail.com",
-      "username": "cale",
+      "email": "anoniiim42@gmail.com",
+      "username": "lale",
       "password": "1!Aa1234",
+      "color": "1b4bc9",
       "favorite": [],
-      "date": [
-        {
-          "movieId": 1022796,
-          "date": "23/02/2024",
-          "time": "10:30",
-          "seat": "A9 | A8 | A2 | A10 | A4 | A18 | A20 | F15 | F12 | E8 | D4 | A16 | A17 | A19 | A15 | A14 | ",
-          "price": 390
-        },
-        {
-          "movieId": 940551,
-          "date": "03/03/2024",
-          "time": "10:00",
-          "seat": "C13 | D14 | F16 | A6 | A5 | ",
-          "price": 110
-        },
-        {
-          "movieId": 940551,
-          "date": "25/02/2024",
-          "time": "09:30",
-          "seat": "A12 | A11 | D11 | A13 | B13 | D13 | A17 | A14 | A18 | A16 | ",
-          "price": 280
-        },
-        {
-          "movieId": 787699,
-          "date": "24/02/2024",
-          "time": "10:30",
-          "seat": "A16 | A15 | ",
-          "price": 60
-        },
-        {
-          "movieId": 787699,
-          "date": "02/03/2024",
-          "time": "10:30",
-          "seat": "A5 | A6 | A8 | ",
-          "price": 80
-        },
-        {
-          "movieId": 1022796,
-          "date": "01/03/2024",
-          "time": "10:30",
-          "seat": "F9 | E7 | D17 | A11 | D11 | ",
-          "price": 100
-        },
-        {
-          "movieId": 955916,
-          "date": "10/03/2024",
-          "time": "12:30",
-          "seat": "B15 | D15 | ",
-          "price": 50
-        }
-      ],
-      "id": 4
+      "date": [],
+      "id": 3
     }
   ],
-  "admin": [
-    {
-      "email": "lskrlale@gmail.com",
-      "username": "Lale",
-      "password": "1!Aa1234",
-      "type": "admin",
-      "id": 1
-    }
-  ],
+  "admin": [],
   "ticket": [
     {
       "id": 1,

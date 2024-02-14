@@ -197,7 +197,9 @@ nav {
             @include center;
             a{
                 width: 100%;
-                padding: 0 12px;
+                // padding: 0 12px;
+                // background-color: #fda403;
+                text-align: center;
                 height: 100%;
                 color: $white;
             }
