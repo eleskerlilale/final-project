@@ -200,6 +200,7 @@
                 .row {
                     padding: 0 10px;
                     font-size: 12px;
+                    font-weight: $fourthFont;
                 }
 
                 .seat {
@@ -219,13 +220,13 @@
                     >div{
                         position: absolute;
                         bottom: 100%;
-                        left: -120%;
+                        left: -160%;
                         z-index: 20;
                         font-size: 15px;
                         font-weight: 300;
 
                         color: $white;
-                        width: 60px;
+                        width: 70px;
                         @include column;
                         justify-content: center;
                         align-items: center;
