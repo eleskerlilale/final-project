@@ -254,7 +254,7 @@ buttonLog.addEventListener("click", () => {
       if (id.password == passwordLog.value) {
         loginRegisterPage.style.display = 'none'
         accountpage.style.display = 'flex'
-        network.getpostaccount(element)
+        network.getpostaccount(id)
         window.location.reload()
       }
       else {

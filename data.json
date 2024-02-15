@@ -36,7 +36,7 @@
           "id": 1,
           "date": "23/02/2024",
           "time": "10:30",
-          "seat": "A13 | A12 | A11 | A2 | E3 | F4 | A3 | F2 | G2 | A5 | C5 | E5 | "
+          "seat": ""
         },
         {
           "id": 2,
@@ -82,13 +82,13 @@
           "id": 1,
           "date": "24/02/2024",
           "time": "10:30",
-          "seat": "A5 | A7 | A6 | A1 | A2 | A16 | A15 | "
+          "seat": ""
         },
         {
           "id": 2,
           "date": "02/03/2024",
           "time": "10:30",
-          "seat": "A11 | A9 | A7 | A4 | A16 | A2 | A3 | A5 | A6 | A8 | "
+          "seat": ""
         }
       ]
     },
@@ -136,13 +136,13 @@
           "id": 1,
           "date": "25/02/2024",
           "time": "09:30",
-          "seat": "A12 | A11 | D11 | A13 | B13 | D13 | A17 | A14 | A18 | A16 | "
+          "seat": ""
         },
         {
           "id": 2,
           "date": "03/03/2024",
           "time": "10:00",
-          "seat": "C13 | D14 | F16 | A6 | A5 | "
+          "seat": ""
         }
       ]
     },
@@ -183,7 +183,7 @@
           "id": 1,
           "date": "26/02/2024",
           "time": "08:30",
-          "seat": "A1 | A4 | A7 | A9 | A16 | A17 | "
+          "seat": ""
         },
         {
           "id": 2,
@@ -231,7 +231,7 @@
           "id": 2,
           "date": "05/03/2024",
           "time": "15:30",
-          "seat": "D19 | C16 | "
+          "seat": ""
         }
       ]
     },
@@ -356,7 +356,7 @@
           "id": 2,
           "date": "10/03/2024",
           "time": "12:30",
-          "seat": "B15 | D15 | "
+          "seat": ""
         }
       ],
       "vote_average": 6.512,
@@ -392,7 +392,7 @@
           "id": 1,
           "date": "12/03/2024",
           "time": "15:30",
-          "seat": "A14 | A13 | D10 | F8 | F4 | B2 | "
+          "seat": ""
         },
         {
           "id": 2,
@@ -480,7 +480,7 @@
           "id": 1,
           "date": "15/03/2024",
           "time": "09:30",
-          "seat": ""
+          "seat": "D10 | E8 | F5 | "
         },
         {
           "id": 2,
@@ -556,20 +556,57 @@
       "id": 1
     },
     {
-      "email": "anoniiim42@gmail.com",
+      "email": "eleskerlilale@gmail.com",
       "username": "lale",
       "password": "1!Aa1234",
-      "color": "df1824",
-      "favorite": [],
-      "date": [],
-      "id": 2
-    },
-    {
-      "email": "eleskerlilale@gmail.com",
-      "username": "Lale",
-      "password": "1!Aa1234",
-      "color": "7d2a13",
+      "color": "4f9e83",
       "favorite": [
+        {
+          "id": 787699,
+          "imdb_id": "tt6166392",
+          "original_language": "en",
+          "original_title": "Wonka",
+          "overview": "Willy Wonka – chock-full of ideas and determined to change the world one delectable bite at a time – is proof that the best things in life begin with a dream, and if you’re lucky enough to meet Willy Wonka, anything is possible.",
+          "popularity": 1989.417,
+          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
+          "runtime": 117,
+          "vote_average": 7.204,
+          "image": [
+            "./assets/image/wonka1.webp",
+            "./assets/image/wonka2.avif",
+            "./assets/image/wonka3.jpg"
+          ],
+          "video_poster": "./assets/image/wonkaposter.jpg",
+          "key": "https://www.youtube.com/embed/otNh9bTjXWg?si=J50oRX8ZcO58lLW2",
+          "genres": [
+            {
+              "id": 14,
+              "name": "Fantasy"
+            },
+            {
+              "id": 35,
+              "name": "Comedy"
+            },
+            {
+              "id": 10751,
+              "name": "Family"
+            }
+          ],
+          "date": [
+            {
+              "id": 1,
+              "date": "24/02/2024",
+              "time": "10:30",
+              "seat": ""
+            },
+            {
+              "id": 2,
+              "date": "02/03/2024",
+              "time": "10:30",
+              "seat": ""
+            }
+          ]
+        },
         {
           "id": 1212073,
           "imdb_id": "tt29538571",
@@ -613,91 +650,64 @@
           ]
         },
         {
-          "id": 1211957,
-          "imdb_id": "tt30253266",
+          "id": 1058694,
+          "imdb_id": "tt14570440",
           "original_language": "en",
-          "original_title": "The Painter",
-          "overview": "An ex-CIA operative is thrown back into a dangerous world when a mysterious woman from his past resurfaces. Now exposed and targeted by a relentless killer and a rogue black ops program, he must rely on skills he thought he left behind in a high-stakes game of survival.",
-          "popularity": 333.344,
+          "original_title": "Radical",
+          "overview": "In a Mexican border town plagued by neglect, corruption, and violence, a frustrated teacher tries a radical new method to break through his students’ apathy and unlock their curiosity, their potential… and maybe even their genius.",
+          "popularity": 598.187,
+          "vote_average": 7.96,
           "image": [
-            "./assets/image/painter1.jpg",
-            "./assets/image/painter2.jpg",
-            "./assets/image/painter3.jpg"
+            "./assets/image/radical1.jpg",
+            "./assets/image/radical2.jpg",
+            "./assets/image/radical3.jpg"
           ],
-          "video_poster": "./assets/image/posterpainter.jpg",
-          "key": "https://www.youtube.com/embed/rZe3fRnZr78?si=J50oRX8ZcO58lLW2",
-          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/UZ0ydgbXtnrq8xZCI5lHVXVcH9.jpg",
-          "genres": [
-            {
-              "id": 28,
-              "name": "Action"
-            },
-            {
-              "id": 53,
-              "name": "Thriller"
-            }
-          ],
-          "date": [
-            {
-              "id": 1,
-              "date": "14/03/2024",
-              "time": "09:30",
-              "seat": ""
-            },
-            {
-              "id": 2,
-              "date": "14/03/2024",
-              "time": "13:30",
-              "seat": ""
-            }
-          ],
-          "release_date": "2024-01-05",
-          "runtime": 100,
-          "vote_average": 7.196
-        },
-        {
-          "id": 852445,
-          "imdb_id": "tt17569526",
-          "original_language": "fr",
-          "original_title": "Acide",
-          "overview": "During a heat wave, strange clouds start pouring down acid rain, wreaking devastation and panic throughout France. In a world teetering on the edge, a girl and her divorced parents must join forces to confront and try to escape this climate catastrophe.",
-          "popularity": 460.052,
-          "image": [
-            "./assets/image/acide1.jpg",
-            "./assets/image/acide2.jpg",
-            "./assets/image/acide3.jpg"
-          ],
-          "video_poster": "./assets/image/posteracide.jpg",
-          "key": "https://www.youtube.com/embed/XeRo7qpNFxo?si=J50oRX8ZcO58lLW2",
-          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/91vF7SNB2tqsSultsmEn8tJYh4l.jpg",
+          "video_poster": "./assets/image/posterradical.jpg",
+          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/eSatbygYZp8ooprBHZdb6GFZxGB.jpg",
+          "key": "https://www.youtube.com/embed/BXcGgvAKC1Q?si=J50oRX8ZcO58lLW2",
           "genres": [
             {
               "id": 18,
               "name": "Drama"
-            },
-            {
-              "id": 14,
-              "name": "Fantasy"
             }
           ],
           "date": [
             {
               "id": 1,
-              "date": "12/03/2024",
-              "time": "15:30",
-              "seat": "A14 | A13 | D10 | F8 | F4 | B2 | "
+              "date": "09/03/2024",
+              "time": "20:00",
+              "seat": ""
             },
             {
               "id": 2,
-              "date": "13/03/2024",
-              "time": "12:30",
+              "date": "10/03/2024",
+              "time": "20:30",
               "seat": ""
             }
           ],
-          "vote_average": 5.791,
-          "release_date": "2023-09-20",
-          "runtime": 99
-        },
+          "runtime": 127
+        }
+      ],
+      "date": [
+        {
+          "movieId": 866398,
+          "movieName": "The Beekeeper",
+          "date": "15/03/2024",
+          "time": "09:30",
+          "seat": "D10 | E8 | F5 | ",
+          "price": 50
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "account": [
+    {
+      "email": "eleskerlilale@gmail.com",
+      "username": "lale",
+      "password": "1!Aa1234",
+      "color": "4f9e83",
+      "favorite": [
         {
           "id": 787699,
           "imdb_id": "tt6166392",
@@ -734,67 +744,55 @@
               "id": 1,
               "date": "24/02/2024",
               "time": "10:30",
-              "seat": "A5 | A7 | A6 | A1 | A2 | A16 | A15 | "
+              "seat": ""
             },
             {
               "id": 2,
               "date": "02/03/2024",
               "time": "10:30",
-              "seat": "A11 | A9 | A7 | A4 | A16 | A2 | A3 | A5 | A6 | A8 | "
+              "seat": ""
             }
           ]
         },
         {
-          "id": 940551,
-          "imdb_id": "tt6495056",
-          "original_language": "en",
-          "original_title": "Migration",
-          "overview": "After a migrating duck family alights on their pond with thrilling tales of far-flung places, the Mallard family embarks on a family road trip, from New England, to New York City, to tropical Jamaica.",
-          "popularity": 1356.633,
-          "video_poster": "./assets/image/migrationposter.avif",
-          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/ldfCF9RhR40mppkzmftxapaHeTo.jpg",
-          "runtime": 83,
+          "id": 1212073,
+          "imdb_id": "tt29538571",
+          "original_language": "de",
+          "original_title": "60 Minuten",
+          "overview": "Desperate to keep custody of his daughter, a mixed martial arts fighter abandons a big match and races across Berlin to attend her birthday party.",
+          "popularity": 899.318,
+          "video_poster": "./assets/image/posterminute.webp",
+          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/cND79ZWPFINDtkA8uwmQo1gnPPE.jpg",
+          "runtime": 89,
           "image": [
-            "./assets/image/migration1.jpg",
-            "./assets/image/migration2.jpg",
-            "./assets/image/migration3.jpg"
+            "./assets/image/minute1.jpg",
+            "./assets/image/minute2.jpg",
+            "./assets/image/minute3.jpg"
           ],
-          "vote_average": 7.657,
-          "key": "https://www.youtube.com/embed/cQfo0HJhCnE?si=J50oRX8ZcO58lLW2",
+          "key": "https://www.youtube.com/embed/uiyZW82Rxf8?si=J50oRX8ZcO58lLW2",
+          "vote_average": 6.939,
           "genres": [
-            {
-              "id": 16,
-              "name": "Animation"
-            },
             {
               "id": 28,
               "name": "Action"
             },
             {
-              "id": 12,
-              "name": "Adventure"
-            },
-            {
-              "id": 35,
-              "name": "Comedy"
-            },
-            {
-              "id": 10751,
-              "name": "Family"
+              "id": 18,
+              "name": "Drama"
             }
           ],
           "date": [
             {
               "id": 1,
-              "date": "25/02/2024",
-              "time": "09:30",
-              "seat": "A12 | A11 | D11 | A13 | B13 | D13 | A17 | A14 | A18 | A16 | "
+              "date": "28/02/2024",
+              "time": "20:00",
+              "seat": ""
             },
             {
               "id": 2,
-              "date": "03/03/2024",
-              "time": "10:00",
-              "seat": "C13 | D14 | F16 | A6 | A5 | "
+              "date": "06/03/2024",
+              "time": "10:30",
+              "seat": ""
             }
           ]
         },
@@ -837,48 +835,43 @@
           "runtime": 127
         },
         {
-          "id": 572802,
-          "imdb_id": "tt9663764",
+          "id": 866398,
+          "imdb_id": "tt15314262",
           "original_language": "en",
-          "original_title": "Aquaman and the Lost Kingdom",
-          "overview": "Black Manta, still driven by the need to avenge his father's death and wielding the power of the mythic Black Trident, will stop at nothing to take Aquaman down once and for all. To defeat him, Aquaman must turn to his imprisoned brother Orm, the former King of Atlantis, to forge an unlikely alliance in order to save the world from irreversible destruction.",
-          "popularity": 2392.899,
-          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/7lTnXOy0iNtBAdRP3TZvaKJ77F6.jpg",
-          "runtime": 124,
+          "original_title": "The Beekeeper",
+          "overview": "One man’s campaign for vengeance takes on national stakes after he is revealed to be a former operative of a powerful and clandestine organization known as Beekeepers.",
+          "popularity": 1268.827,
           "image": [
-            "./assets/image/aquamen1.jpg",
-            "./assets/image/aquamen2.jpg",
-            "./assets/image/aquamen3.jpg"
+            "./assets/image/beekeeper1.jpg",
+            "./assets/image/beekeeper2.jpg",
+            "./assets/image/beekeeper3.jpg"
           ],
-          "video_poster": "./assets/image/posteraquamen.jpg",
-          "key": "https://www.youtube.com/embed/UGc5Tzz19UY?si=J50oRX8ZcO58lLW2",
-          "release_date": "2023-12-20",
-          "vote_average": 6.988,
+          "video_poster": "./assets/image/posterbeekeeper.webp",
+          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/A7EByudX0eOzlkQ2FIbogzyazm2.jpg",
           "genres": [
             {
               "id": 28,
               "name": "Action"
             },
             {
-              "id": 12,
-              "name": "Adventure"
-            },
-            {
-              "id": 14,
-              "name": "Fantasy"
+              "id": 53,
+              "name": "Thriller"
             }
           ],
+          "runtime": 105,
+          "vote_average": 7.312,
+          "key": "https://www.youtube.com/embed/CHKn-yDCE2w?si=J50oRX8ZcO58lLW2",
           "date": [
             {
               "id": 1,
-              "date": "26/02/2024",
-              "time": "08:30",
-              "seat": "A1 | A4 | A7 | A9 | A16 | A17 | "
+              "date": "15/03/2024",
+              "time": "09:30",
+              "seat": ""
             },
             {
               "id": 2,
-              "date": "04/03/2024",
-              "time": "09:30",
+              "date": "15/03/2024",
+              "time": "16:30",
               "seat": ""
             }
           ]
@@ -886,26 +879,17 @@
       ],
       "date": [
         {
-          "movieId": 572802,
-          "movieName": "Aquaman and the Lost Kingdom",
-          "date": "26/02/2024",
-          "time": "08:30",
-          "seat": "A1 | A4 | A7 | A9 | A16 | A17 | ",
-          "price": 160
-        },
-        {
-          "movieId": 609681,
-          "movieName": "The Marvels",
-          "date": "05/03/2024",
-          "time": "15:30",
-          "seat": "D19 | C16 | ",
+          "movieId": 866398,
+          "movieName": "The Beekeeper",
+          "date": "15/03/2024",
+          "time": "09:30",
+          "seat": "D10 | E8 | F5 | ",
           "price": 50
         }
       ],
-      "id": 3
+      "id": 2
     }
   ],
-  "account": [],
   "admin": [
     {
       "email": "lskrlale@gmail.com",
