@@ -891,13 +891,7 @@
     }
   ],
   "admin": [
-    {
-      "email": "lskrlale@gmail.com",
-      "username": "Lale",
-      "password": "1!Aa1234",
-      "type": "admin",
-      "id": 1
-    }
+    
   ],
   "ticket": [
     {
