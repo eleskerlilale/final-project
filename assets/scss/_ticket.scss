@@ -66,6 +66,8 @@
    }
 }
 
+
+
 .close{
     background-color: red;
     cursor: pointer;
@@ -84,32 +86,44 @@
 }
 
 #ticket {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(184, 176, 122);
     .ticket {
         padding: 100px 0;
         width: 100%;
+        // height:100vh;
         @include center;
         flex-direction: column;
         gap: 30px;
+        // background-color: rgb(255, 253, 240);
 
         .main {
             background-color: rgb(255, 253, 240);
             max-width: 500px;
             width: 100%;
             padding: 10px;
-            @include column;
+            @include center;
+            flex-wrap: wrap;
+            align-items: center;
             gap: 20px;
 
             .box {
-                width: 100%;
-                border-radius: 20px;
-                border: 2px solid $gray;
-                padding: 10px 20px;
-                @include flex;
+                width: 200px;
+                height: 100px;
+                background-color: #faff71;
+                // border-radius: 20px;
+                border: 2px solid yellow;
+                // border: none;
+                // padding: 10px 20px;
+                @include column;
                 gap: 20px;
                 @include transition;
                 cursor: pointer;
                 flex-wrap: wrap;
-
+                padding:10px 0 10px 10px;
+                clip-path: polygon(0% 0%, 100% 0%, 90% 10% , 100% 20%, 90% 30%, 100% 40% , 90% 50% , 100% 60% , 90% 70% , 100% 80% , 90% 90%,100% 100%, 0% 100%);
+                
                 >div {
                     @include center;
                     gap: 10px;
@@ -363,6 +377,9 @@
                         font-size: 7px;
                         width: 12px;
                         height: 12px;
+                        >div{
+                            left: -280%;
+                        }
                     }
                 }
                 .red{
@@ -393,6 +410,9 @@
                         font-size: 6px;
                         width: 9px;
                         height: 9px;
+                        >div{
+                            left: -420%;
+                        }
                     }
                 }
                 .red{

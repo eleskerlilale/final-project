@@ -122,21 +122,21 @@
                         <input type="text" placeholder="Email" id="email-log">
                         <label>Password <span>*</span></label>
                         <div>
-                            <input type="password" placeholder="password" id="password-log">
+                            <input type="password" placeholder="Password" id="password-log">
                             <i class="bi bi-eye"></i>
                         </div>
                         <button class="log-button">Log In</button>
                     </div>
                     <div class="register-page">
                         <label>Usarname <span>*</span></label>
-                        <input type="text" id="username-reg" placeholder="Email Address">
+                        <input type="text" id="username-reg" placeholder="Username">
                         <label>Email <span>*</span>
                             <p class="email-problem-reg"></p>
                         </label>
                         <input type="text" id="email-reg" placeholder="Email Address">
                         <label>Password <span>*</span></label>
                         <div>
-                            <input type="password" placeholder="password" id="password-reg">
+                            <input type="password" placeholder="Password" id="password-reg">
                             <i class="bi bi-eye"></i>
                         </div>
                         <p>Your personal data will be used to support your experience throughout this website, to manage
@@ -144,11 +144,13 @@
                                 href="./pirivacy.html">privacy
                                 policy</a>.</p>
                         <button class="register-button">Register</button>
+
+                        <div class="loading"><img src="./assets/image/loading1.webp" alt=""></div>
                     </div>
                     <div class="key-page">
                         <p>Include the key word <span>*</span></p>
                         <div>
-                            <input type="text" id="key-input" maxlength="4"  >
+                            <input type="text" id="key-input" maxlength="4">
                             <div>
                                 <div></div>
                                 <div></div>
@@ -163,9 +165,9 @@
                 </div>
 
             </div>
-            <div class="account">
+            <!-- <div class="account"> -->
 
-                <div class="my-account">
+            <!-- <div class="my-account">
                     <label for="">Username</label>
                     <input type="text" id="username">
                     <label for="">Email</label>
@@ -175,12 +177,82 @@
                     <div class="log-out">
                         Log Out
                     </div>
+                </div> -->
+            <!-- </div> -->
+        </div>
+    </section>
+
+    <section id="account-test">
+        <div class="container">
+            <div class="account-test">
+                <div class="row">
+                    <div class="col-lg-5 col-sm-12">
+                        <div class="card-main">
+                            <div class="my-account active">
+                                <i class="bi bi-arrow-right-short"></i>My account
+                            </div>
+                            <div class="wishlist">
+                                <i class="bi bi-arrow-right-short"></i> Wishlist
+                            </div>
+                            <div class="ticket-btn">
+                                <i class="bi bi-arrow-right-short"></i>Ticket
+                            </div>
+                            <div class="log-out">
+                                <i class="bi bi-arrow-right-short"></i>Log Out
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-sm-12 whole">
+                        <div class="my-account-page">
+                            <label for="">Username</label>
+                            <input type="text" id="username" readonly>
+                            <label for="">Email</label>
+                            <input type="text" id="email" readonly>
+                            <label for="">Password</label>
+                            <div>
+                                <input type="password" id="password" readonly>
+                                <i class="bi bi-eye-slash"></i>
+                            </div>
+                            <!-- <div class="log-out">
+                                Log Out
+                            </div> -->
+                        </div>
+                        <div class="wishlist-page">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Id</td>
+                                        <td class="name">Name</td>
+                                        <td class="end">Detail</td>
+                                        <td class="end">Delete</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="ticket-page">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Id</td>
+                                        <td class="name">Name</td>
+                                        <td>Date</td>
+                                        <td>Time</td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-
 
     <footer>
         <div class="container">

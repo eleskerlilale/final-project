@@ -36,7 +36,7 @@
           "id": 1,
           "date": "23/02/2024",
           "time": "10:30",
-          "seat": ""
+          "seat": "A13 | A12 | A11 | A2 | E3 | F4 | A3 | F2 | G2 | A5 | C5 | E5 | "
         },
         {
           "id": 2,
@@ -554,62 +554,19 @@
       "id": 1
     },
     {
-      "email": "eleskerlilale@gmail.com",
-      "usarname": "Lale1",
-      "password": "1!Aa1234",
-      "username": "Lale1",
-      "id": 2,
-      "favorite": [
-        {
-          "id": 1022796,
-          "imdb_id": "tt11304740",
-          "original_language": "en",
-          "original_title": "Wish",
-          "overview": "Asha, a sharp-witted idealist, makes a wish so powerful that it is answered by a cosmic force – a little ball of boundless energy called Star. Together, Asha and Star confront a most formidable foe - the ruler of Rosas, King Magnifico - to save her community and prove that when the will of one courageous human connects with the magic of the stars, wondrous things can happen.",
-          "popularity": 1428.915,
-          "poster_path": "/AcoVfiv1rrWOmAdpnAMnM56ki19.jpg",
-          "runtime": 95,
-          "vote_average": 6.665,
-          "video_poster": "https://nerdreactor.com/wp-content/uploads/2023/11/wish-movie.jpg",
-          "key": "eQPeGiCH7A0",
-          "genres": [
-            {
-              "id": 16,
-              "name": "Animation"
-            },
-            {
-              "id": 10751,
-              "name": "Family"
-            },
-            {
-              "id": 14,
-              "name": "Fantasy"
-            },
-            {
-              "id": 12,
-              "name": "Adventure"
-            }
-          ],
-          "date": [
-            {
-              "id": 1,
-              "date": "23/02/2024",
-              "time": "10:30"
-            },
-            {
-              "id": 2,
-              "date": "01/03/2024",
-              "time": "10:30"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "email": "anoniiim42@gmail.com",
       "username": "lale",
       "password": "1!Aa1234",
-      "color": "1b4bc9",
+      "color": "df1824",
+      "favorite": [],
+      "date": [],
+      "id": 2
+    },
+    {
+      "email": "eleskerlilale@gmail.com",
+      "username": "Lale",
+      "password": "1!Aa1234",
+      "color": "7d2a13",
       "favorite": [],
       "date": [],
       "id": 3
@@ -617,10 +574,10 @@
   ],
   "account": [
     {
-      "email": "anoniiim42@gmail.com",
-      "username": "lale",
+      "email": "eleskerlilale@gmail.com",
+      "username": "Lale",
       "password": "1!Aa1234",
-      "color": "1b4bc9",
+      "color": "7d2a13",
       "favorite": [],
       "date": [],
       "id": 3

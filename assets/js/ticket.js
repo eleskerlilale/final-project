@@ -9,8 +9,10 @@ const image = document.querySelector(".image")
 const down = document.querySelector(".down")
 const SearchId = new URLSearchParams(window.location.search).get("id")
 console.log(typeof SearchId);
+let movieName=''
 network.getfetchticket().then(data => console.log(data))
 network.getfetchById(SearchId).then(data => {
+    movieName=`${data.original_title}`
     data.date.forEach(elem => {
         main.innerHTML += `
         <div class="box box${elem.id}" onclick='chooseFunc(${elem.id})'>
@@ -37,6 +39,7 @@ function chooseFunc(id) {
     const dateElem = document.querySelector(`.box .date${id} `)
     const timeElem = document.querySelector(`.box .time${id}`)
     console.log(box);
+    console.log(movieName);
     if (box.classList.value == `box box${id}`) {
         boxs.forEach(b => b.classList.remove("active"));
         box.classList.add("active");
@@ -183,6 +186,7 @@ proceed.addEventListener("click", () => {
                                 console.log(favdata);
                                 favdata[y] = {
                                     movieId: Number(SearchId),
+                                    movieName:element.movieName,
                                     date: element.date,
                                     time: element.time,
                                     seat: element.seat,
@@ -191,14 +195,15 @@ proceed.addEventListener("click", () => {
                                 
                                 ticketdate.innerText = date
                                 tickettime.innerText = time
-                                ticketseat.innerText = element.seat
-                                ticketprice.innerText = `$${totalprc}`
+                                ticketseat.innerText = seatStr
+                                ticketprice.innerText = `$${prc}`
                                 network.getaccountpath(dataaccount[0].id, { date: favdata })
                             }
                         })
                     } else {
                         favdata.push({
                             movieId: Number(SearchId),
+                            movieName:movieName,
                             date: date,
                             time: time,
                             seat: seatStr,
@@ -208,7 +213,7 @@ proceed.addEventListener("click", () => {
                         ticketdate.innerText = date
                         tickettime.innerText = time
                         ticketseat.innerText = seatStr
-                        ticketprice.innerText = `$${totalprc}`
+                        ticketprice.innerText = `$${prc}`
                         console.log(favdata);
                         network.getaccountpath(dataaccount[0].id, { date: favdata })
                     }

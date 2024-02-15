@@ -1768,6 +1768,11 @@
   background-color: rgb(226, 0, 0);
 }
 
+#ticket {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(184, 176, 122);
+}
 #ticket .ticket {
   padding: 100px 0;
   width: 100%;
@@ -1783,22 +1788,27 @@
   width: 100%;
   padding: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 20px;
 }
 #ticket .ticket .main .box {
-  width: 100%;
-  border-radius: 20px;
-  border: 2px solid #737373;
-  padding: 10px 20px;
+  width: 200px;
+  height: 100px;
+  background-color: #faff71;
+  border: 2px solid yellow;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 20px;
   transition: all 0.3s ease;
   cursor: pointer;
   flex-wrap: wrap;
+  padding: 10px 0 10px 10px;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 90% 10%, 100% 20%, 90% 30%, 100% 40%, 90% 50%, 100% 60%, 90% 70%, 100% 80%, 90% 90%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 90% 10%, 100% 20%, 90% 30%, 100% 40%, 90% 50%, 100% 60%, 90% 70%, 100% 80%, 90% 90%, 100% 100%, 0% 100%);
 }
 #ticket .ticket .main .box > div {
   display: flex;
@@ -2045,6 +2055,9 @@
     width: 12px;
     height: 12px;
   }
+  #place .place .seats > div .seat > div {
+    left: -280%;
+  }
   #place .place .seats .red {
     left: calc((100% - 260px) / 2);
     width: 260px;
@@ -2068,6 +2081,9 @@
     font-size: 6px;
     width: 9px;
     height: 9px;
+  }
+  #place .place .seats > div .seat > div {
+    left: -420%;
   }
   #place .place .seats .red {
     position: absolute;
@@ -2739,7 +2755,7 @@ nav .search span {
 }
 #login-register .login-register {
   width: 100%;
-  padding: 100px 0 200px 0;
+  padding: 100px 0 250px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2871,6 +2887,11 @@ nav .search span {
   border: none;
   background-color: #d96c2c;
 }
+#login-register .login-register .main .register-page .loading {
+  position: absolute;
+  z-index: 20;
+  display: none;
+}
 #login-register .login-register .main .key-page {
   padding: 50px 0;
   display: flex;
@@ -2895,7 +2916,7 @@ nav .search span {
   color: red;
 }
 #login-register .login-register .main .key-page input {
-  width: 100%;
+  width: 270px;
   padding: 8px;
   margin-bottom: 20px;
   height: 100%;
@@ -2974,6 +2995,136 @@ nav .search span {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
+}
+
+#account-test {
+  background-color: #fff;
+  display: none;
+}
+#account-test .account-test {
+  padding: 100px 0;
+}
+#account-test .account-test .row {
+  width: 100%;
+}
+#account-test .account-test .row > div .card-main {
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#account-test .account-test .row > div .card-main > div {
+  width: 100%;
+  background-color: rgba(222, 222, 222, 0.584);
+  margin: 1px;
+  cursor: pointer;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-right: 2px solid rgba(222, 222, 222, 0.584);
+}
+#account-test .account-test .row > div .card-main > div i {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #d96c2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+#account-test .account-test .row > div .card-main > div:hover {
+  background-color: #fff;
+  color: #d96c2c;
+  border-right: 2px solid #d96c2c;
+}
+#account-test .account-test .row > div .card-main > div:hover i {
+  background-color: #d96c2c;
+  color: #fff;
+}
+#account-test .account-test .row > div .card-main .active {
+  background-color: #fff;
+  color: #d96c2c;
+  align-items: center;
+  flex-direction: row;
+  border-right: 2px solid #d96c2c;
+}
+#account-test .account-test .row > div .card-main .active i {
+  background-color: #d96c2c;
+  color: #fff;
+}
+#account-test .account-test .row > div .my-account-page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+}
+#account-test .account-test .row > div .my-account-page input {
+  padding: 8px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+#account-test .account-test .row > div .my-account-page label {
+  font-size: 16px;
+  color: #737373;
+}
+#account-test .account-test .row > div .my-account-page > div {
+  width: 100%;
+  position: relative;
+}
+#account-test .account-test .row > div .my-account-page > div i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+#account-test .account-test .row > div .wishlist-page, #account-test .account-test .row > div .ticket-page {
+  display: none;
+  width: 100%;
+}
+#account-test .account-test .row > div .wishlist-page table, #account-test .account-test .row > div .ticket-page table {
+  width: 100%;
+}
+#account-test .account-test .row > div .wishlist-page table thead, #account-test .account-test .row > div .ticket-page table thead {
+  width: 100%;
+  background-color: #F3F3F3;
+}
+#account-test .account-test .row > div .wishlist-page table thead tr .end, #account-test .account-test .row > div .ticket-page table thead tr .end {
+  text-align: center;
+}
+#account-test .account-test .row > div .wishlist-page table thead tr td, #account-test .account-test .row > div .ticket-page table thead tr td {
+  padding: 10px 0px 10px 5px;
+}
+#account-test .account-test .row > div .wishlist-page table tbody, #account-test .account-test .row > div .ticket-page table tbody {
+  width: 100%;
+}
+#account-test .account-test .row > div .wishlist-page table tbody tr, #account-test .account-test .row > div .ticket-page table tbody tr {
+  margin: 5px 0;
+  border-bottom: 1px solid #F3F3F3;
+}
+#account-test .account-test .row > div .wishlist-page table tbody tr .end, #account-test .account-test .row > div .ticket-page table tbody tr .end {
+  text-align: center;
+}
+#account-test .account-test .row > div .wishlist-page table tbody tr td, #account-test .account-test .row > div .ticket-page table tbody tr td {
+  padding: 10px 0px 10px 5px;
+}
+#account-test .account-test .row > div .wishlist-page table tbody tr td i, #account-test .account-test .row > div .ticket-page table tbody tr td i {
+  color: black;
+  cursor: pointer;
+}
+#account-test .account-test .row > div .wishlist-page table tbody tr .name, #account-test .account-test .row > div .ticket-page table tbody tr .name {
+  font-size: 15px;
+}
+#account-test .account-test .row .col-lg-7 {
+  padding-left: 100px;
 }
 
 * {

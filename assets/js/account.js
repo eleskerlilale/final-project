@@ -10,7 +10,6 @@ const accountA=document.querySelector(".search a")
 const accountback=document.querySelector(".search")
 
 network.getfetchaccount().then(data => {
-  // const randomColor = Math.floor(Math.random()*16777215).toString(16);
   accountA.innerHTML=`${data[0].username[0].toUpperCase()}`
   accountback.style.backgroundColor='#'+`${data[0].color}`
 })
@@ -60,7 +59,7 @@ const loginRegisterPage = document.querySelector(".login-register")
 const loginPage = document.querySelector(".login-page")
 const registerPage = document.querySelector(".register-page")
 const main = document.querySelector(".login-register .main")
-const accountpage = document.querySelector("#login-register .account")
+const accountpage = document.querySelector("#account-test")
 console.log(accountpage);
 
 login.addEventListener("click", () => {
@@ -94,7 +93,7 @@ const keyButton = document.querySelector(".key-button")
 const icons = document.querySelectorAll(".bi-eye")
 const nameAccount = document.querySelector(".search span")
 const logOut=document.querySelector(".log-out")
-
+const load= document.querySelector(".loading")
 key.addEventListener("input", () => {
   if(key.value.length==4){
     key.style.caretColor='transparent'
@@ -152,6 +151,7 @@ network.getfetchaccount().then(data => {
     password.value = data[0].password
     loginRegisterPage.style.display = 'none'
     accountpage.style.display = 'flex'
+
   } else {
     loginRegisterPage.style.display = 'flex'
     accountpage.style.display = 'none'
@@ -169,7 +169,7 @@ buttonReg.addEventListener("click", () => {
     }
   } else {
       yoxlama=''
-
+    load.style.display='block'
       network.getMainaccount().then(data => {
         console.log(data)
         data.forEach(data => {
@@ -178,9 +178,6 @@ buttonReg.addEventListener("click", () => {
             console.log(data.email , emailReg.value, yoxlama);
           }
         })
-      // })
-      // const id = data.find(f => f.email != emailReg.value)
-      // console.log(id);
       if (yoxlama!='true') {
         yoxlama=''
         console.log(yoxlama, "girdi");
@@ -255,3 +252,112 @@ buttonLog.addEventListener("click", () => {
     })
   }
 })
+
+
+const accountWhole=document.querySelectorAll(".whole >div")
+const cartMain=document.querySelectorAll("#account-test .card-main >div")
+const myAccount=document.querySelector(".my-account")
+const wishlist = document.querySelector(".wishlist")
+const myAccountPage=document.querySelector(".my-account-page")
+const wishlistPage = document.querySelector(".wishlist-page")
+const wishlistTbody=document.querySelector(".wishlist-page table tbody")
+const ticketbtn=document.querySelector(".ticket-btn")
+const ticketTboy=document.querySelector(".ticket-page table tbody")
+const ticketPage=document.querySelector(".ticket-page")
+// console.log(cartMain);
+const passwordAccount=document.querySelector(".my-account-page #password")
+const hidViz=document.querySelector(".my-account-page i")
+
+cartMain.forEach((e ) => {
+  // e.classList.remove("active")
+  e.addEventListener("click" ,() => {
+    cartMain[0].classList.remove("active")
+    cartMain[1].classList.remove("active")
+    cartMain[2].classList.remove("active")
+    cartMain[3].classList.remove("active")
+    e.classList.add("active")
+  })
+})
+myAccount.addEventListener("click" , () => {
+  accountWhole.forEach(a => {
+    a.style.display='none'
+  })
+  myAccountPage.style.display='flex'
+
+})
+
+hidViz.addEventListener("click" ,() => {
+  if (passwordAccount.type === 'password') {
+    hidViz.classList.remove("bi-eye-slash")
+    hidViz.classList.add("bi-eye")
+    passwordAccount.type = 'text'
+  } else {
+    hidViz.classList.add("bi-eye-slash")
+    hidViz.classList.remove("bi-eye")
+    passwordAccount.type = 'password'
+  }
+})
+let date ='';
+let time='';
+wishlist.addEventListener("click", () => {
+  accountWhole.forEach(a => {
+    a.style.display='none'
+  })
+  wishlistPage.style.display='flex'
+  wishlistTbody.innerHTML=``
+  network.getfetchaccount().then(data => {
+    data[0].favorite.forEach(elem => {
+      
+      wishlistTbody.innerHTML+=`
+      <tr>
+        <td>${elem.id}</td>
+        <td class="name">${elem.original_title}</td>
+        <td class="end"><a href='./detail.html?id=${elem.id}'><i class="bi bi-eye-fill"></i></a></td>
+        <td class="end" onclick = 'delFunc(${elem.id})'><i class="bi bi-trash3-fill"></i></td>
+      </tr>   `
+      console.log();
+    })
+  })
+})
+
+ticketbtn.addEventListener("click" ,() => {
+  accountWhole.forEach(a => {
+    a.style.display='none'
+  })
+  ticketPage.style.display='flex'
+  ticketTboy.innerHTML=``
+  
+  network.getfetchaccount().then(data => {
+    data[0].date.forEach(elem => {
+      ticketTboy.innerHTML+=`
+      <tr>
+        <td>${elem.movieId}</td>
+        <td class="name">${elem.movieName}</td>
+        <td>${elem.date}</td>
+        <td>${elem.time}</td>
+        <td><a href='./ticketpdf.html?id=${elem.movieId}&date=${elem.date}&time=${elem.time}'><i class="bi bi-download"></i></a></td>
+      </tr> `
+    })
+  })
+ 
+})
+
+function delFunc(id){
+  network.getfetchaccount().then(data => {
+    data[0].favorite.forEach(elem => {
+      if(id==elem.id){
+        const k =data[0].favorite.indexOf(elem)
+        console.log(k);
+        if(k!=0){
+          favorite= data[0].favorite.slice(0,k).concat( data[0].favorite.slice(k+1))
+        }else{
+          favorite= data[0].favorite.slice(1)
+        }
+        console.log(data[0].id ,favorite);
+        network.getaccountpath(data[0].id , {favorite: favorite})
+        network.getmainaccountpath(data[0].id, {favorite:favorite})
+        window.location.reload()
+      }
+    })
+  })
+}
