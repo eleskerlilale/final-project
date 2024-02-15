@@ -8,8 +8,16 @@ const backk = document.querySelector(".backk")
 const image = document.querySelector(".image")
 const down = document.querySelector(".down")
 const SearchId = new URLSearchParams(window.location.search).get("id")
+
 console.log(typeof SearchId);
 let movieName=''
+window.addEventListener("load", () => {
+    network.getfetchaccount().then(data => {
+        if(data.length!=1){
+            window.location='./account.html'
+        }
+    })
+})
 network.getfetchticket().then(data => console.log(data))
 network.getfetchById(SearchId).then(data => {
     movieName=`${data.original_title}`

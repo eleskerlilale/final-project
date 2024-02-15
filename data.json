@@ -82,7 +82,7 @@
           "id": 1,
           "date": "24/02/2024",
           "time": "10:30",
-          "seat": ""
+          "seat": "B15 | D15 | E15 | "
         },
         {
           "id": 2,
@@ -608,195 +608,6 @@
           ]
         },
         {
-          "id": 1212073,
-          "imdb_id": "tt29538571",
-          "original_language": "de",
-          "original_title": "60 Minuten",
-          "overview": "Desperate to keep custody of his daughter, a mixed martial arts fighter abandons a big match and races across Berlin to attend her birthday party.",
-          "popularity": 899.318,
-          "video_poster": "./assets/image/posterminute.webp",
-          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/cND79ZWPFINDtkA8uwmQo1gnPPE.jpg",
-          "runtime": 89,
-          "image": [
-            "./assets/image/minute1.jpg",
-            "./assets/image/minute2.jpg",
-            "./assets/image/minute3.jpg"
-          ],
-          "key": "https://www.youtube.com/embed/uiyZW82Rxf8?si=J50oRX8ZcO58lLW2",
-          "vote_average": 6.939,
-          "genres": [
-            {
-              "id": 28,
-              "name": "Action"
-            },
-            {
-              "id": 18,
-              "name": "Drama"
-            }
-          ],
-          "date": [
-            {
-              "id": 1,
-              "date": "28/02/2024",
-              "time": "20:00",
-              "seat": ""
-            },
-            {
-              "id": 2,
-              "date": "06/03/2024",
-              "time": "10:30",
-              "seat": ""
-            }
-          ]
-        },
-        {
-          "id": 1058694,
-          "imdb_id": "tt14570440",
-          "original_language": "en",
-          "original_title": "Radical",
-          "overview": "In a Mexican border town plagued by neglect, corruption, and violence, a frustrated teacher tries a radical new method to break through his students’ apathy and unlock their curiosity, their potential… and maybe even their genius.",
-          "popularity": 598.187,
-          "vote_average": 7.96,
-          "image": [
-            "./assets/image/radical1.jpg",
-            "./assets/image/radical2.jpg",
-            "./assets/image/radical3.jpg"
-          ],
-          "video_poster": "./assets/image/posterradical.jpg",
-          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/eSatbygYZp8ooprBHZdb6GFZxGB.jpg",
-          "key": "https://www.youtube.com/embed/BXcGgvAKC1Q?si=J50oRX8ZcO58lLW2",
-          "genres": [
-            {
-              "id": 18,
-              "name": "Drama"
-            }
-          ],
-          "date": [
-            {
-              "id": 1,
-              "date": "09/03/2024",
-              "time": "20:00",
-              "seat": ""
-            },
-            {
-              "id": 2,
-              "date": "10/03/2024",
-              "time": "20:30",
-              "seat": ""
-            }
-          ],
-          "runtime": 127
-        }
-      ],
-      "date": [
-        {
-          "movieId": 866398,
-          "movieName": "The Beekeeper",
-          "date": "15/03/2024",
-          "time": "09:30",
-          "seat": "D10 | E8 | F5 | ",
-          "price": 50
-        }
-      ],
-      "id": 2
-    }
-  ],
-  "account": [
-    {
-      "email": "eleskerlilale@gmail.com",
-      "username": "lale",
-      "password": "1!Aa1234",
-      "color": "4f9e83",
-      "favorite": [
-        {
-          "id": 787699,
-          "imdb_id": "tt6166392",
-          "original_language": "en",
-          "original_title": "Wonka",
-          "overview": "Willy Wonka – chock-full of ideas and determined to change the world one delectable bite at a time – is proof that the best things in life begin with a dream, and if you’re lucky enough to meet Willy Wonka, anything is possible.",
-          "popularity": 1989.417,
-          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
-          "runtime": 117,
-          "vote_average": 7.204,
-          "image": [
-            "./assets/image/wonka1.webp",
-            "./assets/image/wonka2.avif",
-            "./assets/image/wonka3.jpg"
-          ],
-          "video_poster": "./assets/image/wonkaposter.jpg",
-          "key": "https://www.youtube.com/embed/otNh9bTjXWg?si=J50oRX8ZcO58lLW2",
-          "genres": [
-            {
-              "id": 14,
-              "name": "Fantasy"
-            },
-            {
-              "id": 35,
-              "name": "Comedy"
-            },
-            {
-              "id": 10751,
-              "name": "Family"
-            }
-          ],
-          "date": [
-            {
-              "id": 1,
-              "date": "24/02/2024",
-              "time": "10:30",
-              "seat": ""
-            },
-            {
-              "id": 2,
-              "date": "02/03/2024",
-              "time": "10:30",
-              "seat": ""
-            }
-          ]
-        },
-        {
-          "id": 1212073,
-          "imdb_id": "tt29538571",
-          "original_language": "de",
-          "original_title": "60 Minuten",
-          "overview": "Desperate to keep custody of his daughter, a mixed martial arts fighter abandons a big match and races across Berlin to attend her birthday party.",
-          "popularity": 899.318,
-          "video_poster": "./assets/image/posterminute.webp",
-          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/cND79ZWPFINDtkA8uwmQo1gnPPE.jpg",
-          "runtime": 89,
-          "image": [
-            "./assets/image/minute1.jpg",
-            "./assets/image/minute2.jpg",
-            "./assets/image/minute3.jpg"
-          ],
-          "key": "https://www.youtube.com/embed/uiyZW82Rxf8?si=J50oRX8ZcO58lLW2",
-          "vote_average": 6.939,
-          "genres": [
-            {
-              "id": 28,
-              "name": "Action"
-            },
-            {
-              "id": 18,
-              "name": "Drama"
-            }
-          ],
-          "date": [
-            {
-              "id": 1,
-              "date": "28/02/2024",
-              "time": "20:00",
-              "seat": ""
-            },
-            {
-              "id": 2,
-              "date": "06/03/2024",
-              "time": "10:30",
-              "seat": ""
-            }
-          ]
-        },
-        {
           "id": 1058694,
           "imdb_id": "tt14570440",
           "original_language": "en",
@@ -885,14 +696,21 @@
           "time": "09:30",
           "seat": "D10 | E8 | F5 | ",
           "price": 50
+        },
+        {
+          "movieId": 787699,
+          "movieName": "Wonka",
+          "date": "24/02/2024",
+          "time": "10:30",
+          "seat": "B15 | D15 | E15 | ",
+          "price": 70
         }
       ],
       "id": 2
     }
   ],
-  "admin": [
-    
-  ],
+  "account": [],
+  "admin": [],
   "ticket": [
     {
       "id": 1,

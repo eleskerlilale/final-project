@@ -18,6 +18,7 @@ const file = document.querySelector("input[type=file]")
 const f = document.querySelector(".f")
 const fInput = document.querySelectorAll(".f input")
 const inputP = document.querySelectorAll(".f label p")
+const videolink=document.querySelector("#video-sec")
 console.log(inputP);
 
 window.addEventListener("load", () => {
@@ -70,11 +71,23 @@ menuBtn.addEventListener("click", () => {
     }
 })
 let count = 0;
+let imageSrc=[]
 fInput.forEach((inputF, index) => {
     inputF.addEventListener("input", () => {
         const i = inputF.files[0]
         console.log(i.name);
         inputP[index].innerText = `${i.name}`
+        if(i){
+            console.log(i);
+            const read = new FileReader()
+            read.readAsDataURL(i)
+            read.addEventListener("load" ,() => {
+                console.log(read.result);
+                
+                // imageSrc.push(`${read.result}`)
+            })
+            // console.log(imageSrc.length);
+        }
     })
 })
 let num = 0;
@@ -84,7 +97,7 @@ if (id) {
         textarea.value = data.overview
         time.value = data.runtime
         img.src = `${data.poster_path}`
-        iframe.src = `${data.key}`
+        // iframe.src = `${data.key}`
         checkbox.forEach(e => {
             const g = data.genres.find(f => f.id == e.value)
             if (g) {
@@ -103,6 +116,7 @@ if (id) {
             dateInput[i].value = data.date[i].date
             timeInput[i].value = data.date[i].time
         })
+        videolink.value=data.key
     })
 }
 
@@ -119,7 +133,7 @@ file.addEventListener("input", () => {
             if (i.name.slice(i.name.length - 3) != "mp4") {
                 img.src = reader.result
             } else {
-                iframe.src = `./assets/image/${i.name}`
+                // iframe.src = `./assets/image/${i.name}`
             }
         })
     }
@@ -163,10 +177,10 @@ save.addEventListener("click", () => {
     console.log(textarea.value);
     console.log(img.src);
     console.log(time.value);
-    console.log(iframe.src);
+    // console.log(iframe.src);
     console.log(time.value == 0);
     console.log(inputP[3].innerText==0);
-    if (genres.length != 0 || name.value != 0 || textarea.value != 0 || img.src == '' || time.value != 0 || iframe.src == '' || dateInput[0].value!=0 || dateInput[1].value!=0 || timeInput[0].value!=0 || timeInput[1].value!=0  || inputP[0].innerText!=0 || inputP[1].innerText!=0 || inputP[2].innerText!=0 || inputP[3].innerText!=0) {
+    if (genres.length != 0 || name.value != 0 || textarea.value != 0 || img.src == '' || time.value != 0 || dateInput[0].value!=0 || dateInput[1].value!=0 || timeInput[0].value!=0 || timeInput[1].value!=0  || inputP[0].innerText!=0 || inputP[1].innerText!=0 || inputP[2].innerText!=0 || inputP[3].innerText!=0) {
         if (!id) {
             network.getmainpost({
                 original_title: name.value,
@@ -174,7 +188,7 @@ save.addEventListener("click", () => {
                 poster_path: img.src,
                 runtime: Number(time.value),
                 genres: genres,
-                key: iframe.src,
+                key:  videolink.value,
                 image: image,
                 date: dateItem,
                 video_poster: `./assets/image/${inputP[3].innerText}`
@@ -192,7 +206,7 @@ save.addEventListener("click", () => {
                 poster_path: img.src,
                 runtime: Number(time.value),
                 genres: genres,
-                key: iframe.src,
+                key:  videolink.value,
                 date: dateItem,
                 image: image,
                 video_poster: `./assets/image/${inputP[3].innerText}`
