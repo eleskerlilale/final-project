@@ -6,12 +6,12 @@ const menuButton = document.querySelector(".menu")
 const subNav = document.querySelectorAll(".sub-nav")
 const movieSub = document.querySelectorAll(".movie-sub")
 const subNavSecond = document.querySelector(".sub-nav-second")
-const accountA=document.querySelector(".search a")
-const accountback=document.querySelector(".search")
+const accountA = document.querySelector(".search a")
+const accountback = document.querySelector(".search")
 
 network.getfetchaccount().then(data => {
-  accountA.innerHTML=`${data[0].username[0].toUpperCase()}`
-  accountback.style.backgroundColor='#'+`${data[0].color}`
+  accountA.innerHTML = `${data[0].username[0].toUpperCase()}`
+  accountback.style.backgroundColor = '#' + `${data[0].color}`
 })
 
 movieSub.forEach((movieSub, i) => {
@@ -58,7 +58,7 @@ const movie = document.querySelector(".playing")
 
 network.getfetch().then(data => {
   network.getfetchaccount().then(dataFav => {
-    if (data.length != 0) {
+    if (dataFav.length != 0) {
       data.forEach(elem => {
         const ids = dataFav[dataFav.length - 1].favorite.find(f => f.id == elem.id)
         if (!ids) {
@@ -104,25 +104,29 @@ network.getfetch().then(data => {
         `
         }
       })
-    }else{
-      movie.innerHTML += `
-      <div class="my-card col-lg-3 col-md-4 col-sm-6 col-xs-12" >
-          <div>
-              <div class="image">
-                  <img src="${elem.poster_path}" alt="">
-              </div>
-              <div class="text">
-                  <div class="category-time">
-                      <p class="category">${elem.genres[0].name}</p>
-                      /
-                      <p class="time">${elem.runtime} min</p>
-                  </div>
-                  <div class="film-name" onclick="detailFunc(${elem.id})">${elem.original_title}</div>
-                  <a href="ticket">Ticket</a>
-              </div>
-          </div>
-      </div>
-`
+    } else {
+      data.forEach(elem => {
+        movie.innerHTML += `
+        <div class="my-card col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+            <div>
+                <div class="image">
+                    <img src="${elem.poster_path}" alt="">
+                </div>
+                <div class="text">
+                    <div class="category-time">
+                        <p class="category">${elem.genres[0].name}</p>
+                        /
+                        <p class="time">${elem.runtime} min</p>
+                    </div>
+                    <div class="film-name" onclick="detailFunc(${elem.id})">${elem.original_title}</div>
+                    <a href="ticket">Ticket</a>
+                </div>
+                <div class='favorite favorite${elem.id}' onclick='favFunc(${elem.id})'><i class="bi bi-heart"></i></div>
+            </div>
+        </div>
+  `
+      })
+      
     }
   })
 })
@@ -134,45 +138,49 @@ function favFunc(id) {
   const favorite = document.querySelector(`.favorite${id}`)
   network.getfetchById(id).then(data => {
     network.getfetchaccount().then(datafav => {
-      const ids = datafav[datafav.length - 1].favorite.find(f => f.id == data.id)
-      if (!ids) {
-        favorite.innerHTML = `<i class="bi bi-heart-fill"></i>`
-        datafav[datafav.length - 1].favorite.push(data)
-        network.getaccountpath(datafav[datafav.length - 1].id, { favorite: datafav[datafav.length - 1].favorite })
-        network.getfetchaccount().then(data => {
-          network.getMainaccount().then(maindata => {
-            maindata.forEach(maindt => {
-              if (maindt.email == data[0].email) {
-                const index = maindt.id;
-                network.getmainaccountpath(index, data[0])
-              }
+      if (datafav.length != 0) {
+        const ids = datafav[datafav.length - 1].favorite.find(f => f.id == data.id)
+        if (!ids) {
+          favorite.innerHTML = `<i class="bi bi-heart-fill"></i>`
+          datafav[datafav.length - 1].favorite.push(data)
+          network.getaccountpath(datafav[datafav.length - 1].id, { favorite: datafav[datafav.length - 1].favorite })
+          network.getfetchaccount().then(data => {
+            network.getMainaccount().then(maindata => {
+              maindata.forEach(maindt => {
+                if (maindt.email == data[0].email) {
+                  const index = maindt.id;
+                  network.getmainaccountpath(index, data[0])
+                }
+              })
             })
           })
-        })
-      }
-      else {
-        favorite.innerHTML = `<i class="bi bi-heart"></i>`
-        console.log(id);
-        [...newarr] = datafav[datafav.length - 1].favorite
-        newarr.forEach((elem, i) => {
-          if (elem.id == id) {
-            index = i
-          }
-        })
-        if (index > -1) {
-          newarr.splice(index, 1);
         }
-        network.getaccountpath(datafav[datafav.length - 1].id, { favorite: newarr })
-        network.getfetchaccount().then(data => {
-          network.getMainaccount().then(maindata => {
-            maindata.forEach(maindt => {
-              if (maindt.email == data[0].email) {
-                const index = maindt.id;
-                network.getmainaccountpath(index, { favorite: newarr })
-              }
+        else {
+          favorite.innerHTML = `<i class="bi bi-heart"></i>`
+          console.log(id);
+          [...newarr] = datafav[datafav.length - 1].favorite
+          newarr.forEach((elem, i) => {
+            if (elem.id == id) {
+              index = i
+            }
+          })
+          if (index > -1) {
+            newarr.splice(index, 1);
+          }
+          network.getaccountpath(datafav[datafav.length - 1].id, { favorite: newarr })
+          network.getfetchaccount().then(data => {
+            network.getMainaccount().then(maindata => {
+              maindata.forEach(maindt => {
+                if (maindt.email == data[0].email) {
+                  const index = maindt.id;
+                  network.getmainaccountpath(index, { favorite: newarr })
+                }
+              })
             })
           })
-        })
+        }
+      }else{
+        window.location='./account.html'
       }
     })
 

@@ -72,6 +72,7 @@ button.addEventListener("click", () => {
                 table = `${data.date[Number(say) - 1].seat}`
                 ticName = data.original_title
                 ticket.forEach((t, index) => {
+                    console.log(data.date[Number(say) - 1]);
                     if (data.date[Number(say) - 1].seat.includes(t.seat)) {
                         seats[index].style.backgroundColor = 'red'
                     }

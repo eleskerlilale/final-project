@@ -6,12 +6,12 @@ const menuButton = document.querySelector(".menu")
 const subNav = document.querySelectorAll(".sub-nav")
 const movieSub = document.querySelectorAll(".movie-sub")
 const subNavSecond = document.querySelector(".sub-nav-second")
-const accountA=document.querySelector(".search a")
-const accountback=document.querySelector(".search")
+const accountA = document.querySelector(".search a")
+const accountback = document.querySelector(".search")
 
 network.getfetchaccount().then(data => {
-  accountA.innerHTML=`${data[0].username[0].toUpperCase()}`
-  accountback.style.backgroundColor='#'+`${data[0].color}`
+  accountA.innerHTML = `${data[0].username[0].toUpperCase()}`
+  accountback.style.backgroundColor = '#' + `${data[0].color}`
 })
 
 movieSub.forEach((movieSub, i) => {
@@ -92,13 +92,18 @@ const keyButton = document.querySelector(".key-button")
 
 const icons = document.querySelectorAll(".bi-eye")
 const nameAccount = document.querySelector(".search span")
-const logOut=document.querySelector(".log-out")
-const load= document.querySelector(".loading")
+const logOut = document.querySelector(".log-out")
+const load = document.querySelector(".loading")
+const problemregusername = document.querySelector(".username-problem-reg")
+const problemregpassword = document.querySelector(".password-problem-reg")
+const problemlogpassword = document.querySelector(".password-problem-log")
+const problemlogemail = document.querySelector(".email-problem-log")
+
 key.addEventListener("input", () => {
-  if(key.value.length==4){
-    key.style.caretColor='transparent'
-  }else{
-    key.style.caretColor='black'
+  if (key.value.length == 4) {
+    key.style.caretColor = 'transparent'
+  } else {
+    key.style.caretColor = 'black'
   }
 })
 
@@ -107,17 +112,18 @@ let account = {
   email: '',
   username: "",
   password: "",
-  color:"",
+  color: "",
   favorite: [],
   date: []
 }
-logOut.addEventListener("click" ,() => {
+logOut.addEventListener("click", () => {
   network.getfetchaccount().then(data => {
     network.getaccountDelete(data[0].id)
     window.location.reload()
   })
-  
 })
+
+
 icons.forEach((icon, index) => {
   icon.addEventListener("click", () => {
     if (index == 0) {
@@ -157,37 +163,49 @@ network.getfetchaccount().then(data => {
     accountpage.style.display = 'none'
   }
 })
-let yoxlama=''
+let yoxlama = ''
 buttonReg.addEventListener("click", () => {
-  problemReg.innerText=''
+  problemReg.innerText = ''
   console.log(usernameReg.value);
-  if (!(emailReg.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) && passwordReg.value.match(/^(?=.*[\d])(?=.*[!@#$%^&*])[\w!@#$%^&*]{6,16}$/))) {
+  if (!(emailReg.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))) {
     emailReg.style.borderColor = 'red'
+  } if (!(passwordReg.value.match(/^(?=.*[\d])(?=.*[!@#$%^&*])[\w!@#$%^&*]{6,16}$/))) {
     passwordReg.style.borderColor = 'red'
-    if (usernameReg.value = '') {
-      usernameReg.style.borderColor = 'red'
-    }
-  } else {
-      yoxlama=''
-    load.style.display='block'
-      network.getMainaccount().then(data => {
-        console.log(data)
-        data.forEach(data => {
-          if(data.email.includes(emailReg.value)){
-            yoxlama='true'
-            console.log(data.email , emailReg.value, yoxlama);
-          }
-        })
-      if (yoxlama!='true') {
-        yoxlama=''
+    problemregpassword.innerText = `
+    The password should consist of numbers, letters and special symbols and have at least 8 characters
+    `
+  }
+  if (usernameReg.value == '' || Number(usernameReg.value[0])) {
+    usernameReg.style.borderColor = 'red'
+    problemregusername.innerText = `Username not be kept empty and cannot start with a number`
+  }
+  else {
+    yoxlama = ''
+    network.getMainaccount().then(data => {
+      console.log(data)
+      data.forEach(data => {
+        if (data.email.includes(emailReg.value)) {
+          yoxlama = 'true'
+          problemReg.innerText = `The e-mail you added is registered on our site. Try again.`
+
+          console.log(data.email, emailReg.value, yoxlama, data.username);
+        } if (data.username.includes(usernameReg.value)) {
+          yoxlama = 'true'
+          problemregusername.innerText = `This username has been used by someone else`
+        }
+      })
+      if (yoxlama != 'true') {
+        load.style.display = 'block'
+
+        yoxlama = ''
         console.log(yoxlama, "girdi");
         const messages = Math.floor(Math.random() * 9000) + 1000;
-        const randomColor = Math.floor(Math.random()*16777215).toString(16);
+        const randomColor = Math.floor(Math.random() * 16777215).toString(16);
         keystring = `${messages}`
         account.email = `${emailReg.value}`
         account.username = `${usernameReg.value}`
         account.password = `${passwordReg.value}`
-        account.color= `${randomColor}`
+        account.color = `${randomColor}`
         emailjs.init("YYynOFfdG-YgR_cIO")
         const params = {
           sendername: "Avios",
@@ -207,9 +225,7 @@ buttonReg.addEventListener("click", () => {
           })
           .catch();
       }
-      else {
-        problemReg.innerText = `The e-mail you added is registered on our site. Try again.`
-      }
+
     })
   }
 })
@@ -220,7 +236,7 @@ keyButton.addEventListener("click", () => {
     console.log("dogru", keystring, key.value);
     loginPage.style.display = 'flex'
     registerPage.style.display = 'none'
-    keyPage.style.display='none'
+    keyPage.style.display = 'none'
     login.classList.add("active")
     register.classList.remove("active")
     console.log(account);
@@ -232,45 +248,42 @@ keyButton.addEventListener("click", () => {
 })
 
 buttonLog.addEventListener("click", () => {
-  if (!(emailLog.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) && passwordLog.value.match(/^(?=.*[\d])(?=.*[!@#$%^&*])[\w!@#$%^&*]{6,16}$/))) {
-    emailLog.style.borderColor = 'red'
-    passwordLog.style.borderColor = 'red'
-  } else {
-    network.getMainaccount().then(data => {
-      data.forEach(element => {
-        console.log(element.password);
-        console.log(element.email == emailLog.value, element.email , emailLog.value);
-        console.log(element.password == passwordLog.value,element.password,passwordLog.value);
-        if (element.email == emailLog.value && element.password == passwordLog.value) {
-          console.log(element);
-          loginRegisterPage.style.display = 'none'
-          accountpage.style.display = 'flex'
-          network.getpostaccount(element)
-          window.location.reload()
-        }
-      })
-    })
-  }
+  network.getMainaccount().then(data => {
+    const id = data.find(f => f.email == emailLog.value)
+    if (id) {
+      if (id.password == passwordLog.value) {
+        loginRegisterPage.style.display = 'none'
+        accountpage.style.display = 'flex'
+        network.getpostaccount(element)
+        window.location.reload()
+      }
+      else {
+        problemlogpassword.innerText = `Password is incorrect`
+      }
+    } else {
+      problemlogemail.innerText = `You are not registered`
+    }
+  })
 })
 
 
-const accountWhole=document.querySelectorAll(".whole >div")
-const cartMain=document.querySelectorAll("#account-test .card-main >div")
-const myAccount=document.querySelector(".my-account")
+const accountWhole = document.querySelectorAll(".whole >div")
+const cartMain = document.querySelectorAll("#account-test .card-main >div")
+const myAccount = document.querySelector(".my-account")
 const wishlist = document.querySelector(".wishlist")
-const myAccountPage=document.querySelector(".my-account-page")
+const myAccountPage = document.querySelector(".my-account-page")
 const wishlistPage = document.querySelector(".wishlist-page")
-const wishlistTbody=document.querySelector(".wishlist-page table tbody")
-const ticketbtn=document.querySelector(".ticket-btn")
-const ticketTboy=document.querySelector(".ticket-page table tbody")
-const ticketPage=document.querySelector(".ticket-page")
+const wishlistTbody = document.querySelector(".wishlist-page table tbody")
+const ticketbtn = document.querySelector(".ticket-btn")
+const ticketTboy = document.querySelector(".ticket-page table tbody")
+const ticketPage = document.querySelector(".ticket-page")
 // console.log(cartMain);
-const passwordAccount=document.querySelector(".my-account-page #password")
-const hidViz=document.querySelector(".my-account-page i")
+const passwordAccount = document.querySelector(".my-account-page #password")
+const hidViz = document.querySelector(".my-account-page i")
 
-cartMain.forEach((e ) => {
+cartMain.forEach((e) => {
   // e.classList.remove("active")
-  e.addEventListener("click" ,() => {
+  e.addEventListener("click", () => {
     cartMain[0].classList.remove("active")
     cartMain[1].classList.remove("active")
     cartMain[2].classList.remove("active")
@@ -278,15 +291,15 @@ cartMain.forEach((e ) => {
     e.classList.add("active")
   })
 })
-myAccount.addEventListener("click" , () => {
+myAccount.addEventListener("click", () => {
   accountWhole.forEach(a => {
-    a.style.display='none'
+    a.style.display = 'none'
   })
-  myAccountPage.style.display='flex'
+  myAccountPage.style.display = 'flex'
 
 })
 
-hidViz.addEventListener("click" ,() => {
+hidViz.addEventListener("click", () => {
   if (passwordAccount.type === 'password') {
     hidViz.classList.remove("bi-eye-slash")
     hidViz.classList.add("bi-eye")
@@ -297,18 +310,18 @@ hidViz.addEventListener("click" ,() => {
     passwordAccount.type = 'password'
   }
 })
-let date ='';
-let time='';
+let date = '';
+let time = '';
 wishlist.addEventListener("click", () => {
   accountWhole.forEach(a => {
-    a.style.display='none'
+    a.style.display = 'none'
   })
-  wishlistPage.style.display='flex'
-  wishlistTbody.innerHTML=``
+  wishlistPage.style.display = 'flex'
+  wishlistTbody.innerHTML = ``
   network.getfetchaccount().then(data => {
     data[0].favorite.forEach(elem => {
-      
-      wishlistTbody.innerHTML+=`
+
+      wishlistTbody.innerHTML += `
       <tr>
         <td>${elem.id}</td>
         <td class="name">${elem.original_title}</td>
@@ -320,16 +333,16 @@ wishlist.addEventListener("click", () => {
   })
 })
 
-ticketbtn.addEventListener("click" ,() => {
+ticketbtn.addEventListener("click", () => {
   accountWhole.forEach(a => {
-    a.style.display='none'
+    a.style.display = 'none'
   })
-  ticketPage.style.display='flex'
-  ticketTboy.innerHTML=``
-  
+  ticketPage.style.display = 'flex'
+  ticketTboy.innerHTML = ``
+
   network.getfetchaccount().then(data => {
     data[0].date.forEach(elem => {
-      ticketTboy.innerHTML+=`
+      ticketTboy.innerHTML += `
       <tr>
         <td>${elem.movieId}</td>
         <td class="name">${elem.movieName}</td>
@@ -339,23 +352,23 @@ ticketbtn.addEventListener("click" ,() => {
       </tr> `
     })
   })
- 
+
 })
 
-function delFunc(id){
+function delFunc(id) {
   network.getfetchaccount().then(data => {
     data[0].favorite.forEach(elem => {
-      if(id==elem.id){
-        const k =data[0].favorite.indexOf(elem)
+      if (id == elem.id) {
+        const k = data[0].favorite.indexOf(elem)
         console.log(k);
-        if(k!=0){
-          favorite= data[0].favorite.slice(0,k).concat( data[0].favorite.slice(k+1))
-        }else{
-          favorite= data[0].favorite.slice(1)
+        if (k != 0) {
+          favorite = data[0].favorite.slice(0, k).concat(data[0].favorite.slice(k + 1))
+        } else {
+          favorite = data[0].favorite.slice(1)
         }
-        console.log(data[0].id ,favorite);
-        network.getaccountpath(data[0].id , {favorite: favorite})
-        network.getmainaccountpath(data[0].id, {favorite:favorite})
+        console.log(data[0].id, favorite);
+        network.getaccountpath(data[0].id, { favorite: favorite })
+        network.getmainaccountpath(data[0].id, { favorite: favorite })
         window.location.reload()
       }
     })

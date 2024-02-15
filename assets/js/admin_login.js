@@ -2,7 +2,7 @@ const email = document.querySelector(".email")
 const password = document.querySelector(".password")
 const login = document.querySelector(".log")
 const icon = document.querySelector(".bi-eye")
-let arr
+let arr;
 login.addEventListener("click", () => {
     network.getMainaccount().then(data => {
         const id = data.find(f =>f.email == email.value && f.type == 'admin')

@@ -386,6 +386,24 @@
   align-items: flex-start;
   gap: 20px;
 }
+#add-item .add-item .melumat {
+  position: relative;
+}
+#add-item .add-item .melumat > div {
+  font-size: 12px;
+  width: 300px;
+  display: none;
+  position: absolute;
+  top: -5px;
+  left: 30px;
+  z-index: 200;
+}
+#add-item .add-item .melumat i {
+  cursor: pointer;
+}
+#add-item .add-item .melumat:hover > div {
+  display: block;
+}
 #add-item .add-item h2 {
   font-size: 30px;
 }
@@ -2860,7 +2878,7 @@ nav .search span {
 }
 #login-register .login-register .main .register-page label p {
   color: red;
-  font-size: 12px;
+  font-size: 10px;
 }
 #login-register .login-register .main .register-page label span {
   color: red;
@@ -3087,6 +3105,7 @@ nav .search span {
   cursor: pointer;
 }
 #account-test .account-test .row > div .wishlist-page, #account-test .account-test .row > div .ticket-page {
+  min-width: 600px;
   display: none;
   width: 100%;
 }
@@ -3125,8 +3144,16 @@ nav .search span {
 }
 #account-test .account-test .row .col-lg-7 {
   padding-left: 100px;
+  height: 288px;
+  overflow-y: auto;
+  overflow-x: auto;
 }
 
+@media screen and (max-width: 992px) {
+  #account-test .account-test .row .col-lg-7 {
+    padding-left: 15px;
+  }
+}
 * {
   padding: 0;
   margin: 0;

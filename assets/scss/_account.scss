@@ -120,7 +120,7 @@ nav {
 
                     p {
                         color: red;
-                        font-size: 12px;
+                        font-size: 10px;
                     }
 
                     span {
@@ -373,6 +373,7 @@ nav {
                     }
                 }
                 .wishlist-page, .ticket-page{
+                    min-width: 600px;
                     display: none;
                     width: 100%;
                     table{
@@ -418,7 +419,17 @@ nav {
             }
             .col-lg-7{
                padding-left: 100px;
+            //    background-color: aqua;
+               height: 288px;
+               overflow-y: auto;
+               overflow-x: auto;
             }
         }
     }
+}
+
+@media screen and (max-width:992px) {
+#account-test .account-test .row .col-lg-7{
+    padding-left: 15px ;
+}
 }
