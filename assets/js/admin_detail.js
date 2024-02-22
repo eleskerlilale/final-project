@@ -17,6 +17,9 @@ const f = document.querySelector(".f")
 const fInput = document.querySelectorAll(".f input")
 const inputP = document.querySelectorAll(".f label p")
 
+const adminlogout = document.querySelector(".admin-log-out")
+
+console.log(adminlogout);
 window.addEventListener("load" , () => {
     network.getadmin().then(data => {
         if(data.length==0){
@@ -24,6 +27,14 @@ window.addEventListener("load" , () => {
         }
     })
 })
+
+adminlogout.addEventListener("click", () => {
+    network.getadmin().then(data => {
+        network.getadmindelete(data[0].id)
+        // window.location.reload()
+    })
+})
+
 menuBtn.addEventListener("click", () => {
     console.log(menuBtn.classList.value);
     if (menuBtn.classList.value == 'bi bi-list') {

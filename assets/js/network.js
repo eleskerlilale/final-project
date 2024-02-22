@@ -60,6 +60,7 @@ const network = {
         let res = await fetch(this.url2 + id, {
             method: 'DELETE',
         })
+        window.location.reload()
         return res.json();
     },
     getaccountpath : async function(id, data){
@@ -152,6 +153,7 @@ const network = {
         let res = await fetch(this.url6 + id, {
             method: 'DELETE',
         })
+        window.location.reload()
         return res.json();
     }
 }

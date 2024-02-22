@@ -189,7 +189,7 @@
           "id": 2,
           "date": "04/03/2024",
           "time": "09:30",
-          "seat": ""
+          "seat": "B13 | C14 | E14 | "
         }
       ]
     },
@@ -562,51 +562,70 @@
       "color": "4f9e83",
       "favorite": [
         {
-          "id": 787699,
-          "imdb_id": "tt6166392",
+          "id": 1058694,
+          "imdb_id": "tt14570440",
           "original_language": "en",
-          "original_title": "Wonka",
-          "overview": "Willy Wonka – chock-full of ideas and determined to change the world one delectable bite at a time – is proof that the best things in life begin with a dream, and if you’re lucky enough to meet Willy Wonka, anything is possible.",
-          "popularity": 1989.417,
-          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
-          "runtime": 117,
-          "vote_average": 7.204,
+          "original_title": "Radical",
+          "overview": "In a Mexican border town plagued by neglect, corruption, and violence, a frustrated teacher tries a radical new method to break through his students’ apathy and unlock their curiosity, their potential… and maybe even their genius.",
+          "popularity": 598.187,
+          "vote_average": 7.96,
           "image": [
-            "./assets/image/wonka1.webp",
-            "./assets/image/wonka2.avif",
-            "./assets/image/wonka3.jpg"
+            "./assets/image/radical1.jpg",
+            "./assets/image/radical2.jpg",
+            "./assets/image/radical3.jpg"
           ],
-          "video_poster": "./assets/image/wonkaposter.jpg",
-          "key": "https://www.youtube.com/embed/otNh9bTjXWg?si=J50oRX8ZcO58lLW2",
+          "video_poster": "./assets/image/posterradical.jpg",
+          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/eSatbygYZp8ooprBHZdb6GFZxGB.jpg",
+          "key": "https://www.youtube.com/embed/BXcGgvAKC1Q?si=J50oRX8ZcO58lLW2",
           "genres": [
             {
-              "id": 14,
-              "name": "Fantasy"
-            },
-            {
-              "id": 35,
-              "name": "Comedy"
-            },
-            {
-              "id": 10751,
-              "name": "Family"
+              "id": 18,
+              "name": "Drama"
             }
           ],
           "date": [
             {
               "id": 1,
-              "date": "24/02/2024",
-              "time": "10:30",
+              "date": "09/03/2024",
+              "time": "20:00",
               "seat": ""
             },
             {
               "id": 2,
-              "date": "02/03/2024",
-              "time": "10:30",
+              "date": "10/03/2024",
+              "time": "20:30",
               "seat": ""
             }
-          ]
+          ],
+          "runtime": 127
+        }
+      ],
+      "date": [
+        {
+          "movieId": 866398,
+          "movieName": "The Beekeeper",
+          "date": "15/03/2024",
+          "time": "09:30",
+          "seat": "D10 | E8 | F5 | ",
+          "price": 50
         },
+        {
+          "movieId": 787699,
+          "movieName": "Wonka",
+          "date": "24/02/2024",
+          "time": "10:30",
+          "seat": "B15 | D15 | E15 | ",
+          "price": 70
+        }
+      ],
+      "id": 2
+    },
+    {
+      "email": "anoniiim42@gmail.com",
+      "username": "lalee",
+      "password": "1!Aa12344",
+      "color": "79bda0",
+      "favorite": [
         {
           "id": 1058694,
           "imdb_id": "tt14570440",
@@ -646,43 +665,47 @@
           "runtime": 127
         },
         {
-          "id": 866398,
-          "imdb_id": "tt15314262",
+          "id": 1022796,
+          "imdb_id": "tt11304740",
           "original_language": "en",
-          "original_title": "The Beekeeper",
-          "overview": "One man’s campaign for vengeance takes on national stakes after he is revealed to be a former operative of a powerful and clandestine organization known as Beekeepers.",
-          "popularity": 1268.827,
+          "original_title": "Wish",
+          "overview": "Asha, a sharp-witted idealist, makes a wish so powerful that it is answered by a cosmic force – a little ball of boundless energy called Star. Together, Asha and Star confront a most formidable foe - the ruler of Rosas, King Magnifico - to save her community and prove that when the will of one courageous human connects with the magic of the stars, wondrous things can happen.",
+          "popularity": 1428.915,
+          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/AcoVfiv1rrWOmAdpnAMnM56ki19.jpg",
+          "runtime": 95,
+          "vote_average": 6.665,
+          "video_poster": "./assets/image/wishposter.jpg",
+          "key": "https://www.youtube.com/embed/eQPeGiCH7A0?si=J50oRX8ZcO58lLW2",
           "image": [
-            "./assets/image/beekeeper1.jpg",
-            "./assets/image/beekeeper2.jpg",
-            "./assets/image/beekeeper3.jpg"
+            "./assets/image/wish1.jpeg",
+            "./assets/image/wish2.webp",
+            "./assets/image/wish3.jpg"
           ],
-          "video_poster": "./assets/image/posterbeekeeper.webp",
-          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/A7EByudX0eOzlkQ2FIbogzyazm2.jpg",
           "genres": [
             {
-              "id": 28,
-              "name": "Action"
+              "id": 14,
+              "name": "Fantasy"
             },
             {
-              "id": 53,
-              "name": "Thriller"
+              "id": 10751,
+              "name": "Family"
+            },
+            {
+              "id": 16,
+              "name": "Animation"
             }
           ],
-          "runtime": 105,
-          "vote_average": 7.312,
-          "key": "https://www.youtube.com/embed/CHKn-yDCE2w?si=J50oRX8ZcO58lLW2",
           "date": [
             {
               "id": 1,
-              "date": "15/03/2024",
-              "time": "09:30",
+              "date": "23/02/2024",
+              "time": "10:30",
               "seat": ""
             },
             {
               "id": 2,
-              "date": "15/03/2024",
-              "time": "16:30",
+              "date": "01/03/2024",
+              "time": "10:30",
               "seat": ""
             }
           ]
@@ -690,27 +713,131 @@
       ],
       "date": [
         {
-          "movieId": 866398,
-          "movieName": "The Beekeeper",
-          "date": "15/03/2024",
+          "movieId": 572802,
+          "movieName": "Aquaman and the Lost Kingdom",
+          "date": "04/03/2024",
           "time": "09:30",
-          "seat": "D10 | E8 | F5 | ",
-          "price": 50
-        },
-        {
-          "movieId": 787699,
-          "movieName": "Wonka",
-          "date": "24/02/2024",
-          "time": "10:30",
-          "seat": "B15 | D15 | E15 | ",
-          "price": 70
+          "seat": "B13 | C14 | E14 | ",
+          "price": 80
         }
       ],
-      "id": 2
+      "id": 3
     }
   ],
-  "account": [],
-  "admin": [],
+  "account": [
+    {
+      "email": "anoniiim42@gmail.com",
+      "username": "lalee",
+      "password": "1!Aa12344",
+      "color": "79bda0",
+      "favorite": [
+        {
+          "id": 1058694,
+          "imdb_id": "tt14570440",
+          "original_language": "en",
+          "original_title": "Radical",
+          "overview": "In a Mexican border town plagued by neglect, corruption, and violence, a frustrated teacher tries a radical new method to break through his students’ apathy and unlock their curiosity, their potential… and maybe even their genius.",
+          "popularity": 598.187,
+          "vote_average": 7.96,
+          "image": [
+            "./assets/image/radical1.jpg",
+            "./assets/image/radical2.jpg",
+            "./assets/image/radical3.jpg"
+          ],
+          "video_poster": "./assets/image/posterradical.jpg",
+          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/eSatbygYZp8ooprBHZdb6GFZxGB.jpg",
+          "key": "https://www.youtube.com/embed/BXcGgvAKC1Q?si=J50oRX8ZcO58lLW2",
+          "genres": [
+            {
+              "id": 18,
+              "name": "Drama"
+            }
+          ],
+          "date": [
+            {
+              "id": 1,
+              "date": "09/03/2024",
+              "time": "20:00",
+              "seat": ""
+            },
+            {
+              "id": 2,
+              "date": "10/03/2024",
+              "time": "20:30",
+              "seat": ""
+            }
+          ],
+          "runtime": 127
+        },
+        {
+          "id": 1022796,
+          "imdb_id": "tt11304740",
+          "original_language": "en",
+          "original_title": "Wish",
+          "overview": "Asha, a sharp-witted idealist, makes a wish so powerful that it is answered by a cosmic force – a little ball of boundless energy called Star. Together, Asha and Star confront a most formidable foe - the ruler of Rosas, King Magnifico - to save her community and prove that when the will of one courageous human connects with the magic of the stars, wondrous things can happen.",
+          "popularity": 1428.915,
+          "poster_path": "https://image.tmdb.org/t/p/w220_and_h330_face/AcoVfiv1rrWOmAdpnAMnM56ki19.jpg",
+          "runtime": 95,
+          "vote_average": 6.665,
+          "video_poster": "./assets/image/wishposter.jpg",
+          "key": "https://www.youtube.com/embed/eQPeGiCH7A0?si=J50oRX8ZcO58lLW2",
+          "image": [
+            "./assets/image/wish1.jpeg",
+            "./assets/image/wish2.webp",
+            "./assets/image/wish3.jpg"
+          ],
+          "genres": [
+            {
+              "id": 14,
+              "name": "Fantasy"
+            },
+            {
+              "id": 10751,
+              "name": "Family"
+            },
+            {
+              "id": 16,
+              "name": "Animation"
+            }
+          ],
+          "date": [
+            {
+              "id": 1,
+              "date": "23/02/2024",
+              "time": "10:30",
+              "seat": ""
+            },
+            {
+              "id": 2,
+              "date": "01/03/2024",
+              "time": "10:30",
+              "seat": ""
+            }
+          ]
+        }
+      ],
+      "date": [
+        {
+          "movieId": 572802,
+          "movieName": "Aquaman and the Lost Kingdom",
+          "date": "04/03/2024",
+          "time": "09:30",
+          "seat": "B13 | C14 | E14 | ",
+          "price": 80
+        }
+      ],
+      "id": 3
+    }
+  ],
+  "admin": [
+    {
+      "email": "lskrlale@gmail.com",
+      "username": "Lale",
+      "password": "1!Aa1234",
+      "type": "admin",
+      "id": 1
+    }
+  ],
   "ticket": [
     {
       "id": 1,

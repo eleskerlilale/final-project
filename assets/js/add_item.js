@@ -18,14 +18,24 @@ const file = document.querySelector("input[type=file]")
 const f = document.querySelector(".f")
 const fInput = document.querySelectorAll(".f input")
 const inputP = document.querySelectorAll(".f label p")
-const videolink=document.querySelector("#video-sec")
+const videolink = document.querySelector("#video-sec")
+const div = document.querySelectorAll(".f label")
 console.log(inputP);
+const adminlogout = document.querySelector(".admin-log-out")
 
+console.log(adminlogout);
 window.addEventListener("load", () => {
     network.getadmin().then(data => {
         if (data.length == 0) {
             window.location = './admin-login.html'
         }
+    })
+})
+
+adminlogout.addEventListener("click", () => {
+    network.getadmin().then(data => {
+        network.getadmindelete(data[0].id)
+        // window.location.reload()
     })
 })
 
@@ -71,19 +81,19 @@ menuBtn.addEventListener("click", () => {
     }
 })
 let count = 0;
-let imageSrc=[]
+let imageSrc = []
 fInput.forEach((inputF, index) => {
     inputF.addEventListener("input", () => {
         const i = inputF.files[0]
         console.log(i.name);
         inputP[index].innerText = `${i.name}`
-        if(i){
+        if (i) {
             console.log(i);
             const read = new FileReader()
             read.readAsDataURL(i)
-            read.addEventListener("load" ,() => {
+            read.addEventListener("load", () => {
                 console.log(read.result);
-                
+
                 // imageSrc.push(`${read.result}`)
             })
             // console.log(imageSrc.length);
@@ -116,7 +126,7 @@ if (id) {
             dateInput[i].value = data.date[i].date
             timeInput[i].value = data.date[i].time
         })
-        videolink.value=data.key
+        videolink.value = data.key
     })
 }
 
@@ -130,11 +140,14 @@ file.addEventListener("input", () => {
         const reader = new FileReader()
         reader.readAsDataURL(i)
         reader.addEventListener("load", () => {
-            if (i.name.slice(i.name.length - 3) != "mp4") {
-                img.src = reader.result
-            } else {
-                // iframe.src = `./assets/image/${i.name}`
-            }
+            img.src = reader.result
+            console.log(img.src);
+    console.log(img.src!='');
+    // if (i.name.slice(i.name.length - 3) != "mp4") {
+                
+            // } else {
+            //     // iframe.src = `./assets/image/${i.name}`
+            // }
         })
     }
 })
@@ -172,15 +185,16 @@ save.addEventListener("click", () => {
         }
     ]
 
-    console.log(genres.length);
-    console.log( name.value);
-    console.log(textarea.value);
-    console.log(img.src);
-    console.log(time.value);
+    console.log(genres.length != 0);
+    console.log( name.value != 0);
+    console.log(textarea.value !=0);
+    console.log(img.src!='');
+    // console.log(time.value !=0);
     // console.log(iframe.src);
-    console.log(time.value == 0);
-    console.log(inputP[3].innerText==0);
-    if (genres.length != 0 || name.value != 0 || textarea.value != 0 || img.src == '' || time.value != 0 || dateInput[0].value!=0 || dateInput[1].value!=0 || timeInput[0].value!=0 || timeInput[1].value!=0  || inputP[0].innerText!=0 || inputP[1].innerText!=0 || inputP[2].innerText!=0 || inputP[3].innerText!=0) {
+    console.log(time.value != 0);
+    console.log(inputP[3].innerText != 0);
+    console.log(dateInput[0].value != 0 && dateInput[1].value != 0 && timeInput[0].value != 0 && timeInput[1].value != 0 && inputP[0].innerText != 0 && inputP[1].innerText != 0 && inputP[2].innerText != 0 && inputP[3].innerText != 0)
+    if (genres.length != 0 && name.value != 0 && textarea.value != 0 && img.src != '' && time.value != 0 && dateInput[0].value != 0 && dateInput[1].value != 0 && timeInput[0].value != 0 && timeInput[1].value != 0 && inputP[0].innerText != 0 && inputP[1].innerText != 0 && inputP[2].innerText != 0 && inputP[3].innerText != 0) {
         if (!id) {
             network.getmainpost({
                 original_title: name.value,
@@ -188,7 +202,7 @@ save.addEventListener("click", () => {
                 poster_path: img.src,
                 runtime: Number(time.value),
                 genres: genres,
-                key:  videolink.value,
+                key: videolink.value,
                 image: image,
                 date: dateItem,
                 video_poster: `./assets/image/${inputP[3].innerText}`
@@ -196,7 +210,7 @@ save.addEventListener("click", () => {
             check.style.display = 'flex'
             setTimeout(() => {
                 check.style.display = 'none'
-                // window.location = './catalog.html'
+                window.location = './catalog.html'
             }, 1000);
 
         } else {
@@ -206,7 +220,7 @@ save.addEventListener("click", () => {
                 poster_path: img.src,
                 runtime: Number(time.value),
                 genres: genres,
-                key:  videolink.value,
+                key: videolink.value,
                 date: dateItem,
                 image: image,
                 video_poster: `./assets/image/${inputP[3].innerText}`
@@ -222,7 +236,6 @@ save.addEventListener("click", () => {
         alert("Fill in the boxes")
     }
 })
-
 
 
 

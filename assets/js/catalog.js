@@ -28,7 +28,7 @@ menuBtn.addEventListener("click", () => {
         menuBtn.classList.toggle("active")
     }
 })
-
+let vote;
 const tbody = document.querySelector("tbody")
 const sort = document.querySelector(".sort")
 const search = document.querySelector(".search input")
@@ -37,12 +37,18 @@ function item() {
     network.getfetch().then(data => {
         [...info] = data
         tbody.innerHTML = ``
+       
         info.forEach(element => {
+            if(element.vote_average){
+                vote=element.vote_average.toFixed(1)
+            }else{
+                vote=0
+            }
             tbody.innerHTML += `
                         <tr>
                             <td>${element.id}</td>
                             <td>${element.original_title}</td>
-                            <td><i class="bi bi-star-fill"></i>${element.vote_average.toFixed(1)}</td>
+                            <td><i class="bi bi-star-fill"></i>${vote}</td>
                             <td>${element.genres[0].name}</td>
                             <td>${element.runtime} min</td>
                             <td>
@@ -88,20 +94,25 @@ sort.addEventListener("click", () => {
             sortP.innerHTML = 'Default<i class="bi bi-list-nested"></i>'
         }
         infonew.forEach(element => {
+            if(element.vote_average){
+                vote=element.vote_average.toFixed(1)
+            }else{
+                vote=0
+            }
             tbody.innerHTML += `
                         <tr>
                             <td>${element.id}</td>
                             <td>${element.original_title}</td>
-                            <td><i class="bi bi-star-fill"></i>${element.vote_average.toFixed(1)}</td>
+                            <td><i class="bi bi-star-fill"></i>${vote}</td>
                             <td>${element.genres[0].name}</td>
                             <td>${element.runtime} min</td>
                             <td>
-                                <i class="bi bi-pencil-square"></i>
-                                <i class="bi bi-eye-fill"></i>
-                                <i class="bi bi-trash3"></i>
+                                <i class="bi bi-pencil-square" onclick='editFunc(${element.id})'></i>
+                                <i class="bi bi-eye-fill" onclick='detailFunc(${element.id})'></i>
+                                <i class="bi bi-trash3" onclick='delFunc(${element.id})'></i>
                             </td>
                         </tr>
-                `
+            `
         });
     })
 })
@@ -111,21 +122,44 @@ search.addEventListener("input", () => {
     network.getfetch().then(data => {
         data.forEach(element => {
             if (element.original_title.toLowerCase().includes(search.value.toLowerCase())) {
+                if(element.vote_average){
+                    vote=element.vote_average.toFixed(1)
+                }else{
+                    vote=0
+                }
                 tbody.innerHTML += `
-                        <tr>
-                            <td>${element.id}</td>
-                            <td>${element.original_title}</td>
-                            <td><i class="bi bi-star-fill"></i>${element.vote_average.toFixed(1)}</td>
-                            <td>${element.genres[0].name}</td>
-                            <td>${element.runtime} min</td>
-                            <td>
-                                <i class="bi bi-pencil-square"></i>
-                                <i class="bi bi-eye-fill"></i>
-                                <i class="bi bi-trash3"></i>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>${element.id}</td>
+                                <td>${element.original_title}</td>
+                                <td><i class="bi bi-star-fill"></i>${vote}</td>
+                                <td>${element.genres[0].name}</td>
+                                <td>${element.runtime} min</td>
+                                <td>
+                                    <i class="bi bi-pencil-square" onclick='editFunc(${element.id})'></i>
+                                    <i class="bi bi-eye-fill" onclick='detailFunc(${element.id})'></i>
+                                    <i class="bi bi-trash3" onclick='delFunc(${element.id})'></i>
+                                </td>
+                            </tr>
                 `
             }
         })
+    })
+})
+
+const adminlogout = document.querySelector(".admin-log-out")
+
+console.log(adminlogout);
+window.addEventListener("load" , () => {
+    network.getadmin().then(data => {
+        if(data.length==0){
+            window.location='./admin-login.html'
+        }
+    })
+})
+
+adminlogout.addEventListener("click", () => {
+    network.getadmin().then(data => {
+        network.getadmindelete(data[0].id)
+        // window.location.reload()
     })
 })

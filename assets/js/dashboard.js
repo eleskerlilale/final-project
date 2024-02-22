@@ -5,8 +5,7 @@ const reload = document.querySelectorAll(".bi-arrow-clockwise")
 const menuBtn = document.querySelector(".bi-list")
 const adminNav = document.querySelector("#admin-nav")
 const adminlogout = document.querySelector(".admin-log-out")
-const sortArr = []
-let count = 0
+
 console.log(adminlogout);
 window.addEventListener("load" , () => {
     network.getadmin().then(data => {
@@ -19,24 +18,12 @@ window.addEventListener("load" , () => {
 adminlogout.addEventListener("click", () => {
     network.getadmin().then(data => {
         network.getadmindelete(data[0].id)
-        window.location.reload()
+        // window.location.reload()
     })
 })
 
-window.addEventListener("load", () => {
-    network.getadmin().then(data => {
-        if (data.length == 0) {
-            window.location = './admin-login.html'
-        }
-    })
-})
-
-reload.forEach(reload => {
-    reload.addEventListener("click", () => {
-        window.location.reload()
-    })
-})
-
+const sortArr = []
+let count = 0
 window.addEventListener("resize", () => {
     // console.log("dfsd");
     if (document.body.scrollWidth < 768) {
@@ -112,7 +99,6 @@ network.getMainaccount().then(data => {
                         <td>${dt.id}</td>
                         <td>${dt.email}</td>
                         <td>${dt.username}</td>
-                        <td>${dt.password}</td>
                         <!-- <td>RATING</td> -->
                     </tr>
                         `
